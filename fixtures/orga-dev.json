@@ -1,0 +1,11 @@
+[
+  {
+    "model": "a4-speakup_organisations.Organisation",
+    "pk": 1,
+    "fields": {
+      "name": "liqd",
+      "slug": "liqd",
+      "initiators": ["1","3"]
+    }
+  }
+]

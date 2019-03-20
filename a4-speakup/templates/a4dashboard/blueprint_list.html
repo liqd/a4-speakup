@@ -1,0 +1,44 @@
+
+{% extends "a4dashboard/base_dashboard.html" %}
+{% load i18n static %}
+
+{% block title %}{% trans "New Project" %} &mdash; {{ block.super }}{% endblock%}
+
+{% block dashboard_content %}
+<div class="container">
+    <div class="offset-md-1 col-md-10 mb-3">
+        <h1 class="">
+            {% trans "What kind of project would you like to create?" %}
+        </h1>
+
+        <div class="row">
+            <div class="card-deck">
+            {% for blueprint_slug, blueprint in view.blueprints %}
+            <div class="col-sm-6 col-md-4">
+                <div class="card px-0">
+                    <img class="card-img-top" src="{% static blueprint.image %}" alt="{{ blueprint.title }}">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ blueprint.title }}</h2>
+                        <p class="card-text">{{ blueprint.description | linebreaks }}</p>
+                        <ul class="list-unstyled">
+                            {% for phase_content in blueprint.content %}
+                            <li><strong>Phase {{ forloop.counter }}</strong>: {{ phase_content.description }}</li>
+                            {% endfor %}
+                        </ul>
+                        <div class="text-center">
+                            <a href="{% url 'a4dashboard:project-create' organisation_slug=view.organisation.slug blueprint_slug=blueprint_slug %}"
+                               class="btn btn-primary">
+                                {% trans 'use this template' %}
+                            </a>
+                            <button class="btn btn-link" type="button" data-toggle="modal" data-target="#dst-infopage-{{ blueprint_slug }}">{% trans 'Learn More' %}</button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
