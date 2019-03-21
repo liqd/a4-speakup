@@ -2,8 +2,7 @@ import itertools
 
 from django.contrib import messages
 from django.contrib.auth import get_user_model
-from django.shortcuts import get_object_or_404
-from django.shortcuts import redirect
+from django.shortcuts import get_object_or_404, redirect
 from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import ungettext
 from django.views import generic
@@ -14,8 +13,7 @@ from adhocracy4.dashboard import signals as a4dashboard_signals
 from adhocracy4.projects import models as project_models
 from adhocracy4.projects.mixins import ProjectMixin
 
-from . import forms
-from . import models
+from . import forms, models
 
 User = get_user_model()
 

@@ -1,6 +1,5 @@
 from django import template
-from django.forms import CheckboxInput
-from django.forms import RadioSelect
+from django.forms import CheckboxInput, RadioSelect
 
 register = template.Library()
 

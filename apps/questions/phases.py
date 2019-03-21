@@ -19,4 +19,5 @@ class IssuePhase(phases.PhaseContent):
         'crud': (models.Question,),
     }
 
+
 phases.content.register(IssuePhase())

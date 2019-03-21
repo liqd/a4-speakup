@@ -4,9 +4,7 @@ from django.db import models
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 
-from . import USERNAME_INVALID_MESSAGE
-from . import USERNAME_REGEX
-
+from . import USERNAME_INVALID_MESSAGE, USERNAME_REGEX
 
 USERNAME_NOT_UNIQUE = _('A user with that username already exists.')
 USERNAME_HELP = _('Required. 60 characters or fewer. Letters, digits, spaces '

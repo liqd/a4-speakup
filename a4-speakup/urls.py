@@ -1,7 +1,3 @@
-from adhocracy4.api import routers as a4routers
-from adhocracy4.comments.api import CommentViewSet
-from adhocracy4.ratings.api import RatingViewSet
-from adhocracy4.reports.api import ReportViewSet
 from ckeditor_uploader import views as ck_views
 from django.conf import settings
 from django.conf.urls import include, url
@@ -13,6 +9,10 @@ from rest_framework import routers
 from wagtail.admin import urls as wagtailadmin_urls
 from wagtail.core import urls as wagtail_urls
 
+from adhocracy4.api import routers as a4routers
+from adhocracy4.comments.api import CommentViewSet
+from adhocracy4.ratings.api import RatingViewSet
+from adhocracy4.reports.api import ReportViewSet
 from apps.dashboard import urls as dashboard_urls
 from apps.ideas import urls as ideas_urls
 from apps.projects import urls as project_urls

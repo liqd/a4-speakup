@@ -18,7 +18,8 @@ rules.add_perm('a4-speakup_questions.modify_question',
                (is_context_member & is_owner & phase_allows_change))
 
 
-rules.add_perm('a4-speakup_questions.propose_question', phase_allows_add(Question))
+rules.add_perm('a4-speakup_questions.propose_question',
+               phase_allows_add(Question))
 
 
 rules.add_perm('a4-speakup_questions.view_question', True)

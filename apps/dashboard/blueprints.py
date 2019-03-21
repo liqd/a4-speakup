@@ -1,6 +1,6 @@
-from adhocracy4.dashboard.blueprints import ProjectBlueprint
 from django.utils.translation import ugettext_lazy as _
 
+from adhocracy4.dashboard.blueprints import ProjectBlueprint
 from apps.questions import phases as question_phases
 
 blueprints = [
