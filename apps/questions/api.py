@@ -21,5 +21,5 @@ class QuestionViewSet(ModuleMixin,
     def get_queryset(self):
         return Question\
             .objects\
-            .filter(module=self.module)\
+            .filter(is_answered=False, module=self.module)\
             .order_by('created')

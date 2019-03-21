@@ -1,5 +1,5 @@
 {% extends 'a4-speakup_projects/project_detail.html' %}
-{% load i18n discovery_tags %}
+{% load i18n discovery_tags react_questions %}
 
 {% block phase_content %}
 <div class="container">
@@ -13,13 +13,7 @@
                     {% trans 'Add Question' %}
                 </a>
                 {% endif %}
-                <div id="question-list">
-                    {% for question in question_list %}
-                    <div class="list-group">
-                    {% include "a4-speakup_questions/includes/question_list_tile.html" with question=question %}
-                    </div>
-                    {% endfor %}
-                </div>
+                {% react_questions view.module %}
             </div>
         </div>
     </div>
