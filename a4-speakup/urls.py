@@ -1,25 +1,22 @@
+from adhocracy4.api import routers as a4routers
+from adhocracy4.comments.api import CommentViewSet
+from adhocracy4.ratings.api import RatingViewSet
+from adhocracy4.reports.api import ReportViewSet
 from ckeditor_uploader import views as ck_views
 from django.conf import settings
 from django.conf.urls import include, url
-from django.views.decorators.cache import never_cache
+from django.contrib import admin
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.cache import never_cache
 from django.views.i18n import javascript_catalog
+from rest_framework import routers
 from wagtail.admin import urls as wagtailadmin_urls
 from wagtail.core import urls as wagtail_urls
-from django.contrib import admin
-
-from rest_framework import routers
-
-from adhocracy4.api import routers as a4routers
-from adhocracy4.ratings.api import RatingViewSet
-from adhocracy4.reports.api import ReportViewSet
-from adhocracy4.comments.api import CommentViewSet
-
 
 from apps.dashboard import urls as dashboard_urls
 from apps.ideas import urls as ideas_urls
-
 from apps.projects import urls as project_urls
+from apps.questions import urls as questions_urls
 
 js_info_dict = {
     'packages': ('adhocracy4.comments',),
@@ -44,6 +41,7 @@ urlpatterns = [
     url(r'^dashboard/', include(dashboard_urls)),
     url(r'^projects/', include(project_urls)),
     url(r'^ideas/', include(ideas_urls)),
+    url(r'^questions/', include(questions_urls)),
 
     url(r'^jsi18n/$', javascript_catalog,
         js_info_dict, name='javascript-catalog'),
