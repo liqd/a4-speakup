@@ -78,6 +78,7 @@ INSTALLED_APPS = [
 
     'apps.contrib',
     'apps.ideas',
+    'apps.questions',
     
     'apps.organisations',
     'apps.projects',
@@ -375,7 +376,7 @@ ACTIONABLE = [
 
 A4_CATEGORIZABLE = (
     ('a4-speakup_ideas', 'idea'),
-
+    ('a4-speakup_questions', 'question'),
 )
 
 A4_PROJECT_TOPICS = ()
