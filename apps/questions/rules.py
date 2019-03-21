@@ -22,4 +22,4 @@ rules.add_perm('a4-speakup_questions.propose_question',
                phase_allows_add(Question))
 
 
-rules.add_perm('a4-speakup_questions.view_question', True)
+rules.add_perm('a4-speakup_questions.view_question', rules.always_allow)

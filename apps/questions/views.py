@@ -18,7 +18,7 @@ class QuestionListView(ProjectMixin, generic.ListView):
 class QuestionCreateView(PermissionRequiredMixin, generic.CreateView):
     model = question_models.Question
     form_class = forms.QuestionForm
-    permission_required = 'a4-speakup_ideas.propose_idea'
+    permission_required = 'a4-speakup_questions.propose_question'
 
     def dispatch(self, *args, **kwargs):
         mod_slug = self.kwargs[self.slug_url_kwarg]
