@@ -10,14 +10,19 @@ class QuestionBox extends React.Component {
     }
   }
 
-  fetchData () {
+  getItems () {
     fetch(this.props.questions_api_url)
       .then(response => response.json())
       .then(data => this.setState({questions: data}))
   }
 
-  componentDidMount () {
-    this.fetchData()
+  componentDidMount() {
+    this.getItems()
+    this.timer = setInterval(()=> this.getItems(), 5000);
+  }
+
+  componentWillUnmount() {
+    this.timer = null;
   }
 
   render () {
