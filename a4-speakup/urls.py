@@ -17,6 +17,7 @@ from apps.dashboard import urls as dashboard_urls
 from apps.ideas import urls as ideas_urls
 from apps.projects import urls as project_urls
 from apps.questions import urls as questions_urls
+from apps.questions.api import QuestionViewSet
 
 js_info_dict = {
     'packages': ('adhocracy4.comments',),
@@ -30,12 +31,16 @@ ct_router = a4routers.ContentTypeDefaultRouter()
 ct_router.register(r'comments', CommentViewSet, base_name='comments')
 ct_router.register(r'ratings', RatingViewSet, base_name='ratings')
 
+module_router = a4routers.ModuleDefaultRouter()
+module_router.register(r'questions', QuestionViewSet, base_name='questions')
+
 
 urlpatterns = [
     url(r'^django-admin/', include(admin.site.urls)),
     url(r'^admin/', include(wagtailadmin_urls)),
     url(r'^api/', include(router.urls)),
     url(r'^api/', include(ct_router.urls)),
+    url(r'^api/', include(module_router.urls)),
 
     url(r'^accounts/', include('allauth.urls')),
     url(r'^dashboard/', include(dashboard_urls)),
