@@ -1,19 +1,17 @@
 from django.utils.translation import ugettext_lazy as _
 
 from adhocracy4.dashboard.blueprints import ProjectBlueprint
-
-from apps.ideas import phases as ideas_phases
-
+from apps.questions import phases as question_phases
 
 blueprints = [
-    ('brainstorming',
+    ('speakup',
      ProjectBlueprint(
-         title=_('Brainstorming'),
+         title=_('Speak Up'),
          description=_(
-             'Collect first ideas for a specific topic and comment on them.'
+             'Collect questions for your discussion.'
          ),
          content=[
-             ideas_phases.CollectPhase(),
+             question_phases.IssuePhase(),
          ],
          image='images/brainstorming.svg',
          settings_model=None,

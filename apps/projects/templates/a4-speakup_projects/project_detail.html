@@ -38,17 +38,14 @@
     {% has_perm 'a4projects.view_project' request.user project as can_view_project %}
     {% block phase_cta %}{% endblock %}
 
-    <div class="col-12 mx-auto">
-        <a href="{% url 'a4dashboard:project-edit' project_slug=project.slug %}" class="btn btn--small btn--light float-right" data-embed-target="external"> <i class="fa fa-edit"></i>{% trans 'Edit' %}</a>
-    </div>
 </div>
 <div class="row mb-5">
-    <!-- if statement not working right now
-     {% if can_change_project %}
+    {% has_perm 'a4projects.change_project' request.user project as can_change_project %}
+    {% if can_change_project %}
     <div class="col-12 mx-auto">
         <a href="{% url 'a4dashboard:project-edit' project_slug=project.slug %}" class="btn btn--light float-right" data-embed-target="external"> <i class="fa fa-edit"></i>{% trans 'Edit' %}</a>
     </div>
-    {% endif %} -->
+    {% endif %}
     <div class="offset-md-2 col-md-8 ">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">

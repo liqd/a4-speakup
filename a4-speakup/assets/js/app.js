@@ -10,6 +10,7 @@ require('bootstrap')
 var django = require('django')
 
 // expose react components
+var ReactQuestions = require('../../../apps/questions/static/react_questions.jsx')
 var ReactComments = require('adhocracy4').comments
 var ReactRatings = require('adhocracy4').ratings
 var ReactReports = require('adhocracy4').reports
@@ -29,6 +30,7 @@ var initialiseWidget = function (namespace, name, fn) {
 
 var init = function () {
 
+  initialiseWidget('speakup', 'questions', ReactQuestions.renderQuestions)
   initialiseWidget('a4', 'comment', ReactComments.renderComment)
   initialiseWidget('a4', 'follows', ReactFollows.renderFollow)
   initialiseWidget('a4', 'ratings', ReactRatings.renderRatings)
