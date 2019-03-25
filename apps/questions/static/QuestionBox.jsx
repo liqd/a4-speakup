@@ -72,8 +72,9 @@ class QuestionBox extends React.Component {
 
   handleDelete(id) {
     let data = {is_answered: 1}
-    this.updateQuestion(data, id).then(response => this.setState(prevState => ({
-      questions: prevState.questions.filter(question => question.id != id)
+    this.updateQuestion(data, id)
+      .then(response => this.setState(prevState => ({
+      filteredQuestions: prevState.filteredQuestions.filter(question => question.id != id)
     })))
   }
 
@@ -107,7 +108,7 @@ class QuestionBox extends React.Component {
           setCategories={this.setCategory.bind(this)}
         />
         <QuestionList
-          questions={this.state.questions}
+          questions={this.state.filteredQuestions}
           handleDelete={this.handleDelete.bind(this)}
           markFavourite={this.markFavourite.bind(this)}
           isModerator={this.props.isModerator}
