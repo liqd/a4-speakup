@@ -379,7 +379,7 @@ $btn-link-disabled-color:     $gray-600 !default;
 $btn-block-spacing-y:         .5rem !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           6.25rem !default;
+$btn-border-radius:           $border-radius !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 

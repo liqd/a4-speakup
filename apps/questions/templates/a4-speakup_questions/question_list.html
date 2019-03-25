@@ -6,6 +6,7 @@
     <div class="row mb-5">
         <div class="col-12">
             <div class="question-list">
+                {% react_questions view.module %}
                 {% has_or_would_have_perm 'a4-speakup_questions.propose_question' request.user view.module as add_button_enabled %}
                 {% if add_button_enabled %}
                 <a href="{% url 'question-create' slug=view.module.slug %}" class="btn btn--primary btn--full btn--huge question-list-button mb-4" id="question-create">
@@ -13,7 +14,6 @@
                     {% trans 'Add Question' %}
                 </a>
                 {% endif %}
-                {% react_questions view.module %}
             </div>
         </div>
     </div>

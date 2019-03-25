@@ -15,10 +15,10 @@ class Filter extends React.Component {
 
   render() {
     return (
-      <div className="row">
+      <div className="row mb-5">
         <div className="col text-center">
         <div className="dropdown">
-          <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+          <button className="btn btn-secondary btn-round dropdown-toggle" type="button" id="dropdownMenuButton"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             {this.props.currentCategory}
           </button>
