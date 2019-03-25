@@ -1,3 +1,4 @@
+/* global django */
 let React = require('react')
 
 
@@ -21,7 +22,8 @@ class Question extends React.Component {
         {this.props.isModerator &&
         <div className="row">
           <div className="col-12">
-            <button type="button" className="btn btn-primary float-right" onClick={this.props.handleDelete.bind(this, this.props.id)}>done</button>
+            <button type="button" className="btn btn-primary float-right" onClick={this.props.markFavourite.bind(this, this.props.id)}>{django.gettext('mark favourite')}</button>
+            <button type="button" className="btn btn-primary float-right" onClick={this.props.handleDelete.bind(this, this.props.id)}>{django.gettext('done')}</button>
           </div>
         </div>
         }
