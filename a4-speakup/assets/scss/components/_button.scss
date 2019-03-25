@@ -30,3 +30,8 @@
 .btn--full {
     @extend .btn-block;
 }
+
+.btn-transparent {
+    background-color: transparent;
+    border: none;
+}

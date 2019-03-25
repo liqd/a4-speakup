@@ -34,12 +34,12 @@ $grays: map-merge((
   "900": $gray-900
 ), $grays);
 
-$blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
+$blue:    #007aff !default;
+$indigo:  #5963d5 !default;
+$purple:  #9e74d5 !default;
 $pink:    #e83e8c !default;
 $red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
+$orange:  #ff9500 !default;
 $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
@@ -63,7 +63,7 @@ $colors: map-merge((
 ), $colors);
 
 $primary:       $blue !default;
-$secondary:     $gray-600 !default;
+$secondary:     $orange !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -379,7 +379,7 @@ $btn-link-disabled-color:     $gray-600 !default;
 $btn-block-spacing-y:         .5rem !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           $border-radius !default;
+$btn-border-radius:           6.25rem !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 
@@ -751,11 +751,11 @@ $popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default
 
 // Badges
 
-$badge-font-size:                   75% !default;
-$badge-font-weight:                 $font-weight-bold !default;
-$badge-padding-y:                   .25em !default;
-$badge-padding-x:                   .4em !default;
-$badge-border-radius:               $border-radius !default;
+$badge-font-size:                   100% !default;
+$badge-font-weight:                 $font-weight-normal !default;
+$badge-padding-y:                   .5em !default;
+$badge-padding-x:                   1em !default;
+$badge-border-radius:               6.25rem !default;
 
 $badge-pill-padding-x:              .6em !default;
 // Use a higher than normal value to ensure completely rounded edges when
@@ -826,9 +826,9 @@ $progress-bar-transition:           width .6s ease !default;
 // List group
 
 $list-group-bg:                     $white !default;
-$list-group-border-color:           rgba($black, .125) !default;
+$list-group-border-color:           none !default;
 $list-group-border-width:           $border-width !default;
-$list-group-border-radius:          $border-radius !default;
+$list-group-border-radius:          0 !default;
 
 $list-group-item-padding-y:         .75rem !default;
 $list-group-item-padding-x:         1.25rem !default;
