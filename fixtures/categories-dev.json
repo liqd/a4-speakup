@@ -1,0 +1,29 @@
+[
+  {
+    "model": "a4categories.category",
+    "pk": 1,
+    "fields": {
+      "name": "Liquid",
+      "icon": "",
+      "module": 1
+    }
+  },
+  {
+    "model": "a4categories.category",
+    "pk": 2,
+    "fields": {
+      "name": "Solid",
+      "icon": "",
+      "module": 1
+    }
+  },
+  {
+    "model": "a4categories.category",
+    "pk": 3,
+    "fields": {
+      "name": "Aerial",
+      "icon": "",
+      "module": 1
+    }
+  }
+]
