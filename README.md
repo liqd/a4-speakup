@@ -9,7 +9,7 @@ Install dependencies
 ```
 $ make install
 ```
-Start server at port 8000
+Start server at port 8006
 ```
 $ make watch
 ```

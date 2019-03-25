@@ -40,13 +40,13 @@ clean:
 
 .PHONY: server
 server:
-	$(VIRTUAL_ENV)/bin/python3 manage.py runserver 8000
+	$(VIRTUAL_ENV)/bin/python3 manage.py runserver 8006
 
 .PHONY: watch
 watch:
 	trap 'kill %1' KILL; \
 	npm run watch & \
-	$(VIRTUAL_ENV)/bin/python3 manage.py runserver 8000
+	$(VIRTUAL_ENV)/bin/python3 manage.py runserver 8006
 
 .PHONY: background-tasks
 background-tasks:
