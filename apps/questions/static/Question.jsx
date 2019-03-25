@@ -7,14 +7,18 @@ class Question extends React.Component {
     super(props)
 
     this.state = {
-      hidden: false
+      is_favourite: this.props.is_favourite
     }
   }
 
-  render () {
+  markFavourite () {
+    this.props.markFavourite(this.props.id)
+    this.setState({is_favourite: true})
+  }
 
+  render () {
     return (
-      <div className="list-group-item mb-2">
+      <div className={this.state.is_favourite ? "list-group-item list-group-item-warning mb-2" : "list-group-item mb-2" }>
         <div>
           <p>{this.props.children}</p>
           <span className="badge badge-info">{ this.props.category }</span>
@@ -22,7 +26,7 @@ class Question extends React.Component {
         {this.props.isModerator &&
         <div className="row">
           <div className="col-12">
-            <button type="button" className="btn btn-primary float-right" onClick={this.props.markFavourite.bind(this, this.props.id)}>{django.gettext('mark favourite')}</button>
+            <button type="button" className="btn btn-primary float-right" onClick={this.markFavourite.bind(this)}>{django.gettext('mark favourite')}</button>
             <button type="button" className="btn btn-primary float-right" onClick={this.props.handleDelete.bind(this, this.props.id)}>{django.gettext('done')}</button>
           </div>
         </div>
