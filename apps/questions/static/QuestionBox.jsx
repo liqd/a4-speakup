@@ -2,6 +2,8 @@
 let React = require('react')
 let QuestionList = require('./QuestionList')
 let Filters = require('./Filters')
+let cookie = require('js-cookie')
+
 
 class QuestionBox extends React.Component {
   constructor(props) {
@@ -12,7 +14,8 @@ class QuestionBox extends React.Component {
       filteredQuestions: [],
       category: '-1',
       categoryName: django.gettext('all'),
-      filterChanged: false
+      filterChanged: false,
+      csrfToken: cookie.get('csrftoken')
     }
   }
 
@@ -57,9 +60,18 @@ class QuestionBox extends React.Component {
   }
 
   handleDelete(id) {
-    this.setState(prevState => ({
+    fetch(this.props.questions_api_url + id + '/', {
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+        'X-CSRFToken': this.state.csrfToken
+      },
+      method: 'PATCH',
+      body: JSON.stringify({
+        is_answered: 1
+      })
+    }).then(response => this.setState(prevState => ({
       questions: prevState.questions.filter(question => question.id != id)
-    }))
+    })))
   }
 
   componentDidMount() {
