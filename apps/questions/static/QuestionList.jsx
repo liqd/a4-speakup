@@ -1,19 +1,4 @@
-let React = require('react')
-
-
-class Question extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render () {
-    return (
-      <div className="list-group-item mb-2">
-        <p>{this.props.children}</p>
-        <span className="badge badge-info">{ this.props.category }</span>
-      </div>)
-  }
-}
+Question = require('./Question')
 
 
 let QuestionList = (props) => {
