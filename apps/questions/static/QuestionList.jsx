@@ -9,7 +9,8 @@ let QuestionList = (props) => {
         props.questions.map((question, index) => {
           return <Question
             key={question.id}
-            authorIsModerator={props.is_moderator}
+            handleDelete={props.handleDelete.bind(this)}
+            isModerator={props.isModerator}
             id={question.id}
             is_answered={question.is_answered}
             category={question.category}

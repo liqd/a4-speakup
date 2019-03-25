@@ -16,19 +16,20 @@ class QuestionBox extends React.Component {
     }
   }
 
-  setCategory (category) {
+  setCategory(category) {
     let newName = (category === '-1') ? django.gettext('all') : category
     this.setState({
       filterChanged: true,
       categoryName: newName,
-      category: category})
+      category: category
+    })
   }
 
-  isInFilter (item) {
+  isInFilter(item) {
     return (this.state.category === '-1' || this.state.category === item.category)
   }
 
-  filterQuestions (questions) {
+  filterQuestions(questions) {
     let filteredQuestions = []
     questions.forEach((item) => {
       if (this.isInFilter(item)) {
@@ -38,37 +39,45 @@ class QuestionBox extends React.Component {
     return filteredQuestions
   }
 
-  updateList () {
+  updateList() {
     let filteredQuestions = this.filterQuestions(this.state.questions)
     this.setState({
       filterChanged: false,
-      filteredQuestions: filteredQuestions})
+      filteredQuestions: filteredQuestions
+    })
   }
 
-  getItems () {
+  getItems() {
     fetch(this.props.questions_api_url)
       .then(response => response.json())
       .then(data => this.setState({
         questions: data,
-        filteredQuestions: this.filterQuestions(data)}))
+        filteredQuestions: this.filterQuestions(data)
+      }))
+  }
+
+  handleDelete(id) {
+    this.setState(prevState => ({
+      questions: prevState.questions.filter(question => question.id != id)
+    }))
   }
 
   componentDidMount() {
     this.getItems()
-    this.timer = setInterval(()=> this.getItems(), 5000);
+    this.timer = setInterval(() => this.getItems(), 5000);
   }
 
   componentWillUnmount() {
     this.timer = null;
   }
 
-  componentDidUpdate () {
+  componentDidUpdate() {
     if (this.state.filterChanged === true) {
       this.updateList()
     }
   }
 
-  render () {
+  render() {
     return (
       <div>
         <Filters
@@ -77,8 +86,10 @@ class QuestionBox extends React.Component {
           setCategories={this.setCategory.bind(this)}
         />
         <QuestionList
-          questions={this.state.filteredQuestions}
-          is_moderator={this.props.is_moderator} />
+          questions={this.state.questions}
+          handleDelete={this.handleDelete.bind(this)}
+          isModerator={this.props.isModerator}
+        />
       </div>)
   }
 
