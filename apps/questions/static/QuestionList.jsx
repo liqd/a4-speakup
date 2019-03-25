@@ -1,4 +1,5 @@
-Question = require('./Question')
+let Question = require('./Question')
+let React = require('react')
 
 
 let QuestionList = (props) => {

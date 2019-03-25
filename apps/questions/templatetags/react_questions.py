@@ -13,12 +13,13 @@ def react_questions(context, obj):
 
     user = request.user
     is_moderator = user.is_superuser or user in obj.project.moderators.all()
-
+    categories = [category.name for category in obj.category_set.all()]
     questions_api_url = reverse('questions-list', kwargs={'module_pk': obj.pk})
 
     attributes = {
         'questions_api_url': questions_api_url,
-        'isModerator': is_moderator
+        'isModerator': is_moderator,
+        'categories': categories
     }
 
     return format_html(
