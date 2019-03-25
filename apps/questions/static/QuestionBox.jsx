@@ -59,17 +59,20 @@ class QuestionBox extends React.Component {
       }))
   }
 
-  handleDelete(id) {
-    fetch(this.props.questions_api_url + id + '/', {
+  updateQuestion (data, id) {
+    return fetch(this.props.questions_api_url + id + '/', {
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
         'X-CSRFToken': this.state.csrfToken
       },
       method: 'PATCH',
-      body: JSON.stringify({
-        is_answered: 1
-      })
-    }).then(response => this.setState(prevState => ({
+      body: JSON.stringify(data)
+    })
+  }
+
+  handleDelete(id) {
+    let data = {is_answered: 1}
+    this.updateQuestion(data, id).then(response => this.setState(prevState => ({
       questions: prevState.questions.filter(question => question.id != id)
     })))
   }
