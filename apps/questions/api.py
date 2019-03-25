@@ -9,6 +9,7 @@ from .serializers import QuestionSerializer
 
 class QuestionViewSet(ModuleMixin,
                       mixins.ListModelMixin,
+                      mixins.UpdateModelMixin,
                       viewsets.GenericViewSet,
                       ):
 
