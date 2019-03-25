@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from rest_framework import mixins, viewsets
 
 from adhocracy4.api.mixins import ModuleMixin
@@ -20,7 +21,14 @@ class QuestionViewSet(ModuleMixin,
         return self.module
 
     def get_queryset(self):
-        return Question\
+        qs = Question\
             .objects\
-            .filter(is_answered=False, module=self.module)\
+            .filter(module=self.module)\
             .order_by('created')
+        is_answered = self.request.query_params.get('is_answered', None)
+        if is_answered:
+            try:
+                return qs.filter(is_answered=is_answered)
+            except ValidationError:
+                return qs
+        return qs

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load i18n static rules wagtailcore_tags ckeditor_tags thumbnail a4dashboard_tags %}
+{% load i18n static rules wagtailcore_tags ckeditor_tags thumbnail react_questions a4dashboard_tags %}
 
 {% block extra_messages %}
     {{ block.super }}
@@ -66,7 +66,7 @@
                 <div class="offset-md-1 col-md-10">
                     <h2 class="text-center">{% trans "Statistics" %}</h2>
                     <div>
-                    {{ view.project.result|richtext }}
+                    {% react_questions_statistics view.module %}
                     </div>
                 </div>
             </div>

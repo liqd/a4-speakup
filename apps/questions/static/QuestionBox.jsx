@@ -51,7 +51,7 @@ class QuestionBox extends React.Component {
   }
 
   getItems() {
-    fetch(this.props.questions_api_url)
+    fetch(this.props.questions_api_url + '?is_answered=0')
       .then(response => response.json())
       .then(data => this.setState({
         questions: data,
