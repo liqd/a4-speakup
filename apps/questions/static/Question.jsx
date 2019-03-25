@@ -12,8 +12,9 @@ class Question extends React.Component {
   }
 
   markFavourite () {
-    this.props.markFavourite(this.props.id)
-    this.setState({is_favourite: true})
+    let value = !this.state.is_favourite
+    this.props.markFavourite(this.props.id, value)
+    this.setState({is_favourite: value})
   }
 
   render () {

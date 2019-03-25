@@ -77,8 +77,9 @@ class QuestionBox extends React.Component {
     })))
   }
 
-  markFavourite(id) {
-    let data = {is_favourite: 1}
+  markFavourite(id, value) {
+    let boolValue = (value) ? 1 : 0
+    let data = {is_favourite: boolValue}
     this.updateQuestion(data, id)
   }
 
