@@ -78,6 +78,7 @@ fixtures:
 	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata fixtures/module-dev.json
 	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata fixtures/phase-dev.json
 	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata fixtures/categories-dev.json
+	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata fixtures/questions-dev.json
 
 .PHONY: lint
 lint:
