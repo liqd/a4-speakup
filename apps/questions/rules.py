@@ -14,8 +14,8 @@ rules.add_perm('a4-speakup_questions.rate_question', phase_allows_rate)
 
 
 rules.add_perm('a4-speakup_questions.modify_question',
-               is_superuser | is_context_moderator | is_context_initiator |
-               (is_context_member & is_owner & phase_allows_change))
+               is_superuser | is_context_moderator | is_context_initiator
+               | (is_context_member & is_owner & phase_allows_change))
 
 
 rules.add_perm('a4-speakup_questions.propose_question',

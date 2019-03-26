@@ -1,12 +1,11 @@
-/* global django */
+/* global django fetch */
 let React = require('react')
 let QuestionList = require('./QuestionList')
 let Filters = require('./Filters')
 let cookie = require('js-cookie')
 
-
 class QuestionBox extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -19,7 +18,7 @@ class QuestionBox extends React.Component {
     }
   }
 
-  setCategory(category) {
+  setCategory (category) {
     let newName = (category === '-1') ? django.gettext('select category') : category
     this.setState({
       filterChanged: true,
@@ -28,11 +27,11 @@ class QuestionBox extends React.Component {
     })
   }
 
-  isInFilter(item) {
+  isInFilter (item) {
     return (this.state.category === '-1' || this.state.category === item.category)
   }
 
-  filterQuestions(questions) {
+  filterQuestions (questions) {
     let filteredQuestions = []
     questions.forEach((item) => {
       if (this.isInFilter(item)) {
@@ -42,7 +41,7 @@ class QuestionBox extends React.Component {
     return filteredQuestions
   }
 
-  updateList() {
+  updateList () {
     let filteredQuestions = this.filterQuestions(this.state.questions)
     this.setState({
       filterChanged: false,
@@ -50,7 +49,7 @@ class QuestionBox extends React.Component {
     })
   }
 
-  getItems() {
+  getItems () {
     fetch(this.props.questions_api_url + '?is_answered=0')
       .then(response => response.json())
       .then(data => this.setState({
@@ -70,36 +69,36 @@ class QuestionBox extends React.Component {
     })
   }
 
-  handleDelete(id) {
-    let data = {is_answered: 1}
+  handleDelete (id) {
+    let data = { is_answered: 1 }
     this.updateQuestion(data, id)
       .then(response => this.setState(prevState => ({
-      filteredQuestions: prevState.filteredQuestions.filter(question => question.id != id)
-    })))
+        filteredQuestions: prevState.filteredQuestions.filter(question => question.id !== id)
+      })))
   }
 
-  markFavourite(id, value) {
+  markFavourite (id, value) {
     let boolValue = (value) ? 1 : 0
-    let data = {is_favourite: boolValue}
+    let data = { is_favourite: boolValue }
     this.updateQuestion(data, id)
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.getItems()
-    this.timer = setInterval(() => this.getItems(), 5000);
+    this.timer = setInterval(() => this.getItems(), 5000)
   }
 
-  componentWillUnmount() {
-    this.timer = null;
+  componentWillUnmount () {
+    this.timer = null
   }
 
-  componentDidUpdate() {
+  componentDidUpdate () {
     if (this.state.filterChanged === true) {
       this.updateList()
     }
   }
 
-  render() {
+  render () {
     return (
       <div>
         <Filters
@@ -115,7 +114,6 @@ class QuestionBox extends React.Component {
         />
       </div>)
   }
-
 }
 
 module.exports = QuestionBox
