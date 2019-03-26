@@ -19,16 +19,20 @@ class Question extends React.Component {
 
   render () {
     return (
-      <div className={this.state.is_favourite ? "list-group-item list-group-item-warning mb-2" : "list-group-item mb-2" }>
+      <div className="list-group-item border-bottom mb-2">
         <div>
           <p>{this.props.children}</p>
-          <span className="badge badge-info">{ this.props.category }</span>
         </div>
         {this.props.isModerator &&
         <div className="row">
           <div className="col-12">
-            <button type="button" className="btn btn-primary float-right" onClick={this.markFavourite.bind(this)}>{django.gettext('mark favourite')}</button>
-            <button type="button" className="btn btn-primary float-right" onClick={this.props.handleDelete.bind(this, this.props.id)}>{django.gettext('done')}</button>
+            <span className="badge badge-light">{ this.props.category }</span>
+            <button type="button" className="btn btn-transparent float-right" onClick={this.props.handleDelete.bind(this, this.props.id)}>
+              <i className="fas fa-check"/>
+            </button>
+            <button type="button" className="btn btn-transparent float-right" onClick={this.markFavourite.bind(this)}>
+              <i className={this.state.is_favourite ? "fas fa-star text-secondary" : "far fa-star" }/>
+            </button>
           </div>
         </div>
         }

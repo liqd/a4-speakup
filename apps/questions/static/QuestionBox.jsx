@@ -13,14 +13,14 @@ class QuestionBox extends React.Component {
       questions: [],
       filteredQuestions: [],
       category: '-1',
-      categoryName: django.gettext('all'),
+      categoryName: django.gettext('select category'),
       filterChanged: false,
       csrfToken: cookie.get('csrftoken')
     }
   }
 
   setCategory(category) {
-    let newName = (category === '-1') ? django.gettext('all') : category
+    let newName = (category === '-1') ? django.gettext('select category') : category
     this.setState({
       filterChanged: true,
       categoryName: newName,
@@ -51,7 +51,7 @@ class QuestionBox extends React.Component {
   }
 
   getItems() {
-    fetch(this.props.questions_api_url)
+    fetch(this.props.questions_api_url + '?is_answered=0')
       .then(response => response.json())
       .then(data => this.setState({
         questions: data,

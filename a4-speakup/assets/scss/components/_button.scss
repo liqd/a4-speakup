@@ -30,3 +30,12 @@
 .btn--full {
     @extend .btn-block;
 }
+
+.btn-transparent {
+    background-color: transparent;
+    border: none;
+}
+
+.btn-round {
+    border-radius: 6.25rem;
+}
