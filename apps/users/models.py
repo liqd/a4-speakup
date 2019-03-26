@@ -74,7 +74,7 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
         return full_name.strip()
 
     def get_short_name(self):
-        """Returns the short name for the user."""
+        """Return the short name for the user."""
         return self.username
 
     def signup(self, username, email, timezone, commit=True):
