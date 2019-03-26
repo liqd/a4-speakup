@@ -1,0 +1,6 @@
+[flake8]
+max-complexity = 10
+# D10 Missing docstring in public method
+
+ignore = D10
+exclude = .git,__pycache__,*/migrations/*,*/settings/*
