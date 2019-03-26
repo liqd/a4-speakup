@@ -2,7 +2,7 @@ from django.db import models
 from modelcluster.fields import ParentalKey
 from modelcluster.models import ClusterableModel
 from wagtail.admin.edit_handlers import (FieldPanel, InlinePanel,
-                                                PageChooserPanel)
+                                         PageChooserPanel)
 from wagtail.core.models import Orderable
 from wagtail.snippets.models import register_snippet
 

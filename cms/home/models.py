@@ -1,8 +1,7 @@
 from django.db import models
-from wagtail.core.models import Page
 from wagtail.admin import edit_handlers
-from wagtail.core import fields
-from wagtail.core import blocks
+from wagtail.core import blocks, fields
+from wagtail.core.models import Page
 
 
 class HomePage(Page):
