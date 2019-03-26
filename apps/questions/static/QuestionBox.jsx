@@ -1,4 +1,4 @@
-/* global django */
+/* global django fetch */
 let React = require('react')
 let QuestionList = require('./QuestionList')
 let Filters = require('./Filters')
@@ -73,7 +73,7 @@ class QuestionBox extends React.Component {
     let data = { is_answered: 1 }
     this.updateQuestion(data, id)
       .then(response => this.setState(prevState => ({
-        filteredQuestions: prevState.filteredQuestions.filter(question => question.id != id)
+        filteredQuestions: prevState.filteredQuestions.filter(question => question.id !== id)
       })))
   }
 

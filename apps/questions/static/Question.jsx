@@ -1,4 +1,3 @@
-/* global django */
 let React = require('react')
 
 class Question extends React.Component {
@@ -18,20 +17,20 @@ class Question extends React.Component {
 
   render () {
     return (
-      <div className="list-group-item border-bottom mb-2">
+      <div className='list-group-item border-bottom mb-2'>
         <div>
           <p>{this.props.children}</p>
         </div>
-        <div className="row">
-          <div className="col-12">
-            <span className="badge badge-secondary">{ this.props.category }</span>
+        <div className='row'>
+          <div className='col-12'>
+            <span className='badge badge-secondary'>{ this.props.category }</span>
             {this.props.isModerator &&
             <div>
-              <button type="button" className="btn btn-transparent float-right"
+              <button type='button' className='btn btn-transparent float-right'
                 onClick={this.props.handleDelete.bind(this, this.props.id)}>
-                <i className="fas fa-check" />
+                <i className='fas fa-check' />
               </button>
-              <button type="button" className="btn btn-transparent float-right" onClick={this.markFavourite.bind(this)}>
+              <button type='button' className='btn btn-transparent float-right' onClick={this.markFavourite.bind(this)}>
                 <i className={this.state.is_favourite ? 'fas fa-star text-secondary' : 'far fa-star'} />
               </button>
             </div>

@@ -1,4 +1,4 @@
-/* global django */
+/* global fetch */
 let React = require('react')
 let Question = require('./Question')
 
@@ -47,16 +47,16 @@ class StatisticsBox extends React.Component {
           return (
             <div key={index}>
               <span>{category}</span>
-              <div className="progress">
-                <div className="progress-bar" style={style} role="progressbar" aria-valuenow="25" aria-valuemin="0"
-                  aria-valuemax="100">{count}%
+              <div className='progress'>
+                <div className='progress-bar' style={style} role='progressbar' aria-valuenow='25' aria-valuemin='0'
+                  aria-valuemax='100'>{count}%
                 </div>
               </div>
             </div>
           )
         })
         }
-        <div className="list-group mt-5">
+        <div className='list-group mt-5'>
           { this.state.questions.map((question, index) => {
             return <Question
               key={question.id}
