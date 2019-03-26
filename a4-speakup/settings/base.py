@@ -379,6 +379,8 @@ A4_CATEGORIZABLE = (
     ('a4-speakup_questions', 'question'),
 )
 
+A4_CATEGORY_ICONS = ()
+
 A4_PROJECT_TOPICS = ()
 
 A4_MAP_BASEURL = 'https://{s}.tile.openstreetmap.org/'
