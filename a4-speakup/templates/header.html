@@ -11,13 +11,13 @@
 
         <div class="collapse navbar-collapse header__button" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-            <li>{% userindicator %}</li>
             {% for menuitem in header_menu_items %}
             <li class="nav-item {% if request.path == menuitem.url %} active{% endif %}">
                 <a class="nav-link" href="{{ menuitem.url }}"> {{ menuitem.title }} </a>
             </li>
             {% endfor %}
             </ul>
+             {% userindicator %}
         </div>
     </div>
     <div class="header__curve"></div>
