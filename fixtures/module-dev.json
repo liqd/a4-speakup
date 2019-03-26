@@ -1,14 +1,13 @@
 [
-    {
-        "model": "a4modules.module",
-        "pk": 1,
-        "fields": {
-            "slug": "brainstorming",
-            "name": "Brainstorming",
-            "description":
-            "liqd project description",
-            "weight": 1,
-            "project": 1
-        }
+  {
+    "model": "a4modules.module",
+    "pk": 1,
+    "fields": {
+      "slug": "speak-up",
+      "name": "Speak Up",
+      "description": "This is a short description",
+      "weight": 1,
+      "project": 1
     }
+  }
 ]

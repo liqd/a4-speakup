@@ -3,14 +3,15 @@
     "model": "a4projects.project",
     "pk": 1,
     "fields": {
-      "name": "liqd-project",
-      "slug": "liqd-project",
-      "organisation": "1",
-      "description": "liqd project description",
-      "information": "<p>liqd project info</p>",
+      "slug": "liquid-fixture-event",
+      "name": "Liquid fixture event",
+      "organisation": 1,
+      "description": "This is a short description",
+      "information": "<p>And this is a more lengthy description</p>",
+      "is_public": true,
       "is_draft": false,
-      "point": "\"\"",
-      "moderators": "4"
+      "is_archived": false,
+      "moderators": [1, 4]
     }
   }
 ]

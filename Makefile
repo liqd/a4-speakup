@@ -40,13 +40,13 @@ clean:
 
 .PHONY: server
 server:
-	$(VIRTUAL_ENV)/bin/python3 manage.py runserver 8000
+	$(VIRTUAL_ENV)/bin/python3 manage.py runserver 8006
 
 .PHONY: watch
 watch:
 	trap 'kill %1' KILL; \
 	npm run watch & \
-	$(VIRTUAL_ENV)/bin/python3 manage.py runserver 8000
+	$(VIRTUAL_ENV)/bin/python3 manage.py runserver 8006
 
 .PHONY: background-tasks
 background-tasks:
@@ -77,7 +77,8 @@ fixtures:
 	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata fixtures/project-dev.json
 	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata fixtures/module-dev.json
 	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata fixtures/phase-dev.json
-	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata fixtures/admin-distr.json
+	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata fixtures/categories-dev.json
+	$(VIRTUAL_ENV)/bin/python3 manage.py loaddata fixtures/questions-dev.json
 
 .PHONY: lint
 lint:
