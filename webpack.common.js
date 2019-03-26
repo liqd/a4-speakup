@@ -1,8 +1,6 @@
-var MiniCssExtractPlugin = require('mini-css-extract-plugin')
-var CopyWebpackPlugin = require('copy-webpack-plugin')
-var webpack = require('webpack')
-var path = require('path')
-var autoprefixer = require('autoprefixer')
+const webpack = require('webpack')
+const path = require('path')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -43,37 +41,15 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        exclude: /node_modules\/(?!adhocracy4|bootstrap)/, // exclude most dependencies
+        exclude: /node_modules\/(?!(adhocracy4|bootstrap)\/).*/, // exclude all dependencies but adhocracy4 and bootstrap
         loader: 'babel-loader',
         options: {
-          presets: ['babel-preset-env', 'babel-preset-react'].map(require.resolve)
+          presets: ['@babel/preset-env', '@babel/preset-react'].map(require.resolve),
+          plugins: ['@babel/plugin-transform-runtime', '@babel/plugin-transform-modules-commonjs']
         }
       },
       {
-        test: /\.s?css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              ident: 'postcss',
-              plugins: (loader) => [
-                autoprefixer()
-              ]
-            }
-          },
-          {
-            loader: 'sass-loader'
-          }
-        ]
-      },
-      {
-        test: /fonts\/.*\.(svg|woff2?|ttf|eot)(\?.*)?$/,
+        test: /(fonts|files)\/.*\.(svg|woff2?|ttf|eot|otf)(\?.*)?$/,
         loader: 'file-loader',
         options: {
           name: 'fonts/[name].[ext]'
@@ -91,8 +67,7 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx', '.scss', '.css'],
     alias: {
-      'jquery$': 'jquery/dist/jquery.min.js',
-      'shariff$': 'shariff/dist/shariff.complete.js'
+      'jquery$': 'jquery/dist/jquery.min.js'
     },
     // when using `npm link`, dependencies are resolved against the linked
     // folder by default. This may result in dependencies being included twice.
@@ -107,10 +82,6 @@ module.exports = {
     new webpack.optimize.SplitChunksPlugin({
       name: 'vendor',
       filename: 'vendor.js'
-    }),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css'
     }),
     new CopyWebpackPlugin([
       {

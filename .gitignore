@@ -19,3 +19,4 @@ venv
 /webpack-stats.json
 /a4-speakup/settings/local.py
 /a4-speakup/static
+package-lock.json

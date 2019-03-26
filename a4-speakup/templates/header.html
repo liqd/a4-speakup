@@ -1,15 +1,15 @@
 
-{% load userindicator snippet_tags %}
+{% load userindicator snippet_tags static %}
 {% load_site_menu "header" as header_menu_items %}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="/">SpeakUp</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="header navbar navbar-expand-lg px-0 pb-5">
+    <div class="container d-flex justify-content-center">
+        <a class="navbar-brand mr-0" href="/" rel="home"><img src=" {% static 'images/speakup-logo.png' %}" width="100px" alt="SpeakUp"/></a>
+        <button class="navbar-toggler header__button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse header__button" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
             {% for menuitem in header_menu_items %}
             <li class="nav-item {% if request.path == menuitem.url %} active{% endif %}">
@@ -19,7 +19,6 @@
             </ul>
              {% userindicator %}
         </div>
-
     </div>
+    <div class="header__curve"></div>
 </nav>
-

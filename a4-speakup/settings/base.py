@@ -70,7 +70,7 @@ INSTALLED_APPS = [
     'adhocracy4.reports',
     'adhocracy4.modules',
     'adhocracy4.comments',
-    
+
 
     'cms.home',
     'cms.snippets',
@@ -78,13 +78,14 @@ INSTALLED_APPS = [
     'apps.contrib',
     'apps.ideas',
     'apps.questions',
-    
+
     'apps.organisations',
     'apps.projects',
     'apps.users'
 ]
 
 MIDDLEWARE = (
+    'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -93,7 +94,6 @@ MIDDLEWARE = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'wagtail.core.middleware.SiteMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
@@ -378,6 +378,8 @@ A4_CATEGORIZABLE = (
     ('a4-speakup_ideas', 'idea'),
     ('a4-speakup_questions', 'question'),
 )
+
+A4_CATEGORY_ICONS = ()
 
 A4_PROJECT_TOPICS = ()
 
