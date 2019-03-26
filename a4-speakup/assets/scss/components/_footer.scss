@@ -1,0 +1,12 @@
+.footer {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    background-color: $purple;
+}
+
+.footer__curve {
+    top: 0;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}

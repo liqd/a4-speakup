@@ -25,7 +25,7 @@ class Question extends React.Component {
         </div>
         <div className="row">
           <div className="col-12">
-            <span className="badge badge-light">{ this.props.category }</span>
+            <span className="badge badge-secondary">{ this.props.category }</span>
             {this.props.isModerator &&
             <div>
               <button type="button" className="btn btn-transparent float-right"
