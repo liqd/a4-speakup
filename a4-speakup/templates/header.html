@@ -6,18 +6,18 @@
     <div class="container d-flex justify-content-center">
         <a class="navbar-brand mr-0" href="/" rel="home"><img src=" {% static 'images/speakup-logo.png' %}" width="100px" alt="SpeakUp"/></a>
         <button class="navbar-toggler header__button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"><i class="fa fa-align-justify"></i></span>
         </button>
 
         <div class="collapse navbar-collapse header__button" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
+            <li>{% userindicator %}</li>
             {% for menuitem in header_menu_items %}
             <li class="nav-item {% if request.path == menuitem.url %} active{% endif %}">
                 <a class="nav-link" href="{{ menuitem.url }}"> {{ menuitem.title }} </a>
             </li>
             {% endfor %}
             </ul>
-             {% userindicator %}
         </div>
     </div>
     <div class="header__curve"></div>

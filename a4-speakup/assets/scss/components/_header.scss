@@ -19,6 +19,11 @@
 }
 
 .header__button {
+    color: $white;
     position: absolute;
     right: 0;
+
+    .dropdown-toggle {
+        color: $white;
+    }
 }
