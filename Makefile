@@ -102,10 +102,6 @@ po:
 mo:
 	$(VIRTUAL_ENV)/bin/python manage.py compilemessages
 
-.PHONY: make
-make:
-	@echo Hello dwarf planet!
-
 .PHONY: release
 release: export DJANGO_SETTINGS_MODULE ?= a4-speakup.settings.build
 release:

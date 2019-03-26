@@ -19,7 +19,7 @@ module.exports = {
       'react',
       'immutability-helper',
       'react-dom',
-      'react-flip-move',
+      'react-flip-move'
     ],
 
     datepicker: [
