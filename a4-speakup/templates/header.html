@@ -9,7 +9,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse header__button" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                 {% for menuitem in header_menu_items %}
                 <li class="nav-item {% if request.path == menuitem.url %} active{% endif %}">

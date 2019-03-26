@@ -26,7 +26,7 @@ class Question extends React.Component {
         {this.props.isModerator &&
         <div className="row">
           <div className="col-12">
-            <span className="badge badge-light">{ this.props.category }</span>
+            <span className="badge badge-secondary">{ this.props.category }</span>
             <button type="button" className="btn btn-transparent float-right" onClick={this.props.handleDelete.bind(this, this.props.id)}>
               <i className="fas fa-check"/>
             </button>
