@@ -2,23 +2,23 @@
 {% load userindicator snippet_tags static %}
 {% load_site_menu "header" as header_menu_items %}
 
-    <nav class="header navbar navbar-expand-lg px-0 pb-5">
-        <div class="container d-flex justify-content-center">
-            <a class="navbar-brand mr-0" href="/" rel="home"><img src=" {% static 'images/speakup-logo.png' %}" width="100px" alt="SpeakUp"/></a>
-            <button class="navbar-toggler header__button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<nav class="header navbar navbar-expand-lg px-0 pb-5">
+    <div class="container d-flex justify-content-center">
+        <a class="navbar-brand mr-0" href="/" rel="home"><img src=" {% static 'images/speakup-logo.png' %}" width="100px" alt="SpeakUp"/></a>
+        <button class="navbar-toggler header__button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse header__button" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                {% for menuitem in header_menu_items %}
-                <li class="nav-item {% if request.path == menuitem.url %} active{% endif %}">
-                    <a class="nav-link" href="{{ menuitem.url }}"> {{ menuitem.title }} </a>
-                </li>
-                {% endfor %}
-                </ul>
-                 {% userindicator %}
-            </div>
+        <div class="collapse navbar-collapse header__button" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            {% for menuitem in header_menu_items %}
+            <li class="nav-item {% if request.path == menuitem.url %} active{% endif %}">
+                <a class="nav-link" href="{{ menuitem.url }}"> {{ menuitem.title }} </a>
+            </li>
+            {% endfor %}
+            </ul>
+             {% userindicator %}
         </div>
-        <div class="header__curve"></div>
-    </nav>
+    </div>
+    <div class="header__curve"></div>
+</nav>
