@@ -1,0 +1,4 @@
+//fixes horizontal scroll issue cause by header+footer width
+body {
+    overflow-x: hidden;
+}

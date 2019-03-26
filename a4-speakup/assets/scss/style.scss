@@ -1,6 +1,8 @@
 // Required
 @import "~bootstrap/scss/functions";
 
+@import 'base';
+
 // Project variables overwriting bootstrap's variables
 @import 'variables';
 @import "~bootstrap/scss/variables";
