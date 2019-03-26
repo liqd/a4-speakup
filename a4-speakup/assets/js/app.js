@@ -17,7 +17,6 @@ var ReactRatings = require('adhocracy4').ratings
 var ReactReports = require('adhocracy4').reports
 var ReactFollows = require('adhocracy4').follows
 
-
 var initialiseWidget = function (namespace, name, fn) {
   var key = 'data-' + namespace + '-widget'
   var selector = '[' + key + '=' + name + ']'
@@ -30,14 +29,12 @@ var initialiseWidget = function (namespace, name, fn) {
 }
 
 var init = function () {
-
   initialiseWidget('speakup', 'questions', ReactQuestions.renderQuestions)
   initialiseWidget('speakup', 'statistics', ReactQuestionsStatisitics.renderData)
   initialiseWidget('a4', 'comment', ReactComments.renderComment)
   initialiseWidget('a4', 'follows', ReactFollows.renderFollow)
   initialiseWidget('a4', 'ratings', ReactRatings.renderRatings)
   initialiseWidget('a4', 'reports', ReactReports.renderReports)
-
 }
 
 $(init)

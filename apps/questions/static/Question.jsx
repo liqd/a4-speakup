@@ -1,9 +1,8 @@
 /* global django */
 let React = require('react')
 
-
 class Question extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -11,13 +10,13 @@ class Question extends React.Component {
     }
   }
 
-  markFavourite() {
+  markFavourite () {
     let value = !this.state.is_favourite
     this.props.markFavourite(this.props.id, value)
-    this.setState({is_favourite: value})
+    this.setState({ is_favourite: value })
   }
 
-  render() {
+  render () {
     return (
       <div className="list-group-item border-bottom mb-2">
         <div>
@@ -29,11 +28,11 @@ class Question extends React.Component {
             {this.props.isModerator &&
             <div>
               <button type="button" className="btn btn-transparent float-right"
-                      onClick={this.props.handleDelete.bind(this, this.props.id)}>
-                <i className="fas fa-check"/>
+                onClick={this.props.handleDelete.bind(this, this.props.id)}>
+                <i className="fas fa-check" />
               </button>
               <button type="button" className="btn btn-transparent float-right" onClick={this.markFavourite.bind(this)}>
-                <i className={this.state.is_favourite ? "fas fa-star text-secondary" : "far fa-star" }/>
+                <i className={this.state.is_favourite ? 'fas fa-star text-secondary' : 'far fa-star'} />
               </button>
             </div>
             }
