@@ -9,7 +9,7 @@ let QuestionList = (props) => {
           return <Question
             key={question.id}
             handleDelete={props.handleDelete.bind(this)}
-            markFavourite={props.markFavourite.bind(this)}
+            updateQuestion={props.updateQuestion.bind(this)}
             isModerator={props.isModerator}
             id={question.id}
             is_answered={question.is_answered}
