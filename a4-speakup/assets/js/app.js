@@ -10,8 +10,8 @@ require('bootstrap')
 var django = require('django')
 
 // expose react components
-var ReactQuestions = require('../../../apps/questions/static/react_questions.jsx')
-var ReactQuestionsStatisitics = require('../../../apps/questions/static/react_question_statistics.jsx')
+var ReactQuestions = require('../../../apps/questions/assets/react_questions.jsx')
+var ReactQuestionsStatisitics = require('../../../apps/questions/assets/react_question_statistics.jsx')
 var ReactComments = require('adhocracy4').comments
 var ReactRatings = require('adhocracy4').ratings
 var ReactReports = require('adhocracy4').reports
