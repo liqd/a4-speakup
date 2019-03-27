@@ -77,6 +77,7 @@ INSTALLED_APPS = [
 
     'apps.contrib',
     'apps.ideas',
+    'apps.likes',
     'apps.questions',
 
     'apps.organisations',

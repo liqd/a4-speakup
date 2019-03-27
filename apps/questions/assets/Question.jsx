@@ -5,7 +5,9 @@ class Question extends React.Component {
     super(props)
 
     this.state = {
-      is_favourite: this.props.is_favourite
+      is_favourite: this.props.is_favourite,
+      likes: this.props.likes.count,
+      session_like: this.props.likes.session_like
     }
   }
 
@@ -28,6 +30,23 @@ class Question extends React.Component {
         is_favourite: this.props.is_favourite
       })
     }
+    if (this.props.likes !== prevProps.likes) {
+      this.setState({
+        likes: this.props.likes.count,
+        session_like: this.props.likes.session_like
+      })
+    }
+  }
+
+  handleLike () {
+    let value = !this.state.session_like
+    this.props.handleLike(this.props.id, value)
+      .then(this.setState(
+        {
+          session_like: value,
+          likes: value ? this.state.likes + 1 : this.state.likes - 1
+        }
+      ))
   }
 
   render () {
@@ -50,6 +69,12 @@ class Question extends React.Component {
               </button>
             </div>
             }
+            <div>
+              <button type='button' className='btn btn-transparent float-right' onClick={this.handleLike.bind(this)}>
+                <i className={this.state.session_like ? 'fas fa-thumbs-up text-secondary' : 'far fa-thumbs-up'} />
+                <span>{this.state.likes}</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>)
