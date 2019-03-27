@@ -25,6 +25,15 @@ class Filter extends React.Component {
               }
             </div>
           </div>
+          <label htmlFor='markedCheck'>
+            <input
+              type='checkbox'
+              id='markedCheck'
+              name='markedCheck'
+              checked={this.props.onlyMarked}
+              onChange={this.props.toggleOnlyMarked} />
+            {django.gettext('only show marked questions')}
+          </label>
         </div>
       </div>
     )
