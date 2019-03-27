@@ -11,8 +11,23 @@ class Question extends React.Component {
 
   markFavourite () {
     let value = !this.state.is_favourite
-    this.props.markFavourite(this.props.id, value)
-    this.setState({ is_favourite: value })
+    let boolValue = (value) ? 1 : 0
+    let data = { is_favourite: boolValue }
+    this.props.updateQuestion(data, this.props.id)
+      .then((response) => response.json())
+      .then(responseData => this.setState(
+        {
+          is_favourite: responseData.is_favourite
+        }
+      ))
+  }
+
+  componentDidUpdate (prevProps) {
+    if (this.props.is_favourite !== prevProps.is_favourite) {
+      this.setState({
+        is_favourite: this.props.is_favourite
+      })
+    }
   }
 
   render () {

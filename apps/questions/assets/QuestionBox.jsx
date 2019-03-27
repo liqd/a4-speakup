@@ -87,12 +87,6 @@ class QuestionBox extends React.Component {
       })))
   }
 
-  markFavourite (id, value) {
-    let boolValue = (value) ? 1 : 0
-    let data = { is_favourite: boolValue }
-    this.updateQuestion(data, id)
-  }
-
   componentDidMount () {
     this.getItems()
     this.timer = setInterval(() => this.getItems(), 5000)
@@ -121,7 +115,7 @@ class QuestionBox extends React.Component {
         <QuestionList
           questions={this.state.filteredQuestions}
           handleDelete={this.handleDelete.bind(this)}
-          markFavourite={this.markFavourite.bind(this)}
+          updateQuestion={this.updateQuestion.bind(this)}
           isModerator={this.props.isModerator}
         />
       </div>)
