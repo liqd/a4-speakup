@@ -1,5 +1,5 @@
 .header {
-    height: 100px;
+    height: 150px;
     position: relative;
     background-color: $purple;
 }
@@ -7,7 +7,7 @@
 .header__curve,
 .footer__curve {
     position: absolute;
-    height: 50px;
+    height: 75px;
     width: 100%;
     background-color: $white;
 }
@@ -18,7 +18,20 @@
     border-top-right-radius: 50%;
 }
 
-.header__button {
+.header__burger {
+    color: $white;
     position: absolute;
+    top: 0.75*$spacer;
     right: 0;
+}
+
+.header__button {
+    color: $white;
+    position: absolute;
+    top: 30px;
+    right: 6px;
+
+    .dropdown-toggle {
+        color: $white;
+    }
 }

@@ -1,8 +1,8 @@
 //fixes horizontal scroll issue cause by header+footer width
-body {
+html, body {
     overflow-x: hidden;
 }
 
 .base__wrapper {
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 250px);
 }
