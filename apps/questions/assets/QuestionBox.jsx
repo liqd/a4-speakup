@@ -13,6 +13,7 @@ class QuestionBox extends React.Component {
       filteredQuestions: [],
       category: '-1',
       categoryName: django.gettext('select category'),
+      onlyMarked: false,
       filterChanged: false,
       csrfToken: cookie.get('csrftoken')
     }
@@ -27,8 +28,17 @@ class QuestionBox extends React.Component {
     })
   }
 
+  toggleOnlyMarked () {
+    let onlyMarked = !this.state.onlyMarked
+    this.setState({
+      filterChanged: true,
+      onlyMarked: onlyMarked
+    })
+  }
+
   isInFilter (item) {
-    return (this.state.category === '-1' || this.state.category === item.category)
+    return (this.state.category === '-1' || this.state.category === item.category) &&
+      (!this.state.onlyMarked || item.is_favourite)
   }
 
   filterQuestions (questions) {
@@ -105,6 +115,8 @@ class QuestionBox extends React.Component {
           categories={this.props.categories}
           currentCategory={this.state.categoryName}
           setCategories={this.setCategory.bind(this)}
+          onlyMarked={this.state.onlyMarked}
+          toggleOnlyMarked={this.toggleOnlyMarked.bind(this)}
         />
         <QuestionList
           questions={this.state.filteredQuestions}

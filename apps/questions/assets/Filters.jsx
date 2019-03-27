@@ -11,7 +11,7 @@ class Filter extends React.Component {
   render () {
     return (
       <div className='row mb-5'>
-        <div className='col text-center'>
+        <div className='col justify-content-center form-inline'>
           <div className='dropdown'>
             <button className='btn btn-secondary btn-round dropdown-toggle' type='button' id='dropdownMenuButton'
               data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
@@ -25,6 +25,17 @@ class Filter extends React.Component {
               }
             </div>
           </div>
+          <label htmlFor='markedCheck' className='pl-4'>
+            <input
+              type='checkbox'
+              id='markedCheck'
+              name='markedCheck'
+              checked={this.props.onlyMarked}
+              onChange={this.props.toggleOnlyMarked} />
+            <span className='pl-2'>
+              {django.gettext('only show marked questions')}
+            </span>
+          </label>
         </div>
       </div>
     )

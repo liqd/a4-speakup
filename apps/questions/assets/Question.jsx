@@ -31,7 +31,7 @@ class Question extends React.Component {
                 <i className='fas fa-check' />
               </button>
               <button type='button' className='btn btn-transparent float-right' onClick={this.markFavourite.bind(this)}>
-                <i className={this.state.is_favourite ? 'fas fa-star text-secondary' : 'far fa-star'} />
+                <i className={this.state.is_favourite ? 'fas fa-bookmark text-secondary' : 'far fa-bookmark'} />
               </button>
             </div>
             }
