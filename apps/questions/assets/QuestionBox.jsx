@@ -13,7 +13,7 @@ class QuestionBox extends React.Component {
       filteredQuestions: [],
       category: '-1',
       categoryName: django.gettext('select category'),
-      onlyMarked: true,
+      onlyMarked: false,
       filterChanged: false,
       csrfToken: cookie.get('csrftoken')
     }
