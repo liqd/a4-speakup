@@ -329,7 +329,7 @@ LOGIN_URL = 'account_login'
 LOGOUT_URL = 'account_logout'
 LOGIN_REDIRECT_URL = '/'
 
-#ACCOUNT_ADAPTER = 'apps.users.adapters.AccountAdapter'
+ACCOUNT_ADAPTER = 'apps.users.adapters.AccountAdapter'
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 3
 ACCOUNT_EMAIL_REQUIRED = True
@@ -339,6 +339,7 @@ ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 10
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 300  # seconds
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
 ACCOUNT_LOGIN_ON_PASSWORD_RESET = True
+ACCOUNT_SIGNUP_FORM_CLASS = 'apps.users.forms.TermsSignupForm'
 
 # Rest framework
 
@@ -393,3 +394,5 @@ A4_DASHBOARD = {
     'PROJECT_DASHBOARD_CLASS': 'adhocracy4.dashboard.ProjectDashboard',
     'BLUEPRINTS': 'apps.dashboard.blueprints.blueprints'
 }
+
+CONTACT_EMAIL = 'hallo@liqd.net'

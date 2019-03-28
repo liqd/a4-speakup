@@ -15,19 +15,16 @@
                 <a href="{{ login_url }}">login</a>.{% endblocktrans %}</p>
 
             <form id="signup_form" method="post" action="{% url 'account_signup' %}">
-                <div class="form-group">
                 {% csrf_token %}
 
-                {% for hidden_field in form.hidden_fields %}
-                {{ hidden_field }}
-                {% endfor %}
-                </div>
-
-                {% include 'a4-speakup_contrib/form_fields.html' with fields=form.visible_fields %}
+                {% include 'a4-speakup_contrib/form_field.html' with field=form.email %}
+                {% include 'a4-speakup_contrib/form_field.html' with field=form.username %}
+                {% include 'a4-speakup_contrib/form_field.html' with field=form.password1 %}
+                {% include 'a4-speakup_contrib/form_field.html' with field=form.password2 %}
 
                 <div class="form-check">
                     <label class="form-check__label">
-                        <input type="checkbox" class="form-check-input" id="id_terms_of_use">
+                        {{ form.terms_of_use }}
                         {% blocktrans with terms_of_use_url="/terms-of-use" privacy_policy="/datenschutz" %}
                          I have read and accept the <a href="{{terms_of_use_url}}" target="_blank">terms of use</a> and the <a href="{{privacy_policy}}" target="_blank">privacy policy</a>.
                         {% endblocktrans %}
