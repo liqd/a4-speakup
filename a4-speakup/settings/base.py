@@ -328,7 +328,7 @@ LOGIN_URL = 'account_login'
 LOGOUT_URL = 'account_logout'
 LOGIN_REDIRECT_URL = '/'
 
-#ACCOUNT_ADAPTER = 'apps.users.adapters.AccountAdapter'
+ACCOUNT_ADAPTER = 'apps.users.adapters.AccountAdapter'
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 3
 ACCOUNT_EMAIL_REQUIRED = True
@@ -392,3 +392,5 @@ A4_DASHBOARD = {
     'PROJECT_DASHBOARD_CLASS': 'adhocracy4.dashboard.ProjectDashboard',
     'BLUEPRINTS': 'apps.dashboard.blueprints.blueprints'
 }
+
+CONTACT_EMAIL = 'hallo@liqd.net'
