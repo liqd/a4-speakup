@@ -64,6 +64,7 @@ class StatisticsBox extends React.Component {
               is_answered={question.is_answered}
               is_favourite={question.is_favourite}
               category={question.category}
+              likes={question.likes}
             >{question.text}</Question>
           })
           }

@@ -10,11 +10,13 @@ let QuestionList = (props) => {
             key={question.id}
             handleDelete={props.handleDelete.bind(this)}
             updateQuestion={props.updateQuestion.bind(this)}
+            handleLike={props.handleLike.bind(this)}
             isModerator={props.isModerator}
             id={question.id}
             is_answered={question.is_answered}
             is_favourite={question.is_favourite}
             category={question.category}
+            likes={question.likes}
           >{question.text}</Question>
         })
       }

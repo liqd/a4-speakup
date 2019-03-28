@@ -87,6 +87,17 @@ class QuestionBox extends React.Component {
       })))
   }
 
+  handleLike (id, value) {
+    return fetch(this.props.likes_api_url, {
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+        'X-CSRFToken': this.state.csrfToken
+      },
+      method: 'POST',
+      body: JSON.stringify({ id: id, value: value })
+    })
+  }
+
   componentDidMount () {
     this.getItems()
     this.timer = setInterval(() => this.getItems(), 5000)
@@ -116,6 +127,7 @@ class QuestionBox extends React.Component {
           questions={this.state.filteredQuestions}
           handleDelete={this.handleDelete.bind(this)}
           updateQuestion={this.updateQuestion.bind(this)}
+          handleLike={this.handleLike.bind(this)}
           isModerator={this.props.isModerator}
         />
       </div>)
