@@ -33,6 +33,7 @@ class Filter extends React.Component {
               }
             </div>
           </div>
+          {this.props.isModerator &&
           <label htmlFor='markedCheck' className='pl-4'>
             <input
               type='checkbox'
@@ -44,6 +45,7 @@ class Filter extends React.Component {
               {django.gettext('only show marked questions')}
             </span>
           </label>
+          }
         </div>
       </div>
     )
