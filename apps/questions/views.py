@@ -37,10 +37,15 @@ class QuestionCreateView(PermissionRequiredMixin, generic.CreateView):
         return context
 
     def form_valid(self, form):
+        self.request.session['user_category'] \
+            = self.request.POST.get('category')
         form.instance.module = self.module
         return super().form_valid(form)
 
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()
         kwargs['module'] = self.module
+        if self.request.session.get('user_category'):
+            kwargs['category_initial'] \
+                = self.request.session.get('user_category')
         return kwargs
