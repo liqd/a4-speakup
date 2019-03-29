@@ -37,7 +37,7 @@ class QuestionCreateView(PermissionRequiredMixin, generic.CreateView):
         return context
 
     def form_valid(self, form):
-        self.request.session['user_category'] \
+        self.request.session['user_category' + str(self.module.pk)] \
             = self.request.POST.get('category')
         form.instance.module = self.module
         return super().form_valid(form)
@@ -45,7 +45,8 @@ class QuestionCreateView(PermissionRequiredMixin, generic.CreateView):
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()
         kwargs['module'] = self.module
-        if self.request.session.get('user_category'):
+        if self.request.session.get('user_category' + str(self.module.pk)):
             kwargs['category_initial'] \
-                = self.request.session.get('user_category')
+                = self.request.session.get('user_category'
+                                           + str(self.module.pk))
         return kwargs
