@@ -118,10 +118,12 @@ class QuestionBox extends React.Component {
       <div>
         <Filters
           categories={this.props.categories}
-          currentCategory={this.state.categoryName}
+          currentCategory={this.state.category}
+          currentCategoryName={this.state.categoryName}
           setCategories={this.setCategory.bind(this)}
           onlyMarked={this.state.onlyMarked}
           toggleOnlyMarked={this.toggleOnlyMarked.bind(this)}
+          isModerator={this.props.isModerator}
         />
         <QuestionList
           questions={this.state.filteredQuestions}
