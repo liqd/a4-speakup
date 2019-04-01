@@ -8,3 +8,6 @@ class Like(models.Model):
     session = models.ForeignKey(Session)
     question = models.ForeignKey(Question, related_name='question_likes')
     created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('session', 'question')
