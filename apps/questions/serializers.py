@@ -13,13 +13,10 @@ class QuestionSerializer(serializers.ModelSerializer):
 
     def get_likes(self, question):
         session = self.context['request'].session.session_key
-        like_count = question.like_set.all().count()
-
-        session_like = bool(question.like_set.filter(session=session).first())
-
+        session_like = bool(
+            question.question_likes.filter(session=session).first())
         result = {
-            'count': like_count,
+            'count': question.like_count,
             'session_like': session_like
         }
-
         return result
