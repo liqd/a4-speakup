@@ -25,12 +25,25 @@ class AnonymousItem(TimeStampedModel):
         abstract = True
 
 
+class LikeQuerySet(models.QuerySet):
+
+    def annotate_like_count(self):
+        return self.annotate(
+            like_count=models.Count(
+                'question_likes',
+                distinct=True
+            )
+        )
+
+
 class Question(AnonymousItem):
     text = models.TextField(max_length=1000)
     is_answered = models.BooleanField(default=False)
     is_favourite = models.BooleanField(default=False)
 
     category = CategoryField()
+
+    objects = LikeQuerySet.as_manager()
 
     def __str__(self):
         return self.id
