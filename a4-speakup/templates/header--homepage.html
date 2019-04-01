@@ -1,0 +1,22 @@
+{% load userindicator snippet_tags static %}
+{% load_site_menu "header" as header_menu_items %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-0 pb-5">
+    <div class="container d-flex justify-content-center">
+        <a class="navbar-brand mr-0" href="/" rel="home"><img src=" {% static 'images/speakup-logo.png' %}" width="100px" alt="SpeakUp"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fa fa-align-justify"></i></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            {% for menuitem in header_menu_items %}
+            <li class="nav-item {% if request.path == menuitem.url %} active{% endif %}">
+                <a class="nav-link" href="{{ menuitem.url }}"> {{ menuitem.title }} </a>
+            </li>
+            {% endfor %}
+            </ul>
+             {% userindicator %}
+        </div>
+    </div>
+</nav>
