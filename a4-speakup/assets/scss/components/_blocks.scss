@@ -14,3 +14,12 @@
 .block-col-2 {
     @extend .col-sm-6;
 }
+
+.block-call_to_action,
+.block-image_call_to_action {
+    text-align: center;
+}
+
+.block__header_img {
+    padding: 7*$spacer 0;
+}
