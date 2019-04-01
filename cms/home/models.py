@@ -3,10 +3,16 @@ from wagtail.admin import edit_handlers
 from wagtail.core import blocks, fields
 from wagtail.core.models import Page
 
+from cms import blocks as cms_blocks
+
 
 class HomePage(Page):
     body = fields.StreamField([
-        ('paragraph', blocks.RichTextBlock())
+        ('paragraph', blocks.RichTextBlock()),
+        ('call_to_action', cms_blocks.CallToActionBlock()),
+        ('image_call_to_action', cms_blocks.ImageCallToActionBlock()),
+        ('columns_text', cms_blocks.ColumnsBlock()),
+        ('accordion', cms_blocks.DocsBlock())
     ])
 
     content_panels = [
