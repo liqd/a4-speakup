@@ -1,11 +1,17 @@
 {% extends "base.html" %}
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags wagtailimages_tags rules i18n static %}
+
 
 {% block title %}
 {{ page.title }}
+{{ page.subtitle }}
+{% endblock %}
+
+{% block hero %}
 {% endblock %}
 
 {% block content %}
+<div class="hero-unit__img" style="background-image: url({{ page.header_image.url }})"></div>
 <div class="container">
 {{ page.body }}
 </div>
