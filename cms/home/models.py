@@ -2,6 +2,8 @@ from django.db import models
 from wagtail.admin import edit_handlers
 from wagtail.core import blocks, fields
 from wagtail.core.models import Page
+from wagtail.images.blocks import ImageChooserBlock
+from wagtail.images.edit_handlers import ImageChooserPanel
 
 from cms import blocks as cms_blocks
 
@@ -15,9 +17,15 @@ class HomePage(Page):
         ('accordion', cms_blocks.DocsBlock())
     ])
 
+    subtitle = models.CharField(max_length=120, blank=True)
+
+    header_image = models.ImageField(blank=True)
+
     content_panels = [
         edit_handlers.FieldPanel('title'),
-        edit_handlers.StreamFieldPanel('body'),
+        edit_handlers.FieldPanel('subtitle'),
+        edit_handlers.FieldPanel('header_image'),
+        edit_handlers.StreamFieldPanel('body')
     ]
 
     subpage_types = ['cms_home.SimplePage']
