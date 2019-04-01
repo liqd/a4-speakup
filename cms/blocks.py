@@ -28,8 +28,7 @@ class ColumnsBlock(blocks.StructBlock):
         (2, 'Two columns'),
         (3, 'Three columns'),
         (4, 'Four columns'),
-        (5, 'Five columns'),
-        (6, 'Six columns'),
+        (6, 'Six columns')
 
     ], default=2)
 
