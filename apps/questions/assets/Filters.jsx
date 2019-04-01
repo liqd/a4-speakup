@@ -8,14 +8,22 @@ class Filter extends React.Component {
     this.props.setCategories(category)
   }
 
+  getButtonClass () {
+    if (this.props.currentCategory === '-1') {
+      return 'btn btn-secondary btn-round dropdown-toggle'
+    } else {
+      return 'btn btn-primary btn-round dropdown-toggle'
+    }
+  }
+
   render () {
     return (
       <div className='row mb-5'>
         <div className='col justify-content-center form-inline'>
           <div className='dropdown'>
-            <button className='btn btn-secondary btn-round dropdown-toggle' type='button' id='dropdownMenuButton'
+            <button className={this.getButtonClass()} type='button' id='dropdownMenuButton'
               data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-              {this.props.currentCategory}
+              {this.props.currentCategoryName}
             </button>
             <div className='dropdown-menu' aria-labelledby='dropdownMenuButton'>
               <a className='dropdown-item' data-value={-1} onClick={this.selectCategory.bind(this)} href='#'>{django.gettext('all')}</a>
@@ -25,6 +33,7 @@ class Filter extends React.Component {
               }
             </div>
           </div>
+          {this.props.isModerator &&
           <label htmlFor='markedCheck' className='pl-4'>
             <input
               type='checkbox'
@@ -36,6 +45,7 @@ class Filter extends React.Component {
               {django.gettext('only show marked questions')}
             </span>
           </label>
+          }
         </div>
       </div>
     )
