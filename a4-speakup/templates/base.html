@@ -19,7 +19,11 @@
     </head>
     <body>
         {% wagtailuserbar %}
-        {% include 'header.html' %}
+        {% if request.path == '/' %}
+        {% include 'header--homepage.html' %}
+        {% else %}
+          {% include 'header.html' %}
+        {% endif %}
         <div class="base__wrapper">
             <div class="page-header mb-5">
                 <h1>
@@ -48,10 +52,13 @@
             {# Override this in templates to add extra javascript #}
             {% endblock %}
         </div>
-
-        <div class="footer">
-            <div class="footer__curve"></div>
-        </div>
+        {% if request.path == '/' %}
+            <div class="footer--hompage"></div>
+        {% else %}
+            <div class="footer">
+                <div class="footer__curve"></div>
+            </div>
+        {% endif %}
 
     </body>
 </html>
