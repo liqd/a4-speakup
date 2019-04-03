@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-03 15:18+0000\n"
+"POT-Creation-Date: 2019-04-03 16:11+0000\n"
 "PO-Revision-Date: 2017-05-30 12:06+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -335,11 +335,15 @@ msgstr "Schließen"
 msgid "all"
 msgstr "Alle"
 
-#: apps/questions/assets/Filters.jsx:45
+#: apps/questions/assets/Filters.jsx:46
 msgid "only show marked questions"
 msgstr "nur gemerkte Fragen anzeigen"
 
+#: apps/questions/assets/Filters.jsx:57
+msgid "order by likes"
+msgstr "nach Unterstützung sortieren"
+
 #: apps/questions/assets/QuestionBox.jsx:15
-#: apps/questions/assets/QuestionBox.jsx:23
+#: apps/questions/assets/QuestionBox.jsx:25
 msgid "select category"
 msgstr "Merkmal auswählen"
