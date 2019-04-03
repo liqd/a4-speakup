@@ -34,17 +34,31 @@ class Filter extends React.Component {
             </div>
           </div>
           {this.props.isModerator &&
-          <label htmlFor='markedCheck' className='pl-4'>
-            <input
-              type='checkbox'
-              id='markedCheck'
-              name='markedCheck'
-              checked={this.props.onlyMarked}
-              onChange={this.props.toggleOnlyMarked} />
-            <span className='pl-2'>
-              {django.gettext('only show marked questions')}
-            </span>
-          </label>
+          <div>
+            <label htmlFor='markedCheck' className='pl-4'>
+              <input
+                type='checkbox'
+                id='markedCheck'
+                name='markedCheck'
+                checked={this.props.onlyMarked}
+                onChange={this.props.toggleOnlyMarked} />
+              <span className='pl-2'>
+                {django.gettext('only show marked questions')}
+              </span>
+            </label>
+            <label htmlFor='orderedByLikes' className='pl-4'>
+              <input
+                type='checkbox'
+                id='orderedByLikes'
+                name='orderedByLikes'
+                checked={this.props.orderedByLikes}
+                onChange={this.props.toggleOrdering} />
+              <span className='pl-2'>
+                {django.gettext('order by likes')}
+              </span>
+            </label>
+          </div>
+
           }
         </div>
       </div>

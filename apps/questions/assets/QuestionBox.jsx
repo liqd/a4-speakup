@@ -14,7 +14,9 @@ class QuestionBox extends React.Component {
       category: '-1',
       categoryName: django.gettext('select category'),
       onlyMarked: false,
+      orderedByLikes: false,
       filterChanged: false,
+      orderingChanged: false,
       csrfToken: cookie.get('csrftoken')
     }
   }
@@ -33,6 +35,14 @@ class QuestionBox extends React.Component {
     this.setState({
       filterChanged: true,
       onlyMarked: onlyMarked
+    })
+  }
+
+  toggleOrdering () {
+    let orderedByLikes = !this.state.orderedByLikes
+    this.setState({
+      orderingChanged: true,
+      orderedByLikes: orderedByLikes
     })
   }
 
@@ -59,12 +69,21 @@ class QuestionBox extends React.Component {
     })
   }
 
+  getUrl () {
+    let url = this.props.questions_api_url + '?is_answered=0'
+    if (this.state.orderedByLikes) {
+      return url + '&ordering=-like_count'
+    }
+    return url
+  }
+
   getItems () {
-    fetch(this.props.questions_api_url + '?is_answered=0')
+    fetch(this.getUrl())
       .then(response => response.json())
       .then(data => this.setState({
         questions: data,
-        filteredQuestions: this.filterQuestions(data)
+        filteredQuestions: this.filterQuestions(data),
+        orderingChanged: false
       }))
   }
 
@@ -111,6 +130,9 @@ class QuestionBox extends React.Component {
     if (this.state.filterChanged === true) {
       this.updateList()
     }
+    if (this.state.orderingChanged === true) {
+      this.getItems()
+    }
   }
 
   render () {
@@ -121,6 +143,8 @@ class QuestionBox extends React.Component {
           currentCategory={this.state.category}
           currentCategoryName={this.state.categoryName}
           setCategories={this.setCategory.bind(this)}
+          orderedByLikes={this.state.orderedByLikes}
+          toggleOrdering={this.toggleOrdering.bind(this)}
           onlyMarked={this.state.onlyMarked}
           toggleOnlyMarked={this.toggleOnlyMarked.bind(this)}
           isModerator={this.props.isModerator}

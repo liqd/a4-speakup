@@ -1,5 +1,6 @@
-from django.core.exceptions import ValidationError
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import mixins, viewsets
+from rest_framework.filters import OrderingFilter
 
 from adhocracy4.api.mixins import ModuleMixin
 from adhocracy4.api.permissions import ViewSetRulesPermission
@@ -16,19 +17,16 @@ class QuestionViewSet(ModuleMixin,
 
     serializer_class = QuestionSerializer
     permission_classes = (ViewSetRulesPermission,)
+    filter_backends = (DjangoFilterBackend, OrderingFilter,)
+    filter_fields = ('is_answered',)
+    ordering_fields = ('like_count',)
 
     def get_permission_object(self):
         return self.module
 
     def get_queryset(self):
-        qs = Question\
+        return Question\
             .objects\
             .filter(module=self.module)\
-            .order_by('created')
-        is_answered = self.request.query_params.get('is_answered', None)
-        if is_answered:
-            try:
-                return qs.filter(is_answered=is_answered)
-            except ValidationError:
-                return qs
-        return qs
+            .order_by('created')\
+            .annotate_like_count()
