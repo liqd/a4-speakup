@@ -1,0 +1,1207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-03 11:42+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: adhocracy4.js/categories/templates/a4categories/includes/module_categories_form.html:3
+#: adhocracy4.py/categories/templates/a4categories/includes/module_categories_form.html:3
+msgid ""
+"In this section, you can create\n"
+"categories. If you create any, each contribution has to be assigned\n"
+"to one of them. This way, content can be classified."
+msgstr ""
+
+#: adhocracy4.js/categories/templates/a4categories/includes/module_categories_form.html:21
+#: adhocracy4.py/categories/templates/a4categories/includes/module_categories_form.html:21
+msgid "Add category"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/base_dashboard.html:4
+#: adhocracy4.py/dashboard/templates/a4dashboard/base_dashboard.html:4
+msgid "Dashboard"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/base_dashboard_project.html:5
+#: adhocracy4.py/dashboard/templates/a4dashboard/base_dashboard_project.html:5
+msgid "Project Settings"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/base_dashboard_project.html:15
+#: adhocracy4.js/dashboard/templates/a4dashboard/base_dashboard_project.html:33
+#: adhocracy4.py/dashboard/templates/a4dashboard/base_dashboard_project.html:15
+#: adhocracy4.py/dashboard/templates/a4dashboard/base_dashboard_project.html:33
+msgid "Missing fields for publication"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/base_form_module.html:18
+#: adhocracy4.js/dashboard/templates/a4dashboard/base_form_project.html:18
+#: adhocracy4.py/dashboard/templates/a4dashboard/base_form_module.html:18
+#: adhocracy4.py/dashboard/templates/a4dashboard/base_form_project.html:18
+msgid "Save"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/blueprint_list.html:4
+#: adhocracy4.js/dashboard/templates/a4dashboard/blueprint_list.html:7
+#: adhocracy4.js/dashboard/templates/a4dashboard/project_list.html:9
+#: adhocracy4.py/dashboard/templates/a4dashboard/blueprint_list.html:4
+#: adhocracy4.py/dashboard/templates/a4dashboard/blueprint_list.html:7
+#: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:9
+msgid "New Project"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/blueprint_list.html:17
+#: adhocracy4.py/dashboard/templates/a4dashboard/blueprint_list.html:17
+msgid "Phase"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/blueprint_list.html:23
+#: adhocracy4.py/dashboard/templates/a4dashboard/blueprint_list.html:23
+msgid "Select"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/includes/form_field.html:6
+#: adhocracy4.py/dashboard/templates/a4dashboard/includes/form_field.html:6
+msgid "Missing field for publication"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/includes/preview.html:7
+#: adhocracy4.js/dashboard/templates/a4dashboard/project_list.html:35
+#: adhocracy4.py/dashboard/templates/a4dashboard/includes/preview.html:7
+#: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:35
+msgid "Preview"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/includes/preview.html:9
+#: adhocracy4.js/dashboard/templates/a4dashboard/project_list.html:37
+#: adhocracy4.py/dashboard/templates/a4dashboard/includes/preview.html:9
+#: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:37
+msgid "View"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/includes/progress.html:16
+#: adhocracy4.py/dashboard/templates/a4dashboard/includes/progress.html:16
+#, python-format
+msgid "%(value)s from %(max)s"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/includes/progress.html:17
+#: adhocracy4.py/dashboard/templates/a4dashboard/includes/progress.html:17
+msgid "required fields for publication"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/includes/progress.html:27
+#: adhocracy4.py/dashboard/templates/a4dashboard/includes/progress.html:27
+msgid "Publish"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/includes/progress.html:31
+#: adhocracy4.py/dashboard/templates/a4dashboard/includes/progress.html:31
+msgid "Unpublish"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/project_create_form.html:4
+#: adhocracy4.js/dashboard/templates/a4dashboard/project_create_form.html:7
+#: adhocracy4.py/dashboard/templates/a4dashboard/project_create_form.html:4
+#: adhocracy4.py/dashboard/templates/a4dashboard/project_create_form.html:7
+msgid "Create project based on"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/project_create_form.html:23
+#: adhocracy4.py/dashboard/templates/a4dashboard/project_create_form.html:23
+msgid ""
+"After saving the draft project you can further customize and edit your "
+"project and eventually publish it."
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/project_create_form.html:25
+#: adhocracy4.py/dashboard/templates/a4dashboard/project_create_form.html:25
+msgid "Create draft"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/project_create_form.html:27
+#: adhocracy4.py/dashboard/templates/a4dashboard/project_create_form.html:27
+msgid "Cancel"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/project_list.html:4
+#: adhocracy4.js/dashboard/templates/a4dashboard/project_list.html:7
+#: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:4
+#: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:7
+msgid "Projects"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/project_list.html:23
+#: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:23
+msgid "Finished"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/project_list.html:26
+#: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:26
+#: apps/projects/templates/a4-speakup_projects/project_detail.html:28
+msgid "private"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/project_list.html:44
+#: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:44
+#: apps/ideas/templates/a4-speakup_ideas/idea_detail.html:25
+#: apps/projects/templates/a4-speakup_projects/project_detail.html:40
+msgid "Edit"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/project_list.html:53
+#: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:53
+msgid "Duplicate"
+msgstr ""
+
+#: adhocracy4.js/dashboard/templates/a4dashboard/project_list.html:60
+#: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:60
+msgid "We could not find any projects."
+msgstr ""
+
+#: adhocracy4.js/filters/templates/a4filters/widgets/free_text_filter.html:15
+#: adhocracy4.py/dashboard/filter.py:11
+#: adhocracy4.py/filters/templates/a4filters/widgets/free_text_filter.html:15
+msgid "Search"
+msgstr ""
+
+#: adhocracy4.js/forms/templates/a4forms/includes/form_field.html:5
+#: adhocracy4.py/forms/templates/a4forms/includes/form_field.html:5
+msgid "This field is required"
+msgstr ""
+
+#: adhocracy4.js/forms/templates/a4forms/includes/inline_form.html:14
+#: adhocracy4.js/forms/templates/a4forms/includes/inline_form.html:15
+#: adhocracy4.js/forms/templates/a4forms/includes/inline_form.html:18
+#: adhocracy4.js/forms/templates/a4forms/includes/inline_form.html:19
+#: adhocracy4.py/forms/templates/a4forms/includes/inline_form.html:14
+#: adhocracy4.py/forms/templates/a4forms/includes/inline_form.html:15
+#: adhocracy4.py/forms/templates/a4forms/includes/inline_form.html:18
+#: adhocracy4.py/forms/templates/a4forms/includes/inline_form.html:19
+msgid "Remove category"
+msgstr ""
+
+#: adhocracy4.js/images/templates/a4images/image_upload_widget.html:8
+#: adhocracy4.py/images/templates/a4images/image_upload_widget.html:8
+msgid "Remove the picture"
+msgstr ""
+
+#: adhocracy4.js/images/templates/a4images/image_upload_widget.html:12
+#: adhocracy4.py/images/templates/a4images/image_upload_widget.html:12
+msgid "Upload a picture"
+msgstr ""
+
+#: adhocracy4.js/images/templates/a4images/image_upload_widget.html:19
+#: adhocracy4.py/images/templates/a4images/image_upload_widget.html:19
+msgid ""
+"\n"
+"            Your image will be uploaded/removed once you save your changes\n"
+"            at the end of this page.\n"
+"            "
+msgstr ""
+
+#: adhocracy4.js/labels/templates/a4labels/includes/module_labels_form.html:3
+#: adhocracy4.py/labels/templates/a4labels/includes/module_labels_form.html:3
+msgid ""
+"In this section, you can create\n"
+"labels. If you create any, each contribution can be assigned\n"
+"to one or more of them. This way, content can be classified."
+msgstr ""
+
+#: adhocracy4.js/labels/templates/a4labels/includes/module_labels_form.html:21
+#: adhocracy4.py/labels/templates/a4labels/includes/module_labels_form.html:21
+msgid "Add label"
+msgstr ""
+
+#: adhocracy4.js/polls/templates/a4polls/poll_404.html:8
+#: adhocracy4.py/polls/templates/a4polls/poll_404.html:8
+msgid ""
+"Participation is not possible at the moment. The poll has not been set up "
+"yet."
+msgstr ""
+
+#: adhocracy4.js/polls/templates/a4polls/poll_404.html:15
+#: adhocracy4.py/polls/templates/a4polls/poll_404.html:15
+msgid "Setup the poll by adding questions and answers in the dashboard."
+msgstr ""
+
+#: adhocracy4.js/polls/templates/a4polls/poll_dashboard.html:5
+#: adhocracy4.py/polls/templates/a4polls/poll_dashboard.html:5
+msgid "Edit poll"
+msgstr ""
+
+#: adhocracy4.py/categories/dashboard.py:12
+msgid "Categories"
+msgstr ""
+
+#: adhocracy4.py/categories/dashboard.py:14
+msgid "Edit categories"
+msgstr ""
+
+#: adhocracy4.py/categories/fields.py:12
+#: adhocracy4.py/categories/filters.py:14
+#: adhocracy4.py/categories/forms.py:45
+#: adhocracy4.py/exports/mixins.py:149
+msgid "Category"
+msgstr ""
+
+#: adhocracy4.py/categories/forms.py:38
+#: adhocracy4.py/labels/forms.py:14
+msgid "Category name"
+msgstr ""
+
+#: adhocracy4.py/categories/forms.py:39
+msgid "Category icon"
+msgstr ""
+
+#: adhocracy4.py/comments/models.py:37
+#: apps/ideas/exports.py:62
+msgid "Comment"
+msgstr ""
+
+#: adhocracy4.py/comments/models.py:38
+#: adhocracy4.py/exports/mixins.py:121
+msgid "Comments"
+msgstr ""
+
+#: adhocracy4.py/comments/models.py:58
+msgid "deleted by creator"
+msgstr ""
+
+#: adhocracy4.py/comments/models.py:61
+msgid "deleted by moderator"
+msgstr ""
+
+#: adhocracy4.py/comments/serializers.py:49
+msgid "Please choose a category"
+msgstr ""
+
+#: adhocracy4.py/comments/serializers.py:59
+msgid "unknown user"
+msgstr ""
+
+#: adhocracy4.py/dashboard/components/forms/views.py:22
+msgid "Project successfully updated."
+msgstr ""
+
+#: adhocracy4.py/dashboard/components/forms/views.py:47
+msgid "Module successfully updated."
+msgstr ""
+
+#: adhocracy4.py/dashboard/dashboard.py:13
+msgid "Basic settings"
+msgstr ""
+
+#: adhocracy4.py/dashboard/dashboard.py:15
+msgid "Edit basic settings"
+msgstr ""
+
+#: adhocracy4.py/dashboard/dashboard.py:23
+#: apps/projects/templates/a4-speakup_projects/project_detail.html:51
+#: apps/projects/templates/a4-speakup_projects/project_detail.html:67
+msgid "Information"
+msgstr ""
+
+#: adhocracy4.py/dashboard/dashboard.py:25
+msgid "Edit project information"
+msgstr ""
+
+#: adhocracy4.py/dashboard/dashboard.py:33
+msgid "Result"
+msgstr ""
+
+#: adhocracy4.py/dashboard/dashboard.py:35
+msgid "Edit project result"
+msgstr ""
+
+#: adhocracy4.py/dashboard/dashboard.py:43
+msgid "Basic information"
+msgstr ""
+
+#: adhocracy4.py/dashboard/dashboard.py:45
+msgid "Edit basic module information"
+msgstr ""
+
+#: adhocracy4.py/dashboard/dashboard.py:53
+msgid "Phases"
+msgstr ""
+
+#: adhocracy4.py/dashboard/dashboard.py:55
+msgid "Edit phases information"
+msgstr ""
+
+#: adhocracy4.py/dashboard/dashboard.py:64
+msgid "Areasettings"
+msgstr ""
+
+#: adhocracy4.py/dashboard/dashboard.py:65
+msgid "Edit areasettings"
+msgstr ""
+
+#: adhocracy4.py/dashboard/filter.py:15
+msgid "Archived"
+msgstr ""
+
+#: adhocracy4.py/dashboard/filter.py:19
+#: adhocracy4.py/filters/widgets.py:32
+msgid "All"
+msgstr ""
+
+#: adhocracy4.py/dashboard/filter.py:20
+msgid "No"
+msgstr ""
+
+#: adhocracy4.py/dashboard/filter.py:21
+msgid "Yes"
+msgstr ""
+
+#: adhocracy4.py/dashboard/forms.py:57
+msgid "All users can participate (public)."
+msgstr ""
+
+#: adhocracy4.py/dashboard/forms.py:58
+msgid "Only invited users can participate (private)."
+msgstr ""
+
+#: adhocracy4.py/dashboard/forms.py:66
+#: apps/projects/templates/a4-speakup_projects/project_detail.html:71
+msgid "Contact for questions"
+msgstr ""
+
+#: adhocracy4.py/dashboard/forms.py:67
+msgid ""
+"Please name a contact person. The user will then know who is carrying out "
+"this project and to whom they can address possible questions. The contact "
+"person will be shown in the information tab on the project page."
+msgstr ""
+
+#: adhocracy4.py/dashboard/forms.py:72
+msgid "More contact possibilities"
+msgstr ""
+
+#: adhocracy4.py/dashboard/forms.py:85
+#: adhocracy4.py/phases/models.py:64
+#: apps/projects/templates/a4-speakup_projects/includes/dashboard_user_list.html:7
+msgid "Name"
+msgstr ""
+
+#: adhocracy4.py/dashboard/forms.py:87
+msgid "Address"
+msgstr ""
+
+#: adhocracy4.py/dashboard/forms.py:90
+#: apps/projects/templates/a4-speakup_projects/project_detail.html:79
+msgid "Telephone"
+msgstr ""
+
+#: adhocracy4.py/dashboard/forms.py:92
+#: apps/projects/templates/a4-speakup_projects/includes/dashboard_user_invite_list.html:7
+#: apps/projects/templates/a4-speakup_projects/project_detail.html:83
+msgid "Email"
+msgstr ""
+
+#: adhocracy4.py/dashboard/forms.py:94
+#: apps/projects/templates/a4-speakup_projects/project_detail.html:88
+msgid "Website"
+msgstr ""
+
+#: adhocracy4.py/dashboard/forms.py:122
+#: adhocracy4.py/phases/models.py:72
+msgid "End date"
+msgstr ""
+
+#: adhocracy4.py/dashboard/forms.py:122
+msgid "End time"
+msgstr ""
+
+#: adhocracy4.py/dashboard/forms.py:128
+#: adhocracy4.py/phases/models.py:70
+msgid "Start date"
+msgstr ""
+
+#: adhocracy4.py/dashboard/forms.py:128
+msgid "Start time"
+msgstr ""
+
+#: adhocracy4.py/dashboard/mixins.py:192
+msgid "Project successfully duplicated."
+msgstr ""
+
+#: adhocracy4.py/dashboard/views.py:69
+msgid "Project successfully created."
+msgstr ""
+
+#: adhocracy4.py/dashboard/views.py:154
+msgid "Invalid action"
+msgstr ""
+
+#: adhocracy4.py/dashboard/views.py:171
+msgid "Project is already published"
+msgstr ""
+
+#: adhocracy4.py/dashboard/views.py:181
+msgid "Project cannot be published. Required fields are missing."
+msgstr ""
+
+#: adhocracy4.py/dashboard/views.py:190
+msgid "Project cannot be published."
+msgstr ""
+
+#: adhocracy4.py/dashboard/views.py:201
+msgid "Project successfully published."
+msgstr ""
+
+#: adhocracy4.py/dashboard/views.py:206
+msgid "Project is already unpublished"
+msgstr ""
+
+#: adhocracy4.py/dashboard/views.py:215
+msgid "Project successfully unpublished."
+msgstr ""
+
+#: adhocracy4.py/exports/mixins.py:18
+msgid "Link"
+msgstr ""
+
+#: adhocracy4.py/exports/mixins.py:62
+msgid "Positive ratings"
+msgstr ""
+
+#: adhocracy4.py/exports/mixins.py:64
+msgid "Negative ratings"
+msgstr ""
+
+#: adhocracy4.py/exports/mixins.py:97
+msgid "Comment count"
+msgstr ""
+
+#: adhocracy4.py/exports/mixins.py:162
+#: adhocracy4.py/labels/dashboard.py:12
+msgid "Labels"
+msgstr ""
+
+#: adhocracy4.py/exports/mixins.py:174
+msgid "Location (Longitude)"
+msgstr ""
+
+#: adhocracy4.py/exports/mixins.py:176
+msgid "Location (Latitude)"
+msgstr ""
+
+#: adhocracy4.py/exports/mixins.py:178
+msgid "Location label"
+msgstr ""
+
+#: adhocracy4.py/forms/fields.py:18
+#, python-format
+msgid "Time of %(date_label)s"
+msgstr ""
+
+#: adhocracy4.py/images/fields.py:70
+#, python-brace-format
+msgid ""
+"{help_prefix} It must be min. {min_resolution[0]} pixel wide and "
+"{min_resolution[1]} pixel tall. Allowed file formats are {fileformats_str}. "
+"The file size should be max. {max_size_mb} MB."
+msgstr ""
+
+#: adhocracy4.py/images/fields.py:90
+#, python-brace-format
+msgid "{image_name} copyright"
+msgstr ""
+
+#: adhocracy4.py/images/fields.py:93
+#, python-brace-format
+msgid "Copyright shown in the {image_name}."
+msgstr ""
+
+#: adhocracy4.py/images/validators.py:20
+msgid "Unsupported file format. Supported formats are {}."
+msgstr ""
+
+#: adhocracy4.py/images/validators.py:27
+#, python-brace-format
+msgid "Image should be at most {max_size} MB"
+msgstr ""
+
+#: adhocracy4.py/images/validators.py:30
+#, python-brace-format
+msgid "Image must be at least {min_width} pixels wide"
+msgstr ""
+
+#: adhocracy4.py/images/validators.py:33
+#, python-brace-format
+msgid "Image must be at least {min_height} pixels high"
+msgstr ""
+
+#: adhocracy4.py/images/validators.py:43
+#, python-brace-format
+msgid "Image aspect ratio should be {aspect_width}:{aspect_height}"
+msgstr ""
+
+#: adhocracy4.py/images/widgets.py:25
+msgid "Select a picture from your local folder."
+msgstr ""
+
+#: adhocracy4.py/labels/dashboard.py:14
+msgid "Edit labels"
+msgstr ""
+
+#: adhocracy4.py/labels/forms.py:17
+msgid "Label"
+msgstr ""
+
+#: adhocracy4.py/maps/admin.py:14
+#: adhocracy4.py/maps/models.py:11
+msgid "Polygon"
+msgstr ""
+
+#: adhocracy4.py/maps/admin.py:16
+msgid ""
+"Enter a valid GeoJSON object. To initialize a new areasetting enter the "
+"string \"false\" without quotation marks."
+msgstr ""
+
+#: adhocracy4.py/maps/fields.py:16
+msgid "Geometry as GeoJSON"
+msgstr ""
+
+#: adhocracy4.py/maps/fields.py:34
+msgid "Please add a Marker on the map"
+msgstr ""
+
+#: adhocracy4.py/maps/fields.py:39
+msgid "Please draw a Polygon on the map"
+msgstr ""
+
+#: adhocracy4.py/maps/models.py:12
+msgid "Please draw an area on the map."
+msgstr ""
+
+#: adhocracy4.py/modules/models.py:15
+msgid "Title of the module"
+msgstr ""
+
+#: adhocracy4.py/modules/models.py:16
+msgid ""
+"This title will appear in the timeline and the header on the module and "
+"project detail pages. It should be max. 512 characters long"
+msgstr ""
+
+#: adhocracy4.py/modules/models.py:24
+msgid "Short description of the module"
+msgstr ""
+
+#: adhocracy4.py/modules/models.py:25
+msgid ""
+"This short description will appear on the header of the module and project "
+"detail pages. It should briefly state the goal of the module in max. 512 "
+"chars."
+msgstr ""
+
+#: adhocracy4.py/phases/models.py:66
+msgid "Description"
+msgstr ""
+
+#: adhocracy4.py/phases/models.py:90
+msgid "End date can not be smallerthan the start date."
+msgstr ""
+
+#: adhocracy4.py/polls/dashboard.py:14
+msgid "Poll"
+msgstr ""
+
+#: adhocracy4.py/polls/phases.py:15
+msgid "Voting phase"
+msgstr ""
+
+#: adhocracy4.py/polls/phases.py:16
+msgid "Cast votes and discuss the poll."
+msgstr ""
+
+#: adhocracy4.py/polls/phases.py:17
+msgid "polls"
+msgstr ""
+
+#: adhocracy4.py/polls/validators.py:15
+#, python-format
+msgid "Item of type %(item)s for that module already exists"
+msgstr ""
+
+#: adhocracy4.py/polls/validators.py:38
+msgid "Only one vote per question is allowed per user."
+msgstr ""
+
+#: adhocracy4.py/polls/validators.py:47
+msgid "Choice has to belong to the question set in the url."
+msgstr ""
+
+#: adhocracy4.py/projects/admin.py:8
+msgid "Project"
+msgstr ""
+
+#: adhocracy4.py/projects/admin.py:47
+msgid "Information and result"
+msgstr ""
+
+#: adhocracy4.py/projects/admin.py:50
+msgid "Settings"
+msgstr ""
+
+#: adhocracy4.py/projects/admin.py:55
+msgid "Images"
+msgstr ""
+
+#: adhocracy4.py/projects/admin.py:60
+msgid "Contact"
+msgstr ""
+
+#: adhocracy4.py/projects/admin.py:65
+msgid "Topic and location"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:37
+msgid ""
+"Phone numbers can only contain digits, spaces and the following characters: "
+"-, +, (, ). It has to be between 8 and 20 characters long."
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:43
+msgid "Postal address"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:52
+msgid "Contact person"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:72
+msgid "Can your project be located on the map?"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:73
+msgid ""
+"Locate your project. Click inside the marked area or type in an address to "
+"set the marker. A set marker can be dragged when pressed."
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:83
+msgid "Administrative district"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:93
+msgid "Title of your project"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:94
+msgid ""
+"This title will appear on the teaser card and on top of the project detail "
+"page. It should be max. 120 characters long"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:103
+msgid "Short description of your project"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:104
+msgid ""
+"This short description will appear on the header of the project and in the "
+"teaser. It should briefly state the goal of the project in max. 250 chars."
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:112
+msgid "Description of your project"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:113
+msgid ""
+"This description should tell participants what the goal of the project is, "
+"how the project’s participation will look like. It will be always visible in "
+"the „Info“ tab on your project’s page."
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:121
+msgid "Results of your project"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:122
+msgid ""
+"Here you should explain what the expected outcome of the project will be and "
+"how you are planning to use the results. If the project is finished you "
+"should add a summary of the results."
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:129
+msgid "Access to the project"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:130
+msgid ""
+"Please indicate whether this project should be public or restricted to "
+"invited users. Teasers for your project including title and short "
+"description will always be visible to everyone"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:138
+#: adhocracy4.py/projects/models.py:144
+msgid "Header image"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:140
+msgid "The image will be shown as a decorative background image."
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:147
+#: adhocracy4.py/projects/models.py:154
+msgid "Tile image"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:149
+msgid "The image will be shown in the project tile."
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:167
+msgid "Project is archived"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:168
+msgid ""
+"Exclude this project from all listings by default. You can still access this "
+"project by using filters."
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:172
+msgid "Project topics"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:173
+msgid "Add topics to your project."
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:294
+msgid "day"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:294
+msgid "days"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:295
+msgid "hour"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:295
+msgid "hours"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:296
+msgid "minute"
+msgstr ""
+
+#: adhocracy4.py/projects/models.py:296
+msgid "minutes"
+msgstr ""
+
+#: adhocracy4.py/projects/templatetags/project_tags.py:12
+#, python-format
+msgid "%(number)d day left"
+msgid_plural "%(number)d days left"
+msgstr[0] ""
+msgstr[1] ""
+
+#: adhocracy4.py/projects/templatetags/project_tags.py:19
+msgid "a few hours left"
+msgstr ""
+
+#: adhocracy4.py/reports/templatetags/react_reports.py:30
+msgid "Report"
+msgstr ""
+
+#: apps/dashboard/blueprints.py:9 apps/questions/phases.py:15
+msgid "Speak Up"
+msgstr ""
+
+#: apps/dashboard/blueprints.py:11
+msgid "Collect questions for your discussion."
+msgstr ""
+
+#: apps/dashboard/forms.py:13
+msgid "Organisation name"
+msgstr ""
+
+#: apps/ideas/exports.py:61
+msgid "ID"
+msgstr ""
+
+#: apps/ideas/exports.py:63
+msgid "Created"
+msgstr ""
+
+#: apps/ideas/filters.py:10
+msgid "Most Recent"
+msgstr ""
+
+#: apps/ideas/filters.py:11
+msgid "Most Comments"
+msgstr ""
+
+#: apps/ideas/filters.py:12
+msgid "Most Support"
+msgstr ""
+
+#: apps/ideas/filters.py:17
+msgid "Sort by"
+msgstr ""
+
+#: apps/ideas/phases.py:13 apps/questions/phases.py:13
+msgid "Issue phase"
+msgstr ""
+
+#: apps/ideas/phases.py:14
+msgid "Add new ideas."
+msgstr ""
+
+#: apps/ideas/phases.py:15 apps/ideas/phases.py:30 apps/ideas/phases.py:45
+#: apps/ideas/phases.py:62 apps/ideas/phases.py:77
+msgid "ideas collection"
+msgstr ""
+
+#: apps/ideas/phases.py:28
+msgid "Collect phase"
+msgstr ""
+
+#: apps/ideas/phases.py:29
+msgid "Add new ideas and comment them."
+msgstr ""
+
+#: apps/ideas/phases.py:44
+msgid "Rating phase"
+msgstr ""
+
+#: apps/ideas/phases.py:46
+msgid "Get quantative feeback by rating the collected ideas."
+msgstr ""
+
+#: apps/ideas/phases.py:59
+msgid "Feedback phase"
+msgstr ""
+
+#: apps/ideas/phases.py:60
+msgid "Get feedback for collected ideas through rates and comments."
+msgstr ""
+
+#: apps/ideas/phases.py:76
+msgid "Universal phase"
+msgstr ""
+
+#: apps/ideas/phases.py:78
+msgid "Use all features of the idea collection."
+msgstr ""
+
+#: apps/ideas/templates/a4-speakup_ideas/idea_detail.html:12
+#: apps/ideas/templates/a4-speakup_ideas/idea_form.html:19
+msgid "back to project"
+msgstr ""
+
+#: apps/ideas/templates/a4-speakup_ideas/idea_detail.html:29
+msgid "Delete"
+msgstr ""
+
+#: apps/ideas/templates/a4-speakup_ideas/idea_form.html:11
+msgid "create new proposal for this project"
+msgstr ""
+
+#: apps/ideas/templates/a4-speakup_ideas/idea_form.html:13
+msgid "update idea"
+msgstr ""
+
+#: apps/ideas/templates/a4-speakup_ideas/idea_form.html:33
+#: apps/questions/templates/a4-speakup_questions/question_form.html:19
+msgid "post"
+msgstr ""
+
+#: apps/ideas/templates/a4-speakup_ideas/idea_form.html:36
+#: apps/questions/templates/a4-speakup_questions/question_form.html:22
+msgid "cancel"
+msgstr ""
+
+#: apps/ideas/templates/a4-speakup_ideas/idea_list.html:13
+msgid "Create Proposal"
+msgstr ""
+
+#: apps/ideas/templates/a4-speakup_ideas/idea_list.html:48
+msgid "No proposals found"
+msgstr ""
+
+#: apps/ideas/views.py:107
+msgid "Your Idea has been deleted"
+msgstr ""
+
+#: apps/organisations/views.py:17
+msgid "Organisation successfully updated."
+msgstr ""
+
+#: apps/projects/dashboard.py:12
+#: apps/projects/templates/a4-speakup_projects/dashboard_project_moderators.html:4
+#: apps/projects/templates/a4-speakup_projects/dashboard_project_moderators.html:12
+msgid "Moderators"
+msgstr ""
+
+#: apps/projects/forms.py:38
+msgid "Invite users via email"
+msgstr ""
+
+#: apps/projects/forms.py:43
+msgid "Invite users via file upload"
+msgstr ""
+
+#: apps/projects/forms.py:44
+msgid "Upload a csv file containing email addresses."
+msgstr ""
+
+#: apps/projects/forms.py:61
+msgid "Please enter email addresses or upload a file"
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/dashboard_project_moderators.html:7
+msgid "Edit Moderators"
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/dashboard_project_moderators.html:10
+msgid "Pending Invitations"
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/includes/dashboard_user_invite_list.html:8
+msgid "Date"
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/includes/dashboard_user_invite_list.html:9
+#: apps/projects/templates/a4-speakup_projects/includes/dashboard_user_invite_list.html:21
+#: apps/projects/templates/a4-speakup_projects/includes/dashboard_user_invite_list.html:22
+#: apps/projects/templates/a4-speakup_projects/includes/dashboard_user_list.html:8
+#: apps/projects/templates/a4-speakup_projects/includes/dashboard_user_list.html:19
+#: apps/projects/templates/a4-speakup_projects/includes/dashboard_user_list.html:20
+msgid "Remove"
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/includes/dashboard_user_invite_list.html:31
+#: apps/projects/templates/a4-speakup_projects/includes/dashboard_user_list.html:30
+msgid "None"
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/includes/dashboard_users_from_email_form.html:24
+msgid "Add"
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/includes/dashboard_users_from_email_form.html:41
+msgid "Upload"
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/moderatorinvite_detail.html:4
+#: apps/projects/templates/a4-speakup_projects/moderatorinvite_form.html:4
+#, python-format
+msgid "Invitation to %(project)s"
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/moderatorinvite_detail.html:8
+#: apps/projects/templates/a4-speakup_projects/moderatorinvite_form.html:9
+#, python-format
+msgid "Moderation invitation for %(project)s"
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/moderatorinvite_detail.html:11
+msgid ""
+"Please login to procceed. If you do not have an account, register and "
+"revisit the invitation link."
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/moderatorinvite_detail.html:13
+msgid "Proceed to login"
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/moderatorinvite_detail.html:14
+#: apps/users/templates/a4-speakup_users/indicator.html:41
+#: apps/users/templates/a4-speakup_users/indicator.html:45
+msgid "Register"
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/moderatorinvite_form.html:12
+msgid ""
+"You were invited by the initiator of the project. If you accept you will be "
+"able to moderate the project."
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/moderatorinvite_form.html:20
+msgid "Accept"
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/moderatorinvite_form.html:21
+msgid "Decline"
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/project_detail.html:10
+msgid "This project is in not published yet."
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/project_detail.html:31
+msgid "archived"
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/project_detail.html:33
+msgid "finished"
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/project_detail.html:54
+msgid "Questions"
+msgstr ""
+
+#: apps/projects/templates/a4-speakup_projects/project_detail.html:57
+#: apps/projects/templates/a4-speakup_projects/project_detail.html:104
+msgid "Statistics"
+msgstr ""
+
+#: apps/projects/views.py:80
+msgid "Invitation succesfully removed."
+msgstr ""
+
+#: apps/projects/views.py:121
+msgid "Following users already accepted an invitation: "
+msgstr ""
+
+#: apps/projects/views.py:129
+msgid "Following users are already invited: "
+msgstr ""
+
+#: apps/projects/views.py:172
+msgid "Invite moderators via email"
+msgstr ""
+
+#: apps/projects/views.py:173
+msgid "Invite moderators via file upload"
+msgstr ""
+
+#: apps/projects/views.py:174
+msgid "{} moderator invited."
+msgstr ""
+
+#: apps/projects/views.py:174
+msgid "{} moderators invited."
+msgstr ""
+
+#: apps/projects/views.py:175
+msgid "Moderator successfully removed."
+msgstr ""
+
+#: apps/questions/phases.py:14
+msgid "Add question."
+msgstr ""
+
+#: apps/questions/templates/a4-speakup_questions/question_list.html:14
+msgid "Add Question"
+msgstr ""
+
+#: apps/users/__init__.py:6
+msgid ""
+"Enter a valid username. This value may contain only letters, digits, spaces "
+"and @/./+/-/_ characters. It must start with a digit or a letter."
+msgstr ""
+
+#: apps/users/admin.py:10
+msgid "Permissions"
+msgstr ""
+
+#: apps/users/admin.py:11
+msgid "Important dates"
+msgstr ""
+
+#: apps/users/fields.py:12
+msgid "Please enter correct email addresses, separated by commas."
+msgstr ""
+
+#: apps/users/forms.py:10
+msgid "Terms of use"
+msgstr ""
+
+#: apps/users/forms.py:11
+msgid "Please accept the terms of use."
+msgstr ""
+
+#: apps/users/models.py:9
+msgid "A user with that username already exists."
+msgstr ""
+
+#: apps/users/models.py:10
+msgid ""
+"Required. 60 characters or fewer. Letters, digits, spaces and @/./+/-/_ only."
+msgstr ""
+
+#: apps/users/models.py:16
+msgid "A user with that email address already exists."
+msgstr ""
+
+#: apps/users/models.py:18
+msgid "Designates whether the user can log into this admin site."
+msgstr ""
+
+#: apps/users/models.py:19
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr ""
+
+#: apps/users/models.py:22
+msgid ""
+"Designates whether you want to receive notifications about content you "
+"follow. Unselect if you do not want to receive notifications."
+msgstr ""
+
+#: apps/users/models.py:29
+msgid "username"
+msgstr ""
+
+#: apps/users/models.py:37
+msgid "email address"
+msgstr ""
+
+#: apps/users/models.py:42
+msgid "staff status"
+msgstr ""
+
+#: apps/users/models.py:45
+msgid "active"
+msgstr ""
+
+#: apps/users/models.py:51
+msgid "Send me email notifications"
+msgstr ""
+
+#: apps/users/models.py:61
+msgid "User"
+msgstr ""
+
+#: apps/users/models.py:62
+msgid "Users"
+msgstr ""
+
+#: apps/users/templates/a4-speakup_users/indicator.html:22
+#: apps/users/templates/a4-speakup_users/indicator.html:25
+msgid "Logout"
+msgstr ""
+
+#: apps/users/templates/a4-speakup_users/indicator.html:41
+#: apps/users/templates/a4-speakup_users/indicator.html:44
+msgid "Login"
+msgstr ""
