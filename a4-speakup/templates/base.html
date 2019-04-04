@@ -31,15 +31,15 @@
                 </h1>
             </div>
             {% if messages %}
-              {% for message in messages %}
-                  <div class="alert alert--{{ message.level_tag }}" role="alert">
-                      <div class="text-center alert-text">
-                      {{ message }}
-                      </div>
-                  </div>
-              {% endfor %}
-              {% endif %}
-              {% block extra_messages %}{% endblock %}
+            {% for message in messages %}
+            <div class="alert alert--{{ message.level_tag }}" role="alert">
+                <div class="text-center alert-text">
+                {{ message }}
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% block extra_messages %}{% endblock %}
 
             <div class="content">
             {% block content %}
@@ -53,11 +53,9 @@
             {% endblock %}
         </div>
         {% if request.path == '/' %}
-            <div class="footer--hompage"></div>
+        {% include 'footer--homepage.html' %}
         {% else %}
-            <div class="footer">
-                <div class="footer__curve"></div>
-            </div>
+        {% include 'footer.html' %}
         {% endif %}
 
     </body>
