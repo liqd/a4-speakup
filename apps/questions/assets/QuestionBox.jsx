@@ -107,13 +107,13 @@ class QuestionBox extends React.Component {
   }
 
   handleLike (id, value) {
-    return fetch(this.props.likes_api_url, {
+    return fetch('/api/questions/' + id + '/likes/', {
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
         'X-CSRFToken': this.state.csrfToken
       },
       method: 'POST',
-      body: JSON.stringify({ id: id, value: value })
+      body: JSON.stringify({ question: id, value: value })
     })
   }
 
