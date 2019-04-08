@@ -17,6 +17,7 @@ class IssuePhase(phases.PhaseContent):
 
     features = {
         'crud': (models.Question,),
+        'like': (models.Question,)
     }
 
 
