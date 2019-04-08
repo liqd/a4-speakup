@@ -38,15 +38,24 @@ class Question extends React.Component {
     }
   }
 
+  handleErrors (response) {
+    if (!response.ok) {
+      throw Error(response.statusText)
+    }
+    return response
+  }
+
   handleLike () {
     let value = !this.state.session_like
     this.props.handleLike(this.props.id, value)
-      .then(this.setState(
+      .then(this.handleErrors)
+      .then((response) => this.setState(
         {
           session_like: value,
           likes: value ? this.state.likes + 1 : this.state.likes - 1
         }
       ))
+      .catch((response) => { console.log(response.message) })
   }
 
   render () {
