@@ -10,8 +10,7 @@ from .serializers import LikeSerializer
 
 
 class LikesViewSet(mixins.CreateModelMixin,
-                   viewsets.GenericViewSet,
-                   ):
+                   viewsets.GenericViewSet):
     serializer_class = LikeSerializer
     permission_classes = (ViewSetRulesPermission,)
 
@@ -32,8 +31,9 @@ class LikesViewSet(mixins.CreateModelMixin,
             session_key=self.request.session.session_key)
         like_value = bool(self.request.data['value'])
         if like_value:
-            serializer.save(session=session)
-        else:
+            serializer.save(session=session, question=self.question)
+        elif Like.objects.filter(session=session,
+                                 question=self.question).exists():
             Like.objects.get(session=session, question=self.question).delete()
 
     @property

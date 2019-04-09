@@ -7,4 +7,7 @@ class LikeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Like
-        fields = ('question', 'id')
+        fields = ('id',)
+
+    def create(self, validated_data):
+        return Like.objects.get_or_create(**validated_data)

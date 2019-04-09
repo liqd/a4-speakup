@@ -113,7 +113,7 @@ class QuestionBox extends React.Component {
         'X-CSRFToken': this.state.csrfToken
       },
       method: 'POST',
-      body: JSON.stringify({ question: id, value: value })
+      body: JSON.stringify({ value: value })
     })
   }
 
