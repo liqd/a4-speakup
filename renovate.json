@@ -1,0 +1,29 @@
+{
+  "extends": [
+    "config:base"
+  ],
+
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "devDependencies": {
+    "automerge": true
+  },
+  "digest": {
+    "enabled": false
+  },
+
+  "labels": [
+    "renovate"
+  ],
+
+  "packageRules": [
+      {
+        "packagePatterns": ["^eslint"],
+        "groupName": "eslint packages"
+      }
+    ],
+
+  "schedule": ["on tuesday"]
+}
