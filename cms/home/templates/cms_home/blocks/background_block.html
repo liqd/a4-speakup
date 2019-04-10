@@ -1,0 +1,10 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% image value.image max-1920x700 as image %}
+<div class="block block__background" style="background-image: url({{ image.url }})">
+    <div class="block row mb-5">
+        <div class="col-md-8 offset-md-2">
+            {{ value.body }}
+        </div>
+    </div>
+</div>
