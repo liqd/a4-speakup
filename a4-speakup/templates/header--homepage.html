@@ -2,7 +2,7 @@
 {% load_site_menu "header" as header_menu_items %}
 
 <div class="hompage">
-    <nav class="homepage navbar navbar-expand-lg justify-content-center">
+    <nav class="homepage navbar navbar-expand-lg justify-content-end">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><i class="fa fa-align-justify"></i></span>
         </button>
@@ -19,6 +19,6 @@
         </div>
     </nav>
     <div class="text-center">
-        <a href="/" rel="home"><img src=" {% static 'images/logo_speakup.png' %}" width="20%" alt="SpeakUp"/></a>
+        <a href="/" rel="home"><img class="homepage__logo" src="{% static 'images/logo_speakup.png' %}" alt="SpeakUp"/></a>
     </div>
 </div>
