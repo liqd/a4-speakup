@@ -1,8 +1,8 @@
 {% load userindicator snippet_tags static %}
 {% load_site_menu "header" as header_menu_items %}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light px-0">
-    <div class="container d-flex justify-content-center">
+<div class="hompage">
+    <nav class="homepage navbar navbar-expand-lg justify-content-center">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><i class="fa fa-align-justify"></i></span>
         </button>
@@ -17,5 +17,8 @@
             </ul>
              {% userindicator %}
         </div>
+    </nav>
+    <div class="text-center">
+        <a href="/" rel="home"><img src=" {% static 'images/logo_speakup.png' %}" width="20%" alt="SpeakUp"/></a>
     </div>
-</nav>
+</div>

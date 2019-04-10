@@ -3,12 +3,10 @@
 
 
 {% block title %}
-<div class="block__header_img homepage" {% if page.header_image %} style="background: rgba(255, 255, 255, 0.1); background-image: url({{ page.header_image.url }});  background-repeat: no-repeat; background-position: center; background-size: cover; " {% endif %}>
-    <div class="block__header_img_overlay">
+<div class="block__header_img homepage" {% if page.header_image %} style=" background-image: url({{ page.header_image.url }});  background-repeat: no-repeat; background-position: center; background-size: cover; " {% endif %}>
     <div class="container block__header_content text-center">
         <h1>{{ page.title }}</h1>
         <h2>{{ page.subtitle }}</h2>
-    </div>
     </div>
 </div>
 {% endblock %}
@@ -16,7 +14,9 @@
 {% block content %}
 {% for block in self.body %}
     {% if block.block_type == 'background' or block.block_type == 'image_call_to_action'%}
+        <div class="mb-5 homepage">
         {{ block }}
+        </div>
     {% else %}
     <div class="container mb-5 homepage">
     {{ block }}

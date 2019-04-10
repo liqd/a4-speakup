@@ -7,6 +7,9 @@
 
     .block-col-4,
     .block-col-6 {
-        text-align: center;
+        .richtext-image.full-width {
+          @extend .mx-auto;
+          @extend .d-block;
+        }
     }
 }
