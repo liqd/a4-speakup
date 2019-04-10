@@ -1,9 +1,9 @@
 {% load wagtailcore_tags wagtailimages_tags %}
 
 {% image value.image max-1920x700 as image %}
-<div class="block block__background" style="background-image: url({{ image.url }})">
-    <div class="block row mb-5">
-        <div class="col-md-8 offset-md-2">
+<div class="block block__background" style="{% if image.url %} background-image: url({{ image.url }}); background-repeat: no-repeat; background-position: center; background-size: cover; {% else %} background-colour: rgba(255, 255, 255, 0.1); {% endif %}">
+    <div class="container">
+        <div class="block mb-5 py-3">
             {{ value.body }}
         </div>
     </div>

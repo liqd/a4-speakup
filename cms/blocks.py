@@ -51,7 +51,7 @@ class DocsBlock(blocks.StructBlock):
 
 
 class BackgroundBlock(blocks.StructBlock):
-    image = ImageChooserBlock()
+    image = ImageChooserBlock(required=False)
     body = blocks.RichTextBlock(required=False)
 
     class Meta:
