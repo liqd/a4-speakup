@@ -18,10 +18,10 @@ def react_questions(context, obj):
     categories = [category.name for category in obj.category_set.all()]
     questions_api_url = reverse('questions-list', kwargs={'module_pk': obj.pk})
 
-    permission = 'a4-speakup_likes.add_like'
-    has_rating_permission = user.has_perm(
+    permission = 'a4-speakup_questions.propose_question'
+    has_liking_permission = user.has_perm(
         permission, obj)
-    would_have_rating_permission = NormalUser().would_have_perm(
+    would_have_liking_permission = NormalUser().would_have_perm(
         permission, obj
     )
 
@@ -29,8 +29,8 @@ def react_questions(context, obj):
         'questions_api_url': questions_api_url,
         'isModerator': is_moderator,
         'categories': categories,
-        'hasRatingPermission': (has_rating_permission
-                                or would_have_rating_permission)
+        'hasLikingPermission': (has_liking_permission
+                                or would_have_liking_permission)
     }
 
     return format_html(

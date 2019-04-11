@@ -155,7 +155,7 @@ class QuestionBox extends React.Component {
           updateQuestion={this.updateQuestion.bind(this)}
           handleLike={this.handleLike.bind(this)}
           isModerator={this.props.isModerator}
-          hasRatingPermission={this.props.hasRatingPermission}
+          hasLikingPermission={this.props.hasLikingPermission}
         />
       </div>)
   }

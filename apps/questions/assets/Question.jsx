@@ -79,7 +79,7 @@ class Question extends React.Component {
             </div>
             }
             <div>
-              {this.props.hasRatingPermission
+              {this.props.hasLikingPermission
                 ? <button type='button' className='btn btn-transparent float-right' onClick={this.handleLike.bind(this)}>
                   <i className={this.state.session_like ? 'fas fa-thumbs-up text-secondary mr-1' : 'far fa-thumbs-up mr-1'} />
                   <span>{this.state.likes}</span>

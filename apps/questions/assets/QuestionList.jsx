@@ -12,7 +12,7 @@ let QuestionList = (props) => {
             updateQuestion={props.updateQuestion.bind(this)}
             handleLike={props.handleLike.bind(this)}
             isModerator={props.isModerator}
-            hasRatingPermission={props.hasRatingPermission}
+            hasLikingPermission={props.hasLikingPermission}
             id={question.id}
             is_answered={question.is_answered}
             is_favourite={question.is_favourite}
