@@ -1,5 +1,10 @@
 import rules
 
-from .predicates import phase_allows_like
+from apps.questions.models import Question
+
+from .predicates import phase_allows_like, phase_allows_like_model
 
 rules.add_perm('a4-speakup_likes.add_like', phase_allows_like)
+
+rules.add_perm('a4-speakup_likes.add_like_model',
+               phase_allows_like_model(Question))

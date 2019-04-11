@@ -2,8 +2,7 @@
 __pycache__
 .cache
 myvenv
-db.sqlite3
-test_db.sqlite3
+*.sqlite3
 /static
 .DS_Store
 *.mo
