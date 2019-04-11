@@ -4,6 +4,8 @@ from django import template
 from django.core.urlresolvers import reverse
 from django.utils.html import format_html
 
+from adhocracy4.rules.discovery import NormalUser
+
 register = template.Library()
 
 
@@ -16,10 +18,19 @@ def react_questions(context, obj):
     categories = [category.name for category in obj.category_set.all()]
     questions_api_url = reverse('questions-list', kwargs={'module_pk': obj.pk})
 
+    permission = 'a4-speakup_questions.rate_question'
+    has_rating_permission = user.has_perm(
+        permission, obj)
+    would_have_rating_permission = NormalUser().would_have_perm(
+        permission, obj
+    )
+
     attributes = {
         'questions_api_url': questions_api_url,
         'isModerator': is_moderator,
-        'categories': categories
+        'categories': categories,
+        'hasRatingPermission': (has_rating_permission
+                                or would_have_rating_permission)
     }
 
     return format_html(

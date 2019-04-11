@@ -79,10 +79,16 @@ class Question extends React.Component {
             </div>
             }
             <div>
-              <button type='button' className='btn btn-transparent float-right' onClick={this.handleLike.bind(this)}>
-                <i className={this.state.session_like ? 'fas fa-thumbs-up text-secondary' : 'far fa-thumbs-up'} />
-                <span>{this.state.likes}</span>
-              </button>
+              {this.props.hasRatingPermission
+                ? <button type='button' className='btn btn-transparent float-right' onClick={this.handleLike.bind(this)}>
+                  <i className={this.state.session_like ? 'fas fa-thumbs-up text-secondary mr-1' : 'far fa-thumbs-up mr-1'} />
+                  <span>{this.state.likes}</span>
+                </button>
+                : <div className='float-right'>
+                  <i className='far fa-thumbs-up text-muted mr-1' />
+                  <span>{this.state.likes}</span>
+                </div>
+              }
             </div>
           </div>
         </div>
