@@ -6,11 +6,6 @@ from adhocracy4.modules.predicates import (is_context_initiator,
 from adhocracy4.phases.predicates import phase_allows_add
 
 from .models import Question
-from .predicates import phase_allows_rate
-
-rules.add_perm('a4-speakup_questions.rate_question',
-               phase_allows_rate(Question))
-
 
 rules.add_perm('a4-speakup_questions.change_question',
                is_superuser | is_context_moderator | is_context_initiator)
