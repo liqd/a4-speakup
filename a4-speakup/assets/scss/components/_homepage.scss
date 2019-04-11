@@ -2,14 +2,14 @@
     font-family: $font-family-homepage;
 
     h3 {
-        font-family: $font-family-hompage-mono;
+        font-family: $font-family-homepage-mono;
     }
 
     .block-col-4,
     .block-col-6 {
         .richtext-image.full-width {
-          @extend .mx-auto;
-          @extend .d-block;
+            @extend .mx-auto;
+            @extend .d-block;
         }
     }
 }

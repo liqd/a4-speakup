@@ -20,7 +20,7 @@
     <body>
         {% wagtailuserbar %}
         {% if request.path == '/' %}
-        {% include 'header--homepage.html' %}
+        {% include 'header-light.html' %}
         {% else %}
           {% include 'header.html' %}
         {% endif %}
@@ -53,7 +53,6 @@
             {% endblock %}
         </div>
         {% if request.path == '/' %}
-            <div class="footer--hompage"></div>
         {% else %}
             <div class="footer">
                 <div class="footer__curve"></div>
