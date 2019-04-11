@@ -48,3 +48,12 @@ class DocsBlock(blocks.StructBlock):
     class Meta:
         template = 'cms_home/blocks/docs_block.html'
         icon = 'arrow-down'
+
+
+class BackgroundBlock(blocks.StructBlock):
+    image = ImageChooserBlock(required=False)
+    body = blocks.RichTextBlock(required=False)
+
+    class Meta:
+        template = 'cms_home/blocks/background_block.html'
+        icon = 'view'
