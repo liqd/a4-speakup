@@ -50,11 +50,9 @@
             {# Override this in templates to add extra javascript #}
             {% endblock %}
         </div>
-        {% if request.path == '/' %}
-        {% include 'footer--homepage.html' %}
-        {% else %}
-        {% include 'footer.html' %}
-        {% endif %}
+        {% block footer %}
+            {% include 'footer.html' %}
+        {% endblock %}
 
     </body>
 </html>
