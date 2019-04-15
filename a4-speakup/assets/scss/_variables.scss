@@ -233,6 +233,8 @@ $transition-collapse:         height .35s ease !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
+$font-family-homepage:        'Plantin', 'Times New Roman', serif !default;
+$font-family-homepage-mono:    'Favorit', monospace !default;
 $font-family-speakup:         roboto, arial !default;
 $font-family-sans-serif:      -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-monospace:       sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace !default;

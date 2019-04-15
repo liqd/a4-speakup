@@ -1,36 +1,44 @@
 from django.contrib.sessions.models import Session
-from rest_framework import status
-from rest_framework.parsers import JSONParser
-from rest_framework.response import Response
-from rest_framework.views import APIView
+from django.shortcuts import get_object_or_404
+from rest_framework import mixins, viewsets
 
+from adhocracy4.api.permissions import ViewSetRulesPermission
 from apps.questions.models import Question
 
 from .models import Like
+from .serializers import LikeSerializer
 
 
-class LikeView(APIView):
+class LikesViewSet(mixins.CreateModelMixin,
+                   viewsets.GenericViewSet):
+    serializer_class = LikeSerializer
+    permission_classes = (ViewSetRulesPermission,)
 
-    parser_classes = (JSONParser,)
+    def dispatch(self, request, *args, **kwargs):
+        self.question_pk = kwargs.get('question_pk', '')
+        return super().dispatch(request, *args, **kwargs)
 
-    def post(self, request, format=None):
+    def get_permission_object(self):
+        return self.question
 
-        if not request.session.session_key:
-            request.session.create()
+    def get_queryset(self):
+        return Like.objects.filter(question=self.question)
 
-        try:
-            question_id = request.data['id']
-            like_value = bool(request.data['value'])
+    def perform_create(self, serializer):
+        if not self.request.session.session_key:
+            self.request.session.create()
+        session = Session.objects.get(
+            session_key=self.request.session.session_key)
+        like_value = bool(self.request.data['value'])
+        if like_value:
+            serializer.save(session=session, question=self.question)
+        elif Like.objects.filter(session=session,
+                                 question=self.question).exists():
+            Like.objects.get(session=session, question=self.question).delete()
 
-            question = Question.objects.get(id=question_id)
-            session = Session.objects.get(
-                session_key=request.session.session_key)
-
-            if like_value:
-                Like.objects.get_or_create(session=session, question=question)
-            else:
-                Like.objects.get(session=session, question=question).delete()
-
-            return Response(status=status.HTTP_200_OK)
-        except (ValueError, Question.DoesNotExist, Session.DoesNotExist):
-            return Response(status=status.HTTP_400_BAD_REQUEST)
+    @property
+    def question(self):
+        return get_object_or_404(
+            Question,
+            pk=self.question_pk
+        )

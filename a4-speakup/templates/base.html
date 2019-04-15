@@ -19,11 +19,9 @@
     </head>
     <body>
         {% wagtailuserbar %}
-        {% if request.path == '/' %}
-        {% include 'header--homepage.html' %}
-        {% else %}
-          {% include 'header.html' %}
-        {% endif %}
+        {% block header %}
+            {% include 'header.html' %}
+        {% endblock %}
         <div class="base__wrapper">
             <div class="page-header mb-5">
                 <h1>

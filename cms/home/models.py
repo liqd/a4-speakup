@@ -11,6 +11,7 @@ from cms import blocks as cms_blocks
 class HomePage(Page):
     body = fields.StreamField([
         ('paragraph', blocks.RichTextBlock()),
+        ('background', cms_blocks.BackgroundBlock()),
         ('call_to_action', cms_blocks.CallToActionBlock()),
         ('image_call_to_action', cms_blocks.ImageCallToActionBlock()),
         ('columns_text', cms_blocks.ColumnsBlock()),

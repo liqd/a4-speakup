@@ -46,7 +46,7 @@ class Question(AnonymousItem):
     objects = LikeQuerySet.as_manager()
 
     def __str__(self):
-        return self.id
+        return str(self.id)
 
     def get_absolute_url(self):
         from django.core.urlresolvers import reverse

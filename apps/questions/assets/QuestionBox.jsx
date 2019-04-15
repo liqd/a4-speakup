@@ -107,13 +107,13 @@ class QuestionBox extends React.Component {
   }
 
   handleLike (id, value) {
-    return fetch(this.props.likes_api_url, {
+    return fetch('/api/questions/' + id + '/likes/', {
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
         'X-CSRFToken': this.state.csrfToken
       },
       method: 'POST',
-      body: JSON.stringify({ id: id, value: value })
+      body: JSON.stringify({ value: value })
     })
   }
 
@@ -155,6 +155,7 @@ class QuestionBox extends React.Component {
           updateQuestion={this.updateQuestion.bind(this)}
           handleLike={this.handleLike.bind(this)}
           isModerator={this.props.isModerator}
+          hasLikingPermission={this.props.hasLikingPermission}
         />
       </div>)
   }
