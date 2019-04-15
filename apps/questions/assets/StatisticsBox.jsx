@@ -35,8 +35,9 @@ class StatisticsBox extends React.Component {
         count++
       }
     })
-    return Math.round(count * 100 / this.state.questions.length)
+    return Math.round(count * 100 / this.state.questions.length ) || 0
   }
+
 
   render () {
     return (
