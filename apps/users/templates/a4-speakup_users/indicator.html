@@ -15,7 +15,7 @@
     >
         {{ request.user.username }}
     </button>
-    <div class="dropdown-menu">
+    <div class="dropdown-menu dropdown-menu-right">
         {% for organisation in request.user.organisations %}
             <a href="{% url 'a4dashboard:project-list' organisation_slug=organisation.slug %}" class="dropdown-item">{{ organisation.name }}</a>
         {% endfor %}
