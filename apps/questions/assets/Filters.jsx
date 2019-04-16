@@ -10,9 +10,9 @@ class Filter extends React.Component {
 
   getButtonClass () {
     if (this.props.currentCategory === '-1') {
-      return 'btn btn-secondary btn-round dropdown-toggle'
-    } else {
       return 'btn btn-primary btn-round dropdown-toggle'
+    } else {
+      return 'btn btn-secondary btn-round dropdown-toggle'
     }
   }
 

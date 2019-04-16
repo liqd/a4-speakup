@@ -69,18 +69,18 @@ class Question extends React.Component {
             <span className='badge badge-gray'>{ this.props.category }</span>
             {this.props.isModerator &&
             <div>
-              <button type='button' className='btn btn-transparent float-right'
+              <button type='button' className='btn btn-transparent float-right px-3'
                 onClick={this.props.handleDelete.bind(this, this.props.id)}>
-                <i className='fas fa-check' />
+                <i className='fas fa-check px-1' />
               </button>
-              <button type='button' className='btn btn-transparent float-right' onClick={this.markFavourite.bind(this)}>
-                <i className={this.state.is_favourite ? 'fas fa-bookmark text-secondary' : 'far fa-bookmark'} />
+              <button type='button' className='btn btn-transparent float-right px-3' onClick={this.markFavourite.bind(this)}>
+                <i className={this.state.is_favourite ? 'fas fa-bookmark px-2 text-secondary' : 'far fa-bookmark px-2'} />
               </button>
             </div>
             }
             <div>
               {this.props.hasLikingPermission
-                ? <button type='button' className='btn btn-transparent float-right' onClick={this.handleLike.bind(this)}>
+                ? <button type='button' className='btn btn-transparent float-right px-3' onClick={this.handleLike.bind(this)}>
                   <i className={this.state.session_like ? 'fas fa-thumbs-up text-secondary mr-1' : 'far fa-thumbs-up mr-1'} />
                   <span>{this.state.likes}</span>
                 </button>
