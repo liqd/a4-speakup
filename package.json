@@ -7,7 +7,7 @@
     "@babel/preset-env": "7.4.2",
     "@babel/preset-react": "7.0.0",
     "@babel/runtime": "7.4.2",
-    "@fortawesome/fontawesome-free": "5.7.2",
+    "@fortawesome/fontawesome-free": "5.8.1",
     "acorn": "6.1.0",
     "adhocracy4": "liqd/adhocracy4#mB-v2.0",
     "babel-loader": "8.0.5",
