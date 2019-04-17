@@ -43,3 +43,11 @@
 .header__logo {
     margin-top: -(2*$spacer);
 }
+
+.header__prototype {
+    width: 25%;
+    max-width: 100px;
+    position: absolute;
+    left: $spacer;
+    top: $spacer;
+}
