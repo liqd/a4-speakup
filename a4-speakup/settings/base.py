@@ -75,6 +75,7 @@ INSTALLED_APPS = [
 
     'cms.home',
     'cms.snippets',
+    'cms.settings',
 
     'apps.contrib',
     'apps.ideas',
