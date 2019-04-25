@@ -35,9 +35,8 @@ class StatisticsBox extends React.Component {
         count++
       }
     })
-    return Math.round(count * 100 / this.state.questions.length ) || 0
+    return Math.round(count * 100 / this.state.questions.length) || 0
   }
-
 
   render () {
     return (
@@ -46,7 +45,7 @@ class StatisticsBox extends React.Component {
           let count = this.countCategory(category)
           let style = { width: count + '%' }
           return (
-            <div key={index}>
+            <div key={index} className='mt-3'>
               <span>{category}</span>
               <div className='progress'>
                 <div className='progress-bar' style={style} role='progressbar' aria-valuenow='25' aria-valuemin='0'
