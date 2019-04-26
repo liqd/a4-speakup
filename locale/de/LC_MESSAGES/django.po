@@ -1198,7 +1198,7 @@ msgstr "Bitte korrigieren Sie Ihre E-Mail Adresse, getrennt durch Kommata."
 
 #: apps/users/forms.py:10
 msgid "I accept the terms of use."
-msgstr ""
+msgstr "Ich akzeptiere die Nutzungsbedingungen."
 
 #: apps/users/forms.py:16
 msgid "Please accept the terms of use."
@@ -1282,7 +1282,7 @@ msgstr "Anmelden"
 
 #: cms/contrib/helpers.py:7
 msgid "Please look {}here{} for more information."
-msgstr ""
+msgstr "{}Hier{} gibt es mehr Informationen."
 
 #~ msgid "Terms of use"
 #~ msgstr "Nutzungsbedingungen"
