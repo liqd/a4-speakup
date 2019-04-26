@@ -37,7 +37,7 @@
             </p>
             <div class="row">
                 <div class="col text-center">
-                    <a href="{% url 'a4dashboard:project-edit' project_slug=project.slug %}" class="btn btn--light btn-round" data-embed-target="external"> <i class="fa fa-edit"></i>{% trans 'Edit' %}</a>
+                    <a href="{% url 'a4dashboard:project-edit' project_slug=project.slug %}" class="btn btn--light btn-round" data-embed-target="external"> <i class="fa fa-edit" aria-hidden="true"></i>{% trans 'Edit' %}</a>
                 </div>
             </div>
             {% endif %}
