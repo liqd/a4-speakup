@@ -4,8 +4,8 @@
 {% image value.image max-1920x700 as image %}
     <div class="block block__background" style="{% if image.url %} background-image: url({{ image.url }}); background-repeat: no-repeat; background-position: center; background-size: cover; {% else %} background: #9e74d5; {% endif %}">
         <div class="container">
-            <div class="block-call_to_action block mb-5 py-4 text-light">
-                <div class="col-md-8 offset-md-2">
+            <div class="block-call_to_action block mb-5 py-5 text-light">
+                <div class="col-md-8 offset-md-2 py-5">
                     <h2 class="u-first-heading">{{ value.title }}</h2>
                     {{ value.body|richtext }}
                     <a href="{{ value.link }}" class="btn btn-lg btn-primary">{{ value.link_text }}</a>

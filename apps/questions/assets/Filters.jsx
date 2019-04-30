@@ -10,16 +10,16 @@ class Filter extends React.Component {
 
   getButtonClass () {
     if (this.props.currentCategory === '-1') {
-      return 'btn btn-secondary btn-round dropdown-toggle'
-    } else {
       return 'btn btn-primary btn-round dropdown-toggle'
+    } else {
+      return 'btn btn-secondary btn-round dropdown-toggle'
     }
   }
 
   render () {
     return (
-      <div className='row mb-5'>
-        <div className='col justify-content-center form-inline'>
+      <div className='mb-5'>
+        <div className='justify-content-center form-inline'>
           <div className='dropdown'>
             <button className={this.getButtonClass()} type='button' id='dropdownMenuButton'
               data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
@@ -35,28 +35,34 @@ class Filter extends React.Component {
           </div>
           {this.props.isModerator &&
           <div>
-            <label htmlFor='markedCheck' className='pl-4'>
-              <input
-                type='checkbox'
-                id='markedCheck'
-                name='markedCheck'
-                checked={this.props.onlyMarked}
-                onChange={this.props.toggleOnlyMarked} />
-              <span className='pl-2'>
-                {django.gettext('only show marked questions')}
-              </span>
-            </label>
-            <label htmlFor='orderedByLikes' className='pl-4'>
-              <input
-                type='checkbox'
-                id='orderedByLikes'
-                name='orderedByLikes'
-                checked={this.props.orderedByLikes}
-                onChange={this.props.toggleOrdering} />
-              <span className='pl-2'>
-                {django.gettext('order by likes')}
-              </span>
-            </label>
+            <div className='checkbox-btn'>
+              <label htmlFor='markedCheck' className='checkbox-btn__label--primary pl-3'>
+                <input
+                  className='checkbox-btn__input'
+                  type='checkbox'
+                  id='markedCheck'
+                  name='markedCheck'
+                  checked={this.props.onlyMarked}
+                  onChange={this.props.toggleOnlyMarked} />
+                <span className='checkbox-btn__text'>
+                  <i className='fas fa-bookmark' aria-label={django.gettext('only show marked questions')} />
+                </span>
+              </label>
+            </div>
+            <div className='checkbox-btn'>
+              <label htmlFor='orderedByLikes' className='checkbox-btn__label--transparent'>
+                <input
+                  className='checkbox-btn__input'
+                  type='checkbox'
+                  id='orderedByLikes'
+                  name='orderedByLikes'
+                  checked={this.props.orderedByLikes}
+                  onChange={this.props.toggleOrdering} />
+                <span className='checkbox-btn__text'>
+                  <i class='fas fa-sort-amount-up' aria-label={django.gettext('order by likes')} /> likes
+                </span>
+              </label>
+            </div>
           </div>
 
           }

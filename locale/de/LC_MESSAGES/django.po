@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: a4-meinberlin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-03 15:18+0000\n"
+"POT-Creation-Date: 2019-04-26 09:18+0000\n"
 "PO-Revision-Date: 2017-10-16 13:42+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -25,8 +25,8 @@ msgid ""
 "categories. If you create any, each contribution has to be assigned\n"
 "to one of them. This way, content can be classified."
 msgstr ""
-"Hier können Sie Merkmale anlegen. Dadurch können alle Beiträge einem "
-"Merkmal zugeordnet und entsprechend gefiltert werden."
+"Hier können Sie Merkmale anlegen. Dadurch können alle Beiträge einem Merkmal "
+"zugeordnet und entsprechend gefiltert werden."
 
 #: adhocracy4.js/categories/templates/a4categories/includes/module_categories_form.html:21
 #: adhocracy4.py/categories/templates/a4categories/includes/module_categories_form.html:21
@@ -1197,10 +1197,10 @@ msgid "Please enter correct email addresses, separated by commas."
 msgstr "Bitte korrigieren Sie Ihre E-Mail Adresse, getrennt durch Kommata."
 
 #: apps/users/forms.py:10
-msgid "Terms of use"
-msgstr "Nutzungsbedingungen"
+msgid "I accept the terms of use."
+msgstr "Ich akzeptiere die Nutzungsbedingungen."
 
-#: apps/users/forms.py:11
+#: apps/users/forms.py:16
 msgid "Please accept the terms of use."
 msgstr "Bitte akzeptieren sie die Nutzungsbedingungen."
 
@@ -1279,3 +1279,10 @@ msgstr "Abmelden"
 #: apps/users/templates/a4-speakup_users/indicator.html:44
 msgid "Login"
 msgstr "Anmelden"
+
+#: cms/contrib/helpers.py:7
+msgid "Please look {}here{} for more information."
+msgstr "{}Hier{} gibt es mehr Informationen."
+
+#~ msgid "Terms of use"
+#~ msgstr "Nutzungsbedingungen"
