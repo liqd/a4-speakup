@@ -28,8 +28,12 @@
 .header__button {
     color: $white;
     position: absolute;
-    top: 30px;
     right: 6px;
+    top: 2.5*$spacer;
+
+    @include media-breakpoint-up(sm) {
+        top: $spacer;
+    }
 
     .dropdown-toggle {
         color: $white;
@@ -38,4 +42,12 @@
 
 .header__logo {
     margin-top: -(2*$spacer);
+}
+
+.header__prototype {
+    width: 25%;
+    max-width: 100px;
+    position: absolute;
+    left: $spacer;
+    top: $spacer;
 }
