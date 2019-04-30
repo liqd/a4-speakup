@@ -1,0 +1,38 @@
+.checkbox-btn {
+    display: inline-block;
+}
+
+.checkbox-btn__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.checkbox-btn__label--primary {
+    .checkbox-btn__text {
+        @extend .btn;
+        @extend .btn-round;
+        @extend .btn-primary;
+    }
+
+    input[type="checkbox"]:checked + .checkbox-btn__text {
+        @extend .btn-secondary;
+    }
+}
+
+.checkbox-btn__label--transparent {
+    .checkbox-btn__text {
+        @extend .btn;
+        @extend .btn-round;
+        @extend .btn-link;
+    }
+
+    input[type="checkbox"]:checked + .checkbox-btn__text {
+        color: $secondary;
+    }
+}
