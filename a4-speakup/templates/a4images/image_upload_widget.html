@@ -7,7 +7,7 @@
             {% if has_image_set and not is_required %}
                 <div class="input-group-append">
                     <label for="{{ checkbox_id }}" class="btn btn-danger" title="{% trans 'Remove the picture' %}">
-                        <i class="fas fa-trash-alt"></i>
+                        <i class="fas fa-trash-alt" aria-label="{% trans 'Remove the picture' %}"></i>
                     </label>
                 </div>
             {% else %}

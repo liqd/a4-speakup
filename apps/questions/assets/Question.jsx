@@ -1,3 +1,4 @@
+/* global django */
 let React = require('react')
 
 class Question extends React.Component {
@@ -71,22 +72,24 @@ class Question extends React.Component {
             <div>
               <button type='button' className='btn btn-transparent float-right px-3'
                 onClick={this.props.handleDelete.bind(this, this.props.id)}>
-                <i className='fas fa-check px-1' />
+                <i className='fas fa-check px-1' aria-label={django.gettext('mark as done')} />
               </button>
               <button type='button' className='btn btn-transparent float-right px-3' onClick={this.markFavourite.bind(this)}>
-                <i className={this.state.is_favourite ? 'fas fa-bookmark px-2 text-secondary' : 'far fa-bookmark px-2'} />
+                <i className={this.state.is_favourite ? 'fas fa-bookmark px-2 text-secondary' : 'far fa-bookmark px-2'} aria-label={this.state.is_favourite ? django.gettext('bookmark') : django.gettext('undo bookmark')} />
               </button>
             </div>
             }
             <div>
               {this.props.hasLikingPermission
                 ? <button type='button' className='btn btn-transparent float-right px-3' onClick={this.handleLike.bind(this)}>
-                  <i className={this.state.session_like ? 'fas fa-thumbs-up text-secondary mr-1' : 'far fa-thumbs-up mr-1'} />
+                  <i className={this.state.session_like ? 'fas fa-thumbs-up text-secondary mr-1' : 'far fa-thumbs-up mr-1'} aria-label={this.state.session_like ? django.gettext('add like') : django.gettext('undo like')} />
                   <span>{this.state.likes}</span>
+                  <span className='sr-only'>{django.gettext('likes')}</span>
                 </button>
                 : <div className='float-right'>
-                  <i className='far fa-thumbs-up text-muted mr-1' />
+                  <i className='far fa-thumbs-up text-muted mr-1' aria-hidden='true' />
                   <span>{this.state.likes}</span>
+                  <span className='sr-only'>{django.gettext('likes')}</span>
                 </div>
               }
             </div>
