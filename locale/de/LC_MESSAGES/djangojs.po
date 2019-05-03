@@ -345,27 +345,27 @@ msgstr "nach Unterstützung sortieren"
 
 #: apps/questions/assets/Question.jsx:75
 msgid "mark as done"
-msgstr ""
+msgstr "als beantwortet markieren"
 
 #: apps/questions/assets/Question.jsx:78
 msgid "bookmark"
-msgstr ""
+msgstr "Lesezeichen setzen"
 
 #: apps/questions/assets/Question.jsx:78
 msgid "undo bookmark"
-msgstr ""
+msgstr "Lesezeichen entfernen"
 
 #: apps/questions/assets/Question.jsx:85
 msgid "add like"
-msgstr ""
+msgstr "positiv bewerten"
 
 #: apps/questions/assets/Question.jsx:85
 msgid "undo like"
-msgstr ""
+msgstr "positive Bewertung zurück nehmen"
 
 #: apps/questions/assets/Question.jsx:87 apps/questions/assets/Question.jsx:92
 msgid "likes"
-msgstr ""
+msgstr "positive Bewertungen"
 
 #: apps/questions/assets/QuestionBox.jsx:15
 #: apps/questions/assets/QuestionBox.jsx:25
@@ -374,4 +374,4 @@ msgstr "Merkmal auswählen"
 
 #: apps/questions/assets/StatisticsBox.jsx:46
 msgid "Posts included"
-msgstr ""
+msgstr "Einbezogene Beiträge"
