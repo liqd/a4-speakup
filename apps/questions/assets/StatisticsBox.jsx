@@ -1,4 +1,5 @@
 /* global fetch */
+/* global django */
 let React = require('react')
 let Question = require('./Question')
 
@@ -41,6 +42,9 @@ class StatisticsBox extends React.Component {
   render () {
     return (
       <div>
+        <p class='font-weight-bold'>
+          {django.gettext('Posts included')}
+        </p>
         { this.props.categories.map((category, index) => {
           let count = this.countCategory(category)
           let style = { width: count + '%' }
