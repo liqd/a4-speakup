@@ -2,6 +2,10 @@
     height: 150px;
     position: relative;
     background-color: $purple;
+
+    .btn {
+        color: $white;
+    }
 }
 
 .header__curve,
@@ -18,26 +22,10 @@
     border-top-right-radius: 50%;
 }
 
-.header__burger {
-    color: $white;
+.header__user {
     position: absolute;
     top: 0.75*$spacer;
-    right: 0;
-}
-
-.header__button {
-    color: $white;
-    position: absolute;
-    right: 6px;
-    top: 2.5*$spacer;
-
-    @include media-breakpoint-up(sm) {
-        top: $spacer;
-    }
-
-    .dropdown-toggle {
-        color: $white;
-    }
+    right: 0.5*$spacer;
 }
 
 .header__logo {

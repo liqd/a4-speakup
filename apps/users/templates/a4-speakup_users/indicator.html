@@ -1,19 +1,19 @@
 {% load i18n %}
 
-<div class="dropdown">
+<div class="header__user dropdown">
 
     {% if request.user.is_authenticated %}
 
     <button
             type="button"
-            class="btn dropdown-toggle"
+            class="btn"
             data-toggle="dropdown"
             data-flip="false"
             aria-haspopup="true"
             aria-expanded="false"
             id="user-actions"
     >
-        {{ request.user.username }}
+        <i class="far fa-user"></i>
     </button>
     <div class="dropdown-menu dropdown-menu-right">
         {% for organisation in request.user.organisations %}
@@ -31,14 +31,14 @@
 
     <button
             type="button"
-            class="btn dropdown-toggle"
+            class="btn"
             data-toggle="dropdown"
             data-flip="false"
             aria-haspopup="true"
             aria-expanded="false"
             id="login-register"
     >
-        {% trans "Login" %}/{% trans "Register" %}
+        <i class="far fa-user"></i>
     </button>
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="login-register">
         <a class="dropdown-item" href="{% url 'account_login' %}?next={{ redirect_field_value|urlencode }}">{% trans "Login" %}</a>

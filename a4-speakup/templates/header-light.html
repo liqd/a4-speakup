@@ -1,25 +1,17 @@
 {% load userindicator snippet_tags static %}
 {% load_site_menu "header" as header_menu_items %}
 
-<div>
-    <nav class="homepage navbar navbar-expand-lg justify-content-end">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"><i class="fa fa-align-justify" aria-hidden="true"></i></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-            {% for menuitem in header_menu_items %}
-            <li class="nav-item {% if request.path == menuitem.url %} active{% endif %}">
-                <a class="nav-link" href="{{ menuitem.url }}"> {{ menuitem.title }} </a>
-            </li>
-            {% endfor %}
-            </ul>
-             {% userindicator %}
-        </div>
-    </nav>
-    <div class="text-center">
-        <a href="/" rel="home"><img class="homepage__logo" src="{% static 'images/logo_speakup.png' %}" alt="SpeakUp"/></a>
-    </div>
-    <img class="header__prototype" src="{% static 'images/badge-prototype1.png' %}" alt="prototype"/>
+<nav class="homepage navbar justify-content-end">
+    <ul class="navbar-nav mr-auto">
+    {% for menuitem in header_menu_items %}
+    <li class="nav-item {% if request.path == menuitem.url %} active{% endif %}">
+        <a class="nav-link" href="{{ menuitem.url }}"> {{ menuitem.title }} </a>
+    </li>
+    {% endfor %}
+    </ul>
+     {% userindicator %}
+</nav>
+<div class="text-center">
+    <a href="/" rel="home"><img class="homepage__logo" src="{% static 'images/logo_speakup.png' %}" alt="SpeakUp"/></a>
 </div>
+<img class="header__prototype" src="{% static 'images/badge-prototype1.png' %}" alt="prototype"/>
