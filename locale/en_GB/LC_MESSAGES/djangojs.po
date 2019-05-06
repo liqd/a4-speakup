@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-03 16:11+0000\n"
+"POT-Creation-Date: 2019-05-03 13:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -334,15 +334,43 @@ msgstr "Close"
 msgid "all"
 msgstr "all"
 
-#: apps/questions/assets/Filters.jsx:46
+#: apps/questions/assets/Filters.jsx:48
 msgid "only show marked questions"
 msgstr "only show marked questions"
 
-#: apps/questions/assets/Filters.jsx:57
+#: apps/questions/assets/Filters.jsx:62
 msgid "order by likes"
 msgstr "order by likes"
+
+#: apps/questions/assets/Question.jsx:75
+msgid "mark as done"
+msgstr "mark as done"
+
+#: apps/questions/assets/Question.jsx:78
+msgid "bookmark"
+msgstr "bookmark"
+
+#: apps/questions/assets/Question.jsx:78
+msgid "undo bookmark"
+msgstr "undo bookmark"
+
+#: apps/questions/assets/Question.jsx:85
+msgid "add like"
+msgstr "add like"
+
+#: apps/questions/assets/Question.jsx:85
+msgid "undo like"
+msgstr "undo like"
+
+#: apps/questions/assets/Question.jsx:87 apps/questions/assets/Question.jsx:92
+msgid "likes"
+msgstr "likes"
 
 #: apps/questions/assets/QuestionBox.jsx:15
 #: apps/questions/assets/QuestionBox.jsx:25
 msgid "select category"
 msgstr "select category"
+
+#: apps/questions/assets/StatisticsBox.jsx:46
+msgid "Posts included"
+msgstr "Posts included"
