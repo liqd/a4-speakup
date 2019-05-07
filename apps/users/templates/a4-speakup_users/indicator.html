@@ -28,22 +28,6 @@
 </div>
 
     {% else %}
-
-    <button
-            type="button"
-            class="btn"
-            data-toggle="dropdown"
-            data-flip="false"
-            aria-haspopup="true"
-            aria-expanded="false"
-            id="login-register"
-    >
-        <i class="far fa-user"></i>
-    </button>
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="login-register">
-        <a class="dropdown-item" href="{% url 'account_login' %}?next={{ redirect_field_value|urlencode }}">{% trans "Login" %}</a>
-        <a class="dropdown-item" href="{% url 'account_signup' %}?next={{ redirect_field_value|urlencode }}">{% trans "Register" %}</a>
-    </div>
-
+        <a class="btn" href="{% url 'account_login' %}?next={{ redirect_field_value|urlencode }}" aria-label="{% trans 'Login' %}"><i class="far fa-user"></i></a>
     {% endif %}
 </div>
