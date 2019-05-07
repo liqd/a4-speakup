@@ -11,7 +11,7 @@
         <div class="col-md-6 offset-md-3">
             <h1>{% trans "Login" %}</h1>
 
-            <p>{% blocktrans %}If you do not have an account, please <a href="{{ signup_url }}">register</a> first. Registration is only necessary for the moderation of SpeakUp. As a participant, you can participate in the discussion without registration. If you have any questions about privacy or use of SpeakUp, check out our privacy policy [internal link] and our Terms of Use [internal link].{% endblocktrans %}</p>
+            <p>{% blocktrans with terms_of_use=settings.cms_settings.HelpPages.terms_of_use_page.url privacy_policy=settings.cms_settings.HelpPages.privacy_policy.url %}If you do not have an account, please <a href="{{ signup_url }}">register</a> first. Registration is only necessary for the moderation of SpeakUp. As a participant, you can participate in the discussion without registration. If you have any questions about privacy or use of SpeakUp, check out our <a href="{{ privacy_policy }}">privacy policy</a> and our <a href="{{ terms_of_use }}">Terms of Use</a>.{% endblocktrans %}</p>
 
             <form  method="POST" action="{% url 'account_login' %}">
                 <div class="form-group">
