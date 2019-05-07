@@ -29,11 +29,11 @@
                 {% include 'a4-speakup_contrib/form_fields.html' with fields=form.visible_fields %}
 
                 <div class="row">
-                    <div class="col-2">
-                        <button type="submit" class="btn btn-primary">{% trans 'post'%}</button>
+                    <div class="col-6 col-sm-2">
+                        <button type="submit" class="btn btn-primary btn-block">{% trans 'post'%}</button>
                     </div>
-                    <div class="col-2">
-                        <a href="{% if mode == 'create' %}{% url 'project-detail' project.slug %}{% else %}{% url 'idea-detail' idea.slug %}{% endif %}" class="btn btn-link">{% trans 'cancel'%}</a>
+                    <div class="col-6 col-sm-2">
+                        <a href="{% if mode == 'create' %}{% url 'project-detail' project.slug %}{% else %}{% url 'idea-detail' idea.slug %}{% endif %}" class="btn btn-link btn-block">{% trans 'cancel'%}</a>
                     </div>
                 </div>
             </form>
@@ -49,4 +49,3 @@
         {% endblock %}
     </div>
 </div>
-

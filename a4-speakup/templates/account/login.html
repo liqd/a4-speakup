@@ -11,7 +11,7 @@
         <div class="col-md-6 offset-md-3">
             <h1>{% trans "Login" %}</h1>
 
-            <p>{% blocktrans %}If you have not created an account yet, then please <a href="{{ signup_url }}">register</a> first.{% endblocktrans %}</p>
+            <p>{% blocktrans %}If you do not have an account, please <a href="{{ signup_url }}">register</a> first. Registration is only necessary for the moderation of SpeakUp. As a participant, you can participate in the discussion without registration. If you have any questions about privacy or use of SpeakUp, check out our privacy policy [internal link] and our Terms of Use [internal link].{% endblocktrans %}</p>
 
             <form  method="POST" action="{% url 'account_login' %}">
                 <div class="form-group">
