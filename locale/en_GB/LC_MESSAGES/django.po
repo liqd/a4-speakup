@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-03 13:56+0000\n"
+"POT-Creation-Date: 2019-05-07 14:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1068,8 +1068,6 @@ msgid "Proceed to login"
 msgstr "Proceed to login"
 
 #: apps/projects/templates/a4-speakup_projects/moderatorinvite_detail.html:14
-#: apps/users/templates/a4-speakup_users/indicator.html:41
-#: apps/users/templates/a4-speakup_users/indicator.html:45
 msgid "Register"
 msgstr "Register"
 
@@ -1170,11 +1168,7 @@ msgstr "Important dates"
 msgid "Please enter correct email addresses, separated by commas."
 msgstr "Please enter correct email addresses, separated by commas."
 
-#: apps/users/forms.py:10
-msgid "I accept the terms of use."
-msgstr "I accept the terms of use."
-
-#: apps/users/forms.py:16
+#: apps/users/forms.py:13
 msgid "Please accept the terms of use."
 msgstr "Please accept the terms of use."
 
@@ -1245,14 +1239,20 @@ msgstr "Users"
 msgid "Logout"
 msgstr "Logout"
 
-#: apps/users/templates/a4-speakup_users/indicator.html:41
-#: apps/users/templates/a4-speakup_users/indicator.html:44
+#: apps/users/templates/a4-speakup_users/indicator.html:31
 msgid "Login"
 msgstr "Login"
 
 #: cms/contrib/helpers.py:7
-msgid "Please look {}here{} for more information."
-msgstr "Please look {}here{} for more information."
+msgid "I have read and accept the {}terms of use{} and the {}privacy policy{}."
+msgstr ""
+"I have read and accept the {}terms of use{} and the {}privacy policy{}."
+
+#~ msgid "I accept the terms of use."
+#~ msgstr "I accept the terms of use."
+
+#~ msgid "Please look {}here{} for more information."
+#~ msgstr "Please look {}here{} for more information."
 
 #~ msgid "Terms of use"
 #~ msgstr "Terms of use"

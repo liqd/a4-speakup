@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: a4-meinberlin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-03 13:56+0000\n"
+"POT-Creation-Date: 2019-05-07 14:56+0000\n"
 "PO-Revision-Date: 2017-10-16 13:42+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -1092,8 +1092,6 @@ msgid "Proceed to login"
 msgstr "Weiter zur Anmeldung"
 
 #: apps/projects/templates/a4-speakup_projects/moderatorinvite_detail.html:14
-#: apps/users/templates/a4-speakup_users/indicator.html:41
-#: apps/users/templates/a4-speakup_users/indicator.html:45
 msgid "Register"
 msgstr "Registrieren"
 
@@ -1196,11 +1194,7 @@ msgstr "Wichtige Daten"
 msgid "Please enter correct email addresses, separated by commas."
 msgstr "Bitte korrigieren Sie Ihre E-Mail Adresse, getrennt durch Kommata."
 
-#: apps/users/forms.py:10
-msgid "I accept the terms of use."
-msgstr "Ich akzeptiere die Nutzungsbedingungen."
-
-#: apps/users/forms.py:16
+#: apps/users/forms.py:13
 msgid "Please accept the terms of use."
 msgstr "Bitte akzeptieren sie die Nutzungsbedingungen."
 
@@ -1275,14 +1269,19 @@ msgstr "Nutzer"
 msgid "Logout"
 msgstr "Abmelden"
 
-#: apps/users/templates/a4-speakup_users/indicator.html:41
-#: apps/users/templates/a4-speakup_users/indicator.html:44
+#: apps/users/templates/a4-speakup_users/indicator.html:31
 msgid "Login"
 msgstr "Anmelden"
 
 #: cms/contrib/helpers.py:7
-msgid "Please look {}here{} for more information."
-msgstr "{}Hier{} gibt es mehr Informationen."
+msgid "I have read and accept the {}terms of use{} and the {}privacy policy{}."
+msgstr ""
+
+#~ msgid "I accept the terms of use."
+#~ msgstr "Ich akzeptiere die Nutzungsbedingungen."
+
+#~ msgid "Please look {}here{} for more information."
+#~ msgstr "{}Hier{} gibt es mehr Informationen."
 
 #~ msgid "Terms of use"
 #~ msgstr "Nutzungsbedingungen"
