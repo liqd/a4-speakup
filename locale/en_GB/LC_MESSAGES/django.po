@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-03 13:56+0000\n"
+"POT-Creation-Date: 2019-05-08 08:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,7 @@ msgstr ""
 
 #: adhocracy4.js/categories/templates/a4categories/includes/module_categories_form.html:3
 #: adhocracy4.py/categories/templates/a4categories/includes/module_categories_form.html:3
+#: a4-speakup/templates/a4categories/includes/module_categories_form.html:3
 msgid ""
 "In this section, you can create\n"
 "categories. If you create any, each contribution has to be assigned\n"
@@ -31,6 +32,7 @@ msgstr ""
 
 #: adhocracy4.js/categories/templates/a4categories/includes/module_categories_form.html:21
 #: adhocracy4.py/categories/templates/a4categories/includes/module_categories_form.html:21
+#: a4-speakup/templates/a4categories/includes/module_categories_form.html:21
 msgid "Add category"
 msgstr "Add category"
 
@@ -48,6 +50,8 @@ msgstr "Project Settings"
 #: adhocracy4.js/dashboard/templates/a4dashboard/base_dashboard_project.html:33
 #: adhocracy4.py/dashboard/templates/a4dashboard/base_dashboard_project.html:15
 #: adhocracy4.py/dashboard/templates/a4dashboard/base_dashboard_project.html:33
+#: a4-speakup/templates/a4dashboard/base_dashboard_project.html:17
+#: a4-speakup/templates/a4dashboard/base_dashboard_project.html:34
 msgid "Missing fields for publication"
 msgstr "Missing fields for publication"
 
@@ -55,6 +59,7 @@ msgstr "Missing fields for publication"
 #: adhocracy4.js/dashboard/templates/a4dashboard/base_form_project.html:18
 #: adhocracy4.py/dashboard/templates/a4dashboard/base_form_module.html:18
 #: adhocracy4.py/dashboard/templates/a4dashboard/base_form_project.html:18
+#: a4-speakup/templates/a4dashboard/base_form_project.html:18
 msgid "Save"
 msgstr "Save"
 
@@ -64,6 +69,8 @@ msgstr "Save"
 #: adhocracy4.py/dashboard/templates/a4dashboard/blueprint_list.html:4
 #: adhocracy4.py/dashboard/templates/a4dashboard/blueprint_list.html:7
 #: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:9
+#: a4-speakup/templates/a4dashboard/blueprint_list.html:5
+#: a4-speakup/templates/a4dashboard/project_list.html:17
 msgid "New Project"
 msgstr "New Project"
 
@@ -86,6 +93,7 @@ msgstr "Missing field for publication"
 #: adhocracy4.js/dashboard/templates/a4dashboard/project_list.html:35
 #: adhocracy4.py/dashboard/templates/a4dashboard/includes/preview.html:7
 #: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:35
+#: a4-speakup/templates/a4dashboard/includes/project_list_item.html:29
 msgid "Preview"
 msgstr "Preview"
 
@@ -93,6 +101,7 @@ msgstr "Preview"
 #: adhocracy4.js/dashboard/templates/a4dashboard/project_list.html:37
 #: adhocracy4.py/dashboard/templates/a4dashboard/includes/preview.html:9
 #: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:37
+#: a4-speakup/templates/a4dashboard/includes/project_list_item.html:31
 msgid "View"
 msgstr "View"
 
@@ -121,11 +130,14 @@ msgstr "Unpublish"
 #: adhocracy4.js/dashboard/templates/a4dashboard/project_create_form.html:7
 #: adhocracy4.py/dashboard/templates/a4dashboard/project_create_form.html:4
 #: adhocracy4.py/dashboard/templates/a4dashboard/project_create_form.html:7
+#: a4-speakup/templates/a4dashboard/project_create_form.html:4
+#: a4-speakup/templates/a4dashboard/project_create_form.html:8
 msgid "Create project based on"
 msgstr "Create project based on"
 
 #: adhocracy4.js/dashboard/templates/a4dashboard/project_create_form.html:23
 #: adhocracy4.py/dashboard/templates/a4dashboard/project_create_form.html:23
+#: a4-speakup/templates/a4dashboard/project_create_form.html:32
 msgid ""
 "After saving the draft project you can further customize and edit your "
 "project and eventually publish it."
@@ -135,11 +147,13 @@ msgstr ""
 
 #: adhocracy4.js/dashboard/templates/a4dashboard/project_create_form.html:25
 #: adhocracy4.py/dashboard/templates/a4dashboard/project_create_form.html:25
+#: a4-speakup/templates/a4dashboard/project_create_form.html:34
 msgid "Create draft"
 msgstr "Create draft"
 
 #: adhocracy4.js/dashboard/templates/a4dashboard/project_create_form.html:27
 #: adhocracy4.py/dashboard/templates/a4dashboard/project_create_form.html:27
+#: a4-speakup/templates/a4dashboard/project_create_form.html:36
 msgid "Cancel"
 msgstr "Cancel"
 
@@ -147,17 +161,21 @@ msgstr "Cancel"
 #: adhocracy4.js/dashboard/templates/a4dashboard/project_list.html:7
 #: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:4
 #: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:7
+#: a4-speakup/templates/a4dashboard/project_list.html:9
+#: a4-speakup/templates/a4dashboard/project_list.html:14
 msgid "Projects"
 msgstr "Projects"
 
 #: adhocracy4.js/dashboard/templates/a4dashboard/project_list.html:23
 #: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:23
+#: a4-speakup/templates/a4dashboard/includes/project_list_item.html:17
 msgid "Finished"
 msgstr "Finished"
 
 #: adhocracy4.js/dashboard/templates/a4dashboard/project_list.html:26
 #: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:26
 #: apps/projects/templates/a4-speakup_projects/project_detail.html:28
+#: a4-speakup/templates/a4dashboard/includes/project_list_item.html:20
 msgid "private"
 msgstr "private"
 
@@ -165,16 +183,19 @@ msgstr "private"
 #: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:44
 #: apps/ideas/templates/a4-speakup_ideas/idea_detail.html:25
 #: apps/projects/templates/a4-speakup_projects/project_detail.html:40
+#: a4-speakup/templates/a4dashboard/includes/project_list_item.html:35
 msgid "Edit"
 msgstr "Edit"
 
 #: adhocracy4.js/dashboard/templates/a4dashboard/project_list.html:53
 #: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:53
+#: a4-speakup/templates/a4dashboard/includes/project_list_item.html:46
 msgid "Duplicate"
 msgstr "Duplicate"
 
 #: adhocracy4.js/dashboard/templates/a4dashboard/project_list.html:60
 #: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:60
+#: a4-speakup/templates/a4dashboard/project_list.html:29
 msgid "We could not find any projects."
 msgstr "We could not find any projects."
 
@@ -197,16 +218,24 @@ msgstr "This field is required"
 #: adhocracy4.py/forms/templates/a4forms/includes/inline_form.html:15
 #: adhocracy4.py/forms/templates/a4forms/includes/inline_form.html:18
 #: adhocracy4.py/forms/templates/a4forms/includes/inline_form.html:19
+#: a4-speakup/templates/a4forms/includes/inline_form.html:13
+#: a4-speakup/templates/a4forms/includes/inline_form.html:14
+#: a4-speakup/templates/a4forms/includes/inline_form.html:17
+#: a4-speakup/templates/a4forms/includes/inline_form.html:18
 msgid "Remove category"
 msgstr "Remove category"
 
 #: adhocracy4.js/images/templates/a4images/image_upload_widget.html:8
 #: adhocracy4.py/images/templates/a4images/image_upload_widget.html:8
+#: a4-speakup/templates/a4images/image_upload_widget.html:9
+#: a4-speakup/templates/a4images/image_upload_widget.html:10
 msgid "Remove the picture"
 msgstr "Remove the picture"
 
 #: adhocracy4.js/images/templates/a4images/image_upload_widget.html:12
 #: adhocracy4.py/images/templates/a4images/image_upload_widget.html:12
+#: a4-speakup/templates/a4images/image_upload_widget.html:15
+#: a4-speakup/templates/a4images/image_upload_widget.html:16
 msgid "Upload a picture"
 msgstr "Upload a picture"
 
@@ -675,6 +704,7 @@ msgid "Information and result"
 msgstr "Information and result"
 
 #: adhocracy4.py/projects/admin.py:50
+#: a4-speakup/templates/a4dashboard/base_dashboard.html:20
 msgid "Settings"
 msgstr "Settings"
 
@@ -1068,8 +1098,9 @@ msgid "Proceed to login"
 msgstr "Proceed to login"
 
 #: apps/projects/templates/a4-speakup_projects/moderatorinvite_detail.html:14
-#: apps/users/templates/a4-speakup_users/indicator.html:41
-#: apps/users/templates/a4-speakup_users/indicator.html:45
+#: a4-speakup/templates/account/signup.html:7
+#: a4-speakup/templates/account/signup.html:13
+#: a4-speakup/templates/account/signup.html:39
 msgid "Register"
 msgstr "Register"
 
@@ -1170,11 +1201,7 @@ msgstr "Important dates"
 msgid "Please enter correct email addresses, separated by commas."
 msgstr "Please enter correct email addresses, separated by commas."
 
-#: apps/users/forms.py:10
-msgid "I accept the terms of use."
-msgstr "I accept the terms of use."
-
-#: apps/users/forms.py:16
+#: apps/users/forms.py:13
 msgid "Please accept the terms of use."
 msgstr "Please accept the terms of use."
 
@@ -1245,14 +1272,188 @@ msgstr "Users"
 msgid "Logout"
 msgstr "Logout"
 
-#: apps/users/templates/a4-speakup_users/indicator.html:41
-#: apps/users/templates/a4-speakup_users/indicator.html:44
+#: apps/users/templates/a4-speakup_users/indicator.html:31
+#: a4-speakup/templates/account/login.html:6
+#: a4-speakup/templates/account/login.html:12
+#: a4-speakup/templates/account/login.html:34
 msgid "Login"
 msgstr "Login"
 
 #: cms/contrib/helpers.py:7
-msgid "Please look {}here{} for more information."
-msgstr "Please look {}here{} for more information."
+msgid "I have read and accept the {}terms of use{} and the {}privacy policy{}."
+msgstr ""
+"I have read and accept the {}terms of use{} and the {}privacy policy{}."
+
+#: a4-speakup/settings/base.py:170 a4-speakup/settings/base.py:181
+msgid "Rich text editor"
+msgstr "Rich text editor"
+
+#: a4-speakup/settings/base.py:254
+msgid "English"
+msgstr "English"
+
+#: a4-speakup/settings/base.py:255
+msgid "German"
+msgstr "German"
+
+#: a4-speakup/templates/403.html:7
+msgid "You are not allowed to access this page."
+msgstr "You are not allowed to access this page."
+
+#: a4-speakup/templates/404.html:7
+msgid "This page could not be found."
+msgstr "This page could not be found."
+
+#: a4-speakup/templates/500.html:7
+msgid "Internal server error."
+msgstr "Internal server error."
+
+#: a4-speakup/templates/a4dashboard/base_dashboard.html:15
+msgid "Participation projects"
+msgstr "Participation projects"
+
+#: a4-speakup/templates/a4dashboard/blueprint_list.html:11
+msgid "What kind of project would you like to create?"
+msgstr "What kind of project would you like to create?"
+
+#: a4-speakup/templates/a4dashboard/blueprint_list.html:31
+msgid "use this template"
+msgstr "use this template"
+
+#: a4-speakup/templates/a4dashboard/blueprint_list.html:34
+msgid "Learn More"
+msgstr "Learn More"
+
+#: a4-speakup/templates/a4images/image_upload_widget.html:33
+msgid ""
+"\n"
+"        Your image will be uploaded/removed once you save your changes\n"
+"        at the end of this page.\n"
+"        "
+msgstr ""
+"\n"
+"        Your image will be uploaded/removed once you save your changes\n"
+"        at the end of this page.\n"
+"        "
+
+#: a4-speakup/templates/account/email_confirm.html:4
+#: a4-speakup/templates/account/email_confirm.html:10
+msgid "Confirm Email Address"
+msgstr "Confirm Email Address"
+
+#: a4-speakup/templates/account/email_confirm.html:13
+#, python-format
+msgid ""
+"Please\n"
+"                    confirm that <a href=\"mailto:%(email)s\">%(email)s</a> "
+"is an\n"
+"                    email address for user %(user_display)s."
+msgstr ""
+"Please\n"
+"                    confirm that <a href=\"mailto:%(email)s\">%(email)s</a> "
+"is an\n"
+"                    email address for user %(user_display)s."
+
+#: a4-speakup/templates/account/email_confirm.html:19
+msgid "Confirm"
+msgstr "Confirm"
+
+#: a4-speakup/templates/account/email_confirm.html:23
+#, python-format
+msgid ""
+"This email confirmation link expired or is invalid.\n"
+"                    Please <a href=\"%(email_url)s\">issue a new email "
+"confirmation\n"
+"                        request</a>."
+msgstr ""
+"This email confirmation link expired or is invalid.\n"
+"                    Please <a href=\"%(email_url)s\">issue a new email "
+"confirmation\n"
+"                        request</a>."
+
+#: a4-speakup/templates/account/login.html:15
+#, python-format
+msgid ""
+"\n"
+"                If you do not have an account, please <a href="
+"\"%(signup_url)s\">register</a> first. Registration is only necessary for "
+"the moderation of SpeakUp. As a participant, you can participate in the "
+"discussion without registration. If you have any questions about privacy or "
+"use of SpeakUp, check out our <a href=\"%(privacy_policy_url)s\">privacy "
+"policy</a> and our <a href=\"%(terms_of_use_url)s\">Terms of Use</a>.\n"
+"                "
+msgstr ""
+"\n"
+"                If you do not have an account, please <a href="
+"\"%(signup_url)s\">register</a> first. Registration is only necessary for "
+"the moderation of SpeakUp. As a participant, you can participate in the "
+"discussion without registration. If you have any questions about privacy or "
+"use of SpeakUp, check out our <a href=\"%(privacy_policy_url)s\">privacy "
+"policy</a> and our <a href=\"%(terms_of_use_url)s\">Terms of Use</a>.\n"
+"                "
+
+#: a4-speakup/templates/account/login.html:35
+msgid "Forgot Password?"
+msgstr "Forgot Password?"
+
+#: a4-speakup/templates/account/logout.html:4
+#: a4-speakup/templates/account/logout.html:10
+#: a4-speakup/templates/account/logout.html:18
+msgid "Sign Out"
+msgstr "Sign Out"
+
+#: a4-speakup/templates/account/logout.html:11
+msgid "Are you sure you want to sign out?"
+msgstr "Are you sure you want to sign out?"
+
+#: a4-speakup/templates/account/password_reset.html:6
+#: a4-speakup/templates/account/password_reset.html:12
+msgid "Password Reset"
+msgstr "Password Reset"
+
+#: a4-speakup/templates/account/password_reset.html:17
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send you "
+"an e-mail allowing you to reset it."
+msgstr ""
+"Forgotten your password? Enter your e-mail address below, and we'll send you "
+"an e-mail allowing you to reset it."
+
+#: a4-speakup/templates/account/password_reset.html:29
+msgid "Reset My Password"
+msgstr "Reset My Password"
+
+#: a4-speakup/templates/account/password_reset.html:31
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr "Please contact us if you have any trouble resetting your password."
+
+#: a4-speakup/templates/account/signup.html:15
+#, python-format
+msgid ""
+"Already registered as a moderator? Then log in\n"
+"                    <a href=\"%(login_url)s\">here</a>."
+msgstr ""
+"Already registered as a moderator? Then log in\n"
+"                    <a href=\"%(login_url)s\">here</a>."
+
+#: a4-speakup/templates/base_errors.html:4
+msgid "Error"
+msgstr "Error"
+
+#: a4-speakup/templates/base_errors.html:11
+msgid "Back to landing page"
+msgstr "Back to landing page"
+
+#: a4-speakup/templates/email_base.html:19
+#: a4-speakup/templates/email_base.txt:4
+msgid "Hello"
+msgstr "Hello"
+
+#~ msgid "I accept the terms of use."
+#~ msgstr "I accept the terms of use."
+
+#~ msgid "Please look {}here{} for more information."
+#~ msgstr "Please look {}here{} for more information."
 
 #~ msgid "Terms of use"
 #~ msgstr "Terms of use"
