@@ -6,7 +6,10 @@ from django.core.management.commands import makemessages
 
 def get_module_dir(name):
     module = __import__(name)
-    return path.dirname(module.__file__)
+    if hasattr(module, '__file__'):
+        return path.dirname(module.__file__)
+    else:
+        return module.__path__._path[0]
 
 
 class Command(makemessages.Command):
@@ -32,8 +35,8 @@ class Command(makemessages.Command):
             path.relpath(get_module_dir('cms'))
         )
         speakup_paths = super().find_files(
-            path.relpath(get_module_dir('a4-speakup/templates'))
+            path.relpath(get_module_dir('a4-speakup'))
         )
 
-        return (a4js_paths + a4_paths + apps_paths +
-                wagtail_paths + speakup_paths)
+        return (a4js_paths + a4_paths + apps_paths
+                + wagtail_paths + speakup_paths)
