@@ -32,7 +32,8 @@ class Command(makemessages.Command):
             path.relpath(get_module_dir('cms'))
         )
         speakup_paths = super().find_files(
-            path.relpath(get_module_dir('a4-speakup'))
+            path.relpath(get_module_dir('a4-speakup/templates'))
         )
 
-        return a4js_paths + a4_paths + apps_paths + wagtail_paths + speakup_paths
+        return (a4js_paths + a4_paths + apps_paths +
+                wagtail_paths + speakup_paths)
