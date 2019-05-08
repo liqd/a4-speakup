@@ -1,0 +1,17 @@
+@include media-breakpoint-down(sm) {
+    h1 {
+        font-size: $h1-font-size * 0.7;
+    }
+
+    h2 {
+        font-size: $h2-font-size * 0.7;
+    }
+
+    h3 {
+        font-size: $h3-font-size * 0.7;
+    }
+
+    h5 {
+        font-size: $font-size-base;
+    }
+}
