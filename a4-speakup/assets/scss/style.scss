@@ -10,6 +10,9 @@
 // Must be loaded after above due to use of default
 @import "~bootstrap/scss/bootstrap.scss";
 
+// Must be loaded after above due to media queary
+@import 'responsive_font_sizes';
+
 // A4 styling
 @import 'a4-components/alert';
 @import 'a4-components/category_formset';
