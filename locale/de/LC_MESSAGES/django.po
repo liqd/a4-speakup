@@ -1311,47 +1311,47 @@ msgstr "Anmelden"
 
 #: cms/contrib/helpers.py:7
 msgid "I have read and accept the {}terms of use{} and the {}privacy policy{}."
-msgstr ""
+msgstr "Ich habe die {}Nutzungsbedingungen{} und den {}Datenschutz{} gelesen und akzeptiere sie."
 
 #: a4-speakup/settings/base.py:170 a4-speakup/settings/base.py:181
 msgid "Rich text editor"
-msgstr ""
+msgstr "Rich-Text-Editor"
 
 #: a4-speakup/settings/base.py:254
 msgid "English"
-msgstr ""
+msgstr "Englisch"
 
 #: a4-speakup/settings/base.py:255
 msgid "German"
-msgstr ""
+msgstr "Deutsch"
 
 #: a4-speakup/templates/403.html:7
 msgid "You are not allowed to access this page."
-msgstr ""
+msgstr "Sie sind nicht berechtigt, auf diese Seite zuzugreifen."
 
 #: a4-speakup/templates/404.html:7
 msgid "This page could not be found."
-msgstr ""
+msgstr "Diese Seite konnte nicht gefunden werden."
 
 #: a4-speakup/templates/500.html:7
 msgid "Internal server error."
-msgstr ""
+msgstr "Interner Serverfehler."
 
 #: a4-speakup/templates/a4dashboard/base_dashboard.html:15
 msgid "Participation projects"
-msgstr ""
+msgstr "Beteiligungsprojekte"
 
 #: a4-speakup/templates/a4dashboard/blueprint_list.html:11
 msgid "What kind of project would you like to create?"
-msgstr ""
+msgstr "Welche Art von Projekt möchten Sie erstellen?"
 
 #: a4-speakup/templates/a4dashboard/blueprint_list.html:31
 msgid "use this template"
-msgstr ""
+msgstr "Diese Vorlage verwenden"
 
 #: a4-speakup/templates/a4dashboard/blueprint_list.html:34
 msgid "Learn More"
-msgstr ""
+msgstr "Mehr lesen"
 
 #: a4-speakup/templates/a4images/image_upload_widget.html:33
 msgid ""
@@ -1360,11 +1360,15 @@ msgid ""
 "        at the end of this page.\n"
 "        "
 msgstr ""
+"\n"
+"        Ihr Bild wird hochgeladen bzw. entfernt, sobald Sie Ihre Änderungen\n"
+"        am Ende gespeichert haben.\n"
+"        "
 
 #: a4-speakup/templates/account/email_confirm.html:4
 #: a4-speakup/templates/account/email_confirm.html:10
 msgid "Confirm Email Address"
-msgstr ""
+msgstr "Bitte bestätigen Sie Ihre E-Mail Adresse."
 
 #: a4-speakup/templates/account/email_confirm.html:13
 #, python-format
@@ -1374,10 +1378,12 @@ msgid ""
 "is an\n"
 "                    email address for user %(user_display)s."
 msgstr ""
+"Bitte bestätigen Sie, dass <a href=\"mailto:%(email)s\">%(email)s</a> eine E-"
+"Mail Adresse der Nutzer*in %(user_display)s ist."
 
 #: a4-speakup/templates/account/email_confirm.html:19
 msgid "Confirm"
-msgstr ""
+msgstr "Bestätigen"
 
 #: a4-speakup/templates/account/email_confirm.html:23
 #, python-format
@@ -1387,6 +1393,9 @@ msgid ""
 "confirmation\n"
 "                        request</a>."
 msgstr ""
+"Der Link zur E-Mail Bestätigung ist abgelaufen oder ist ungültig.\n"
+"                    Bitte <a href=\"%(email_url)s\">fordern Sie "
+"eine neue Bestätigungsemail an</a>."
 
 #: a4-speakup/templates/account/login.html:15
 #, python-format
@@ -1400,39 +1409,51 @@ msgid ""
 "policy</a> and our <a href=\"%(terms_of_use_url)s\">Terms of Use</a>.\n"
 "                "
 msgstr ""
+"\n"
+"               Wenn du noch keinen Account hast, <a href=\"%(signup_url)s\">"
+"registriere</a> dich bitte zuerst. Eine Anmeldung ist nur für die Moderation "
+"von SpeakUp notwendig. Als Teilnehmer*in kannst du auch ohne Registrierung "
+"an der Diskussion teilnehmen. Bei Fragen zum Datenschutz oder zur Nutzung von "
+"SpeakUp, schau dir unsere <a href=\"%(privacy_policy_url)s\">"
+"Datenschutzerklärung</a> und unsere <a href=\"%(terms_of_use_url)s\">"
+"Nutzungsbedingungen</a> an.\n"
+"                "
 
 #: a4-speakup/templates/account/login.html:35
 msgid "Forgot Password?"
-msgstr ""
+msgstr "Passwort vergessen?"
 
 #: a4-speakup/templates/account/logout.html:4
 #: a4-speakup/templates/account/logout.html:10
 #: a4-speakup/templates/account/logout.html:18
 msgid "Sign Out"
-msgstr ""
+msgstr "Abmelden"
 
 #: a4-speakup/templates/account/logout.html:11
 msgid "Are you sure you want to sign out?"
-msgstr ""
+msgstr "Sind Sie sicher, dass Sie sich abmelden möchten?"
 
 #: a4-speakup/templates/account/password_reset.html:6
 #: a4-speakup/templates/account/password_reset.html:12
 msgid "Password Reset"
-msgstr ""
+msgstr "Passwort zurücksetzen"
 
 #: a4-speakup/templates/account/password_reset.html:17
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you "
 "an e-mail allowing you to reset it."
-msgstr ""
+msgstr "Passwort vergessen? Tragen Sie Ihre E-Mail Adresse ein und Sie bekommen eine "
+"Email mit der Sie das Passwort zurücksetzen können."
 
 #: a4-speakup/templates/account/password_reset.html:29
 msgid "Reset My Password"
-msgstr ""
+msgstr "Mein Passwort zurücksetzen"
 
 #: a4-speakup/templates/account/password_reset.html:31
 msgid "Please contact us if you have any trouble resetting your password."
 msgstr ""
+"Bitte kontaktieren Sie uns, falls es Probleme mit der Passwortzurücksetzung "
+"gibt."
 
 #: a4-speakup/templates/account/signup.html:15
 #, python-format
@@ -1440,10 +1461,12 @@ msgid ""
 "Already registered as a moderator? Then log in\n"
 "                    <a href=\"%(login_url)s\">here</a>."
 msgstr ""
+"Du bist die Moderation und schon registriert? Dann logge "
+"dich <a href=\"%(login_url)s\">hier</a> ein!"
 
 #: a4-speakup/templates/base_errors.html:4
 msgid "Error"
-msgstr ""
+msgstr "Fehler"
 
 #: a4-speakup/templates/base_errors.html:11
 msgid "Back to landing page"
@@ -1452,7 +1475,7 @@ msgstr ""
 #: a4-speakup/templates/email_base.html:19
 #: a4-speakup/templates/email_base.txt:4
 msgid "Hello"
-msgstr ""
+msgstr "Hallo"
 
 #~ msgid "I accept the terms of use."
 #~ msgstr "Ich akzeptiere die Nutzungsbedingungen."
