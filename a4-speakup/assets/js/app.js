@@ -38,6 +38,3 @@ var init = function () {
 }
 
 $(init)
-
-// ugly hack to make ckeditor work with whitenoise
-window.CKEDITOR_BASEPATH = '/static/ckeditor/ckeditor/'
