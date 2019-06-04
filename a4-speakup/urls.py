@@ -4,7 +4,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.cache import never_cache
-from django.views.i18n import javascript_catalog
+from django.views.i18n import JavaScriptCatalog
 from rest_framework import routers
 from wagtail.admin import urls as wagtailadmin_urls
 from wagtail.core import urls as wagtail_urls
@@ -20,10 +20,6 @@ from apps.likes.routers import LikesDefaultRouter
 from apps.projects import urls as project_urls
 from apps.questions import urls as questions_urls
 from apps.questions.api import QuestionViewSet
-
-js_info_dict = {
-    'packages': ('adhocracy4.comments',),
-}
 
 router = routers.DefaultRouter()
 router.register(r'reports', ReportViewSet, base_name='reports')
@@ -41,7 +37,7 @@ likes_router.register(r'likes', LikesViewSet, base_name='likes')
 
 
 urlpatterns = [
-    url(r'^django-admin/', include(admin.site.urls)),
+    url(r'^django-admin/', admin.site.urls),
     url(r'^admin/', include(wagtailadmin_urls)),
     url(r'^api/', include(router.urls)),
     url(r'^api/', include(ct_router.urls)),
@@ -54,8 +50,7 @@ urlpatterns = [
     url(r'^ideas/', include(ideas_urls)),
     url(r'^questions/', include(questions_urls)),
 
-    url(r'^jsi18n/$', javascript_catalog,
-        js_info_dict, name='javascript-catalog'),
+    url(r'^jsi18n/$', JavaScriptCatalog.as_view(), name='javascript-catalog'),
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^upload/',
         login_required(ck_views.upload), name='ckeditor_upload'),

@@ -1,7 +1,7 @@
 from autoslug import AutoSlugField
 from django.conf import settings
-from django.core.urlresolvers import reverse
 from django.db import models
+from django.urls import reverse
 
 
 class Organisation(models.Model):
