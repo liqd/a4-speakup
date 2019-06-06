@@ -18,10 +18,10 @@
                 <form id="signup_form" method="post" action="{% url 'account_signup' %}">
                     {% csrf_token %}
 
-                    {% include 'a4-speakup_contrib/form_field.html' with field=form.email %}
-                    {% include 'a4-speakup_contrib/form_field.html' with field=form.username %}
-                    {% include 'a4-speakup_contrib/form_field.html' with field=form.password1 %}
-                    {% include 'a4-speakup_contrib/form_field.html' with field=form.password2 %}
+                    {% include 'a4_candy_contrib/form_field.html' with field=form.email %}
+                    {% include 'a4_candy_contrib/form_field.html' with field=form.username %}
+                    {% include 'a4_candy_contrib/form_field.html' with field=form.password1 %}
+                    {% include 'a4_candy_contrib/form_field.html' with field=form.password2 %}
 
                     <div class="form-check">
                         <label class="form-check__label">

@@ -164,7 +164,7 @@ class DashboardProjectModeratorsView(AbstractProjectUserInviteListView):
 
     model = project_models.Project
     slug_url_kwarg = 'project_slug'
-    template_name = 'a4-speakup_projects/dashboard_project_moderators.html'
+    template_name = 'a4_candy_projects/dashboard_project_moderators.html'
     permission_required = 'a4projects.change_project'
     menu_item = 'project'
 

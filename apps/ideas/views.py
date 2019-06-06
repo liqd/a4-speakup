@@ -32,7 +32,7 @@ class IdeaDetailView(PermissionRequiredMixin, generic.DetailView):
     model = idea_models.Idea
     queryset = idea_models.Idea.objects.annotate_positive_rating_count() \
         .annotate_negative_rating_count()
-    permission_required = 'a4-speakup_ideas.view_idea'
+    permission_required = 'a4_candy_ideas.view_idea'
 
     @property
     def raise_exception(self):
@@ -48,7 +48,7 @@ class IdeaDetailView(PermissionRequiredMixin, generic.DetailView):
 class IdeaUpdateView(PermissionRequiredMixin, generic.UpdateView):
     model = idea_models.Idea
     form_class = forms.IdeaForm
-    permission_required = 'a4-speakup_ideas.modify_idea'
+    permission_required = 'a4_candy_ideas.modify_idea'
 
     @property
     def raise_exception(self):
@@ -69,7 +69,7 @@ class IdeaUpdateView(PermissionRequiredMixin, generic.UpdateView):
 class IdeaCreateView(PermissionRequiredMixin, generic.CreateView):
     model = idea_models.Idea
     form_class = forms.IdeaForm
-    permission_required = 'a4-speakup_ideas.propose_idea'
+    permission_required = 'a4_candy_ideas.propose_idea'
 
     @property
     def raise_exception(self):
@@ -105,7 +105,7 @@ class IdeaCreateView(PermissionRequiredMixin, generic.CreateView):
 class IdeaDeleteView(PermissionRequiredMixin, generic.DeleteView):
     model = idea_models.Idea
     success_message = _("Your Idea has been deleted")
-    permission_required = 'a4-speakup_ideas.modify_idea'
+    permission_required = 'a4_candy_ideas.modify_idea'
 
     @property
     def raise_exception(self):

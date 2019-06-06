@@ -1,6 +1,6 @@
 [
   {
-    "model": "a4-speakup_organisations.Organisation",
+    "model": "a4_candy_organisations.Organisation",
     "pk": 1,
     "fields": {
       "name": "liqd",

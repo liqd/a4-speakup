@@ -7,8 +7,10 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
+    replaces = [('a4-speakup_users', '0002_add_notification')]
+
     dependencies = [
-        ('a4-speakup_users', '0001_initial'),
+        ('a4_candy_users', '0001_initial'),
     ]
 
     operations = [

@@ -25,7 +25,7 @@
                   {% endfor %}
                 </div>
 
-                {% include 'a4-speakup_contrib/form_fields.html' with fields=form.visible_fields %}
+                {% include 'a4_candy_contrib/form_fields.html' with fields=form.visible_fields %}
 
                 {% if redirect_field_value %}
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>

@@ -11,6 +11,8 @@ class Migration(migrations.Migration):
 
     initial = True
 
+    replaces = [('a4-speakup_organisations', '0001_initial')]
+
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
@@ -24,5 +26,8 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=512)),
                 ('initiators', models.ManyToManyField(blank=True, to=settings.AUTH_USER_MODEL)),
             ],
+            options={
+                'db_table': 'a4-speakup_organisations_organisation',
+            },
         ),
     ]

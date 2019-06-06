@@ -7,10 +7,12 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
 
+    replaces = [('a4-speakup_likes', '0003_unique_together')]
+
     dependencies = [
-        ('a4-speakup_questions', '0002_question_category'),
+        ('a4_candy_questions', '0002_question_category'),
         ('sessions', '0001_initial'),
-        ('a4-speakup_likes', '0002_add_related_name'),
+        ('a4_candy_likes', '0002_add_related_name'),
     ]
 
     operations = [

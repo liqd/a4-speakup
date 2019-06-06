@@ -12,6 +12,8 @@ class Migration(migrations.Migration):
 
     initial = True
 
+    replaces = [('a4-speakup_users', '0001_initial')]
+
     dependencies = [
         ('auth', '0008_alter_user_username_max_length'),
     ]
@@ -34,6 +36,7 @@ class Migration(migrations.Migration):
             ],
             options={
                 'abstract': False,
+                'db_table': 'a4-speakup_users_user',
             },
             managers=[
                 ('objects', django.contrib.auth.models.UserManager()),

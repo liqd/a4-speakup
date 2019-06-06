@@ -19,7 +19,7 @@ class IdeaExportView(PermissionRequiredMixin,
     model = models.Idea
     fields = ['name', 'description']
     html_fields = ['description']
-    permission_required = 'a4-speakup_ideas.moderate_idea'
+    permission_required = 'a4_candy_ideas.moderate_idea'
 
     def get_permission_object(self):
         return self.module
@@ -45,7 +45,7 @@ class IdeaCommentExportView(PermissionRequiredMixin,
     model = Comment
 
     fields = ['id', 'comment', 'created']
-    permission_required = 'a4-speakup_ideas.moderate_idea'
+    permission_required = 'a4_candy_ideas.moderate_idea'
 
     def get_permission_object(self):
         return self.module

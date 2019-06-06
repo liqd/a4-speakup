@@ -9,9 +9,11 @@ import django.db.models.deletion
 
 class Migration(migrations.Migration):
 
+    replaces = [('a4-speakup_questions', '0002_question_category')]
+
     dependencies = [
         ('a4categories', '0002_category_icon'),
-        ('a4-speakup_questions', '0001_initial'),
+        ('a4_candy_questions', '0001_initial'),
     ]
 
     operations = [

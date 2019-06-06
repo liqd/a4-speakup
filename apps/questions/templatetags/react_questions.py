@@ -18,7 +18,7 @@ def react_questions(context, obj):
     categories = [category.name for category in obj.category_set.all()]
     questions_api_url = reverse('questions-list', kwargs={'module_pk': obj.pk})
 
-    permission = 'a4-speakup_likes.add_like_model'
+    permission = 'a4_candy_likes.add_like_model'
     has_liking_permission = user.has_perm(
         permission, obj)
     would_have_liking_permission = NormalUser().would_have_perm(
