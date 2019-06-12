@@ -1,12 +1,12 @@
 {
   "name": "a4-speakup",
   "dependencies": {
-    "@babel/core": "7.4.4",
+    "@babel/core": "7.4.5",
     "@babel/plugin-transform-modules-commonjs": "7.4.4",
     "@babel/plugin-transform-runtime": "7.4.4",
-    "@babel/preset-env": "7.4.4",
+    "@babel/preset-env": "7.4.5",
     "@babel/preset-react": "7.0.0",
-    "@babel/runtime": "7.4.4",
+    "@babel/runtime": "7.4.5",
     "@fortawesome/fontawesome-free": "5.9.0",
     "acorn": "6.1.1",
     "adhocracy4": "liqd/adhocracy4#0dc3eae28531963bcd420452d6c7b537eef43dfb",
