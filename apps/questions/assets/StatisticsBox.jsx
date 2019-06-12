@@ -42,9 +42,6 @@ class StatisticsBox extends React.Component {
   render () {
     return (
       <div>
-        <p class='font-weight-bold'>
-          {django.gettext('Posts included')}
-        </p>
         { this.props.categories.map((category, index) => {
           let count = this.countCategory(category)
           let style = { width: count + '%' }
@@ -60,6 +57,7 @@ class StatisticsBox extends React.Component {
           )
         })
         }
+        <h5 class='mt-5'>{django.gettext('Posts included')}</h5>
         <div className='list-group mt-5'>
           { this.state.questions.map((question, index) => {
             return <Question
