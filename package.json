@@ -10,7 +10,7 @@
     "@fortawesome/fontawesome-free": "5.9.0",
     "acorn": "6.1.1",
     "adhocracy4": "liqd/adhocracy4#0dc3eae28531963bcd420452d6c7b537eef43dfb",
-    "babel-loader": "8.0.5",
+    "babel-loader": "8.0.6",
     "bootstrap": "4.3.1",
     "copy-webpack-plugin": "5.0.3",
     "css-loader": "3.0.0",
