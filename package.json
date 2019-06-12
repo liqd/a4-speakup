@@ -31,7 +31,7 @@
     "style-loader": "0.23.1",
     "tether": "1.4.6",
     "timeago.js": "3.0.2",
-    "webpack": "4.30.0",
+    "webpack": "4.33.0",
     "webpack-merge": "4.2.1"
   },
   "devDependencies": {
