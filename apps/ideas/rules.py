@@ -12,29 +12,29 @@ from adhocracy4.phases.predicates import (phase_allows_add,
 
 from .models import Idea
 
-rules.add_perm('a4-speakup_ideas.rate_idea',
+rules.add_perm('a4_candy_ideas.rate_idea',
                is_superuser | is_context_moderator | is_context_initiator
                | (is_context_member & phase_allows_rate))
 
 
-rules.add_perm('a4-speakup_ideas.comment_idea',
+rules.add_perm('a4_candy_ideas.comment_idea',
                is_superuser | is_context_moderator | is_context_initiator
                | (is_context_member & phase_allows_comment))
 
 
-rules.add_perm('a4-speakup_ideas.modify_idea',
+rules.add_perm('a4_candy_ideas.modify_idea',
                is_superuser | is_context_moderator | is_context_initiator
                | (is_context_member & is_owner & phase_allows_change))
 
 
-rules.add_perm('a4-speakup_ideas.propose_idea',
+rules.add_perm('a4_candy_ideas.propose_idea',
                is_superuser | is_context_moderator | is_context_initiator
                | (is_context_member & phase_allows_add(Idea)))
 
 
-rules.add_perm('a4-speakup_ideas.view_idea',
+rules.add_perm('a4_candy_ideas.view_idea',
                is_superuser | is_context_moderator | is_context_initiator
                | is_context_member | is_public_context)
 
-rules.add_perm('a4-speakup_ideas.export_ideas',
+rules.add_perm('a4_candy_ideas.export_ideas',
                is_superuser | is_context_moderator | is_context_initiator)

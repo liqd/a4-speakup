@@ -5,11 +5,11 @@
 
 {% block dashboard_project_content %}
     <h1 class="mb-3">{% trans 'Edit Moderators' %}</h1>
-    {% include 'a4-speakup_projects/includes/dashboard_users_from_email_form.html' %}
+    {% include 'a4_candy_projects/includes/dashboard_users_from_email_form.html' %}
 
     <h2 class="mb-3">{% trans 'Pending Invitations' %}</h2>
-    {% include 'a4-speakup_projects/includes/dashboard_user_invite_list.html' with invites=project.moderatorinvite_set.all %}
+    {% include 'a4_candy_projects/includes/dashboard_user_invite_list.html' with invites=project.moderatorinvite_set.all %}
     <h2 class="mb-3">{% trans 'Moderators' %}</h2>
-    {% include 'a4-speakup_projects/includes/dashboard_user_list.html' with users=project.moderators.all %}
+    {% include 'a4_candy_projects/includes/dashboard_user_list.html' with users=project.moderators.all %}
 {% endblock %}
 

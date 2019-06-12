@@ -1,6 +1,6 @@
 [
     {
-        "model": "a4-speakup_questions.question",
+        "model": "a4_candy_questions.question",
         "pk": 1,
         "fields": {
             "created": "2019-03-26T08:54:59.760Z",
@@ -13,7 +13,7 @@
         }
     },
     {
-        "model": "a4-speakup_questions.question",
+        "model": "a4_candy_questions.question",
         "pk": 2,
         "fields": {
             "created": "2019-03-26T08:55:29.810Z",
@@ -26,7 +26,7 @@
         }
     },
     {
-        "model": "a4-speakup_questions.question",
+        "model": "a4_candy_questions.question",
         "pk": 3,
         "fields": {
             "created": "2019-03-26T08:55:41.104Z",
@@ -39,7 +39,7 @@
         }
     },
     {
-        "model": "a4-speakup_questions.question",
+        "model": "a4_candy_questions.question",
         "pk": 4,
         "fields": {
             "created": "2019-03-26T08:55:58.852Z",
@@ -52,7 +52,7 @@
         }
     },
     {
-        "model": "a4-speakup_questions.question",
+        "model": "a4_candy_questions.question",
         "pk": 5,
         "fields": {
             "created": "2019-03-26T08:56:23.088Z",
@@ -65,7 +65,7 @@
         }
     },
     {
-        "model": "a4-speakup_questions.question",
+        "model": "a4_candy_questions.question",
         "pk": 6,
         "fields": {
             "created": "2019-03-26T08:56:52.259Z",
@@ -78,7 +78,7 @@
         }
     },
     {
-        "model": "a4-speakup_questions.question",
+        "model": "a4_candy_questions.question",
         "pk": 7,
         "fields": {
             "created": "2019-03-26T08:57:08.032Z",
@@ -91,7 +91,7 @@
         }
     },
     {
-        "model": "a4-speakup_questions.question",
+        "model": "a4_candy_questions.question",
         "pk": 8,
         "fields": {
             "created": "2019-03-26T08:57:28.690Z",

@@ -8,14 +8,16 @@ import django.db.models.deletion
 
 class Migration(migrations.Migration):
 
+    replaces = [('a4-speakup_likes', '0002_add_related_name')]
+
     dependencies = [
-        ('a4-speakup_likes', '0001_initial'),
+        ('a4_candy_likes', '0001_initial'),
     ]
 
     operations = [
         migrations.AlterField(
             model_name='like',
             name='question',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='question_likes', to='a4-speakup_questions.Question'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='question_likes', to='a4_candy_questions.Question'),
         ),
     ]

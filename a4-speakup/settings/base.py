@@ -96,7 +96,6 @@ MIDDLEWARE = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'wagtail.core.middleware.SiteMiddleware',
@@ -326,7 +325,7 @@ WAGTAIL_SITE_NAME = "a4-speakup"
 
 # Authentification
 
-AUTH_USER_MODEL = 'a4-speakup_users.User'
+AUTH_USER_MODEL = 'a4_candy_users.User'
 
 LOGIN_URL = 'account_login'
 LOGOUT_URL = 'account_logout'
@@ -353,36 +352,36 @@ REST_FRAMEWORK = {
 }
 
 #A4 based Settings
-A4_ORGANISATIONS_MODEL = "a4-speakup_organisations.Organisation"
+A4_ORGANISATIONS_MODEL = "a4_candy_organisations.Organisation"
 
 A4_COMMENTABLES = (
     ('a4comments', 'comment'),
 
-    ('a4-speakup_ideas', 'idea'),
+    ('a4_candy_ideas', 'idea'),
 
 )
 
 A4_RATEABLES = (
     ('a4comments', 'comment'),
-    ('a4-speakup_ideas', 'idea'),
+    ('a4_candy_ideas', 'idea'),
 
 )
 
 A4_REPORTABLES = (
     ('a4comments', 'comment'),
-    ('a4-speakup_ideas', 'idea'),
+    ('a4_candy_ideas', 'idea'),
 
 )
 
 ACTIONABLE = [
     ('a4comments', 'comment'),
-    ('a4-speakup_ideas', 'idea'),
+    ('a4_candy_ideas', 'idea'),
 
 ]
 
 A4_CATEGORIZABLE = (
-    ('a4-speakup_ideas', 'idea'),
-    ('a4-speakup_questions', 'question'),
+    ('a4_candy_ideas', 'idea'),
+    ('a4_candy_questions', 'question'),
 )
 
 A4_CATEGORY_ICONS = ()

@@ -1,7 +1,7 @@
 
 from allauth.account import urls as account_urls
 from django import template
-from django.core.urlresolvers import Resolver404, resolve
+from django.urls import Resolver404, resolve
 
 INVALID_URL_NAME = object()
 
@@ -24,7 +24,7 @@ def get_next_url(request):
         return request.get_full_path()
 
 
-@register.inclusion_tag('a4-speakup_users/indicator.html', takes_context=True)
+@register.inclusion_tag('a4_candy_users/indicator.html', takes_context=True)
 def userindicator(context):
     context['redirect_field_value'] = get_next_url(context['request'])
     return context

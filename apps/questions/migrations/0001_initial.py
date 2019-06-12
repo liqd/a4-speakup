@@ -11,6 +11,8 @@ class Migration(migrations.Migration):
 
     initial = True
 
+    replaces = [('a4-speakup_questions', '0001_initial')]
+
     dependencies = [
         ('a4modules', '0004_description_maxlength_512'),
     ]
@@ -29,6 +31,7 @@ class Migration(migrations.Migration):
             ],
             options={
                 'abstract': False,
+                'db_table': 'a4-speakup_questions_question',
             },
         ),
     ]

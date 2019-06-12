@@ -13,6 +13,8 @@ class Migration(migrations.Migration):
 
     initial = True
 
+    replaces = [('a4-speakup_projects', '0001_initial')]
+
     dependencies = [
         ('a4projects', '0021_names_and_help_topics_and_point'),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
@@ -32,6 +34,7 @@ class Migration(migrations.Migration):
             ],
             options={
                 'abstract': False,
+                'db_table': 'a4-speakup_projects_moderatorinvite',
             },
         ),
         migrations.CreateModel(
@@ -47,6 +50,7 @@ class Migration(migrations.Migration):
             ],
             options={
                 'abstract': False,
+                'db_table': 'a4-speakup_projects_participantinvite',
             },
         ),
         migrations.AlterUniqueTogether(

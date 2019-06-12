@@ -14,6 +14,8 @@ class Migration(migrations.Migration):
 
     initial = True
 
+    replaces = [('a4-speakup_ideas', '0001_initial')]
+
     dependencies = [
         ('a4modules', '0004_description_maxlength_512'),
         ('a4categories', '0002_category_icon'),
@@ -32,6 +34,7 @@ class Migration(migrations.Migration):
             ],
             options={
                 'abstract': False,
+                'db_table': 'a4-speakup_ideas_idea',
             },
             bases=('a4modules.item',),
         ),

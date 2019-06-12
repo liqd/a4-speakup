@@ -7,8 +7,10 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
+    replaces = [('a4-speakup_likes', '0004_safe_session_as_text')]
+
     dependencies = [
-        ('a4-speakup_likes', '0003_unique_together'),
+        ('a4_candy_likes', '0003_unique_together'),
     ]
 
     operations = [

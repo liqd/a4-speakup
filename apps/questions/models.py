@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AnonymousUser
 from django.db import models
+from django.urls import reverse
 
 from adhocracy4.categories.fields import CategoryField
 from adhocracy4.models.base import TimeStampedModel
@@ -49,5 +50,4 @@ class Question(AnonymousItem):
         return str(self.text)
 
     def get_absolute_url(self):
-        from django.core.urlresolvers import reverse
         return reverse('project-detail', args=[str(self.project.slug)])

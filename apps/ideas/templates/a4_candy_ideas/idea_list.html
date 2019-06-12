@@ -1,4 +1,4 @@
-{% extends 'a4-speakup_projects/project_detail.html' %}
+{% extends 'a4_candy_projects/project_detail.html' %}
 {% load i18n discovery_tags %}
 
 {% block phase_content %}
@@ -6,7 +6,7 @@
     <div class="row mb-5">
         <div class="col-12">
             <div class="idea-list">
-                {% has_or_would_have_perm 'a4-speakup_ideas.propose_idea' request.user view.module as add_button_enabled %}
+                {% has_or_would_have_perm 'a4_candy_ideas.propose_idea' request.user view.module as add_button_enabled %}
                 {% if add_button_enabled %}
                 <a href="{% url 'idea-create' slug=view.module.slug %}" class="btn btn--primary btn--full btn--huge idea-list-button mb-4" id="idea-create">
                     <i class="fa fa-plus idea-list-button-icon" aria-hidden="true"></i>
@@ -35,13 +35,13 @@
                   {% if idea_list.count > 0 %}
                   {% for idea in idea_list %}
                   <div class="list-group">
-                  {% include "a4-speakup_ideas/includes/idea_list_tile.html" with idea=idea %}
+                  {% include "a4_candy_ideas/includes/idea_list_tile.html" with idea=idea %}
                   </div>
                   {% endfor %}
 
 
                   {% if is_paginated %}
-                  {% include "a4-speakup_ideas/includes/pagination.html"%}
+                  {% include "a4_candy_ideas/includes/pagination.html"%}
                   {% endif %}
                   {% else %}
                   <div class="infotext">

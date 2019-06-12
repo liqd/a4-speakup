@@ -1,6 +1,7 @@
 from django.contrib.auth import models as auth_models
 from django.core import validators
 from django.db import models
+from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 
@@ -62,7 +63,6 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
         verbose_name_plural = _("Users")
 
     def get_absolute_url(self):
-        from django.core.urlresolvers import reverse
         return reverse('profile', kwargs={'slug': str(self.username)})
 
     @property
