@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'background_task',
+    'raven.contrib.django.raven_compat',
 
     'django.contrib.sites',
     'django.contrib.admin',
