@@ -8,7 +8,7 @@ from . import models
 class QuestionForm(category_forms.CategorizableFieldMixin, forms.ModelForm):
     class Meta:
         model = models.Question
-        fields = ['text', 'category']
+        fields = ['text', 'category', 'weight']
 
     def __init__(self, *args, **kwargs):
         self.category_initial = kwargs.pop('category_initial', None)
@@ -19,3 +19,6 @@ class QuestionForm(category_forms.CategorizableFieldMixin, forms.ModelForm):
                 self.initial['category'] = self.category_initial
         else:
             del self.fields['category']
+        self.fields['text'].label = "Aufgabe"
+        self.fields['category'].label = "Wer macht's"
+        self.fields['weight'].label = "Aufteilung"

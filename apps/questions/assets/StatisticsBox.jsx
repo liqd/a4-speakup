@@ -13,7 +13,7 @@ class StatisticsBox extends React.Component {
   }
 
   getItems () {
-    fetch(this.props.questions_api_url + '?is_answered=1')
+    fetch(this.props.questions_api_url)
       .then(response => response.json())
       .then(data => this.setState({
         questions: data
@@ -31,17 +31,20 @@ class StatisticsBox extends React.Component {
 
   countCategory (category) {
     let count = 0
+    let totalWeight = 0
     this.state.questions.forEach(function (question) {
+      totalWeight += question.weight
       if (question.category === category) {
-        count++
+        count += question.weight
       }
     })
-    return Math.round(count * 100 / this.state.questions.length) || 0
+    return Math.round(count * 100 / totalWeight) || 0
   }
 
   render () {
     return (
       <div>
+        <h5 class='mt-5'>{django.gettext('Eure Anteile')}</h5>
         { this.props.categories.map((category, index) => {
           let count = this.countCategory(category)
           let style = { width: count + '%' }
@@ -57,7 +60,7 @@ class StatisticsBox extends React.Component {
           )
         })
         }
-        <h5 class='mt-5'>{django.gettext('Posts included')}</h5>
+        <h5 class='mt-5'>{django.gettext('Erledigte Aufgaben')}</h5>
         <div className='list-group mt-5'>
           { this.state.questions.map((question, index) => {
             return <Question
@@ -67,6 +70,7 @@ class StatisticsBox extends React.Component {
               is_favourite={question.is_favourite}
               category={question.category}
               likes={question.likes}
+              weight={question.weight}
             >{question.text}</Question>
           })
           }

@@ -41,6 +41,7 @@ class Question(AnonymousItem):
     text = models.TextField(max_length=1000)
     is_answered = models.BooleanField(default=False)
     is_favourite = models.BooleanField(default=False)
+    weight = models.PositiveSmallIntegerField(default=1)
 
     category = CategoryField()
 

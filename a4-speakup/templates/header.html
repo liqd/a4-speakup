@@ -1,10 +1,10 @@
 
-{% load userindicator snippet_tags static %}
+{% load userindicator snippet_tags static i18n %}
 {% load_site_menu "header" as header_menu_items %}
 
 <nav class="header navbar navbar-expand-sm px-0 pb-5">
     <div class="container d-flex justify-content-center">
-        <a class="navbar-brand mr-0 header__logo" href="/" rel="home"><img src=" {% static 'images/logo.png' %}" width="100px" alt="SpeakUp"/></a>
+        <h3 class="text-white font-weight-bold">{% trans "Wer macht's" %}</h3>
         <div>
             <ul class="navbar-nav mr-auto">
             {% for menuitem in header_menu_items %}
