@@ -25,6 +25,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('a4_candy_questions', '0004_rename_table'),
+        ('a4phases', '0006_remove_weight_from_phase_type')
     ]
 
     operations = [
