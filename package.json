@@ -18,7 +18,7 @@
     "feature-detect": "1.0.0",
     "file-loader": "4.0.0",
     "file-saver": "2.0.2",
-    "immutability-helper": "3.0.0",
+    "immutability-helper": "3.0.1",
     "mini-css-extract-plugin": "0.7.0",
     "node-sass": "4.12.0",
     "popper.js": "1.15.0",
