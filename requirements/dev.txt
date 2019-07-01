@@ -1,5 +1,5 @@
 -r base.txt
-django-debug-toolbar==1.11
+django-debug-toolbar==2.0
 factory-boy==2.11.1
 Faker==1.0.5
 flake8==3.7.7
