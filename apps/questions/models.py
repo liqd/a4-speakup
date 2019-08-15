@@ -41,6 +41,8 @@ class Question(AnonymousItem):
     text = models.TextField(max_length=1000)
     is_answered = models.BooleanField(default=False)
     is_on_shortlist = models.BooleanField(default=False)
+    is_hidden = models.BooleanField(default=False)
+    is_live = models.BooleanField(default=False)
 
     category = CategoryField()
 

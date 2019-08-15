@@ -18,7 +18,7 @@ class QuestionViewSet(ModuleMixin,
     serializer_class = QuestionSerializer
     permission_classes = (ViewSetRulesPermission,)
     filter_backends = (DjangoFilterBackend, OrderingFilter,)
-    filter_fields = ('is_answered',)
+    filter_fields = ('is_answered', 'is_live')
     ordering_fields = ('like_count',)
 
     def get_permission_object(self):
