@@ -105,14 +105,13 @@ class QuestionModerator extends React.Component {
           <div className='col-12'>
             <span className='badge badge-gray'>{ this.props.category }</span>
             <div>
-
               <button type='button' className='btn btn-transparent float-right px-3'
-                onClick={this.props.toggleHidden.bind(this, this.props.id)}>
+                onClick={this.props.handleDelete.bind(this, this.props.id)}>
                 <i className='fas fa-times px-1' aria-label={django.gettext('mark as hidden')} />
               </button>
 
               <button type='button' className='btn btn-transparent float-right px-3'
-                onClick={this.props.toggleAnswered.bind(this, this.props.id)}>
+                onClick={this.props.handleDelete.bind(this, this.props.id)}>
                 <i className='fas fa-check px-1' aria-label={django.gettext('mark as done')} />
               </button>
               <button type='button' className='btn btn-transparent float-right px-3' onClick={this.shortList.bind(this)}>

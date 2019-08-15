@@ -98,16 +98,8 @@ class QuestionBox extends React.Component {
     })
   }
 
-  toggleAnswered (id) {
+  handleDelete (id) {
     let data = { is_answered: 1 }
-    this.updateQuestion(data, id)
-      .then(response => this.setState(prevState => ({
-        filteredQuestions: prevState.filteredQuestions.filter(question => question.id !== id)
-      })))
-  }
-
-  toggleHidden (id) {
-    let data = { is_hidden: 1 }
     this.updateQuestion(data, id)
       .then(response => this.setState(prevState => ({
         filteredQuestions: prevState.filteredQuestions.filter(question => question.id !== id)
@@ -159,8 +151,7 @@ class QuestionBox extends React.Component {
         />
         <QuestionList
           questions={this.state.filteredQuestions}
-          toggleAnswered={this.toggleAnswered.bind(this)}
-          toggleHidden={this.toggleHidden.bind(this)}
+          handleDelete={this.handleDelete.bind(this)}
           updateQuestion={this.updateQuestion.bind(this)}
           handleLike={this.handleLike.bind(this)}
           isModerator={this.props.isModerator}
