@@ -6,29 +6,29 @@ class Question extends React.Component {
     super(props)
 
     this.state = {
-      is_favourite: this.props.is_favourite,
+      is_on_shortlist: this.props.is_on_shortlist,
       likes: this.props.likes.count,
       session_like: this.props.likes.session_like
     }
   }
 
   markFavourite () {
-    let value = !this.state.is_favourite
+    let value = !this.state.is_on_shortlist
     let boolValue = (value) ? 1 : 0
-    let data = { is_favourite: boolValue }
+    let data = { is_on_shortlist: boolValue }
     this.props.updateQuestion(data, this.props.id)
       .then((response) => response.json())
       .then(responseData => this.setState(
         {
-          is_favourite: responseData.is_favourite
+          is_on_shortlist: responseData.is_on_shortlist
         }
       ))
   }
 
   componentDidUpdate (prevProps) {
-    if (this.props.is_favourite !== prevProps.is_favourite) {
+    if (this.props.is_on_shortlist !== prevProps.is_on_shortlist) {
       this.setState({
-        is_favourite: this.props.is_favourite
+        is_on_shortlist: this.props.is_on_shortlist
       })
     }
     if (this.props.likes !== prevProps.likes) {
@@ -75,7 +75,7 @@ class Question extends React.Component {
                 <i className='fas fa-check px-1' aria-label={django.gettext('mark as done')} />
               </button>
               <button type='button' className='btn btn-transparent float-right px-3' onClick={this.markFavourite.bind(this)}>
-                <i className={this.state.is_favourite ? 'fas fa-bookmark px-2 text-secondary' : 'far fa-bookmark px-2'} aria-label={this.state.is_favourite ? django.gettext('bookmark') : django.gettext('undo bookmark')} />
+                <i className={this.state.is_on_shortlist ? 'fas fa-bookmark px-2 text-secondary' : 'far fa-bookmark px-2'} aria-label={this.state.is_on_shortlist ? django.gettext('bookmark') : django.gettext('undo bookmark')} />
               </button>
             </div>
             }

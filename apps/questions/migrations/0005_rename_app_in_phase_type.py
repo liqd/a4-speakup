@@ -22,6 +22,7 @@ def backname_app(apps, schema_editor):
 
 
 class Migration(migrations.Migration):
+    atomic = False
 
     dependencies = [
         ('a4_candy_questions', '0004_rename_table'),

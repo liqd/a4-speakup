@@ -15,6 +15,23 @@ class QuestionListView(ProjectMixin, generic.ListView):
         return super().get_queryset().filter(module=self.module)
 
 
+class QuestionPresentationListView(ProjectMixin,
+                                   PermissionRequiredMixin,
+                                   generic.ListView):
+
+    model = question_models.Question
+    permission_required = 'a4_candy_questions.change_question'
+
+    def get_permission_object(self):
+        return self.module
+
+    def get_template_names(self):
+        return ['a4_candy_questions/question_present_list.html']
+
+    def get_queryset(self):
+        return super().get_queryset().filter(module=self.module)
+
+
 class QuestionCreateView(PermissionRequiredMixin, generic.CreateView):
     model = question_models.Question
     form_class = forms.QuestionForm

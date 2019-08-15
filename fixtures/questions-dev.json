@@ -8,7 +8,7 @@
             "module": 1,
             "text": "Why did you do it?",
             "is_answered": true,
-            "is_favourite": false,
+            "is_on_shortlist": false,
             "category": 1
         }
     },
@@ -21,7 +21,7 @@
             "module": 1,
             "text": "Do you think, this should be done again?",
             "is_answered": false,
-            "is_favourite": false,
+            "is_on_shortlist": false,
             "category": 2
         }
     },
@@ -34,7 +34,7 @@
             "module": 1,
             "text": "Can it flow?",
             "is_answered": true,
-            "is_favourite": false,
+            "is_on_shortlist": false,
             "category": 3
         }
     },
@@ -47,7 +47,7 @@
             "module": 1,
             "text": "Can it grow?",
             "is_answered": false,
-            "is_favourite": false,
+            "is_on_shortlist": false,
             "category": 3
         }
     },
@@ -60,7 +60,7 @@
             "module": 1,
             "text": "Should it be more awesome?",
             "is_answered": false,
-            "is_favourite": false,
+            "is_on_shortlist": false,
             "category": 1
         }
     },
@@ -73,7 +73,7 @@
             "module": 1,
             "text": "Could you elaborate on the funny things?",
             "is_answered": false,
-            "is_favourite": true,
+            "is_on_shortlist": true,
             "category": 1
         }
     },
@@ -86,7 +86,7 @@
             "module": 1,
             "text": "Will it sit there forever?",
             "is_answered": false,
-            "is_favourite": false,
+            "is_on_shortlist": false,
             "category": 2
         }
     },
@@ -99,7 +99,7 @@
             "module": 1,
             "text": "Is that the right number? Are you really really sure?",
             "is_answered": false,
-            "is_favourite": false,
+            "is_on_shortlist": false,
             "category": 2
         }
     }

@@ -59,7 +59,7 @@ class Filter extends React.Component {
                   checked={this.props.orderedByLikes}
                   onChange={this.props.toggleOrdering} />
                 <span className='checkbox-btn__text'>
-                  <i class='fas fa-sort-amount-up' aria-label={django.gettext('order by likes')} /> likes
+                  <i className='fas fa-sort-amount-up' aria-label={django.gettext('order by likes')} /> likes
                 </span>
               </label>
             </div>

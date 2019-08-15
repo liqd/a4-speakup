@@ -56,3 +56,21 @@ def react_questions_statistics(context, obj):
         'data-attributes="{attributes}"></div>',
         attributes=json.dumps(attributes)
     )
+
+
+@register.simple_tag(takes_context=True)
+def react_questions_present(context, obj):
+
+    categories = [category.name for category in obj.category_set.all()]
+    questions_api_url = reverse('questions-list', kwargs={'module_pk': obj.pk})
+
+    attributes = {
+        'questions_api_url': questions_api_url,
+        'categories': categories
+    }
+
+    return format_html(
+        '<div data-speakup-widget="present" '
+        'data-attributes="{attributes}"></div>',
+        attributes=json.dumps(attributes)
+    )
