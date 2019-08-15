@@ -40,7 +40,7 @@ class LikeQuerySet(models.QuerySet):
 class Question(AnonymousItem):
     text = models.TextField(max_length=1000)
     is_answered = models.BooleanField(default=False)
-    is_favourite = models.BooleanField(default=False)
+    is_on_shortlist = models.BooleanField(default=False)
 
     category = CategoryField()
 

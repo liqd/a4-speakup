@@ -48,7 +48,7 @@ class QuestionBox extends React.Component {
 
   isInFilter (item) {
     return (this.state.category === '-1' || this.state.category === item.category) &&
-      (!this.state.onlyMarked || item.is_favourite)
+      (!this.state.onlyMarked || item.is_on_shortlist)
   }
 
   filterQuestions (questions) {
