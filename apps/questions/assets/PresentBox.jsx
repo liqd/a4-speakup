@@ -1,4 +1,5 @@
 /* global fetch */
+/* global django */
 let React = require('react')
 let Question = require('./Question')
 
@@ -29,23 +30,34 @@ class PresentBox extends React.Component {
   }
 
   render () {
-    return (
-      <div>
-        <div className='list-group mt-5'>
-          { this.state.questions.map((question, index) => {
-            return <Question
-              key={question.id}
-              id={question.id}
-              is_answered={question.is_answered}
-              is_on_shortlist={question.is_on_shortlist}
-              category={question.category}
-              likes={question.likes}
-            >{question.text}</Question>
-          })
-          }
+    if (this.state.questions.length > 0) {
+      return (
+        <div>
+          <div className='list-group mt-5'>
+            { this.state.questions.map((question, index) => {
+              return <Question
+                key={question.id}
+                id={question.id}
+                is_answered={question.is_answered}
+                is_on_shortlist={question.is_on_shortlist}
+                category={question.category}
+                likes={question.likes}
+              >{question.text}</Question>
+            })
+            }
+          </div>
         </div>
-      </div>
-    )
+      )
+    } else {
+      return (
+        <div className='row justify-content-center'>
+          <div className='col-8 text-center'>
+            <h1>{this.props.title}</h1>
+            <p>{django.gettext('join in')} <a href={this.props.url}>{this.props.url}</a></p>
+          </div>
+        </div>
+      )
+    }
   }
 }
 

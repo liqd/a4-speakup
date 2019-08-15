@@ -63,10 +63,15 @@ def react_questions_present(context, obj):
 
     categories = [category.name for category in obj.category_set.all()]
     questions_api_url = reverse('questions-list', kwargs={'module_pk': obj.pk})
+    request = context['request']
+    url = obj.project.get_absolute_url()
+    full_url = request.build_absolute_uri(url)
 
     attributes = {
         'questions_api_url': questions_api_url,
-        'categories': categories
+        'categories': categories,
+        'url': full_url,
+        'title': obj.project.name
     }
 
     return format_html(
