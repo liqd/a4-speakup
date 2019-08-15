@@ -1,7 +1,7 @@
 /* global django */
 let React = require('react')
 
-class Question extends React.Component {
+class QuestionUser extends React.Component {
   constructor (props) {
     super(props)
 
@@ -61,7 +61,7 @@ class Question extends React.Component {
 
   render () {
     return (
-      <div className='list-group-item border-bottom mb-2'>
+      <div className='list-group-item border-bottom mb-2 user'>
         <div>
           <p>{this.props.children}</p>
         </div>
@@ -99,4 +99,4 @@ class Question extends React.Component {
   }
 }
 
-module.exports = Question
+module.exports = QuestionUser

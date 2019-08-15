@@ -1,6 +1,6 @@
 /* global fetch */
 let React = require('react')
-let Question = require('./Question')
+let Question = require('./QuestionUser')
 
 class PresentBox extends React.Component {
   constructor (props) {
