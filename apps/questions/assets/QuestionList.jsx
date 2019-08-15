@@ -3,7 +3,7 @@ let QuestionUser = require('./QuestionUser')
 let React = require('react')
 
 let QuestionList = (props) => {
-  if (this.props.isModerator) {
+  if (props.isModerator) {
     return (
       <div>
         {

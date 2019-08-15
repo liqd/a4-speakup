@@ -57,7 +57,7 @@ class StatisticsBox extends React.Component {
           )
         })
         }
-        <h5 class='mt-5'>{django.gettext('Posts included')}</h5>
+        <h5 className='mt-5'>{django.gettext('Posts included')}</h5>
         <div className='list-group mt-5'>
           { this.state.questions.map((question, index) => {
             return <Question

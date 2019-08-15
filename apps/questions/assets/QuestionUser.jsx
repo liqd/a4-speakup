@@ -68,17 +68,6 @@ class QuestionUser extends React.Component {
         <div className='row'>
           <div className='col-12'>
             <span className='badge badge-gray'>{ this.props.category }</span>
-            {this.props.isModerator &&
-            <div>
-              <button type='button' className='btn btn-transparent float-right px-3'
-                onClick={this.props.handleDelete.bind(this, this.props.id)}>
-                <i className='fas fa-check px-1' aria-label={django.gettext('mark as done')} />
-              </button>
-              <button type='button' className='btn btn-transparent float-right px-3' onClick={this.markFavourite.bind(this)}>
-                <i className={this.state.is_on_shortlist ? 'fas fa-bookmark px-2 text-secondary' : 'far fa-bookmark px-2'} aria-label={this.state.is_on_shortlist ? django.gettext('bookmark') : django.gettext('undo bookmark')} />
-              </button>
-            </div>
-            }
             <div>
               {this.props.hasLikingPermission
                 ? <button type='button' className='btn btn-transparent float-right px-3' onClick={this.handleLike.bind(this)}>
