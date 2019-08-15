@@ -10,14 +10,16 @@ let QuestionList = (props) => {
           props.questions.map((question, index) => {
             return <QuestionModerator
               key={question.id}
-              handleDelete={props.handleDelete.bind(this)}
+              toggleAnswered={props.toggleAnswered.bind(this)}
+              toggleHidden={props.toggleHidden.bind(this)}
               updateQuestion={props.updateQuestion.bind(this)}
               handleLike={props.handleLike.bind(this)}
               isModerator={props.isModerator}
               hasLikingPermission={props.hasLikingPermission}
               id={question.id}
               is_answered={question.is_answered}
-              is_favourite={question.is_favourite}
+              is_on_shortlist={question.is_on_shortlist}
+              is_live={question.is_live}
               category={question.category}
               likes={question.likes}
             >{question.text}</QuestionModerator>
@@ -32,7 +34,8 @@ let QuestionList = (props) => {
           props.questions.map((question, index) => {
             return <QuestionUser
               key={question.id}
-              handleDelete={props.handleDelete.bind(this)}
+              toggleAnswered={props.toggleAnswered.bind(this)}
+              toggleHidden={props.toggleHidden.bind(this)}
               updateQuestion={props.updateQuestion.bind(this)}
               handleLike={props.handleLike.bind(this)}
               isModerator={props.isModerator}

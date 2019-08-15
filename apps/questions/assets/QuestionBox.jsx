@@ -48,7 +48,7 @@ class QuestionBox extends React.Component {
 
   isInFilter (item) {
     return (this.state.category === '-1' || this.state.category === item.category) &&
-      (!this.state.onlyMarked || item.is_on_shortlist)
+      (!this.state.onlyMarked || item.is_favourite)
   }
 
   filterQuestions (questions) {
@@ -98,8 +98,16 @@ class QuestionBox extends React.Component {
     })
   }
 
-  handleDelete (id) {
+  toggleAnswered (id) {
     let data = { is_answered: 1 }
+    this.updateQuestion(data, id)
+      .then(response => this.setState(prevState => ({
+        filteredQuestions: prevState.filteredQuestions.filter(question => question.id !== id)
+      })))
+  }
+
+  toggleHidden (id) {
+    let data = { is_hidden: 1 }
     this.updateQuestion(data, id)
       .then(response => this.setState(prevState => ({
         filteredQuestions: prevState.filteredQuestions.filter(question => question.id !== id)
@@ -151,7 +159,8 @@ class QuestionBox extends React.Component {
         />
         <QuestionList
           questions={this.state.filteredQuestions}
-          handleDelete={this.handleDelete.bind(this)}
+          toggleAnswered={this.toggleAnswered.bind(this)}
+          toggleHidden={this.toggleHidden.bind(this)}
           updateQuestion={this.updateQuestion.bind(this)}
           handleLike={this.handleLike.bind(this)}
           isModerator={this.props.isModerator}

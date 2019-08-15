@@ -12,19 +12,6 @@ class QuestionUser extends React.Component {
     }
   }
 
-  markFavourite () {
-    let value = !this.state.is_on_shortlist
-    let boolValue = (value) ? 1 : 0
-    let data = { is_on_shortlist: boolValue }
-    this.props.updateQuestion(data, this.props.id)
-      .then((response) => response.json())
-      .then(responseData => this.setState(
-        {
-          is_on_shortlist: responseData.is_on_shortlist
-        }
-      ))
-  }
-
   componentDidUpdate (prevProps) {
     if (this.props.is_on_shortlist !== prevProps.is_on_shortlist) {
       this.setState({
