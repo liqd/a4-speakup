@@ -70,7 +70,7 @@ class QuestionBox extends React.Component {
   }
 
   getUrl () {
-    let url = this.props.questions_api_url + '?is_answered=0'
+    let url = this.props.questions_api_url + '?is_answered=0' + '&is_hidden=0'
     if (this.state.orderedByLikes) {
       return url + '&ordering=-like_count'
     }

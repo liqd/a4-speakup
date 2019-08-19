@@ -42,13 +42,17 @@ def react_questions(context, obj):
 
 @register.simple_tag(takes_context=True)
 def react_questions_statistics(context, obj):
+    request = context['request']
 
     categories = [category.name for category in obj.category_set.all()]
     questions_api_url = reverse('questions-list', kwargs={'module_pk': obj.pk})
+    user = request.user
+    is_moderator = user.is_superuser or user in obj.project.moderators.all()
 
     attributes = {
         'questions_api_url': questions_api_url,
-        'categories': categories
+        'categories': categories,
+        'isModerator': is_moderator,
     }
 
     return format_html(
