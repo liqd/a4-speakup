@@ -83,7 +83,6 @@ class StatisticsBox extends React.Component {
                   key={question.id}
                   id={question.id}
                   is_answered={question.is_answered}
-                  is_on_shortlist={question.is_on_shortlist}
                   is_live={question.is_live}
                   is_hidden={question.is_hidden}
                   category={question.category}

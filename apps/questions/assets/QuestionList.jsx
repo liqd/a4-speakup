@@ -40,7 +40,7 @@ let QuestionList = (props) => {
               hasLikingPermission={props.hasLikingPermission}
               id={question.id}
               is_answered={question.is_answered}
-              is_favourite={question.is_favourite}
+              is_on_shortlist={question.is_on_shortlist}
               category={question.category}
               likes={question.likes}
             >{question.text}</QuestionUser>

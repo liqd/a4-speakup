@@ -50,7 +50,11 @@ class QuestionUser extends React.Component {
     return (
       <div className='list-group-item border-bottom mb-2'>
         <div>
-          <p>{this.props.children}</p>
+          <p>
+            {this.props.is_on_shortlist &&
+            <i className='fas fa-align-justify px-2 text-secondary' aria-label={django.gettext('on shortlist')} /> }
+            {this.props.children}
+          </p>
         </div>
         <div className='row'>
           <div className='col-12'>
