@@ -48,7 +48,7 @@ class QuestionUser extends React.Component {
 
   render () {
     return (
-      <div className='list-group-item border-bottom mb-2 user'>
+      <div className='list-group-item border-bottom mb-2'>
         <div>
           <p>{this.props.children}</p>
         </div>
