@@ -28,7 +28,7 @@
     "sass-planifolia": "0.6.0",
     "select2": "4.0.7",
     "shpjs": "3.4.3",
-    "style-loader": "0.23.1",
+    "style-loader": "1.0.0",
     "tether": "1.4.7",
     "timeago.js": "3.0.2",
     "webpack": "4.35.2",
