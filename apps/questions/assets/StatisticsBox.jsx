@@ -13,7 +13,7 @@ class StatisticsBox extends React.Component {
   }
 
   getItems () {
-    fetch(this.props.questions_api_url + '?is_answered=1' + '?is_hidden=1')
+    fetch(this.props.questions_api_url)
       .then(response => response.json())
       .then(data => this.setState({
         questions: data
@@ -61,22 +61,24 @@ class StatisticsBox extends React.Component {
         {this.props.isModerator
           ? <div className='list-group mt-5'>
             { this.state.questions.map((question, index) => {
-              return <Question
-                key={question.id}
-                id={question.id}
-                is_answered={question.is_answered}
-                is_on_shortlist={question.is_on_shortlist}
-                is_live={question.is_live}
-                is_hidden={question.is_hidden}
-                category={question.category}
-                likes={question.likes}
-              >{question.text}</Question>
+              if (question.is_answered || question.is_hidden) {
+                return <Question
+                  key={question.id}
+                  id={question.id}
+                  is_answered={question.is_answered}
+                  is_on_shortlist={question.is_on_shortlist}
+                  is_live={question.is_live}
+                  is_hidden={question.is_hidden}
+                  category={question.category}
+                  likes={question.likes}
+                >{question.text}</Question>
+              }
             })
             }
           </div>
           : <div className='list-group mt-5'>
             { this.state.questions.map((question, index) => {
-              if (!question.is_hidden) {
+              if (question.is_answered && !question.is_hidden) {
                 return <Question
                   key={question.id}
                   id={question.id}

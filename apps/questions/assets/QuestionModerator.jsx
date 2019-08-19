@@ -106,7 +106,7 @@ class QuestionModerator extends React.Component {
             <span className='badge badge-gray'>{ this.props.category }</span>
             <div>
               <button type='button' className='btn btn-transparent float-right px-3'
-                onClick={this.props.handleDelete.bind(this, this.props.id)}>
+                onClick={this.hiddenList.bind(this)}>
                 <i className='fas fa-times px-1' aria-label={django.gettext('mark as hidden')} />
               </button>
 
