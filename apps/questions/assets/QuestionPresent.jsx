@@ -13,11 +13,6 @@ class QuestionPresent extends React.Component {
   }
 
   componentDidUpdate (prevProps) {
-    if (this.props.is_on_shortlist !== prevProps.is_on_shortlist) {
-      this.setState({
-        is_on_shortlist: this.props.is_on_shortlist
-      })
-    }
     if (this.props.likes !== prevProps.likes) {
       this.setState({
         likes: this.props.likes.count,

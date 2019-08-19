@@ -7,6 +7,7 @@ class QuestionModerator extends React.Component {
 
     this.state = {
       is_on_shortlist: this.props.is_on_shortlist,
+      is_live: this.props.is_live,
       likes: this.props.likes.count,
       session_like: this.props.likes.session_like
     }
@@ -117,7 +118,7 @@ class QuestionModerator extends React.Component {
               <button type='button' className='btn btn-transparent float-right px-3' onClick={this.shortList.bind(this)}>
                 <i className={this.state.is_on_shortlist ? 'fas fa-align-justify px-2 text-secondary' : 'fas fa-align-justify text-primary px-2'} aria-label={this.state.is_on_shortlist ? django.gettext('added to shortlist') : django.gettext('remove from shortlist')} />
               </button>
-              <button type='button' className={this.state.is_on_shortlist ? 'btn btn-transparent float-right px-3' : 'd-none'} onClick={this.liveList.bind(this)}>
+              <button type='button' className='btn btn-transparent float-right px-3' onClick={this.liveList.bind(this)}>
                 <i className={this.state.is_live ? 'fas fa-satellite-dish px-2 text-secondary' : 'fas fa-satellite-dish text-primary px-2'} aria-label={this.state.is_live ? django.gettext('added to live list') : django.gettext('remove from live list')} />
               </button>
             </div>
