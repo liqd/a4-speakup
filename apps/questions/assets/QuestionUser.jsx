@@ -58,14 +58,14 @@ class QuestionUser extends React.Component {
             <div>
               {this.props.hasLikingPermission
                 ? <button type='button' className='btn btn-transparent float-right px-3' onClick={this.handleLike.bind(this)}>
-                  <i className={this.state.session_like ? 'fas fa-thumbs-up text-secondary mr-1' : 'fas fa-thumbs-up text-muted mr-1'} aria-label={this.state.session_like ? django.gettext('add like') : django.gettext('undo like')} />
-                  <span>{this.state.likes}</span>
+                  <span className='text-muted'>{this.state.likes}</span>
                   <span className='sr-only'>{django.gettext('likes')}</span>
+                  <i className={this.state.session_like ? 'fas fa-thumbs-up text-secondary ml-2' : 'fas fa-thumbs-up text-muted ml-2'} aria-label={this.state.session_like ? django.gettext('add like') : django.gettext('undo like')} />
                 </button>
                 : <div className='float-right'>
-                  <i className='far fa-thumbs-up text-muted mr-1' aria-hidden='true' />
-                  <span>{this.state.likes}</span>
+                  <span className='text-muted'>{this.state.likes}</span>
                   <span className='sr-only'>{django.gettext('likes')}</span>
+                  <i className='fas fa-thumbs-up text-muted ml-1' aria-hidden='true' />
                 </div>
               }
             </div>

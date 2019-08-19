@@ -43,8 +43,8 @@ class QuestionPresent extends React.Component {
           <div className='col-12'>
             <div>
               <div className='float-right'>
-                <span>{this.state.likes}</span>
-                <i className='fas fa-thumbs-up text-muted ml-1' aria-hidden='true' />
+                <span className='text-muted'>{this.state.likes}</span>
+                <i className='fas fa-thumbs-up text-muted ml-2' aria-hidden='true' />
                 <span className='sr-only'>{django.gettext('likes')}</span>
               </div>
             </div>
