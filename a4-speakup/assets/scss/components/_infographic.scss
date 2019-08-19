@@ -1,10 +1,5 @@
 .infographic {
     font-family: $font-family-homepage-mono;
-    padding-top: $spacer;
-
-    @media screen and (min-width: $breakpoint-sm) {
-        padding-top: 2 * $spacer;
-    }
 }
 
 .infographic__body {
