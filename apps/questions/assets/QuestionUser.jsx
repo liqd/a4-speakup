@@ -1,5 +1,5 @@
 /* global django */
-let React = require('react')
+const React = require('react')
 
 class QuestionUser extends React.Component {
   constructor (props) {
@@ -35,7 +35,7 @@ class QuestionUser extends React.Component {
   }
 
   handleLike () {
-    let value = !this.state.session_like
+    const value = !this.state.session_like
     this.props.handleLike(this.props.id, value)
       .then(this.handleErrors)
       .then((response) => this.setState(
@@ -49,7 +49,7 @@ class QuestionUser extends React.Component {
 
   render () {
     return (
-      <div className='list-group-item border-bottom mb-2'>
+      <div className="list-group-item border-bottom mb-2">
         <div>
           <p>
             {this.props.is_on_shortlist &&
@@ -57,9 +57,9 @@ class QuestionUser extends React.Component {
             {this.props.children}
           </p>
         </div>
-        <div className='row'>
-          <div className='col-12'>
-            <span className='badge badge-gray'>{ this.props.category }</span>
+        <div className="row">
+          <div className="col-12">
+            <span className="badge badge-gray">{ this.props.category }</span>
             <div>
               {this.props.hasLikingPermission
                 ? <button type='button' className='btn btn-transparent float-right px-3' onClick={this.handleLike.bind(this)}>

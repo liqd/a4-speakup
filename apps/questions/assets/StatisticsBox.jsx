@@ -1,7 +1,7 @@
 /* global fetch */
 /* global django */
-let React = require('react')
-let Question = require('./QuestionUser')
+const React = require('react')
+const Question = require('./QuestionUser')
 
 class StatisticsBox extends React.Component {
   constructor (props) {
@@ -43,23 +43,23 @@ class StatisticsBox extends React.Component {
     return (
       <div>
         { this.props.categories.map((category, index) => {
-          let count = this.countCategory(category)
-          let style = { width: count + '%' }
+          const count = this.countCategory(category)
+          const style = { width: count + '%' }
           return (
-            <div key={index} className='mt-3'>
+            <div key={index} className="mt-3">
               <span>{category}</span>
-              <div className='progress'>
-                <div className='progress-bar' style={style} role='progressbar' aria-valuenow='25' aria-valuemin='0'
-                  aria-valuemax='100'>{count}%
+              <div className="progress">
+                <div className="progress-bar" style={style} role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100">{count}%
                 </div>
               </div>
             </div>
           )
         })
         }
-        <h5 className='mt-5'>{django.gettext('Posts included')}</h5>
+        <h5 className="mt-5">{django.gettext('Posts included')}</h5>
         {this.props.isModerator
-          ? <div className='list-group mt-5'>
+          ? <div className="list-group mt-5">
             { this.state.questions.map((question, index) => {
               if (question.is_answered || question.is_hidden) {
                 return <Question
@@ -76,7 +76,7 @@ class StatisticsBox extends React.Component {
             })
             }
           </div>
-          : <div className='list-group mt-5'>
+          : <div className="list-group mt-5">
             { this.state.questions.map((question, index) => {
               if (question.is_answered && !question.is_hidden) {
                 return <Question

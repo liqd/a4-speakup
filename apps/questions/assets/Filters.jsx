@@ -1,10 +1,10 @@
 /* global django */
-let React = require('react')
+const React = require('react')
 
 class Filter extends React.Component {
   selectCategory (e) {
     e.preventDefault()
-    let category = e.target.getAttribute('data-value')
+    const category = e.target.getAttribute('data-value')
     this.props.setCategories(category)
   }
 
@@ -18,30 +18,30 @@ class Filter extends React.Component {
 
   render () {
     return (
-      <div className='mb-5'>
-        <div className='justify-content-center form-inline'>
-          <div className='dropdown'>
-            <button className={this.getButtonClass()} type='button' id='dropdownMenuButton'
-              data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+      <div className="mb-5">
+        <div className="justify-content-center form-inline">
+          <div className="dropdown">
+            <button className={this.getButtonClass()} type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {this.props.currentCategoryName}
             </button>
-            <div className='dropdown-menu' aria-labelledby='dropdownMenuButton'>
-              <a className='dropdown-item' data-value={-1} onClick={this.selectCategory.bind(this)} href='#'>{django.gettext('all')}</a>
+            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <button className="dropdown-item" data-value={-1} onClick={this.selectCategory.bind(this)} href="#">{django.gettext('all')}</button>
               { this.props.categories.map((category, index) => {
-                return <a className='dropdown-item' key={index} data-value={category} onClick={this.selectCategory.bind(this)} href='#'>{category}</a>
+                return <button className="dropdown-item" key={index} data-value={category} onClick={this.selectCategory.bind(this)} href="#">{category}</button>
               })
               }
             </div>
           </div>
           {this.props.isModerator &&
           <div>
-            <div className='checkbox-btn'>
-              <label htmlFor='markedCheck' className='checkbox-btn__label--primary pl-3'>
+            <div className="checkbox-btn">
+              <label htmlFor="markedCheck" className="checkbox-btn__label--primary pl-3">
                 <input
-                  className='checkbox-btn__input'
-                  type='checkbox'
-                  id='markedCheck'
-                  name='markedCheck'
+                  className="checkbox-btn__input"
+                  type="checkbox"
+                  id="markedCheck"
+                  name="markedCheck"
                   checked={this.props.onlyMarked}
                   onChange={this.props.toggleOnlyMarked} />
                 <span className='checkbox-btn__text'>
@@ -49,17 +49,17 @@ class Filter extends React.Component {
                 </span>
               </label>
             </div>
-            <div className='checkbox-btn'>
-              <label htmlFor='orderedByLikes' className='checkbox-btn__label--transparent'>
+            <div className="checkbox-btn">
+              <label htmlFor="orderedByLikes" className="checkbox-btn__label--transparent">
                 <input
-                  className='checkbox-btn__input'
-                  type='checkbox'
-                  id='orderedByLikes'
-                  name='orderedByLikes'
+                  className="checkbox-btn__input"
+                  type="checkbox"
+                  id="orderedByLikes"
+                  name="orderedByLikes"
                   checked={this.props.orderedByLikes}
                   onChange={this.props.toggleOrdering} />
-                <span className='checkbox-btn__text'>
-                  <i className='fas fa-sort-amount-up' aria-label={django.gettext('order by likes')} /> likes
+                <span className="checkbox-btn__text">
+                  <i className="fas fa-sort-amount-up" aria-label={django.gettext('order by likes')} /> likes
                 </span>
               </label>
             </div>

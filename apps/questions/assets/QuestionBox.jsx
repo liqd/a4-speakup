@@ -1,8 +1,8 @@
 /* global django fetch */
-let React = require('react')
-let QuestionList = require('./QuestionList')
-let Filters = require('./Filters')
-let cookie = require('js-cookie')
+const React = require('react')
+const QuestionList = require('./QuestionList')
+const Filters = require('./Filters')
+const cookie = require('js-cookie')
 
 class QuestionBox extends React.Component {
   constructor (props) {
@@ -22,7 +22,7 @@ class QuestionBox extends React.Component {
   }
 
   setCategory (category) {
-    let newName = (category === '-1') ? django.gettext('select category') : category
+    const newName = (category === '-1') ? django.gettext('select category') : category
     this.setState({
       filterChanged: true,
       categoryName: newName,
@@ -31,7 +31,7 @@ class QuestionBox extends React.Component {
   }
 
   toggleOnlyMarked () {
-    let onlyMarked = !this.state.onlyMarked
+    const onlyMarked = !this.state.onlyMarked
     this.setState({
       filterChanged: true,
       onlyMarked: onlyMarked
@@ -39,7 +39,7 @@ class QuestionBox extends React.Component {
   }
 
   toggleOrdering () {
-    let orderedByLikes = !this.state.orderedByLikes
+    const orderedByLikes = !this.state.orderedByLikes
     this.setState({
       orderingChanged: true,
       orderedByLikes: orderedByLikes
@@ -52,7 +52,7 @@ class QuestionBox extends React.Component {
   }
 
   filterQuestions (questions) {
-    let filteredQuestions = []
+    const filteredQuestions = []
     questions.forEach((item) => {
       if (this.isInFilter(item)) {
         filteredQuestions.push(item)
@@ -62,7 +62,7 @@ class QuestionBox extends React.Component {
   }
 
   updateList () {
-    let filteredQuestions = this.filterQuestions(this.state.questions)
+    const filteredQuestions = this.filterQuestions(this.state.questions)
     this.setState({
       filterChanged: false,
       filteredQuestions: filteredQuestions
@@ -70,7 +70,7 @@ class QuestionBox extends React.Component {
   }
 
   getUrl () {
-    let url = this.props.questions_api_url + '?is_answered=0' + '&is_hidden=0'
+    const url = this.props.questions_api_url + '?is_answered=0' + '&is_hidden=0'
     if (this.state.orderedByLikes) {
       return url + '&ordering=-like_count'
     }
@@ -99,7 +99,7 @@ class QuestionBox extends React.Component {
   }
 
   handleDelete (id) {
-    let data = { is_answered: 1 }
+    const data = { is_answered: 1 }
     this.updateQuestion(data, id)
       .then(response => this.setState(prevState => ({
         filteredQuestions: prevState.filteredQuestions.filter(question => question.id !== id)

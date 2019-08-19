@@ -1,8 +1,8 @@
-let QuestionModerator = require('./QuestionModerator')
-let QuestionUser = require('./QuestionUser')
-let React = require('react')
+const QuestionModerator = require('./QuestionModerator')
+const QuestionUser = require('./QuestionUser')
+const React = require('react')
 
-let QuestionList = (props) => {
+const QuestionList = (props) => {
   if (props.isModerator) {
     return (
       <div>
