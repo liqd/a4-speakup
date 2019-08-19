@@ -1,7 +1,7 @@
 /* global django */
 let React = require('react')
 
-class Question extends React.Component {
+class QuestionModerator extends React.Component {
   constructor (props) {
     super(props)
 
@@ -12,7 +12,7 @@ class Question extends React.Component {
     }
   }
 
-  markFavourite () {
+  shortList () {
     let value = !this.state.is_on_shortlist
     let boolValue = (value) ? 1 : 0
     let data = { is_on_shortlist: boolValue }
@@ -25,10 +25,46 @@ class Question extends React.Component {
       ))
   }
 
+  liveList () {
+    let value = !this.state.is_live
+    let boolValue = (value) ? 1 : 0
+    let data = { is_live: boolValue }
+    this.props.updateQuestion(data, this.props.id)
+      .then((response) => response.json())
+      .then(responseData => this.setState(
+        {
+          is_live: responseData.is_live
+        }
+      ))
+  }
+
+  hiddenList () {
+    let value = !this.state.is_hidden
+    let boolValue = (value) ? 1 : 0
+    let data = { is_hidden: boolValue }
+    this.props.updateQuestion(data, this.props.id)
+      .then((response) => response.json())
+      .then(responseData => this.setState(
+        {
+          is_hidden: responseData.is_hidden
+        }
+      ))
+  }
+
   componentDidUpdate (prevProps) {
     if (this.props.is_on_shortlist !== prevProps.is_on_shortlist) {
       this.setState({
         is_on_shortlist: this.props.is_on_shortlist
+      })
+    }
+    if (this.props.is_live !== prevProps.is_live) {
+      this.setState({
+        is_live: this.props.is_live
+      })
+    }
+    if (this.props.is_hidden !== prevProps.is_hidden) {
+      this.setState({
+        is_hidden: this.props.is_hidden
       })
     }
     if (this.props.likes !== prevProps.likes) {
@@ -68,17 +104,23 @@ class Question extends React.Component {
         <div className='row'>
           <div className='col-12'>
             <span className='badge badge-gray'>{ this.props.category }</span>
-            {this.props.isModerator &&
             <div>
+              <button type='button' className='btn btn-transparent float-right px-3'
+                onClick={this.hiddenList.bind(this)}>
+                <i className='fas fa-times px-1' aria-label={django.gettext('mark as hidden')} />
+              </button>
+
               <button type='button' className='btn btn-transparent float-right px-3'
                 onClick={this.props.handleDelete.bind(this, this.props.id)}>
                 <i className='fas fa-check px-1' aria-label={django.gettext('mark as done')} />
               </button>
-              <button type='button' className='btn btn-transparent float-right px-3' onClick={this.markFavourite.bind(this)}>
-                <i className={this.state.is_on_shortlist ? 'fas fa-bookmark px-2 text-secondary' : 'far fa-bookmark px-2'} aria-label={this.state.is_on_shortlist ? django.gettext('bookmark') : django.gettext('undo bookmark')} />
+              <button type='button' className='btn btn-transparent float-right px-3' onClick={this.shortList.bind(this)}>
+                <i className={this.state.is_on_shortlist ? 'fas fa-align-justify px-2 text-secondary' : 'fas fa-align-justify px-2'} aria-label={this.state.is_on_shortlist ? django.gettext('added to shortlist') : django.gettext('remove from shortlist')} />
+              </button>
+              <button type='button' className={this.state.is_on_shortlist ? 'btn btn-transparent float-right px-3' : 'd-none'} onClick={this.liveList.bind(this)}>
+                <i className={this.state.is_live ? 'fas fa-satellite-dish px-2 text-secondary' : 'fas fa-satellite-dish px-2'} aria-label={this.state.is_live ? django.gettext('added to live list') : django.gettext('remove from live list')} />
               </button>
             </div>
-            }
             <div>
               {this.props.hasLikingPermission
                 ? <button type='button' className='btn btn-transparent float-right px-3' onClick={this.handleLike.bind(this)}>
@@ -86,7 +128,7 @@ class Question extends React.Component {
                   <span>{this.state.likes}</span>
                   <span className='sr-only'>{django.gettext('likes')}</span>
                 </button>
-                : <div className='float-right'>
+                : <div className='float-left'>
                   <i className='far fa-thumbs-up text-muted mr-1' aria-hidden='true' />
                   <span>{this.state.likes}</span>
                   <span className='sr-only'>{django.gettext('likes')}</span>
@@ -99,4 +141,4 @@ class Question extends React.Component {
   }
 }
 
-module.exports = Question
+module.exports = QuestionModerator

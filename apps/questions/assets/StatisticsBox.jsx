@@ -1,7 +1,7 @@
 /* global fetch */
 /* global django */
 let React = require('react')
-let Question = require('./Question')
+let Question = require('./QuestionUser')
 
 class StatisticsBox extends React.Component {
   constructor (props) {
@@ -13,7 +13,7 @@ class StatisticsBox extends React.Component {
   }
 
   getItems () {
-    fetch(this.props.questions_api_url + '?is_answered=1')
+    fetch(this.props.questions_api_url)
       .then(response => response.json())
       .then(data => this.setState({
         questions: data
@@ -57,20 +57,43 @@ class StatisticsBox extends React.Component {
           )
         })
         }
-        <h5 class='mt-5'>{django.gettext('Posts included')}</h5>
-        <div className='list-group mt-5'>
-          { this.state.questions.map((question, index) => {
-            return <Question
-              key={question.id}
-              id={question.id}
-              is_answered={question.is_answered}
-              is_on_shortlist={question.is_on_shortlist}
-              category={question.category}
-              likes={question.likes}
-            >{question.text}</Question>
-          })
-          }
-        </div>
+        <h5 className='mt-5'>{django.gettext('Posts included')}</h5>
+        {this.props.isModerator
+          ? <div className='list-group mt-5'>
+            { this.state.questions.map((question, index) => {
+              if (question.is_answered || question.is_hidden) {
+                return <Question
+                  key={question.id}
+                  id={question.id}
+                  is_answered={question.is_answered}
+                  is_on_shortlist={question.is_on_shortlist}
+                  is_live={question.is_live}
+                  is_hidden={question.is_hidden}
+                  category={question.category}
+                  likes={question.likes}
+                >{question.text}</Question>
+              }
+            })
+            }
+          </div>
+          : <div className='list-group mt-5'>
+            { this.state.questions.map((question, index) => {
+              if (question.is_answered && !question.is_hidden) {
+                return <Question
+                  key={question.id}
+                  id={question.id}
+                  is_answered={question.is_answered}
+                  is_on_shortlist={question.is_on_shortlist}
+                  is_live={question.is_live}
+                  is_hidden={question.is_hidden}
+                  category={question.category}
+                  likes={question.likes}
+                >{question.text}</Question>
+              }
+            })
+            }
+          </div>
+        }
       </div>
     )
   }
