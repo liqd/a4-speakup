@@ -7,6 +7,7 @@ class QuestionPresent extends React.Component {
 
     this.state = {
       is_on_shortlist: this.props.is_on_shortlist,
+      is_live: this.props.is_live,
       likes: this.props.likes.count,
       session_like: this.props.likes.session_like
     }
