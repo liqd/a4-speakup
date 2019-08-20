@@ -42,8 +42,8 @@ class Filter extends React.Component {
                   type="checkbox"
                   id="markedCheck"
                   name="markedCheck"
-                  checked={this.props.onlyMarked}
-                  onChange={this.props.toggleOnlyMarked} />
+                  checked={this.props.displayOnShortlist}
+                  onChange={this.props.toggleDisplayOnShortlist} />
                 <span className="checkbox-btn__text">
                   <i className="fas fa-align-justify" aria-label={django.gettext('only show marked questions')} />
                 </span>

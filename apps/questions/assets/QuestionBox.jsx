@@ -13,7 +13,7 @@ class QuestionBox extends React.Component {
       filteredQuestions: [],
       category: '-1',
       categoryName: django.gettext('select category'),
-      onlyMarked: false,
+      displayOnShortlist: false,
       orderedByLikes: false,
       filterChanged: false,
       orderingChanged: false,
@@ -30,11 +30,11 @@ class QuestionBox extends React.Component {
     })
   }
 
-  toggleOnlyMarked () {
-    const onlyMarked = !this.state.onlyMarked
+  toggleDisplayOnShortlist () {
+    const displayOnShortlist = !this.state.displayOnShortlist
     this.setState({
       filterChanged: true,
-      onlyMarked: onlyMarked
+      displayOnShortlist: displayOnShortlist
     })
   }
 
@@ -48,7 +48,7 @@ class QuestionBox extends React.Component {
 
   isInFilter (item) {
     return (this.state.category === '-1' || this.state.category === item.category) &&
-      (!this.state.onlyMarked || item.is_on_shortlist)
+      (!this.state.displayOnShortlist || item.is_on_shortlist)
   }
 
   filterQuestions (questions) {
@@ -145,8 +145,8 @@ class QuestionBox extends React.Component {
           setCategories={this.setCategory.bind(this)}
           orderedByLikes={this.state.orderedByLikes}
           toggleOrdering={this.toggleOrdering.bind(this)}
-          onlyMarked={this.state.onlyMarked}
-          toggleOnlyMarked={this.toggleOnlyMarked.bind(this)}
+          displayOnShortlist={this.state.displayOnShortlist}
+          toggleDisplayOnShortlist={this.toggleDisplayOnShortlist.bind(this)}
           isModerator={this.props.isModerator}
         />
         <QuestionList
