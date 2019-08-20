@@ -1,5 +1,5 @@
 /* global django */
-let React = require('react')
+const React = require('react')
 
 class QuestionUser extends React.Component {
   constructor (props) {
@@ -35,7 +35,7 @@ class QuestionUser extends React.Component {
   }
 
   handleLike () {
-    let value = !this.state.session_like
+    const value = !this.state.session_like
     this.props.handleLike(this.props.id, value)
       .then(this.handleErrors)
       .then((response) => this.setState(
@@ -49,28 +49,28 @@ class QuestionUser extends React.Component {
 
   render () {
     return (
-      <div className='list-group-item border-bottom mb-2'>
+      <div className="list-group-item border-bottom mb-2">
         <div>
           <p>
             {this.props.is_on_shortlist &&
-            <i className='fas fa-align-justify px-2 text-secondary' aria-label={django.gettext('on shortlist')} /> }
+            <i className="fas fa-align-justify px-2 text-secondary" aria-label={django.gettext('on shortlist')} /> }
             {this.props.children}
           </p>
         </div>
-        <div className='row'>
-          <div className='col-12'>
-            <span className='badge badge-gray'>{ this.props.category }</span>
+        <div className="row">
+          <div className="col-12">
+            <span className="badge badge-gray">{ this.props.category }</span>
             <div>
               {this.props.hasLikingPermission
-                ? <button type='button' className='btn btn-transparent float-right px-3' onClick={this.handleLike.bind(this)}>
-                  <span className='text-muted'>{this.state.likes}</span>
-                  <span className='sr-only'>{django.gettext('likes')}</span>
+                ? <button type="button" className="btn btn-transparent float-right px-3" onClick={this.handleLike.bind(this)}>
+                  <span className="text-muted">{this.state.likes}</span>
+                  <span className="sr-only">{django.gettext('likes')}</span>
                   <i className={this.state.session_like ? 'fas fa-thumbs-up text-secondary ml-2' : 'fas fa-thumbs-up text-muted ml-2'} aria-label={this.state.session_like ? django.gettext('add like') : django.gettext('undo like')} />
                 </button>
-                : <div className='float-right'>
-                  <span className='text-muted'>{this.state.likes}</span>
-                  <span className='sr-only'>{django.gettext('likes')}</span>
-                  <i className='fas fa-thumbs-up text-muted ml-1' aria-hidden='true' />
+                : <div className="float-right">
+                  <span className="text-muted">{this.state.likes}</span>
+                  <span className="sr-only">{django.gettext('likes')}</span>
+                  <i className="fas fa-thumbs-up text-muted ml-1" aria-hidden="true" />
                 </div>
               }
             </div>

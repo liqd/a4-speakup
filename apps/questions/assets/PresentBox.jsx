@@ -1,7 +1,7 @@
 /* global fetch */
 /* global django */
-let React = require('react')
-let Question = require('./QuestionPresent')
+const React = require('react')
+const Question = require('./QuestionPresent')
 
 class PresentBox extends React.Component {
   constructor (props) {
@@ -33,7 +33,7 @@ class PresentBox extends React.Component {
     if (this.state.questions.length > 0) {
       return (
         <div>
-          <div className='list-group mt-5'>
+          <div className="list-group mt-5">
             { this.state.questions.map((question, index) => {
               return <Question
                 key={question.id}
@@ -51,8 +51,8 @@ class PresentBox extends React.Component {
       )
     } else {
       return (
-        <div className='row justify-content-center'>
-          <div className='col-8 text-center'>
+        <div className="row justify-content-center">
+          <div className="col-8 text-center">
             <h1>{this.props.title}</h1>
             <p>{django.gettext('join in')} <a href={this.props.url}>{this.props.url}</a></p>
           </div>
