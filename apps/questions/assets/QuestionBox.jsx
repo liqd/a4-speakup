@@ -31,7 +31,7 @@ class QuestionBox extends React.Component {
   }
 
   toggleDisplayOnShortlist () {
-    let displayOnShortlist = !this.state.displayOnShortlist
+    const displayOnShortlist = !this.state.displayOnShortlist
     this.setState({
       filterChanged: true,
       displayOnShortlist: displayOnShortlist

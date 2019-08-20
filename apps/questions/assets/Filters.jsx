@@ -38,14 +38,14 @@ class Filter extends React.Component {
             <div className="checkbox-btn">
               <label htmlFor="markedCheck" className="checkbox-btn__label--primary pl-3">
                 <input
-                  className='checkbox-btn__input'
-                  type='checkbox'
-                  id='markedCheck'
-                  name='markedCheck'
+                  className="checkbox-btn__input"
+                  type="checkbox"
+                  id="markedCheck"
+                  name="markedCheck"
                   checked={this.props.displayOnShortlist}
                   onChange={this.props.toggleDisplayOnShortlist} />
-                <span className='checkbox-btn__text'>
-                  <i className='fas fa-bookmark' aria-label={django.gettext('only show marked questions')} />
+                <span className="checkbox-btn__text">
+                  <i className="fas fa-align-justify" aria-label={django.gettext('only show marked questions')} />
                 </span>
               </label>
             </div>
