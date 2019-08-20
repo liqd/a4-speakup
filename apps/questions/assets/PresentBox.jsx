@@ -1,4 +1,3 @@
-/* global fetch */
 /* global django */
 const React = require('react')
 const Question = require('./QuestionPresent')

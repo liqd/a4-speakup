@@ -1,4 +1,4 @@
-/* global django fetch */
+/* global django */
 const React = require('react')
 const QuestionList = require('./QuestionList')
 const Filters = require('./Filters')
