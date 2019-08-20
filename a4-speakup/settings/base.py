@@ -394,7 +394,7 @@ A4_MAP_ATTRIBUTION = '&copy; <a href="http://openstreetmap.org/copyright">OpenSt
 A4_MAP_BOUNDING_BOX = ([[54.983, 15.016], [47.302, 5.988]])
 
 A4_DASHBOARD = {
-    'PROJECT_DASHBOARD_CLASS': 'adhocracy4.dashboard.ProjectDashboard',
+    'PROJECT_DASHBOARD_CLASS': 'apps.dashboard.SpeakUpDashboard',
     'BLUEPRINTS': 'apps.dashboard.blueprints.blueprints'
 }
 
