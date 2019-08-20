@@ -32,7 +32,8 @@
     margin-top: -(2*$spacer);
 }
 
-.header__prototype {
+.header__prototype,
+.header-light__prototype {
     width: 20%;
     max-width: 100px;
     position: absolute;
