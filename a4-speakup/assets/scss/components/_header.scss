@@ -22,7 +22,7 @@
     border-top-right-radius: 50%;
 }
 
-.header__user {
+.header__nav {
     position: absolute;
     top: 0.75*$spacer;
     right: 0.5*$spacer;
@@ -33,9 +33,31 @@
 }
 
 .header__prototype {
-    width: 25%;
+    width: 20%;
     max-width: 100px;
     position: absolute;
     left: $spacer;
     top: $spacer;
+    z-index: 1;
+}
+
+//desktop
+
+@media screen and (min-width: $breakpoint-lg) {
+    .header {
+        height: 100px;
+    }
+    .header__logo {
+        position: relative;
+        left: -50px;
+        margin-top: 2*$spacer;
+    }
+    .header__nav {
+        top: 1.5*$spacer;
+        right: 1.5*$spacer;
+    }
+    .header__prototype {
+        position: relative;
+        top: 3*$spacer;
+    }
 }
