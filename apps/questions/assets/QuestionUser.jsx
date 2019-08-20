@@ -53,7 +53,8 @@ class QuestionUser extends React.Component {
         <div>
           <p>
             {this.props.is_on_shortlist &&
-            <i className="fas fa-align-justify px-2 text-secondary" aria-label={django.gettext('on shortlist')} /> }
+            <i className="fas fa-align-justify px-2 text-secondary" aria-label={django.gettext('on shortlist')} />
+            }
             {this.props.children}
           </p>
         </div>

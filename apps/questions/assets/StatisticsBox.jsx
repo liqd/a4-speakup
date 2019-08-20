@@ -1,7 +1,7 @@
-/* global fetch */
 /* global django */
 const React = require('react')
-const Question = require('./QuestionUser')
+const QuestionUser = require('./QuestionUser')
+const QuestionModerator = require('./QuestionModerator')
 
 class StatisticsBox extends React.Component {
   constructor (props) {
@@ -18,6 +18,24 @@ class StatisticsBox extends React.Component {
       .then(data => this.setState({
         questions: data
       }))
+  }
+
+  updateQuestion (data, id) {
+    return fetch(this.props.questions_api_url + id + '/', {
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+        'X-CSRFToken': this.state.csrfToken
+      },
+      method: 'PATCH',
+      body: JSON.stringify(data)
+    })
+  }
+
+  handleDelete (id) {
+    const data = { is_answered: 1 }
+    this.updateQuestion(data, id)
+      .then(response => this.setState(prevState => ({
+      })))
   }
 
   componentDidMount () {
@@ -62,7 +80,9 @@ class StatisticsBox extends React.Component {
           ? <div className="list-group mt-5">
             { this.state.questions.map((question, index) => {
               if (question.is_answered || question.is_hidden) {
-                return <Question
+                return <QuestionModerator
+                  showAllButtons={false}
+                  handleDelete={this.handleDelete.bind(this)}
                   key={question.id}
                   id={question.id}
                   is_answered={question.is_answered}
@@ -71,7 +91,7 @@ class StatisticsBox extends React.Component {
                   is_hidden={question.is_hidden}
                   category={question.category}
                   likes={question.likes}
-                >{question.text}</Question>
+                >{question.text}</QuestionModerator>
               }
             })
             }
@@ -79,15 +99,16 @@ class StatisticsBox extends React.Component {
           : <div className="list-group mt-5">
             { this.state.questions.map((question, index) => {
               if (question.is_answered && !question.is_hidden) {
-                return <Question
+                return <QuestionUser
                   key={question.id}
                   id={question.id}
                   is_answered={question.is_answered}
+                  is_on_shortlist={question.is_on_shortlist}
                   is_live={question.is_live}
                   is_hidden={question.is_hidden}
                   category={question.category}
                   likes={question.likes}
-                >{question.text}</Question>
+                >{question.text}</QuestionUser>
               }
             })
             }

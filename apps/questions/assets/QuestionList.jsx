@@ -10,6 +10,7 @@ const QuestionList = (props) => {
           props.questions.map((question, index) => {
             return <QuestionModerator
               key={question.id}
+              showAllButtons
               handleDelete={props.handleDelete.bind(this)}
               updateQuestion={props.updateQuestion.bind(this)}
               handleLike={props.handleLike.bind(this)}
@@ -19,6 +20,7 @@ const QuestionList = (props) => {
               is_answered={question.is_answered}
               is_on_shortlist={question.is_on_shortlist}
               is_live={question.is_live}
+              is_hidden={question.is_hidden}
               category={question.category}
               likes={question.likes}
             >{question.text}</QuestionModerator>
@@ -42,6 +44,7 @@ const QuestionList = (props) => {
               is_answered={question.is_answered}
               is_on_shortlist={question.is_on_shortlist}
               is_live={question.is_live}
+              is_hidden={question.is_hidden}
               category={question.category}
               likes={question.likes}
             >{question.text}</QuestionUser>
