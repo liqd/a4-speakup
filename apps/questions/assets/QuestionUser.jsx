@@ -7,6 +7,7 @@ class QuestionUser extends React.Component {
 
     this.state = {
       is_on_shortlist: this.props.is_on_shortlist,
+      is_live: this.props.is_live,
       likes: this.props.likes.count,
       session_like: this.props.likes.session_like
     }
@@ -50,7 +51,11 @@ class QuestionUser extends React.Component {
     return (
       <div className='list-group-item border-bottom mb-2'>
         <div>
-          <p>{this.props.children}</p>
+          <p>
+            {this.props.is_on_shortlist &&
+            <i className='fas fa-align-justify px-2 text-secondary' aria-label={django.gettext('on shortlist')} /> }
+            {this.props.children}
+          </p>
         </div>
         <div className='row'>
           <div className='col-12'>
@@ -58,14 +63,14 @@ class QuestionUser extends React.Component {
             <div>
               {this.props.hasLikingPermission
                 ? <button type='button' className='btn btn-transparent float-right px-3' onClick={this.handleLike.bind(this)}>
-                  <i className={this.state.session_like ? 'fas fa-thumbs-up text-secondary mr-1' : 'far fa-thumbs-up mr-1'} aria-label={this.state.session_like ? django.gettext('add like') : django.gettext('undo like')} />
-                  <span>{this.state.likes}</span>
+                  <span className='text-muted'>{this.state.likes}</span>
                   <span className='sr-only'>{django.gettext('likes')}</span>
+                  <i className={this.state.session_like ? 'fas fa-thumbs-up text-secondary ml-2' : 'fas fa-thumbs-up text-muted ml-2'} aria-label={this.state.session_like ? django.gettext('add like') : django.gettext('undo like')} />
                 </button>
                 : <div className='float-right'>
-                  <i className='far fa-thumbs-up text-muted mr-1' aria-hidden='true' />
-                  <span>{this.state.likes}</span>
+                  <span className='text-muted'>{this.state.likes}</span>
                   <span className='sr-only'>{django.gettext('likes')}</span>
+                  <i className='fas fa-thumbs-up text-muted ml-1' aria-hidden='true' />
                 </div>
               }
             </div>

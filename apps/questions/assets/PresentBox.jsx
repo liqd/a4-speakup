@@ -1,7 +1,7 @@
 /* global fetch */
 /* global django */
 let React = require('react')
-let Question = require('./QuestionUser')
+let Question = require('./QuestionPresent')
 
 class PresentBox extends React.Component {
   constructor (props) {
@@ -40,6 +40,7 @@ class PresentBox extends React.Component {
                 id={question.id}
                 is_answered={question.is_answered}
                 is_on_shortlist={question.is_on_shortlist}
+                is_live={question.is_live}
                 category={question.category}
                 likes={question.likes}
               >{question.text}</Question>

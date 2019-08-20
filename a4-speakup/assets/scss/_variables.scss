@@ -22,6 +22,7 @@ $gray-900: #212529 !default;
 $black:    #000 !default;
 
 $speakup-gray-light: $gray-200;
+$spaekup-purple-light: #d2c2e9 !default;
 
 $grays: () !default;
 $grays: map-merge((
@@ -178,6 +179,11 @@ $grid-breakpoints: (
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);
 
+// use for min-width media-queries
+$breakpoint-sm: map-get($grid-breakpoints, "sm") !default;
+$breakpoint-md: map-get($grid-breakpoints, "md") !default;
+$breakpoint-lg: map-get($grid-breakpoints, "lg") !default;
+$breakpoint-xl: map-get($grid-breakpoints, "xl") !default;
 
 // Grid containers
 //
