@@ -2,13 +2,15 @@
 const React = require('react')
 const QuestionUser = require('./QuestionUser')
 const QuestionModerator = require('./QuestionModerator')
+const cookie = require('js-cookie')
 
 class StatisticsBox extends React.Component {
   constructor (props) {
     super(props)
 
     this.state = {
-      questions: []
+      questions: [],
+      csrfToken: cookie.get('csrftoken')
     }
   }
 
@@ -81,6 +83,7 @@ class StatisticsBox extends React.Component {
             { this.state.questions.map((question, index) => {
               if (question.is_answered || question.is_hidden) {
                 return <QuestionModerator
+                  updateQuestion={this.updateQuestion.bind(this)}
                   showAllButtons={false}
                   handleDelete={this.handleDelete.bind(this)}
                   key={question.id}

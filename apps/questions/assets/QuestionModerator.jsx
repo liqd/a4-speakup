@@ -9,7 +9,8 @@ class QuestionModerator extends React.Component {
       is_on_shortlist: this.props.is_on_shortlist,
       is_live: this.props.is_live,
       likes: this.props.likes.count,
-      session_like: this.props.likes.session_like
+      session_like: this.props.likes.session_like,
+      is_hidden: this.props.is_hidden
     }
   }
 
@@ -125,7 +126,6 @@ class QuestionModerator extends React.Component {
             </button>
 
             {this.props.showAllButtons &&
-
               <div>
                 <button type="button" className="btn btn-transparent float-right px-3"
                   onClick={this.props.handleDelete.bind(this, this.props.id)}>
