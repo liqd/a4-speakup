@@ -25,7 +25,6 @@
             <button type="submit" class="dropdown-item">{% trans "Logout" %}</button>
         </form>
     </div>
-</div>
 
     {% else %}
         <a class="btn" href="{% url 'account_login' %}?next={{ redirect_field_value|urlencode }}" aria-label="{% trans 'Login' %}"><i class="far fa-user"></i></a>

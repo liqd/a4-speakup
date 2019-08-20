@@ -23,32 +23,34 @@
             {% include 'header.html' %}
         {% endblock %}
         <div class="base__wrapper">
-            <div class="page-header mb-5">
-                <h1>
-                {% block title %}{% endblock %}
-                </h1>
-            </div>
-            {% if messages %}
-            {% for message in messages %}
-            <div class="alert alert--{{ message.level_tag }}" role="alert">
-                <div class="text-center alert-text">
-                {{ message }}
+            <div class="container">
+                <div class="page-header mb-5 mt-lg-5">
+                    <h1>
+                    {% block title %}{% endblock %}
+                    </h1>
                 </div>
-            </div>
-            {% endfor %}
-            {% endif %}
-            {% block extra_messages %}{% endblock %}
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert--{{ message.level_tag }}" role="alert">
+                    <div class="text-center alert-text">
+                    {{ message }}
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
+                {% block extra_messages %}{% endblock %}
 
-            <div class="content">
-            {% block content %}
-            {% endblock %}
+                <div class="content">
+                {% block content %}
+                {% endblock %}
+                </div>
+                {% block extra_js %}
+                {# Override this in templates to add extra javascript #}
+                {% endblock %}
+                {% block extra_css %}
+                {# Override this in templates to add extra javascript #}
+                {% endblock %}
             </div>
-            {% block extra_js %}
-            {# Override this in templates to add extra javascript #}
-            {% endblock %}
-            {% block extra_css %}
-            {# Override this in templates to add extra javascript #}
-            {% endblock %}
         </div>
         {% block footer %}
             {% include 'footer.html' %}
