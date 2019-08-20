@@ -1,7 +1,7 @@
 /* global fetch */
 /* global django */
-let React = require('react')
-let Question = require('./QuestionPresent')
+const React = require('react')
+const Question = require('./QuestionPresent')
 
 class PresentBox extends React.Component {
   constructor (props) {

@@ -108,31 +108,31 @@ class QuestionModerator extends React.Component {
             <div>
               <button type="button" className="btn btn-transparent float-right px-3"
                 onClick={this.hiddenList.bind(this)}>
-                <i className='fas fa-times text-primary px-1' aria-label={django.gettext('mark as hidden')} />
+                <i className="fas fa-times text-primary px-1" aria-label={django.gettext('mark as hidden')} />
               </button>
 
               <button type="button" className="btn btn-transparent float-right px-3"
                 onClick={this.props.handleDelete.bind(this, this.props.id)}>
-                <i className='fas fa-check text-primary px-1' aria-label={django.gettext('mark as done')} />
+                <i className="fas fa-check text-primary px-1" aria-label={django.gettext('mark as done')} />
               </button>
-              <button type='button' className='btn btn-transparent float-right px-3' onClick={this.shortList.bind(this)}>
+              <button type="button" className="btn btn-transparent float-right px-3" onClick={this.shortList.bind(this)}>
                 <i className={this.state.is_on_shortlist ? 'fas fa-align-justify px-2 text-secondary' : 'fas fa-align-justify text-primary px-2'} aria-label={this.state.is_on_shortlist ? django.gettext('added to shortlist') : django.gettext('remove from shortlist')} />
               </button>
-              <button type='button' className='btn btn-transparent float-right px-3' onClick={this.liveList.bind(this)}>
+              <button type="button" className="btn btn-transparent float-right px-3" onClick={this.liveList.bind(this)}>
                 <i className={this.state.is_live ? 'fas fa-satellite-dish px-2 text-secondary' : 'fas fa-satellite-dish text-primary px-2'} aria-label={this.state.is_live ? django.gettext('added to live list') : django.gettext('remove from live list')} />
               </button>
             </div>
             <div>
               {this.props.hasLikingPermission
-                ? <button type='button' className='btn btn-transparent float-right px-3' onClick={this.handleLike.bind(this)}>
-                  <span className='text-muted'>{this.state.likes}</span>
-                  <span className='sr-only'>{django.gettext('likes')}</span>
+                ? <button type="button" className="btn btn-transparent float-right px-3" onClick={this.handleLike.bind(this)}>
+                  <span className="text-muted">{this.state.likes}</span>
+                  <span className="sr-only">{django.gettext('likes')}</span>
                   <i className={this.state.session_like ? 'fas fa-thumbs-up text-secondary ml-2' : 'fas fa-thumbs-up text-muted ml-2'} aria-label={this.state.session_like ? django.gettext('add like') : django.gettext('undo like')} />
                 </button>
-                : <div className='float-left'>
-                  <span className='text-muted'>{this.state.likes}</span>
-                  <span className='sr-only'>{django.gettext('likes')}</span>
-                  <i className='fas fa-thumbs-up text-muted ml-2' aria-hidden='true' />
+                : <div className="float-left">
+                  <span className="text-muted">{this.state.likes}</span>
+                  <span className="sr-only">{django.gettext('likes')}</span>
+                  <i className="fas fa-thumbs-up text-muted ml-2" aria-hidden="true" />
                 </div>
               }
             </div>

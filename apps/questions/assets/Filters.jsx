@@ -44,8 +44,8 @@ class Filter extends React.Component {
                   name="markedCheck"
                   checked={this.props.onlyMarked}
                   onChange={this.props.toggleOnlyMarked} />
-                <span className='checkbox-btn__text'>
-                  <i className='fas fa-align-justify' aria-label={django.gettext('only show marked questions')} />
+                <span className="checkbox-btn__text">
+                  <i className="fas fa-align-justify" aria-label={django.gettext('only show marked questions')} />
                 </span>
               </label>
             </div>

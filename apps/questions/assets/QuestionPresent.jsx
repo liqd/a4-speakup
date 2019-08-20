@@ -1,5 +1,5 @@
 /* global django */
-let React = require('react')
+const React = require('react')
 
 class QuestionPresent extends React.Component {
   constructor (props) {
@@ -31,17 +31,17 @@ class QuestionPresent extends React.Component {
 
   render () {
     return (
-      <div className='list-group-item border-bottom mb-2'>
+      <div className="list-group-item border-bottom mb-2">
         <div>
           <p>{this.props.children}</p>
         </div>
-        <div className='row'>
-          <div className='col-12'>
+        <div className="row">
+          <div className="col-12">
             <div>
-              <div className='float-right'>
-                <span className='text-muted'>{this.state.likes}</span>
-                <i className='fas fa-thumbs-up text-muted ml-2' aria-hidden='true' />
-                <span className='sr-only'>{django.gettext('likes')}</span>
+              <div className="float-right">
+                <span className="text-muted">{this.state.likes}</span>
+                <i className="fas fa-thumbs-up text-muted ml-2" aria-hidden="true" />
+                <span className="sr-only">{django.gettext('likes')}</span>
               </div>
             </div>
           </div>
