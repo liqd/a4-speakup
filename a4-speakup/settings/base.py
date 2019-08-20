@@ -79,6 +79,7 @@ INSTALLED_APPS = [
     'cms.settings',
 
     'apps.contrib',
+    'apps.dashboard',
     'apps.ideas',
     'apps.likes',
     'apps.questions',
