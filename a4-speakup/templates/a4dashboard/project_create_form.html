@@ -21,13 +21,19 @@
             {{ hidden_field }}
             {% endfor %}
 
-            {% for field in form.visible_fields %}
+
             <div class="form-group">
-                <label for="{{ field.id }}" class="mb-1">{{ field.label }}</label>
-                <small id="{{ field.id }}" class="form-text text-muted mb-2">{{ field.help_text }}</small>
-                {% render_field field class+="form-control" %}
+                <label for="{{ form.name.id }}" class="mb-1">{{ form.name.label }}</label>
+                <small id="{{ form.name.id }}" class="form-text text-muted mb-2">{{ form.name.help_text }}</small>
+                {% render_field form.name class+="form-control" %}
             </div>
-            {% endfor %}
+
+            <div class="form-group">
+                <label for="{{ form.description.id }}" class="mb-1">{{ form.description.label }}</label>
+                <small id="{{ form.description.id }}" class="form-text text-muted mb-2">{{ form.description.help_text }}</small>
+                {% render_field form.description class+="form-control" %}
+            </div>
+
 
             <p>{% trans 'After saving the draft project you can further customize and edit your project and eventually publish it.' %}</p>
 
