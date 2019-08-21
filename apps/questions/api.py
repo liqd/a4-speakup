@@ -25,8 +25,11 @@ class QuestionViewSet(ModuleMixin,
         return self.module
 
     def get_queryset(self):
-        return Question\
+        questions = Question\
             .objects\
             .filter(module=self.module)\
             .order_by('created')\
             .annotate_like_count()
+        if not self.module.project.has_moderator(self.request.user):
+            questions = questions.filter(is_hidden=False)
+        return questions
