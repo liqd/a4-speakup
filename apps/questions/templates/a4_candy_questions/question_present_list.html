@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 {% load react_questions static i18n %}
+
 {% block header %}{% endblock %}
 {% block content %}
     <div class="container">
     {% react_questions_present view.module %}
     </div>
 {% endblock %}
-{% block footer %}
 
+{% block footer %}
 <div class="footer--present fixed-bottom">
     <div class="container infographic">
         <div class="row justify-content-center my-3">
@@ -15,9 +16,11 @@
         </div>
         <div class="infographic__body">
             <div class="infographic__icon-block">
-                <!-- <div class="infographic__icon">
+                {% comment %}
+                <div class="infographic__icon">
                     <img src="{% static 'images/icon_infografik_projekte.png' %}" alt="">
-                </div> -->
+                </div>
+                {% endcomment %}
                 <div class="infographic__text">
                 {% trans "sign up for the event" %}
                 </div>
@@ -26,9 +29,12 @@
                 <img src="{% static 'images/icon_infografik_arrow_up@2x.png' %}" alt="">
             </div>
             <div class="infographic__icon-block">
-                <!-- <div class="infographic__icon">
+
+                {% comment %}
+                <div class="infographic__icon">
                     <img src="{% static 'images/icon_infografik_mitmachen.png' %}" alt="">
-                </div> -->
+                </div>
+                {% endcomment %}
                 <div class="infographic__text">
                   {% trans "My question posts" %}
                 </div>
@@ -37,9 +43,11 @@
                 <img src="{% static 'images/icon_infografik_arrow_down@2x.png' %}" alt="">
             </div>
             <div class="infographic__icon-block">
-                <!-- <div class="infographic__icon">
+                {% comment %}
+                <div class="infographic__icon">
                     <img src="{% static 'images/icon_infografik_folgen.png' %}" alt="">
-                </div> -->
+                </div>
+                {% endcomment %}
                 <div class="infographic__text">
                   {% trans "and another point" %}
                 </div>
