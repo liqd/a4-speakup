@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'speakup-icons';
-  src:  url('fonts/speakup-icons.eot?3dg1gx');
-  src:  url('fonts/speakup-icons.eot?3dg1gx#iefix') format('embedded-opentype'),
-    url('fonts/speakup-icons.ttf?3dg1gx') format('truetype'),
-    url('fonts/speakup-icons.woff?3dg1gx') format('woff'),
-    url('fonts/speakup-icons.svg?3dg1gx#speakup-icons') format('svg');
+  src:  url('../fonts/speakup-icons.eot?3dg1gx');
+  src:  url('../fonts/speakup-icons.eot?3dg1gx#iefix') format('embedded-opentype'),
+    url('../fonts/speakup-icons.ttf?3dg1gx') format('truetype'),
+    url('../fonts/speakup-icons.woff?3dg1gx') format('woff'),
+    url('../fonts/speakup-icons.svg?3dg1gx#speakup-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,32 +26,35 @@
 
 .icon-answered:before {
   content: "\e900";
-  color: #007aff;
 }
 .icon-arrow-down-copy:before {
   content: "\e901";
-  color: #007aff;
 }
 .icon-arrow-down:before {
   content: "\e902";
-  color: #007aff;
 }
 .icon-sort-list:before {
   content: "\e903";
-  color: #007aff;
 }
 .icon-push-in-list:before {
   content: "\e904";
-  color: #007aff;
 }
 .icon-public-view:before {
   content: "\e905";
-  color: #007aff;
 }
 .icon-list:before {
   content: "\e906";
-  color: #007aff;
 }
+.icon-clear:before {
+  content: "\e94b";
+}
+.icon-talking-desired:before {
+  content: "\e94c";
+}
+.icon-vote:before {
+  content: "\e94d";
+}
+
 .icon-in-list .path1:before {
   content: "\e907";
   color: rgb(255, 149, 0);
@@ -390,16 +393,4 @@
   content: "\e94a";
   margin-left: -1.0087890625em;
   color: rgb(255, 149, 0);
-}
-.icon-clear:before {
-  content: "\e94b";
-  color: #007aff;
-}
-.icon-talking-desired:before {
-  content: "\e94c";
-  color: #c8c7cc;
-}
-.icon-vote:before {
-  content: "\e94d";
-  color: #c8c7cc;
 }

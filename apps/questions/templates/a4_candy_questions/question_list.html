@@ -6,7 +6,7 @@
     <div class="row mb-5">
         <div class="col-12">
             <div class="question-list">
-                <a href="{% url 'question-present' module_slug=view.module.slug %}" target="_blank">{% trans 'display on screen' %}</a>
+                <a href="{% url 'question-present' module_slug=view.module.slug %}" target="_blank">{% trans 'display on screen' %}<i class="icon-public-view px-2 text-primary" aria-label="hidden"></i></a>
                 {% react_questions view.module %}
                 {% has_or_would_have_perm 'a4_candy_questions.propose_question' request.user view.module as add_button_enabled %}
                 {% if add_button_enabled %}

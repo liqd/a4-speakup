@@ -53,7 +53,7 @@ class QuestionUser extends React.Component {
         <div>
           <p>
             {this.props.is_on_shortlist &&
-            <i className="fas fa-align-justify px-2 text-secondary" aria-label={django.gettext('on shortlist')} />
+            <i className="icon-push-in-list px-2 text-secondary" aria-label={django.gettext('on shortlist')} />
             }
             {this.props.children}
           </p>
@@ -66,12 +66,12 @@ class QuestionUser extends React.Component {
                 ? <button type="button" className="btn btn-transparent float-right px-3" onClick={this.handleLike.bind(this)}>
                   <span className="text-muted">{this.state.likes}</span>
                   <span className="sr-only">{django.gettext('likes')}</span>
-                  <i className={this.state.session_like ? 'fas fa-thumbs-up text-secondary ml-2' : 'fas fa-thumbs-up text-muted ml-2'} aria-label={this.state.session_like ? django.gettext('add like') : django.gettext('undo like')} />
+                  <i className={this.state.session_like ? 'icon-vote text-secondary ml-2' : 'icon-vote text-muted ml-2'} aria-label={this.state.session_like ? django.gettext('add like') : django.gettext('undo like')} />
                 </button>
                 : <div className="float-right">
                   <span className="text-muted">{this.state.likes}</span>
                   <span className="sr-only">{django.gettext('likes')}</span>
-                  <i className="fas fa-thumbs-up text-muted ml-1" aria-hidden="true" />
+                  <i className="icon-vote text-muted ml-1" aria-hidden="true" />
                 </div>
               }
             </div>
