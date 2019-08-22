@@ -120,11 +120,11 @@ class QuestionModerator extends React.Component {
                   onClick={this.props.handleDelete.bind(this, this.props.id)}>
                   <i className="icon-answered text-primary px-1" aria-label={django.gettext('mark as done')} />
                 </button>
-                <button type="button" className="btn btn-transparent float-right px-3" onClick={this.shortList.bind(this)}>
-                  <i className={this.state.is_on_shortlist ? 'icon-push-in-list px-2 text-secondary' : 'icon-push-in-list text-primary px-2'} aria-label={this.state.is_on_shortlist ? django.gettext('added to shortlist') : django.gettext('remove from shortlist')} />
-                </button>
                 <button type="button" className="btn btn-transparent float-right px-3" onClick={this.liveList.bind(this)}>
                   <i className={this.state.is_live ? 'icon-public-view px-2 text-secondary' : 'icon-public-view text-primary px-2'} aria-label={this.state.is_live ? django.gettext('added to live list') : django.gettext('remove from live list')} />
+                </button>
+                <button type="button" className="btn btn-transparent float-right px-3" onClick={this.shortList.bind(this)}>
+                  <i className={this.state.is_on_shortlist ? 'icon-push-in-list px-2 text-secondary' : 'icon-push-in-list text-primary px-2'} aria-label={this.state.is_on_shortlist ? django.gettext('added to shortlist') : django.gettext('remove from shortlist')} />
                 </button>
               </div>
             }
