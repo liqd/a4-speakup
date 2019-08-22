@@ -5,16 +5,13 @@
 {% block dashboard_content %}
 <div class="row">
     <div class="col-md-3">
-        <ul class="list-group">
-              <a href="{% url 'a4dashboard:project-list' organisation_slug=view.organisation.slug %}" class="list-group-item list-group-item-action {% if request.resolver_match.url_name == 'project-list' %}active{% endif %}">{% trans "Projects" %}</a>
-        </ul>
     </div>
     <div class="col-md-9">
         <div class="d-flex flex-row justify-content-between mt-3">
-            <h1>{% trans 'Projects' %}</h1>
+            <h1>{% trans 'Events' %}</h1>
             <div>
-              <a href="{% url 'a4dashboard:blueprint-list' organisation_slug=view.organisation.slug %}" class="btn btn-primary">
-                  {% trans 'New Project' %}
+              <a href="{% url 'a4dashboard:project-create' organisation_slug=view.organisation.slug blueprint_slug='speakup' %}" class="btn btn-primary">
+                  {% trans 'New Event' %}
               </a>
           </div>
         </div>
