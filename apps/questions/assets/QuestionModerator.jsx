@@ -106,7 +106,7 @@ class QuestionModerator extends React.Component {
         <div className="row justify-content-between">
           <div className="col-4 col-lg-2">
             <span className="badge badge-gray mr-1">{ this.props.category }</span>
-            <span className="badge">{this.state.likes}<i className='icon-vote ml-2'/></span>
+            <span className="badge">{this.state.likes}<i className="icon-vote ml-2" /></span>
           </div>
           <div className="col-8 col-lg-10">
             <button type="button" className="btn btn-transparent float-right px-3"

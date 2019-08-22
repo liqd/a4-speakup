@@ -160,20 +160,20 @@ class QuestionBox extends React.Component {
         {this.props.isModerator && this.state.displayInfo &&
           <div className="alert alert-secondary alert-dismissible">
             <div className="row pt-4">
-              <div className="col-lg-3 pb-2"><i className='icon-push-in-list'/> {django.gettext('add favourite question to shortlist')}</div>
-              <div className="col-lg-3 pb-2"><i className='icon-public-view'/> {django.gettext('display question on screen when being answered')}</div>
-              <div className="col-lg-3 pb-2"><i className='icon-answered'/> {django.gettext('mark question a answered')}</div>
-              <div className="col-lg-3 pb-2"><i className='icon-clear'/> {django.gettext('hide question from audiance when unaproppriate')}</div>
+              <div className="col-lg-3 pb-2"><i className="icon-push-in-list" /> {django.gettext('add favourite question to shortlist')}</div>
+              <div className="col-lg-3 pb-2"><i className="icon-public-view" /> {django.gettext('display question on screen when being answered')}</div>
+              <div className="col-lg-3 pb-2"><i className="icon-answered" /> {django.gettext('mark question a answered')}</div>
+              <div className="col-lg-3 pb-2"><i className="icon-clear" /> {django.gettext('hide question from audiance when unaproppriate')}</div>
             </div>
-            <button type='button' className='close' onClick={this.toggleInformation.bind(this)} aria-label='Close information'>
-              <span aria-hidden='true'>&times;</span>
+            <button type="button" className="close" onClick={this.toggleInformation.bind(this)} aria-label="Close information">
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
         }
         {this.props.isModerator && !this.state.displayInfo &&
-          <div className='row justify-content-end'>
-            <button type='button' className='btn btn-outline-secondary' onClick={this.toggleInformation.bind(this)} aria-label='Open information'>
-              <span aria-hidden='true'><i className='fas fa-info-circle'></i></span>
+          <div className="row justify-content-end">
+            <button type="button" className="btn btn-outline-secondary" onClick={this.toggleInformation.bind(this)} aria-label="Open information">
+              <span aria-hidden="true"><i className="fas fa-info-circle" /></span>
             </button>
           </div>
         }
