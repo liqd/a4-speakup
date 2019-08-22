@@ -1,6 +1,7 @@
 from django.utils.translation import ugettext_lazy as _
 
-from adhocracy4.dashboard import ProjectFormComponent, components
+from adhocracy4.dashboard import (ModuleFormSetComponent, ProjectFormComponent,
+                                  components)
 
 from . import forms
 
@@ -18,4 +19,15 @@ class ProjectBasicComponent(ProjectFormComponent):
         return True
 
 
+class ModulePhasesComponent(ModuleFormSetComponent):
+    identifier = 'speakup-phases'
+    weight = 11
+    label = _('Phases')
+
+    form_title = _('Edit phases information')
+    form_class = forms.SpeakupPhaseFormSet
+    form_template_name = 'a4dashboard/includes/module_phases_form.html'
+
+
 components.register_project(ProjectBasicComponent())
+components.register_module(ModulePhasesComponent())

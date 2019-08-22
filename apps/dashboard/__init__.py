@@ -13,6 +13,6 @@ class SpeakUpDashboard(ProjectDashboard):
 
     def get_module_components(self):
         return [
-            components.modules.get('phases'),
+            components.modules.get('speakup-phases'),
             components.modules.get('categories')
         ]
