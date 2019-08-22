@@ -11,6 +11,7 @@ class QuestionBox extends React.Component {
     this.state = {
       questions: [],
       filteredQuestions: [],
+      displayInfo: true,
       category: '-1',
       categoryName: django.gettext('select category'),
       displayOnShortlist: false,
@@ -135,6 +136,13 @@ class QuestionBox extends React.Component {
     }
   }
 
+  toggleInformation () {
+    let displayInfo = !this.state.displayInfo
+    this.setState({
+      displayInfo: displayInfo
+    })
+  }
+
   render () {
     return (
       <div>
@@ -149,6 +157,26 @@ class QuestionBox extends React.Component {
           toggleDisplayOnShortlist={this.toggleDisplayOnShortlist.bind(this)}
           isModerator={this.props.isModerator}
         />
+        {this.props.isModerator && this.state.displayInfo &&
+          <div className="alert alert-secondary alert-dismissible">
+            <div className="row pt-4">
+              <div className="col-lg-3 pb-2"><i className='icon-push-in-list'></i> {django.gettext('add favourite question to shortlist')}</div>
+              <div className="col-lg-3 pb-2"><i className='icon-public-view'></i> {django.gettext('display question on screen when being answered')}</div>
+              <div className="col-lg-3 pb-2"><i className='icon-answered'></i> {django.gettext('mark question a answered')}</div>
+              <div className="col-lg-3 pb-2"><i className='icon-clear'></i> {django.gettext('hide question from audiance when unaproppriate')}</div>
+            </div>
+            <button type="button" className="close" onClick={this.toggleInformation.bind(this)} aria-label="Close information">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        }
+        {this.props.isModerator && !this.state.displayInfo &&
+          <div className="row justify-content-end">
+            <button type="button" className="btn btn-outline-secondary" onClick={this.toggleInformation.bind(this)} aria-label="Open information">
+              <span aria-hidden="true"><i className="fas fa-info-circle"></i></span>
+            </button>
+          </div>
+        }
         <QuestionList
           questions={this.state.filteredQuestions}
           handleDelete={this.handleDelete.bind(this)}
