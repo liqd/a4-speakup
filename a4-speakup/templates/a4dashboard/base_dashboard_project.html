@@ -13,7 +13,7 @@
                            class="{{ item.is_active|yesno:"is-active," }}">
                             {{ item.label }}
                             {% if not item.is_complete %}
-                                <i class="fa fa-exclamation-circle u-danger"
+                                <i class="fa fa-exclamation-circle text-secondary"
                                    title="{% trans 'Missing fields for publication' %}"
                                    aria-label="{% trans 'Missing fields for publication' %}"></i>
                             {% endif %}
@@ -28,7 +28,7 @@
                                    class="{{ item.is_active|yesno:"is-active," }}">
                                     {{ item.label }}
                                     {% if not item.is_complete %}
-                                        <i class="fa fa-exclamation-circle u-danger"
+                                        <i class="fa fa-exclamation-circle text-secondary"
                                            title="{% trans 'Missing fields for publication' %}"
                                            aria-label="{% trans 'Missing fields for publication' %}"></i>
                                     {% endif %}
