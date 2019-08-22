@@ -45,7 +45,7 @@ class Filter extends React.Component {
                   checked={this.props.displayOnShortlist}
                   onChange={this.props.toggleDisplayOnShortlist} />
                 <span className="checkbox-btn__text">
-                  <i className="fas fa-align-justify" aria-label={django.gettext('only show marked questions')} />
+                  <i className="icon-push-in-list" aria-label={django.gettext('only show marked questions')} />
                 </span>
               </label>
             </div>
@@ -59,7 +59,7 @@ class Filter extends React.Component {
                   checked={this.props.orderedByLikes}
                   onChange={this.props.toggleOrdering} />
                 <span className="checkbox-btn__text">
-                  <i className="fas fa-sort-amount-up" aria-label={django.gettext('order by likes')} /> likes
+                  <i className="icon-sort-list" aria-label={django.gettext('order by likes')} /> likes
                 </span>
               </label>
             </div>
