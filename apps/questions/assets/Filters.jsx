@@ -18,7 +18,7 @@ class Filter extends React.Component {
 
   render () {
     return (
-      <div className="mb-5">
+      <div className="mb-4">
         <div className="justify-content-center form-inline">
           <div className="dropdown">
             <button className={this.getButtonClass()} type="button" id="dropdownMenuButton"
