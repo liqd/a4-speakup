@@ -1,3 +1,4 @@
+/* global fetch */
 /* global django */
 const React = require('react')
 const QuestionUser = require('./QuestionUser')
@@ -50,27 +51,31 @@ class StatisticsBox extends React.Component {
   }
 
   countCategory (category) {
-    let count = 0
+    let countPerCategory = 0
+    let answeredQuestions = 0
     this.state.questions.forEach(function (question) {
-      if (question.category === category) {
-        count++
+      if (question.is_answered && !question.is_hidden) {
+        answeredQuestions++
+        if (question.category === category) {
+          countPerCategory++
+        }
       }
     })
-    return Math.round(count * 100 / this.state.questions.length) || 0
+    return Math.round(countPerCategory * 100 / answeredQuestions) || 0
   }
 
   render () {
     return (
       <div>
         { this.props.categories.map((category, index) => {
-          const count = this.countCategory(category)
-          const style = { width: count + '%' }
+          const countPerCategory = this.countCategory(category)
+          const style = { width: countPerCategory + '%' }
           return (
             <div key={index} className="mt-3">
               <span>{category}</span>
               <div className="progress">
                 <div className="progress-bar" style={style} role="progressbar" aria-valuenow="25" aria-valuemin="0"
-                  aria-valuemax="100">{count}%
+                  aria-valuemax="100">{countPerCategory}%
                 </div>
               </div>
             </div>
