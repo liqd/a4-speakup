@@ -67,21 +67,25 @@ class StatisticsBox extends React.Component {
   render () {
     return (
       <div>
-        { this.props.categories.map((category, index) => {
-          const countPerCategory = this.countCategory(category)
-          const style = { width: countPerCategory + '%' }
-          return (
-            <div key={index} className="mt-3">
-              <span>{category}</span>
-              <div className="progress">
-                <div className="progress-bar" style={style} role="progressbar" aria-valuenow="25" aria-valuemin="0"
-                  aria-valuemax="100">{countPerCategory}%
+        <div className="row justify-content-center">
+          <div className="col-12 col-md-8">
+            { this.props.categories.map((category, index) => {
+              const countPerCategory = this.countCategory(category)
+              const style = { width: countPerCategory + '%' }
+              return (
+                <div key={index} className="mt-3">
+                  <span>{category}</span>
+                  <div className="progress">
+                    <div className="progress-bar" style={style} role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                      aria-valuemax="100">{countPerCategory}%
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          )
-        })
-        }
+              )
+            })
+            }
+          </div>
+        </div>
         <h5 className="mt-5">{django.gettext('Posts included')}</h5>
         {this.props.isModerator
           ? <div className="list-group mt-5">
