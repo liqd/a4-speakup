@@ -101,32 +101,35 @@ class QuestionModerator extends React.Component {
     return (
       <div className="list-group-item border-bottom mb-2">
         <div>
-          <p className={this.props.is_hidden ? 'text-muted' : ''}>{this.props.children}</p>
+          <p className={this.props.is_hidden ? 'text-muted u-text-decoration-line-through' : ''}>{this.props.children}</p>
         </div>
         <div className="row justify-content-between">
-          <div className="col-4 col-lg-2">
+          <div className="col-12 col-md-4 col-sm-5 mb-3 mb-sm-0">
             <span className="badge badge-gray mr-1">{ this.props.category }</span>
             <span className="badge">{this.state.likes}<i className="icon-vote ml-2" /></span>
           </div>
-          <div className="col-8 col-lg-10">
-            <button type="button" className="btn btn-transparent float-right px-3"
+          <div className="col-12 col-md-8 col-sm-7">
+            <button type="button" className="btn btn-transparent float-sm-right px-3"
               onClick={this.hiddenList.bind(this)}>
               <i className={this.props.is_hidden ? 'icon-clear text-primary px-2 text-secondary' : 'icon-clear text-primary px-2 text-primary'} aria-label={this.props.is_hidden ? django.gettext('mark as hidden') : django.gettext('undo mark as hidden')} />
             </button>
 
             {this.props.showAllButtons &&
-              <div>
-                <button type="button" className="btn btn-transparent float-right px-3"
-                  onClick={this.props.handleDelete.bind(this, this.props.id)}>
-                  <i className="icon-answered text-primary px-1" aria-label={django.gettext('mark as done')} />
-                </button>
-                <button type="button" className="btn btn-transparent float-right px-3" onClick={this.liveList.bind(this)}>
-                  <i className={this.state.is_live ? 'icon-public-view px-2 text-secondary' : 'icon-public-view text-primary px-2'} aria-label={this.state.is_live ? django.gettext('added to live list') : django.gettext('remove from live list')} />
-                </button>
-                <button type="button" className="btn btn-transparent float-right px-3" onClick={this.shortList.bind(this)}>
-                  <i className={this.state.is_on_shortlist ? 'icon-push-in-list px-2 text-secondary' : 'icon-push-in-list text-primary px-2'} aria-label={this.state.is_on_shortlist ? django.gettext('added to shortlist') : django.gettext('remove from shortlist')} />
-                </button>
-              </div>
+              <button type="button" className="btn btn-transparent float-sm-right px-3"
+                onClick={this.props.handleDelete.bind(this, this.props.id)}>
+                <i className="icon-answered text-primary px-1" aria-label={django.gettext('mark as done')} />
+              </button>
+            }
+            {this.props.showAllButtons &&
+              <button type="button" className="btn btn-transparent float-sm-right px-3" onClick={this.liveList.bind(this)}>
+                <i className={this.state.is_live ? 'icon-public-view px-2 text-secondary' : 'icon-public-view text-primary px-2'} aria-label={this.state.is_live ? django.gettext('added to live list') : django.gettext('remove from live list')} />
+              </button>
+            }
+            {this.props.showAllButtons &&
+              <button type="button" className="btn btn-transparent float-sm-right px-3" onClick={this.shortList.bind(this)}>
+                <i className={this.state.is_on_shortlist ? 'icon-push-in-list px-2 text-secondary' : 'icon-push-in-list text-primary px-2'} aria-label={this.state.is_on_shortlist ? django.gettext('added to shortlist') : django.gettext('remove from shortlist')} />
+              </button>
+
             }
           </div>
         </div>

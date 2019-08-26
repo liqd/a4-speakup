@@ -20,7 +20,7 @@ class Filter extends React.Component {
     return (
       <div className="mb-4">
         <div className="justify-content-center form-inline">
-          <div className="dropdown">
+          <div className="dropdown mt-3">
             <button className={this.getButtonClass()} type="button" id="dropdownMenuButton"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {this.props.currentCategoryName}
@@ -35,7 +35,7 @@ class Filter extends React.Component {
           </div>
           {this.props.isModerator &&
           <div>
-            <div className="checkbox-btn">
+            <div className="checkbox-btn mt-3">
               <label htmlFor="markedCheck" className="checkbox-btn__label--primary pl-3">
                 <input
                   className="checkbox-btn__input"
@@ -49,7 +49,7 @@ class Filter extends React.Component {
                 </span>
               </label>
             </div>
-            <div className="checkbox-btn">
+            <div className="checkbox-btn mt-3">
               <label htmlFor="orderedByLikes" className="checkbox-btn__label--transparent">
                 <input
                   className="checkbox-btn__input"

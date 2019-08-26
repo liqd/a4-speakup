@@ -1,3 +1,4 @@
+/* global fetch */
 /* global django */
 const React = require('react')
 const QuestionUser = require('./QuestionUser')
@@ -50,34 +51,42 @@ class StatisticsBox extends React.Component {
   }
 
   countCategory (category) {
-    let count = 0
+    let countPerCategory = 0
+    let answeredQuestions = 0
     this.state.questions.forEach(function (question) {
-      if (question.category === category) {
-        count++
+      if (question.is_answered && !question.is_hidden) {
+        answeredQuestions++
+        if (question.category === category) {
+          countPerCategory++
+        }
       }
     })
-    return Math.round(count * 100 / this.state.questions.length) || 0
+    return Math.round(countPerCategory * 100 / answeredQuestions) || 0
   }
 
   render () {
     return (
       <div>
-        { this.props.categories.map((category, index) => {
-          const count = this.countCategory(category)
-          const style = { width: count + '%' }
-          return (
-            <div key={index} className="mt-3">
-              <span>{category}</span>
-              <div className="progress">
-                <div className="progress-bar" style={style} role="progressbar" aria-valuenow="25" aria-valuemin="0"
-                  aria-valuemax="100">{count}%
+        <div className="row justify-content-center">
+          <div className="col-12 col-md-8">
+            { this.props.categories.map((category, index) => {
+              const countPerCategory = this.countCategory(category)
+              const style = { width: countPerCategory + '%' }
+              return (
+                <div key={index} className="mt-3">
+                  <span>{category}</span>
+                  <div className="progress">
+                    <div className="progress-bar" style={style} role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                      aria-valuemax="100">{countPerCategory}%
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          )
-        })
-        }
-        <h5 className="mt-5">{django.gettext('Posts included')}</h5>
+              )
+            })
+            }
+          </div>
+        </div>
+        <h3 className="mt-5">{django.gettext('Posts included')}</h3>
         {this.props.isModerator
           ? <div className="list-group mt-5">
             { this.state.questions.map((question, index) => {
