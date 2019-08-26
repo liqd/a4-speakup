@@ -12,18 +12,24 @@ class StatisticsBox extends React.Component {
 
     this.state = {
       questions: [],
+      pollingPaused: false
     }
   }
 
   getItems () {
-    fetch(this.props.questions_api_url)
-      .then(response => response.json())
-      .then(data => this.setState({
-        questions: data
-      }))
+    if (!this.state.pollingPaused) {
+      fetch(this.props.questions_api_url)
+        .then(response => response.json())
+        .then(data => this.setState({
+          questions: data
+        }
+        ))
+    }
   }
 
   updateQuestion (data, id) {
+    this.setState({
+      pollingPaused: true
     })
     const url = this.props.questions_api_url + id + '/'
     return updateItem(data, url, 'PATCH')
@@ -32,7 +38,16 @@ class StatisticsBox extends React.Component {
   removeFromList (id, data) {
     this.updateQuestion(data, id)
       .then(response => this.setState(prevState => ({
+        questions: prevState.questions.filter(question => question.id !== id),
+        pollingPaused: false
       })))
+  }
+
+  togglePollingPaused () {
+    const pollingPaused = !this.state.pollingPaused
+    this.setState({
+      pollingPaused: pollingPaused
+    })
   }
 
   componentDidMount () {

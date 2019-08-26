@@ -23,6 +23,7 @@ const QuestionList = (props) => {
               is_hidden={question.is_hidden}
               category={question.category}
               likes={question.likes}
+              togglePollingPaused={props.togglePollingPaused}
             >{question.text}</QuestionModerator>
           })
         }

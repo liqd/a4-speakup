@@ -26,6 +26,7 @@ class QuestionModerator extends React.Component {
           is_on_shortlist: responseData.is_on_shortlist
         }
       ))
+      .then(() => this.props.togglePollingPaused())
   }
 
   toggleIslive () {
@@ -39,6 +40,7 @@ class QuestionModerator extends React.Component {
           is_live: responseData.is_live
         }
       ))
+      .then(() => this.props.togglePollingPaused())
   }
 
   toggleIsAnswered () {

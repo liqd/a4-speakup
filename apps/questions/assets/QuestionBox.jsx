@@ -19,6 +19,7 @@ class QuestionBox extends React.Component {
       orderedByLikes: false,
       filterChanged: false,
       orderingChanged: false,
+      pollingPaused: false
     }
   }
 
@@ -97,16 +98,20 @@ class QuestionBox extends React.Component {
   }
 
   getItems () {
-    fetch(this.getUrl())
-      .then(response => response.json())
-      .then(data => this.setState({
-        questions: data,
-        filteredQuestions: this.filterQuestions(data),
-        orderingChanged: false
-      }))
+    if (!this.state.pollingPaused) {
+      fetch(this.getUrl())
+        .then(response => response.json())
+        .then(data => this.setState({
+          questions: data,
+          filteredQuestions: this.filterQuestions(data),
+          orderingChanged: false
+        }))
+    }
   }
 
   updateQuestion (data, id) {
+    this.setState({
+      pollingPaused: true
     })
     const url = this.props.questions_api_url + id + '/'
     return updateItem(data, url, 'PATCH')
@@ -115,7 +120,8 @@ class QuestionBox extends React.Component {
   removeFromList (id, data) {
     this.updateQuestion(data, id)
       .then(response => this.setState(prevState => ({
-        filteredQuestions: prevState.filteredQuestions.filter(question => question.id !== id)
+        filteredQuestions: prevState.filteredQuestions.filter(question => question.id !== id),
+        pollingPaused: false
       })))
   }
 
@@ -129,6 +135,13 @@ class QuestionBox extends React.Component {
     const displayInfo = !this.state.displayInfo
     this.setState({
       displayInfo: displayInfo
+    })
+  }
+
+  togglePollingPaused () {
+    const pollingPaused = !this.state.pollingPaused
+    this.setState({
+      pollingPaused: pollingPaused
     })
   }
 
@@ -172,6 +185,7 @@ class QuestionBox extends React.Component {
           updateQuestion={this.updateQuestion.bind(this)}
           handleLike={this.handleLike.bind(this)}
           isModerator={this.props.isModerator}
+          togglePollingPaused={this.togglePollingPaused.bind(this)}
           hasLikingPermission={this.props.hasLikingPermission}
         />
       </div>)
