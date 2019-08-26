@@ -22,6 +22,24 @@ class QuestionBox extends React.Component {
     }
   }
 
+  componentDidMount () {
+    this.getItems()
+    this.timer = setInterval(() => this.getItems(), 5000)
+  }
+
+  componentWillUnmount () {
+    this.timer = null
+  }
+
+  componentDidUpdate () {
+    if (this.state.filterChanged === true) {
+      this.updateList()
+    }
+    if (this.state.orderingChanged === true) {
+      this.getItems()
+    }
+  }
+
   setCategory (category) {
     const newName = (category === '-1') ? django.gettext('select category') : category
     this.setState({
@@ -115,24 +133,6 @@ class QuestionBox extends React.Component {
       method: 'POST',
       body: JSON.stringify({ value: value })
     })
-  }
-
-  componentDidMount () {
-    this.getItems()
-    this.timer = setInterval(() => this.getItems(), 5000)
-  }
-
-  componentWillUnmount () {
-    this.timer = null
-  }
-
-  componentDidUpdate () {
-    if (this.state.filterChanged === true) {
-      this.updateList()
-    }
-    if (this.state.orderingChanged === true) {
-      this.getItems()
-    }
   }
 
   toggleInformation () {
