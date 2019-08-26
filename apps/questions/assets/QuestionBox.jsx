@@ -99,8 +99,7 @@ class QuestionBox extends React.Component {
     })
   }
 
-  handleDelete (id) {
-    const data = { is_answered: 1 }
+  removeFromList (id, data) {
     this.updateQuestion(data, id)
       .then(response => this.setState(prevState => ({
         filteredQuestions: prevState.filteredQuestions.filter(question => question.id !== id)
@@ -179,7 +178,7 @@ class QuestionBox extends React.Component {
         }
         <QuestionList
           questions={this.state.filteredQuestions}
-          handleDelete={this.handleDelete.bind(this)}
+          removeFromList={this.removeFromList.bind(this)}
           updateQuestion={this.updateQuestion.bind(this)}
           handleLike={this.handleLike.bind(this)}
           isModerator={this.props.isModerator}

@@ -11,7 +11,7 @@ const QuestionList = (props) => {
             return <QuestionModerator
               key={question.id}
               showAllButtons
-              handleDelete={props.handleDelete.bind(this)}
+              removeFromList={props.removeFromList.bind(this)}
               updateQuestion={props.updateQuestion.bind(this)}
               handleLike={props.handleLike.bind(this)}
               isModerator={props.isModerator}
@@ -35,7 +35,6 @@ const QuestionList = (props) => {
           props.questions.map((question, index) => {
             return <QuestionUser
               key={question.id}
-              handleDelete={props.handleDelete.bind(this)}
               updateQuestion={props.updateQuestion.bind(this)}
               handleLike={props.handleLike.bind(this)}
               isModerator={props.isModerator}
