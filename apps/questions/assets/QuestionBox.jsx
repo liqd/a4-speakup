@@ -1,8 +1,9 @@
 /* global django */
+import { updateItem } from './helpers.js'
+
 const React = require('react')
 const QuestionList = require('./QuestionList')
 const Filters = require('./Filters')
-const cookie = require('js-cookie')
 
 class QuestionBox extends React.Component {
   constructor (props) {
@@ -18,7 +19,6 @@ class QuestionBox extends React.Component {
       orderedByLikes: false,
       filterChanged: false,
       orderingChanged: false,
-      csrfToken: cookie.get('csrftoken')
     }
   }
 
@@ -107,14 +107,9 @@ class QuestionBox extends React.Component {
   }
 
   updateQuestion (data, id) {
-    return fetch(this.props.questions_api_url + id + '/', {
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-        'X-CSRFToken': this.state.csrfToken
-      },
-      method: 'PATCH',
-      body: JSON.stringify(data)
     })
+    const url = this.props.questions_api_url + id + '/'
+    return updateItem(data, url, 'PATCH')
   }
 
   removeFromList (id, data) {
@@ -125,14 +120,9 @@ class QuestionBox extends React.Component {
   }
 
   handleLike (id, value) {
-    return fetch('/api/questions/' + id + '/likes/', {
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-        'X-CSRFToken': this.state.csrfToken
-      },
-      method: 'POST',
-      body: JSON.stringify({ value: value })
-    })
+    const url = '/api/questions/' + id + '/likes/'
+    const data = { value: value }
+    return updateItem(data, url, 'POST')
   }
 
   toggleInformation () {

@@ -1,9 +1,10 @@
 /* global fetch */
 /* global django */
+import { updateItem } from './helpers.js'
+
 const React = require('react')
 const QuestionUser = require('./QuestionUser')
 const QuestionModerator = require('./QuestionModerator')
-const cookie = require('js-cookie')
 
 class StatisticsBox extends React.Component {
   constructor (props) {
@@ -11,7 +12,6 @@ class StatisticsBox extends React.Component {
 
     this.state = {
       questions: [],
-      csrfToken: cookie.get('csrftoken')
     }
   }
 
@@ -24,18 +24,12 @@ class StatisticsBox extends React.Component {
   }
 
   updateQuestion (data, id) {
-    return fetch(this.props.questions_api_url + id + '/', {
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-        'X-CSRFToken': this.state.csrfToken
-      },
-      method: 'PATCH',
-      body: JSON.stringify(data)
     })
+    const url = this.props.questions_api_url + id + '/'
+    return updateItem(data, url, 'PATCH')
   }
 
-  handleDelete (id) {
-    const data = { is_answered: 1 }
+  removeFromList (id, data) {
     this.updateQuestion(data, id)
       .then(response => this.setState(prevState => ({
       })))
@@ -94,7 +88,7 @@ class StatisticsBox extends React.Component {
                 return <QuestionModerator
                   updateQuestion={this.updateQuestion.bind(this)}
                   showAllButtons={false}
-                  handleDelete={this.handleDelete.bind(this)}
+                  removeFromList={this.removeFromList.bind(this)}
                   key={question.id}
                   id={question.id}
                   is_answered={question.is_answered}
