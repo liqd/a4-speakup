@@ -1,6 +1,7 @@
+/* global fetch */
 /* global django */
 const React = require('react')
-const Question = require('./QuestionPresent')
+const QuestionPresent = require('./QuestionPresent')
 
 class PresentBox extends React.Component {
   constructor (props) {
@@ -12,7 +13,7 @@ class PresentBox extends React.Component {
   }
 
   getItems () {
-    fetch(this.props.questions_api_url + '?is_live=1')
+    fetch(this.props.questions_api_url + '?is_live=1&is_answered=0')
       .then(response => response.json())
       .then(data => this.setState({
         questions: data
@@ -34,7 +35,7 @@ class PresentBox extends React.Component {
         <div>
           <div className="list-group mt-5">
             { this.state.questions.map((question, index) => {
-              return <Question
+              return <QuestionPresent
                 key={question.id}
                 id={question.id}
                 is_answered={question.is_answered}
@@ -42,7 +43,7 @@ class PresentBox extends React.Component {
                 is_live={question.is_live}
                 category={question.category}
                 likes={question.likes}
-              >{question.text}</Question>
+              >{question.text}</QuestionPresent>
             })
             }
           </div>
