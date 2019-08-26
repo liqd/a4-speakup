@@ -94,8 +94,6 @@
 }
 
 .infographic__info-screen {
-    @extend .align-middle;
-
+    @extend .mt-5;
     width: 100%;
-    height: 100%;
 }
