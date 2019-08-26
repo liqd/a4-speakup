@@ -1,7 +1,13 @@
 {% extends "a4dashboard/base_dashboard.html" %}
 {% load i18n widget_tweaks %}
 
-{% block title %}{% trans "Create project based on" %} {{ view.blueprint.title }} &mdash; {{ block.super }}{% endblock %}
+{% block title %}
+<div class="page-header mb-5 mt-lg-5">
+    <h1>
+    {% trans "Create project based on" %} {{ view.blueprint.title }} &mdash; {{ block.super }}
+    </h1>
+</div>
+{% endblock %}
 
 {% block dashboard_content %}
     <div class="offset-md-3 col-md-6 mb-3">

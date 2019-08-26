@@ -1,7 +1,13 @@
 {% extends "a4dashboard/base_dashboard_project.html" %}
 {% load i18n widget_tweaks %}
 
-{% block title %}{% trans 'Moderators' %} &mdash; {{ block.super }}{% endblock%}
+{% block title %}
+<div class="page-header mb-5 mt-lg-5">
+    <h1>
+    {% trans 'Moderators' %} &mdash; {{ block.super }}
+    </h1>
+</div>
+{% endblock%}
 
 {% block dashboard_project_content %}
     <h1 class="mb-3">{% trans 'Edit Moderators' %}</h1>

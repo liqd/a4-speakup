@@ -1,7 +1,14 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %}{% blocktrans with project=moderatorinvite.project.name %}Invitation to {{ project }}{% endblocktrans %}{% endblock %}
+{% block title %}
+<div class="page-header mb-5 mt-lg-5">
+    <h1>
+    {% blocktrans with project=moderatorinvite.project.name %}Invitation to {{ project }}{% endblocktrans %}
+    </h1>
+</div>
+{% endblock %}
+
 {% block content %}
     <div class="container">
         <div class="row">

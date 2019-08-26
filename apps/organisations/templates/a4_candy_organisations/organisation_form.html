@@ -1,8 +1,6 @@
 {% extends "a4dashboard/base_dashboard.html" %}
 {% load i18n widget_tweaks %}
 
-{% block title %}{% endblock%}
-
 {% block dashboard_content %}
     <form enctype="multipart/form-data" action="{{ request.path }}" method="post">
         {% csrf_token %}
