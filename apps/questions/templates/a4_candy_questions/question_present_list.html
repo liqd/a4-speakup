@@ -7,45 +7,38 @@
 {% endblock %}
 
 {% block footer %}
-<div class="footer--present fixed-bottom">
+<div id="id-present-infographic" class="d-none">
     <div class="container infographic">
         <div class="row justify-content-center my-3">
           <span>{% trans "join in " %}<a href="{% url 'project-detail' project.slug %}">{% url 'project-detail' project.slug %}</a></span>
         </div>
         <div class="infographic__body">
             <div class="infographic__icon-block">
-                {% comment %}
                 <div class="infographic__icon">
-                    <img src="{% static 'images/icon_infografik_projekte.png' %}" alt="">
+                    <img src="{% static 'images/icon_infografik_1_start_app.svg' %}" alt="">
                 </div>
-                {% endcomment %}
                 <div class="infographic__text">
                 {% trans "sign up for the event" %}
                 </div>
             </div>
             <div class="infographic__arrow">
-                <img src="{% static 'images/icon_infografik_arrow_up@2x.png' %}" alt="">
+                <img src="{% static 'images/icon_infografik_arrow_up_purple.svg' %}" alt="">
             </div>
             <div class="infographic__icon-block">
-
-                {% comment %}
                 <div class="infographic__icon">
-                    <img src="{% static 'images/icon_infografik_mitmachen.png' %}" alt="">
+                    <img src="{% static 'images/icon_infografik_2_like.svg' %}" alt="">
                 </div>
-                {% endcomment %}
                 <div class="infographic__text">
                   {% trans "My question posts" %}
                 </div>
             </div>
             <div class="infographic__arrow">
-                <img src="{% static 'images/icon_infografik_arrow_down@2x.png' %}" alt="">
+                <img src="{% static 'images/icon_infografik_arrow_down_purple.svg' %}" alt="">
             </div>
             <div class="infographic__icon-block">
-                {% comment %}
                 <div class="infographic__icon">
-                    <img src="{% static 'images/icon_infografik_folgen.png' %}" alt="">
+                    <img src="{% static 'images/icon_infografik_3_ask.svg' %}" alt="">
                 </div>
-                {% endcomment %}
                 <div class="infographic__text">
                   {% trans "and another point" %}
                 </div>
