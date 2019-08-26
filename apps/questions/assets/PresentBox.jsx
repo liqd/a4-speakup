@@ -1,5 +1,6 @@
 /* global fetch */
 /* global django */
+import $ from 'jquery'
 const React = require('react')
 const QuestionPresent = require('./QuestionPresent')
 
@@ -12,12 +13,17 @@ class PresentBox extends React.Component {
     }
   }
 
+  getListAndFooter (data) {
+    this.setState({
+      questions: data
+    })
+    this.displayFooterOrInfo()
+  }
+
   getItems () {
     fetch(this.props.questions_api_url + '?is_live=1&is_answered=0')
       .then(response => response.json())
-      .then(data => this.setState({
-        questions: data
-      }))
+      .then(data => this.getListAndFooter(data))
   }
 
   componentDidMount () {
@@ -29,6 +35,18 @@ class PresentBox extends React.Component {
     this.timer = null
   }
 
+  displayFooterOrInfo () {
+    if (this.state.questions.length > 0) {
+      $('#id-present-infographic').removeClass('d-none')
+      $('#id-present-infographic').addClass('infographic__info-footer')
+      $('#id-present-infographic').removeClass('infographic__info-screen')
+    } else {
+      $('#id-present-infographic').removeClass('d-none')
+      $('#id-present-infographic').removeClass('infographic__info-footer')
+      $('#id-present-infographic').addClass('infographic__info-screen')
+    }
+  }
+
   render () {
     if (this.state.questions.length > 0) {
       return (
@@ -38,10 +56,6 @@ class PresentBox extends React.Component {
               return <QuestionPresent
                 key={question.id}
                 id={question.id}
-                is_answered={question.is_answered}
-                is_on_shortlist={question.is_on_shortlist}
-                is_live={question.is_live}
-                category={question.category}
                 likes={question.likes}
               >{question.text}</QuestionPresent>
             })
@@ -51,8 +65,8 @@ class PresentBox extends React.Component {
       )
     } else {
       return (
-        <div className="row justify-content-center">
-          <div className="col-8 text-center">
+        <div className="row justify-content-center mt-5">
+          <div className="col-8 text-center py-5">
             <h1>{this.props.title}</h1>
             <p>{django.gettext('join in')} <a href={this.props.url}>{this.props.url}</a></p>
           </div>

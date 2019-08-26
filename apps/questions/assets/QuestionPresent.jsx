@@ -6,18 +6,14 @@ class QuestionPresent extends React.Component {
     super(props)
 
     this.state = {
-      is_on_shortlist: this.props.is_on_shortlist,
-      is_live: this.props.is_live,
-      likes: this.props.likes.count,
-      session_like: this.props.likes.session_like
+      likes: this.props.likes.count
     }
   }
 
   componentDidUpdate (prevProps) {
     if (this.props.likes !== prevProps.likes) {
       this.setState({
-        likes: this.props.likes.count,
-        session_like: this.props.likes.session_like
+        likes: this.props.likes.count
       })
     }
   }
