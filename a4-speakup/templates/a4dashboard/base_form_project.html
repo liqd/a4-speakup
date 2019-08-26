@@ -1,7 +1,13 @@
 {% extends "a4dashboard/base_dashboard_project.html" %}
 {% load i18n %}
 
-{% block title %}{{ view.title }}{% if project %} &mdash; {{ project.name }}{% endif %} {% endblock%}
+{% block title %}
+<div class="page-header mb-5 mt-lg-5">
+    <h1>
+    {{ view.title }}{% if project %} &mdash; {{ project.name }}{% endif %}
+    </h1>
+</div>
+{% endblock%}
 
 {% block dashboard_project_content %}
     <h1>{{ view.title }}</h1>

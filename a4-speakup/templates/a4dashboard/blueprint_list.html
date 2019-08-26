@@ -2,7 +2,13 @@
 {% extends "a4dashboard/base_dashboard.html" %}
 {% load i18n static %}
 
-{% block title %}{% trans "New Project" %} &mdash; {{ block.super }}{% endblock%}
+{% block title %}
+<div class="page-header mb-5 mt-lg-5">
+    <h1>
+    {% trans "New Project" %} &mdash; {{ block.super }}
+    </h1>
+</div>
+{% endblock%}
 
 {% block dashboard_content %}
 <div class="container">

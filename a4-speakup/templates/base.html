@@ -24,11 +24,10 @@
         {% endblock %}
         <div class="base__wrapper">
             <div class="container">
+                {% block title %}
                 <div class="page-header mb-5 mt-lg-5">
-                    <h1>
-                    {% block title %}{% endblock %}
-                    </h1>
                 </div>
+                {% endblock %}
                 {% if messages %}
                 {% for message in messages %}
                 <div class="alert alert--{{ message.level_tag }}" role="alert">

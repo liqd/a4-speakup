@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% load i18n rules %}
 
-{% block title %}{% endblock %}
-
 {% block content %}
 {% has_perm 'a4projects.add_project' request.user view.project as user_may_add %}
 {% if user_may_add %}
