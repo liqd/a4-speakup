@@ -95,14 +95,13 @@ class QuestionModerator extends React.Component {
         <div className="row justify-content-between">
           <div className="col-12 col-md-4 col-sm-5 mb-3 mb-sm-0">
             <span className="badge badge-gray mr-1">{ this.props.category }</span>
-            <span className="badge">{this.state.likes}<i className="icon-vote ml-2" /></span>
+            <span className="badge">{this.state.likes}<i className="icon-like ml-2" /></span>
           </div>
           <div className="col-12 col-md-8 col-sm-7">
             {this.props.displayIsHidden &&
             <button type="button" className="btn btn-transparent float-sm-right px-3"
               onClick={this.toggleIshidden.bind(this)}>
-              <i className={this.props.is_hidden ? 'icon-clear text-primary px-2 text-secondary' : 'icon-clear text-primary px-2 text-primary'}
-                aria-label={this.props.is_hidden ? django.gettext('mark as hidden') : django.gettext('undo mark as hidden')} />
+              <i className={this.props.is_hidden ? 'far fa-eye-slash text-secondary' : 'far fa-eye text-primary'} aria-label={this.props.is_hidden ? django.gettext('mark as hidden') : django.gettext('undo mark as hidden')} />
             </button>
             }
 
@@ -115,12 +114,15 @@ class QuestionModerator extends React.Component {
             }
             {this.props.displayIsLive &&
               <button type="button" className="btn btn-transparent float-sm-right px-3" onClick={this.toggleIslive.bind(this)}>
-                <i className={this.state.is_live ? 'icon-public-view px-2 text-secondary' : 'icon-public-view text-primary px-2'} aria-label={this.state.is_live ? django.gettext('added to live list') : django.gettext('remove from live list')} />
+                <span className="fa-stack fa-1x">
+                  <i className={this.state.is_live ? 'fas fa-tv fa-stack-2x text-secondary' : 'fas fa-tv fa-stack-2x text-primary'} aria-label={this.state.is_live ? django.gettext('added to live list') : django.gettext('remove from live list')} />
+                  <i className={this.state.is_live ? 'fas fa-arrow-up fa-stack-1x fa-inverse text-secondary' : 'fas fa-arrow-up fa-stack-1x text-primary'} aria-hidden="true" />
+                </span>
               </button>
             }
             {this.props.displayIsOnShortlist &&
               <button type="button" className="btn btn-transparent float-sm-right px-3" onClick={this.toggleIsOnShortList.bind(this)}>
-                <i className={this.state.is_on_shortlist ? 'icon-push-in-list px-2 text-secondary' : 'icon-push-in-list text-primary px-2'} aria-label={this.state.is_on_shortlist ? django.gettext('added to shortlist') : django.gettext('remove from shortlist')} />
+                <i className={this.state.is_on_shortlist ? 'icon-in-list text-secondary' : 'icon-push-in-list text-primary'} aria-label={this.state.is_on_shortlist ? django.gettext('added to shortlist') : django.gettext('remove from shortlist')} />
               </button>
 
             }
