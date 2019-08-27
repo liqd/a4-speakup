@@ -15,6 +15,7 @@ class QuestionBox extends React.Component {
       displayInfo: true,
       category: '-1',
       categoryName: django.gettext('select category'),
+      displayNotHiddenOnly: false,
       displayOnShortlist: false,
       orderedByLikes: false,
       filterChanged: false,
@@ -50,6 +51,14 @@ class QuestionBox extends React.Component {
     })
   }
 
+  toggledisplayNotHiddenOnly () {
+    const displayNotHiddenOnly = !this.state.displayNotHiddenOnly
+    this.setState({
+      filterChanged: true,
+      displayNotHiddenOnly: displayNotHiddenOnly
+    })
+  }
+
   toggleDisplayOnShortlist () {
     const displayOnShortlist = !this.state.displayOnShortlist
     this.setState({
@@ -68,7 +77,7 @@ class QuestionBox extends React.Component {
 
   isInFilter (item) {
     return (this.state.category === '-1' || this.state.category === item.category) &&
-      (!this.state.displayOnShortlist || item.is_on_shortlist)
+      (!this.state.displayOnShortlist || item.is_on_shortlist) && (!this.state.displayNotHiddenOnly || !item.is_hidden)
   }
 
   filterQuestions (questions) {
@@ -90,7 +99,7 @@ class QuestionBox extends React.Component {
   }
 
   getUrl () {
-    const url = this.props.questions_api_url + '?is_answered=0' + '&is_hidden=0'
+    const url = this.props.questions_api_url + '?is_answered=0'
     if (this.state.orderedByLikes) {
       return url + '&ordering=-like_count'
     }
@@ -156,7 +165,9 @@ class QuestionBox extends React.Component {
           orderedByLikes={this.state.orderedByLikes}
           toggleOrdering={this.toggleOrdering.bind(this)}
           displayOnShortlist={this.state.displayOnShortlist}
+          displayNotHiddenOnly={this.state.displayNotHiddenOnly}
           toggleDisplayOnShortlist={this.toggleDisplayOnShortlist.bind(this)}
+          toggledisplayNotHiddenOnly={this.toggledisplayNotHiddenOnly.bind(this)}
           isModerator={this.props.isModerator}
         />
         {this.props.isModerator && this.state.displayInfo &&
