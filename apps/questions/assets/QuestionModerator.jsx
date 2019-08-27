@@ -57,6 +57,35 @@ class QuestionModerator extends React.Component {
     this.props.removeFromList(this.props.id, data)
   }
 
+  componentDidUpdate (prevProps) {
+    if (this.props.is_on_shortlist !== prevProps.is_on_shortlist) {
+      this.setState({
+        is_on_shortlist: this.props.is_on_shortlist
+      })
+    }
+    if (this.props.is_live !== prevProps.is_live) {
+      this.setState({
+        is_live: this.props.is_live
+      })
+    }
+    if (this.props.is_hidden !== prevProps.is_hidden) {
+      this.setState({
+        is_hidden: this.props.is_hidden
+      })
+    }
+    if (this.props.is_answered !== prevProps.is_answered) {
+      this.setState({
+        is_answered: this.props.is_answered
+      })
+    }
+    if (this.props.likes !== prevProps.likes) {
+      this.setState({
+        likes: this.props.likes.count,
+        session_like: this.props.likes.session_like
+      })
+    }
+  }
+
   render () {
     return (
       <div className="list-group-item border-bottom mb-2">
