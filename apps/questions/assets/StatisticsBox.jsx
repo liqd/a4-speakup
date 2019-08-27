@@ -11,19 +11,43 @@ class StatisticsBox extends React.Component {
     super(props)
 
     this.state = {
-      questions: [],
+      answeredQuestions: [],
+      hiddenQuestions: [],
+      combinedQuestions: [],
       pollingPaused: false
     }
   }
 
+  fetchAnsweredQuestions () {
+    const url = this.props.questions_api_url + '?is_answered=1'
+    return fetch(url).then((response) => response.json())
+  }
+
+  /* fetchHiddenAnswers () {
+    const url = this.props.questions_api_url + '?is_hidden=1'
+    return fetch (url).then((response) => response.json())
+  } */
+
+  fetchProcessedQuestions () {
+    return Promise.all([this.fetchAnsweredQuestions()])
+  }
+
+  /* getCombinedList (answeredQuestions, hiddenQuestions) {
+   if (this.props.isModerator) {
+     return answeredQuestions.concat(hiddenQuestions)
+   } else {
+     return answeredQuestions
+   }
+  } */
+
   getItems () {
     if (!this.state.pollingPaused) {
-      fetch(this.props.questions_api_url)
-        .then(response => response.json())
-        .then(data => this.setState({
-          questions: data
-        }
-        ))
+      this.fetchProcessedQuestions().then(([answeredQuestions]) => {
+        this.setState({
+          answeredQuestions: answeredQuestions,
+          combinedQuestions: answeredQuestions
+        })
+      })
     }
   }
 
@@ -38,7 +62,7 @@ class StatisticsBox extends React.Component {
   removeFromList (id, data) {
     this.updateQuestion(data, id)
       .then(response => this.setState(prevState => ({
-        questions: prevState.questions.filter(question => question.id !== id),
+        combinedQuestions: prevState.combinedQuestions.filter(question => question.id !== id),
         pollingPaused: false
       })))
   }
@@ -62,7 +86,7 @@ class StatisticsBox extends React.Component {
   countCategory (category) {
     let countPerCategory = 0
     let answeredQuestions = 0
-    this.state.questions.forEach(function (question) {
+    this.state.answeredQuestions.forEach(function (question) {
       if (question.is_answered && !question.is_hidden) {
         answeredQuestions++
         if (question.category === category) {
@@ -98,39 +122,38 @@ class StatisticsBox extends React.Component {
         <h3 className="mt-5">{django.gettext('Posts included')}</h3>
         {this.props.isModerator
           ? <div className="list-group mt-5">
-            { this.state.questions.map((question, index) => {
-              if (question.is_answered || question.is_hidden) {
-                return <QuestionModerator
-                  updateQuestion={this.updateQuestion.bind(this)}
-                  showAllButtons={false}
-                  removeFromList={this.removeFromList.bind(this)}
-                  key={question.id}
-                  id={question.id}
-                  is_answered={question.is_answered}
-                  is_on_shortlist={question.is_on_shortlist}
-                  is_live={question.is_live}
-                  is_hidden={question.is_hidden}
-                  category={question.category}
-                  likes={question.likes}
-                >{question.text}</QuestionModerator>
-              }
+            { this.state.combinedQuestions.map((question, index) => {
+              return <QuestionModerator
+                updateQuestion={this.updateQuestion.bind(this)}
+                displayIsOnShortlist={false}
+                displayIsLive={false}
+                displayIsHidden={question.is_hidden}
+                displayIsAnswered={question.is_answered}
+                removeFromList={this.removeFromList.bind(this)}
+                key={question.id}
+                id={question.id}
+                is_answered={question.is_answered}
+                is_on_shortlist={question.is_on_shortlist}
+                is_live={question.is_live}
+                is_hidden={question.is_hidden}
+                category={question.category}
+                likes={question.likes}
+              >{question.text}</QuestionModerator>
             })
             }
           </div>
           : <div className="list-group mt-5">
-            { this.state.questions.map((question, index) => {
-              if (question.is_answered && !question.is_hidden) {
-                return <QuestionUser
-                  key={question.id}
-                  id={question.id}
-                  is_answered={question.is_answered}
-                  is_on_shortlist={question.is_on_shortlist}
-                  is_live={question.is_live}
-                  is_hidden={question.is_hidden}
-                  category={question.category}
-                  likes={question.likes}
-                >{question.text}</QuestionUser>
-              }
+            { this.state.combinedQuestions.map((question, index) => {
+              return <QuestionUser
+                key={question.id}
+                id={question.id}
+                is_answered={question.is_answered}
+                is_on_shortlist={question.is_on_shortlist}
+                is_live={question.is_live}
+                is_hidden={question.is_hidden}
+                category={question.category}
+                likes={question.likes}
+              >{question.text}</QuestionUser>
             })
             }
           </div>
