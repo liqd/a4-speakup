@@ -36,7 +36,7 @@ class QuestionPresent extends React.Component {
             <div>
               <div className="float-right">
                 <span className="text-muted">{this.state.likes}</span>
-                <i className="icon-vote text-muted ml-2" aria-hidden="true" />
+                <i className="icon-like text-muted ml-2" aria-hidden="true" />
                 <span className="sr-only">{django.gettext('likes')}</span>
               </div>
             </div>

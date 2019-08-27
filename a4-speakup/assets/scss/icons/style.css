@@ -1,17 +1,17 @@
 @font-face {
-  font-family: 'speakup-icons';
-  src:  url('../fonts/speakup-icons.eot?3dg1gx');
-  src:  url('../fonts/speakup-icons.eot?3dg1gx#iefix') format('embedded-opentype'),
-    url('../fonts/speakup-icons.ttf?3dg1gx') format('truetype'),
-    url('../fonts/speakup-icons.woff?3dg1gx') format('woff'),
-    url('../fonts/speakup-icons.svg?3dg1gx#speakup-icons') format('svg');
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?jd0zuw');
+  src:  url('../fonts/icomoon.eot?jd0zuw#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?jd0zuw') format('truetype'),
+    url('../fonts/icomoon.woff?jd0zuw') format('woff'),
+    url('../fonts/icomoon.svg?jd0zuw#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'speakup-icons' !important;
+  font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -33,27 +33,35 @@
 .icon-arrow-right:before {
   content: "\e902";
 }
-.icon-push-in-list:before {
+.icon-clear:before {
   content: "\e903";
 }
-.icon-public-view:before {
+.icon-in-list:before {
   content: "\e904";
 }
-.icon-in-list:before {
+.icon-like:before {
   content: "\e905";
 }
-.icon-clear:before {
+.icon-list:before {
   content: "\e906";
 }
-.icon-sort-list:before {
+.icon-push-in-list:before {
   content: "\e907";
 }
-.icon-talking-desired:before {
+.icon-screen-view:before {
   content: "\e908";
 }
-.icon-vote:before {
+.icon-sort-list:before {
   content: "\e909";
 }
-.icon-list:before {
+.icon-talking-desired:before {
   content: "\e90a";
+}
+
+.fa-eye-slash {
+  font-size: 1.3rem;
+}
+
+.fa-stack {
+  font-size: 0.7rem;
 }
