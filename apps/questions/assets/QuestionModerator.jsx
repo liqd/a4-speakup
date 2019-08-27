@@ -54,7 +54,14 @@ class QuestionModerator extends React.Component {
     const value = !this.state.is_hidden
     const boolValue = (value) ? 1 : 0
     const data = { is_hidden: boolValue }
-    this.props.removeFromList(this.props.id, data)
+    this.props.updateQuestion(data, this.props.id)
+      .then((response) => response.json())
+      .then(responseData => this.setState(
+        {
+          is_hidden: responseData.is_hidden
+        }
+      ))
+      .then(() => this.props.togglePollingPaused())
   }
 
   componentDidUpdate (prevProps) {
