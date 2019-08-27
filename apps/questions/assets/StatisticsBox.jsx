@@ -100,20 +100,24 @@ class StatisticsBox extends React.Component {
           ? <div className="list-group mt-5">
             { this.state.questions.map((question, index) => {
               if (question.is_answered || question.is_hidden) {
-                return <QuestionModerator
-                  updateQuestion={this.updateQuestion.bind(this)}
-                  showAllButtons={false}
-                  removeFromList={this.removeFromList.bind(this)}
-                  key={question.id}
-                  id={question.id}
-                  is_answered={question.is_answered}
-                  is_on_shortlist={question.is_on_shortlist}
-                  is_live={question.is_live}
-                  is_hidden={question.is_hidden}
-                  category={question.category}
-                  likes={question.likes}
-                >{question.text}</QuestionModerator>
               }
+            { this.state.combinedQuestions.map((question, index) => {
+              return <QuestionModerator
+                updateQuestion={this.updateQuestion.bind(this)}
+                displayIsOnShortlist={false}
+                displayIsLive={false}
+                displayIsHidden={question.is_hidden}
+                displayIsAnswered={question.is_answered}
+                removeFromList={this.removeFromList.bind(this)}
+                key={question.id}
+                id={question.id}
+                is_answered={question.is_answered}
+                is_on_shortlist={question.is_on_shortlist}
+                is_live={question.is_live}
+                is_hidden={question.is_hidden}
+                category={question.category}
+                likes={question.likes}
+              >{question.text}</QuestionModerator>
             })
             }
           </div>

@@ -98,23 +98,27 @@ class QuestionModerator extends React.Component {
             <span className="badge">{this.state.likes}<i className="icon-vote ml-2" /></span>
           </div>
           <div className="col-12 col-md-8 col-sm-7">
+            {this.props.displayIsHidden &&
             <button type="button" className="btn btn-transparent float-sm-right px-3"
               onClick={this.toggleIshidden.bind(this)}>
-              <i className={this.props.is_hidden ? 'icon-clear text-primary px-2 text-secondary' : 'icon-clear text-primary px-2 text-primary'} aria-label={this.props.is_hidden ? django.gettext('mark as hidden') : django.gettext('undo mark as hidden')} />
+              <i className={this.props.is_hidden ? 'icon-clear text-primary px-2 text-secondary' : 'icon-clear text-primary px-2 text-primary'}
+                aria-label={this.props.is_hidden ? django.gettext('mark as hidden') : django.gettext('undo mark as hidden')} />
             </button>
+            }
 
-            {this.props.showAllButtons &&
+            {this.props.displayIsAnswered &&
               <button type="button" className="btn btn-transparent float-sm-right px-3"
                 onClick={this.toggleIsAnswered.bind(this)}>
-                <i className="icon-answered text-primary px-1" aria-label={django.gettext('mark as done')} />
+                <i className={this.props.is_answered ? 'icon-answered text-primary px-1 text-secondary' : 'icon-answered text-primary px-1 text-primary'}
+                  aria-label={django.gettext('mark as done')} />
               </button>
             }
-            {this.props.showAllButtons &&
+            {this.props.displayIsLive &&
               <button type="button" className="btn btn-transparent float-sm-right px-3" onClick={this.toggleIslive.bind(this)}>
                 <i className={this.state.is_live ? 'icon-public-view px-2 text-secondary' : 'icon-public-view text-primary px-2'} aria-label={this.state.is_live ? django.gettext('added to live list') : django.gettext('remove from live list')} />
               </button>
             }
-            {this.props.showAllButtons &&
+            {this.props.displayIsOnShortlist &&
               <button type="button" className="btn btn-transparent float-sm-right px-3" onClick={this.toggleIsOnShortList.bind(this)}>
                 <i className={this.state.is_on_shortlist ? 'icon-push-in-list px-2 text-secondary' : 'icon-push-in-list text-primary px-2'} aria-label={this.state.is_on_shortlist ? django.gettext('added to shortlist') : django.gettext('remove from shortlist')} />
               </button>
