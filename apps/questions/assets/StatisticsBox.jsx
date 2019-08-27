@@ -1,9 +1,10 @@
 /* global fetch */
 /* global django */
+import { updateItem } from './helpers.js'
+
 const React = require('react')
 const QuestionUser = require('./QuestionUser')
 const QuestionModerator = require('./QuestionModerator')
-const cookie = require('js-cookie')
 
 class StatisticsBox extends React.Component {
   constructor (props) {
@@ -11,34 +12,42 @@ class StatisticsBox extends React.Component {
 
     this.state = {
       questions: [],
-      csrfToken: cookie.get('csrftoken')
+      pollingPaused: false
     }
   }
 
   getItems () {
-    fetch(this.props.questions_api_url)
-      .then(response => response.json())
-      .then(data => this.setState({
-        questions: data
-      }))
+    if (!this.state.pollingPaused) {
+      fetch(this.props.questions_api_url)
+        .then(response => response.json())
+        .then(data => this.setState({
+          questions: data
+        }
+        ))
+    }
   }
 
   updateQuestion (data, id) {
-    return fetch(this.props.questions_api_url + id + '/', {
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-        'X-CSRFToken': this.state.csrfToken
-      },
-      method: 'PATCH',
-      body: JSON.stringify(data)
+    this.setState({
+      pollingPaused: true
     })
+    const url = this.props.questions_api_url + id + '/'
+    return updateItem(data, url, 'PATCH')
   }
 
-  handleDelete (id) {
-    const data = { is_answered: 1 }
+  removeFromList (id, data) {
     this.updateQuestion(data, id)
       .then(response => this.setState(prevState => ({
+        questions: prevState.questions.filter(question => question.id !== id),
+        pollingPaused: false
       })))
+  }
+
+  togglePollingPaused () {
+    const pollingPaused = !this.state.pollingPaused
+    this.setState({
+      pollingPaused: pollingPaused
+    })
   }
 
   componentDidMount () {
@@ -94,7 +103,7 @@ class StatisticsBox extends React.Component {
                 return <QuestionModerator
                   updateQuestion={this.updateQuestion.bind(this)}
                   showAllButtons={false}
-                  handleDelete={this.handleDelete.bind(this)}
+                  removeFromList={this.removeFromList.bind(this)}
                   key={question.id}
                   id={question.id}
                   is_answered={question.is_answered}

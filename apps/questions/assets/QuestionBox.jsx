@@ -1,8 +1,9 @@
 /* global django */
+import { updateItem } from './helpers.js'
+
 const React = require('react')
 const QuestionList = require('./QuestionList')
 const Filters = require('./Filters')
-const cookie = require('js-cookie')
 
 class QuestionBox extends React.Component {
   constructor (props) {
@@ -18,7 +19,25 @@ class QuestionBox extends React.Component {
       orderedByLikes: false,
       filterChanged: false,
       orderingChanged: false,
-      csrfToken: cookie.get('csrftoken')
+      pollingPaused: false
+    }
+  }
+
+  componentDidMount () {
+    this.getItems()
+    this.timer = setInterval(() => this.getItems(), 5000)
+  }
+
+  componentWillUnmount () {
+    this.timer = null
+  }
+
+  componentDidUpdate () {
+    if (this.state.filterChanged === true) {
+      this.updateList()
+    }
+    if (this.state.orderingChanged === true) {
+      this.getItems()
     }
   }
 
@@ -79,67 +98,50 @@ class QuestionBox extends React.Component {
   }
 
   getItems () {
-    fetch(this.getUrl())
-      .then(response => response.json())
-      .then(data => this.setState({
-        questions: data,
-        filteredQuestions: this.filterQuestions(data),
-        orderingChanged: false
-      }))
+    if (!this.state.pollingPaused) {
+      fetch(this.getUrl())
+        .then(response => response.json())
+        .then(data => this.setState({
+          questions: data,
+          filteredQuestions: this.filterQuestions(data),
+          orderingChanged: false
+        }))
+    }
   }
 
   updateQuestion (data, id) {
-    return fetch(this.props.questions_api_url + id + '/', {
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-        'X-CSRFToken': this.state.csrfToken
-      },
-      method: 'PATCH',
-      body: JSON.stringify(data)
+    this.setState({
+      pollingPaused: true
     })
+    const url = this.props.questions_api_url + id + '/'
+    return updateItem(data, url, 'PATCH')
   }
 
-  handleDelete (id) {
-    const data = { is_answered: 1 }
+  removeFromList (id, data) {
     this.updateQuestion(data, id)
       .then(response => this.setState(prevState => ({
-        filteredQuestions: prevState.filteredQuestions.filter(question => question.id !== id)
+        filteredQuestions: prevState.filteredQuestions.filter(question => question.id !== id),
+        pollingPaused: false
       })))
   }
 
   handleLike (id, value) {
-    return fetch('/api/questions/' + id + '/likes/', {
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-        'X-CSRFToken': this.state.csrfToken
-      },
-      method: 'POST',
-      body: JSON.stringify({ value: value })
-    })
-  }
-
-  componentDidMount () {
-    this.getItems()
-    this.timer = setInterval(() => this.getItems(), 5000)
-  }
-
-  componentWillUnmount () {
-    this.timer = null
-  }
-
-  componentDidUpdate () {
-    if (this.state.filterChanged === true) {
-      this.updateList()
-    }
-    if (this.state.orderingChanged === true) {
-      this.getItems()
-    }
+    const url = '/api/questions/' + id + '/likes/'
+    const data = { value: value }
+    return updateItem(data, url, 'POST')
   }
 
   toggleInformation () {
     const displayInfo = !this.state.displayInfo
     this.setState({
       displayInfo: displayInfo
+    })
+  }
+
+  togglePollingPaused () {
+    const pollingPaused = !this.state.pollingPaused
+    this.setState({
+      pollingPaused: pollingPaused
     })
   }
 
@@ -179,10 +181,11 @@ class QuestionBox extends React.Component {
         }
         <QuestionList
           questions={this.state.filteredQuestions}
-          handleDelete={this.handleDelete.bind(this)}
+          removeFromList={this.removeFromList.bind(this)}
           updateQuestion={this.updateQuestion.bind(this)}
           handleLike={this.handleLike.bind(this)}
           isModerator={this.props.isModerator}
+          togglePollingPaused={this.togglePollingPaused.bind(this)}
           hasLikingPermission={this.props.hasLikingPermission}
         />
       </div>)

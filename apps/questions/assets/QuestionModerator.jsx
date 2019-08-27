@@ -10,11 +10,12 @@ class QuestionModerator extends React.Component {
       is_live: this.props.is_live,
       likes: this.props.likes.count,
       session_like: this.props.likes.session_like,
-      is_hidden: this.props.is_hidden
+      is_hidden: this.props.is_hidden,
+      is_answered: this.props.is_answered
     }
   }
 
-  shortList () {
+  toggleIsOnShortList () {
     const value = !this.state.is_on_shortlist
     const boolValue = (value) ? 1 : 0
     const data = { is_on_shortlist: boolValue }
@@ -25,9 +26,10 @@ class QuestionModerator extends React.Component {
           is_on_shortlist: responseData.is_on_shortlist
         }
       ))
+      .then(() => this.props.togglePollingPaused())
   }
 
-  liveList () {
+  toggleIslive () {
     const value = !this.state.is_live
     const boolValue = (value) ? 1 : 0
     const data = { is_live: boolValue }
@@ -38,63 +40,21 @@ class QuestionModerator extends React.Component {
           is_live: responseData.is_live
         }
       ))
+      .then(() => this.props.togglePollingPaused())
   }
 
-  hiddenList () {
+  toggleIsAnswered () {
+    const value = !this.state.is_answered
+    const boolValue = (value) ? 1 : 0
+    const data = { is_answered: boolValue }
+    this.props.removeFromList(this.props.id, data)
+  }
+
+  toggleIshidden () {
     const value = !this.state.is_hidden
     const boolValue = (value) ? 1 : 0
     const data = { is_hidden: boolValue }
-    this.props.updateQuestion(data, this.props.id)
-      .then((response) => response.json())
-      .then(responseData => this.setState(
-        {
-          is_hidden: responseData.is_hidden
-        }
-      ))
-  }
-
-  componentDidUpdate (prevProps) {
-    if (this.props.is_on_shortlist !== prevProps.is_on_shortlist) {
-      this.setState({
-        is_on_shortlist: this.props.is_on_shortlist
-      })
-    }
-    if (this.props.is_live !== prevProps.is_live) {
-      this.setState({
-        is_live: this.props.is_live
-      })
-    }
-    if (this.props.is_hidden !== prevProps.is_hidden) {
-      this.setState({
-        is_hidden: this.props.is_hidden
-      })
-    }
-    if (this.props.likes !== prevProps.likes) {
-      this.setState({
-        likes: this.props.likes.count,
-        session_like: this.props.likes.session_like
-      })
-    }
-  }
-
-  handleErrors (response) {
-    if (!response.ok) {
-      throw Error(response.statusText)
-    }
-    return response
-  }
-
-  handleLike () {
-    const value = !this.state.session_like
-    this.props.handleLike(this.props.id, value)
-      .then(this.handleErrors)
-      .then((response) => this.setState(
-        {
-          session_like: value,
-          likes: value ? this.state.likes + 1 : this.state.likes - 1
-        }
-      ))
-      .catch((response) => { console.log(response.message) })
+    this.props.removeFromList(this.props.id, data)
   }
 
   render () {
@@ -110,23 +70,23 @@ class QuestionModerator extends React.Component {
           </div>
           <div className="col-12 col-md-8 col-sm-7">
             <button type="button" className="btn btn-transparent float-sm-right px-3"
-              onClick={this.hiddenList.bind(this)}>
+              onClick={this.toggleIshidden.bind(this)}>
               <i className={this.props.is_hidden ? 'icon-clear text-primary px-2 text-secondary' : 'icon-clear text-primary px-2 text-primary'} aria-label={this.props.is_hidden ? django.gettext('mark as hidden') : django.gettext('undo mark as hidden')} />
             </button>
 
             {this.props.showAllButtons &&
               <button type="button" className="btn btn-transparent float-sm-right px-3"
-                onClick={this.props.handleDelete.bind(this, this.props.id)}>
+                onClick={this.toggleIsAnswered.bind(this)}>
                 <i className="icon-answered text-primary px-1" aria-label={django.gettext('mark as done')} />
               </button>
             }
             {this.props.showAllButtons &&
-              <button type="button" className="btn btn-transparent float-sm-right px-3" onClick={this.liveList.bind(this)}>
+              <button type="button" className="btn btn-transparent float-sm-right px-3" onClick={this.toggleIslive.bind(this)}>
                 <i className={this.state.is_live ? 'icon-public-view px-2 text-secondary' : 'icon-public-view text-primary px-2'} aria-label={this.state.is_live ? django.gettext('added to live list') : django.gettext('remove from live list')} />
               </button>
             }
             {this.props.showAllButtons &&
-              <button type="button" className="btn btn-transparent float-sm-right px-3" onClick={this.shortList.bind(this)}>
+              <button type="button" className="btn btn-transparent float-sm-right px-3" onClick={this.toggleIsOnShortList.bind(this)}>
                 <i className={this.state.is_on_shortlist ? 'icon-push-in-list px-2 text-secondary' : 'icon-push-in-list text-primary px-2'} aria-label={this.state.is_on_shortlist ? django.gettext('added to shortlist') : django.gettext('remove from shortlist')} />
               </button>
 
