@@ -9,7 +9,7 @@
                 {% has_or_would_have_perm 'a4_candy_questions.change_question' request.user view.module as view_present_page %}
                 {% if view_present_page %}
                 <div class="d-flex justify-content-end">
-                    <a class="btn btn-outline-primary" href="{% url 'question-present' module_slug=view.module.slug %}" target="_blank">{% trans 'display on screen' %}<i className="fas fa-tv fa-stack-2x" aria-label="hidden"></i><i className="fas fa-arrow-up fa-stack-1x" aria-label="hidden"></i></a>
+                    <a class="btn btn-outline-primary" href="{% url 'question-present' module_slug=view.module.slug %}" target="_blank"><span class="fa-stack fa-1x"><i class="fas fa-tv fa-stack-2x" aria-label="hidden"></i><i class="fas fa-arrow-up fa-stack-1x" aria-label="hidden"></i></span> {% trans 'display on screen' %}</a>
                 </div>
                 {% endif %}
                 {% react_questions view.module %}
