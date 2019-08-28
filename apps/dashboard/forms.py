@@ -26,6 +26,16 @@ class ProjectBasicForm(ProjectDashboardForm):
         model = project_models.Project
         fields = ['name', 'description', 'information']
         required_for_project_publish = ['name', 'description', 'information']
+        help_texts = {
+            'name': '',
+            'description': '',
+            'information': ''
+        }
+        labels = {
+            'name': _('Ttitle'),
+            'description': _('Short description'),
+            'information': _('description')
+        }
 
 
 class SpeakupPhaseForm(PhaseForm):

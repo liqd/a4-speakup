@@ -1,10 +1,5 @@
-{% load a4dashboard_tags %}
-
 {{ form.management_form }}
 {% for phase_form in form %}
-
-    {% get_phase_name phase_form.type.value as phasename %}
-    <h3>{{ phasename }}</h3>
 
     {% include 'a4_candy_contrib/form_field.html' with field=phase_form.start_date %}
     {% include 'a4_candy_contrib/form_field.html' with field=phase_form.end_date %}
