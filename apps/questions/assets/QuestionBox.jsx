@@ -184,10 +184,12 @@ class QuestionBox extends React.Component {
           </div>
         }
         {this.props.isModerator && !this.state.displayInfo &&
-          <div className="row justify-content-end">
-            <button type="button" className="btn btn-outline-secondary" onClick={this.toggleInformation.bind(this)} aria-label="Open information">
-              <span aria-hidden="true"><i className="fas fa-info-circle" /></span>
-            </button>
+          <div className="row">
+            <div className="col-12 d-flex justify-content-end">
+              <button type="button" className="btn btn-outline-secondary" onClick={this.toggleInformation.bind(this)} aria-label="Open information">
+                <span aria-hidden="true"><i className="fas fa-info-circle" /></span>
+              </button>
+            </div>
           </div>
         }
         <QuestionList
