@@ -1,14 +1,7 @@
 {% extends "a4dashboard/base_dashboard_project.html" %}
-{% load i18n %}
+{% load i18n static %}
 
-{% block title %}
-<div class="page-header mb-5 mt-lg-5">
-    <h1>
-    {% if project %}{{ project.name }}{% endif %}
-    </h1>
-    <a href="{% url 'a4dashboard:project-list' organisation_slug=view.organisation.slug %}"><i class="fas fa-arrow-left"></i> {% trans 'back to events list' %}</a>
-</div>
-{% endblock%}
+
 
 {% block dashboard_project_content %}
     <h1>{{ view.title }}</h1>
