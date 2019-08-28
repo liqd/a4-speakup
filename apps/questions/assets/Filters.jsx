@@ -50,16 +50,16 @@ class Filter extends React.Component {
               </label>
             </div>
             <div className="checkbox-btn mt-3">
-              <label htmlFor="displayHidden" className="checkbox-btn__label--primary pl-3">
+              <label htmlFor="displayNotHiddenOnly" className="checkbox-btn__label--primary pl-3">
                 <input
                   className="checkbox-btn__input"
                   type="checkbox"
-                  id="displayHidden"
-                  name="displayHidden"
+                  id="displayNotHiddenOnly"
+                  name="displayNotHiddenOnly"
                   checked={this.props.displayNotHiddenOnly}
                   onChange={this.props.toggledisplayNotHiddenOnly} />
                 <span className="checkbox-btn__text">
-                  <i className="icon-clear" aria-label={django.gettext('only show marked questions')} />
+                  <i className="far fa-eye" aria-label={django.gettext('display only questions which are not hidden')} />
                 </span>
               </label>
             </div>
