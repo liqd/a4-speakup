@@ -1,6 +1,18 @@
 {% extends "base.html" %}
 {% load i18n rules %}
 
+<<<<<<< Updated upstream
+=======
+{% block title %}
+<div class="page-header mb-5 mt-lg-5">
+    <h1 class="u-serif-header">
+    {% if project %}{{ project.name }}{% endif %}
+    </h1>
+    <a href="{% url 'a4dashboard:project-list' organisation_slug=view.organisation.slug %}"><i class="fas fa-arrow-left"></i> {% trans 'back to events list' %}</a>
+</div>
+{% endblock%}
+
+>>>>>>> Stashed changes
 {% block content %}
 {% has_perm 'a4projects.add_project' request.user view.project as user_may_add %}
 {% if user_may_add %}

@@ -4,7 +4,7 @@
 
 {% block title %}
 <div class="page-header mb-5 mt-lg-5">
-    <h1>
+    <h1 class="u-serif-header">
     {% trans "New Project" %} &mdash; {{ block.super }}
     </h1>
 </div>
@@ -13,7 +13,7 @@
 {% block dashboard_content %}
 <div class="container">
     <div class="offset-md-1 col-md-10 mb-3">
-        <h1 class="">
+        <h1 class="u-serif-header">
             {% trans "What kind of project would you like to create?" %}
         </h1>
 
@@ -24,7 +24,7 @@
                 <div class="card px-0">
                     <img class="card-img-top" src="{% static blueprint.image %}" alt="{{ blueprint.title }}">
                     <div class="card-body">
-                        <h2 class="card-title">{{ blueprint.title }}</h2>
+                        <h2 class="card-title u-serif-header">{{ blueprint.title }}</h2>
                         <p class="card-text">{{ blueprint.description | linebreaks }}</p>
                         <ul class="list-unstyled">
                             {% for phase_content in blueprint.content %}
