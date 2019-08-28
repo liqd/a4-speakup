@@ -26,6 +26,7 @@
 
 .icon-answered:before {
   content: "\e900";
+  font-size: 0.9rem;
 }
 .icon-arrow-down:before {
   content: "\e901";
@@ -38,15 +39,20 @@
 }
 .icon-in-list:before {
   content: "\e904";
+  font-size: 1.1rem;
+  vertical-align: bottom;
 }
 .icon-like:before {
   content: "\e905";
 }
 .icon-list:before {
   content: "\e906";
+  font-size: 1.1rem;
 }
 .icon-push-in-list:before {
   content: "\e907";
+  font-size: 1.1rem;
+  vertical-align: bottom;
 }
 .icon-screen-view:before {
   content: "\e908";
@@ -59,5 +65,9 @@
 }
 
 .fa-stack {
-  font-size: 0.65rem;
+  font-size: 0.5rem;
+}
+
+.fa-eye {
+  font-size: 1.05rem;
 }
