@@ -6,6 +6,7 @@
     <h1 class="u-serif-header">
     {% if project %}{{ project.name }}{% endif %}
     </h1>
+    <a href="{% url 'a4dashboard:project-list' organisation_slug=view.organisation.slug %}"><i class="fas fa-arrow-left"></i> {% trans 'back to events list' %}</a>
 </div>
 {% endblock%}
 

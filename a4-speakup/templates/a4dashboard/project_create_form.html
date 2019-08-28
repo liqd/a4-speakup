@@ -11,7 +11,6 @@
 
 {% block dashboard_content %}
     <div class="offset-md-3 col-md-6 mb-3">
-        <h1>{% trans "Create project based on" %} {{ view.blueprint.title }}</h1>
 
         {% for error in form.non_field_errors %}
             <span>{{ error }}</span>
@@ -29,19 +28,17 @@
 
 
             <div class="form-group">
-                <label for="{{ form.name.id }}" class="mb-1">{{ form.name.label }}</label>
-                <small id="{{ form.name.id }}" class="form-text text-muted mb-2">{{ form.name.help_text }}</small>
+                <label for="{{ form.name.id }}" class="mb-1">{% trans 'Title' %}</label>
                 {% render_field form.name class+="form-control" %}
             </div>
 
             <div class="form-group">
-                <label for="{{ form.description.id }}" class="mb-1">{{ form.description.label }}</label>
-                <small id="{{ form.description.id }}" class="form-text text-muted mb-2">{{ form.description.help_text }}</small>
+                <label for="{{ form.description.id }}" class="mb-1">{% trans 'Description' %}</label>
                 {% render_field form.description class+="form-control" %}
             </div>
 
 
-            <p>{% trans 'After saving the draft project you can further customize and edit your project and eventually publish it.' %}</p>
+            <p>{% trans 'After saving the draft event you can further customize and edit your project and eventually publish it.' %}</p>
 
             <input type="submit" class="btn btn--primary" name="send" value="{% trans 'Create draft' %}"/>
             <a href="{% url 'a4dashboard:blueprint-list' organisation_slug=view.organisation.slug %}"

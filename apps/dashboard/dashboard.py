@@ -22,9 +22,9 @@ class ProjectBasicComponent(ProjectFormComponent):
 class ModulePhasesComponent(ModuleFormSetComponent):
     identifier = 'speakup-phases'
     weight = 11
-    label = _('Phases')
+    label = _('Time Period')
 
-    form_title = _('Edit phases information')
+    form_title = _('Edit time period')
     form_class = forms.SpeakupPhaseFormSet
     form_template_name = 'a4dashboard/includes/module_phases_form.html'
 
