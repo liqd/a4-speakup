@@ -32,7 +32,7 @@ class ProjectBasicForm(ProjectDashboardForm):
             'information': ''
         }
         labels = {
-            'name': _('Ttitle'),
+            'name': _('Title'),
             'description': _('Short description'),
             'information': _('description')
         }
