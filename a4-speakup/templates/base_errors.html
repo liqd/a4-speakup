@@ -3,7 +3,7 @@
 
 {% block title %}
 <div class="page-header mb-5 mt-lg-5">
-    <h1>
+    <h1 class="u-serif-header">
     {% trans 'Error' %} &mdash; {{ block.super }}
     </h1>
 </div>
@@ -12,10 +12,9 @@
 {% block content %}
 <div class="container">
     <div class="row justify-content-md-center">
-        <h1>{% block error_status %}{% endblock %}</h1>
+        <h1 class="u-serif-header">{% block error_status %}{% endblock %}</h1>
         {% block error_description %}{% endblock %}
         <a href="/">{% trans 'Back to landing page' %}</a>
     </div>
 </div>
 {% endblock %}
-

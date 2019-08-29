@@ -3,7 +3,7 @@
 
 {% block title %}
 <div class="page-header mb-5 mt-lg-5">
-    <h1>
+    <h1 class="u-serif-header">
     {% blocktrans with project=moderatorinvite.project.name %}Invitation to {{ project }}{% endblocktrans %}
     </h1>
 </div>
@@ -12,7 +12,7 @@
 {% block content %}
     <div class="l-wrapper">
         <div class="l-center-6">
-            <h1>{% blocktrans with project=moderatorinvite.project.name %}Moderation invitation for {{ project }}{% endblocktrans %}</h1>
+            <h1 class="u-serif-header">{% blocktrans with project=moderatorinvite.project.name %}Moderation invitation for {{ project }}{% endblocktrans %}</h1>
             {{ form.non_field_errors }}
             <p>
                 {% trans "Please login to procceed. If you do not have an account, register and revisit the invitation link." %}
@@ -22,4 +22,3 @@
         </div>
     </div>
 {% endblock %}
-

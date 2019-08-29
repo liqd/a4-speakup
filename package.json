@@ -7,7 +7,7 @@
     "@babel/preset-env": "7.5.5",
     "@babel/preset-react": "7.0.0",
     "@babel/runtime": "7.5.5",
-    "@fortawesome/fontawesome-free": "5.10.1",
+    "@fortawesome/fontawesome-free": "5.10.2",
     "acorn": "6.3.0",
     "adhocracy4": "liqd/adhocracy4#django2-v1.0",
     "babel-loader": "8.0.6",
@@ -26,13 +26,13 @@
     "react-sticky-box": "0.8.0",
     "sass-loader": "7.3.1",
     "sass-planifolia": "0.6.0",
-    "select2": "4.0.8",
+    "select2": "4.0.10",
     "shpjs": "3.4.3",
     "style-loader": "1.0.0",
     "tether": "1.4.7",
     "timeago.js": "3.0.2",
-    "webpack": "4.39.2",
-    "webpack-merge": "4.2.1"
+    "webpack": "4.39.3",
+    "webpack-merge": "4.2.2"
   },
   "devDependencies": {
     "babel-eslint": "10.0.3",
