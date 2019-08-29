@@ -1,5 +1,4 @@
 /* global fetch */
-/* global django */
 import $ from 'jquery'
 const React = require('react')
 const QuestionPresent = require('./QuestionPresent')
@@ -68,7 +67,6 @@ class PresentBox extends React.Component {
         <div className="row justify-content-center mt-5">
           <div className="col-8 text-center py-5">
             <h1>{this.props.title}</h1>
-            <p>{django.gettext('join in')} <a href={this.props.url}>{this.props.url}</a></p>
           </div>
         </div>
       )
