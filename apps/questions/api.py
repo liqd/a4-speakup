@@ -30,6 +30,8 @@ class QuestionViewSet(ModuleMixin,
             .filter(module=self.module)\
             .order_by('created')\
             .annotate_like_count()
-        if not self.module.project.has_moderator(self.request.user):
+        if not self.request.user.has_perm(
+            'a4_candy_questions.moderate_questions', self.module
+        ):
             questions = questions.filter(is_hidden=False)
         return questions

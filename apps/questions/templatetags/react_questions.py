@@ -14,7 +14,7 @@ def react_questions(context, obj):
     request = context['request']
 
     user = request.user
-    is_moderator = user.is_superuser or user in obj.project.moderators.all()
+    is_moderator = user.has_perm('a4_candy_questions.moderate_questions', obj)
     categories = [category.name for category in obj.category_set.all()]
     questions_api_url = reverse('questions-list', kwargs={'module_pk': obj.pk})
 
@@ -47,7 +47,7 @@ def react_questions_statistics(context, obj):
     categories = [category.name for category in obj.category_set.all()]
     questions_api_url = reverse('questions-list', kwargs={'module_pk': obj.pk})
     user = request.user
-    is_moderator = user.is_superuser or user in obj.project.moderators.all()
+    is_moderator = user.has_perm('a4_candy_questions.moderate_questions', obj)
 
     attributes = {
         'questions_api_url': questions_api_url,
