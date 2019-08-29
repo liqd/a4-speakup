@@ -103,7 +103,9 @@
                 <div class="col-12">
                     <h2 class="u-serif-header text-center">{% trans "Statistics" %}</h2>
                     <div>
+                    {% if view.project.has_started %}
                     {% react_questions_statistics view.module %}
+                    {% endif %}
                     </div>
                 </div>
             </div>
