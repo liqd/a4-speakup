@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: a4-meinberlin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-28 14:38+0000\n"
+"POT-Creation-Date: 2019-08-29 14:18+0000\n"
 "PO-Revision-Date: 2017-10-16 13:42+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -140,9 +140,9 @@ msgid ""
 "After saving the draft project you can further customize and edit your "
 "project and eventually publish it."
 msgstr ""
-"Nachdem der Evententwurf gespeichert wurde, können in einem weiteren "
-"Schritt Einstellungen angepasst und zusätzliche Informationen angegeben "
-"werden. Wenn alle benötigten Informationen eingegeben sind, kann das Projekt "
+"Nachdem der Evententwurf gespeichert wurde, können in einem weiteren Schritt "
+"Einstellungen angepasst und zusätzliche Informationen angegeben werden. Wenn "
+"alle benötigten Informationen eingegeben sind, kann das Projekt "
 "veröffentlicht werden."
 
 #: adhocracy4.js/dashboard/templates/a4dashboard/project_create_form.html:25
@@ -930,7 +930,8 @@ msgid "Organisation name"
 msgstr "Organisationsname"
 
 #: apps/dashboard/forms.py:35
-msgid "Ttitle"
+#: a4-speakup/templates/a4dashboard/project_create_form.html:31
+msgid "Title"
 msgstr "Titel"
 
 #: apps/dashboard/forms.py:36
@@ -1077,7 +1078,7 @@ msgid "Please enter email addresses or upload a file"
 msgstr "Bitte E-Mail Adressen eingeben oder Datei hochladen"
 
 #: apps/projects/templates/a4_candy_projects/dashboard_project_moderators.html:9
-#: a4-speakup/templates/a4dashboard/base_dashboard.html:9
+#: a4-speakup/templates/a4dashboard/base_dashboard.html:10
 #: a4-speakup/templates/a4dashboard/base_form_project.html:9
 msgid "back to events list"
 msgstr "zurück zur Eventsliste"
@@ -1394,15 +1395,12 @@ msgstr "Mehr lesen"
 msgid "Create event draft"
 msgstr "Evententwurf anlegen"
 
-#: a4-speakup/templates/a4dashboard/project_create_form.html:31
-msgid "Title"
-msgstr "Titel"
-
 #: a4-speakup/templates/a4dashboard/project_create_form.html:41
 msgid ""
 "After saving the draft event you can further customize and edit your project "
 "and eventually publish it."
 msgstr ""
+"Nach dem Speichern des Entwurfs können Sie ihren Event weiter bearbeiten und veröffentlichen."
 
 #: a4-speakup/templates/a4dashboard/project_list.html:11
 msgid "Events"
@@ -1540,6 +1538,9 @@ msgstr "Zurück zur Startseite"
 #: a4-speakup/templates/email_base.txt:4
 msgid "Hello"
 msgstr "Hallo"
+
+#~ msgid "Ttitle"
+#~ msgstr "Titel"
 
 #~ msgid "Topic and location"
 #~ msgstr "Thema und Ort"

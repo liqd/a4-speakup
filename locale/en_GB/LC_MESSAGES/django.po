@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-28 14:38+0000\n"
+"POT-Creation-Date: 2019-08-29 14:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -906,8 +906,9 @@ msgid "Organisation name"
 msgstr "Organisation name"
 
 #: apps/dashboard/forms.py:35
-msgid "Ttitle"
-msgstr "Ttitle"
+#: a4-speakup/templates/a4dashboard/project_create_form.html:31
+msgid "Title"
+msgstr "Title"
 
 #: apps/dashboard/forms.py:36
 msgid "Short description"
@@ -1051,7 +1052,7 @@ msgid "Please enter email addresses or upload a file"
 msgstr "Please enter email addresses or upload a file"
 
 #: apps/projects/templates/a4_candy_projects/dashboard_project_moderators.html:9
-#: a4-speakup/templates/a4dashboard/base_dashboard.html:9
+#: a4-speakup/templates/a4dashboard/base_dashboard.html:10
 #: a4-speakup/templates/a4dashboard/base_form_project.html:9
 msgid "back to events list"
 msgstr "back to events list"
@@ -1361,10 +1362,6 @@ msgstr "Learn More"
 msgid "Create event draft"
 msgstr "Create event draft"
 
-#: a4-speakup/templates/a4dashboard/project_create_form.html:31
-msgid "Title"
-msgstr "Title"
-
 #: a4-speakup/templates/a4dashboard/project_create_form.html:41
 msgid ""
 "After saving the draft event you can further customize and edit your project "
@@ -1509,6 +1506,9 @@ msgstr "Back to landing page"
 #: a4-speakup/templates/email_base.txt:4
 msgid "Hello"
 msgstr "Hello"
+
+#~ msgid "Ttitle"
+#~ msgstr "Ttitle"
 
 #~ msgid "Topic and location"
 #~ msgstr "Topic and location"

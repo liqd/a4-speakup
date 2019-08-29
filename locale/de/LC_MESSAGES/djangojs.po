@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-08 08:45+0000\n"
+"POT-Creation-Date: 2019-08-29 14:18+0000\n"
 "PO-Revision-Date: 2017-05-30 12:06+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,63 +38,59 @@ msgstr "Textkörper"
 msgid "Collapsible element"
 msgstr "Aufklappbares Element"
 
-#: adhocracy4.js/comments/static/comments/Comment.jsx:26
-#: adhocracy4.py/comments/static/comments/Comment.jsx:26
+#: adhocracy4.js/comments/static/comments/Comment.jsx:23
+#: adhocracy4.py/comments/static/comments/Comment.jsx:23
+#, fuzzy, javascript-format
+#| msgid "hide one reply"
 msgid "hide one reply"
-msgstr "Antwort ausblenden"
+msgid_plural "hide %s replies"
+msgstr[0] "Antwort ausblenden"
+msgstr[1] "Antwort ausblenden"
 
-#: adhocracy4.js/comments/static/comments/Comment.jsx:26
-#: adhocracy4.py/comments/static/comments/Comment.jsx:26
-#, javascript-format
-msgid "hide %s replies"
-msgstr "%s Antworten ausblenden"
-
-#: adhocracy4.js/comments/static/comments/Comment.jsx:28
-#: adhocracy4.py/comments/static/comments/Comment.jsx:28
+#: adhocracy4.js/comments/static/comments/Comment.jsx:25
+#: adhocracy4.py/comments/static/comments/Comment.jsx:25
+#, fuzzy, javascript-format
+#| msgid "view one reply"
 msgid "view one reply"
-msgstr "Antwort einblenden"
+msgid_plural "view %s replies"
+msgstr[0] "Antwort einblenden"
+msgstr[1] "Antwort einblenden"
 
-#: adhocracy4.js/comments/static/comments/Comment.jsx:28
-#: adhocracy4.py/comments/static/comments/Comment.jsx:28
-#, javascript-format
-msgid "view %s replies"
-msgstr "%s Antworten einblenden"
-
-#: adhocracy4.js/comments/static/comments/Comment.jsx:128
-#: adhocracy4.py/comments/static/comments/Comment.jsx:128
+#: adhocracy4.js/comments/static/comments/Comment.jsx:125
+#: adhocracy4.py/comments/static/comments/Comment.jsx:125
 msgid "Do you really want to delete this comment?"
 msgstr "Möchten Sie diesen Kommentar wirklich löschen?"
 
-#: adhocracy4.js/comments/static/comments/Comment.jsx:130
+#: adhocracy4.js/comments/static/comments/Comment.jsx:127
 #: adhocracy4.js/comments/static/comments/CommentManageDropdown.jsx:19
 #: adhocracy4.js/polls/static/polls/QuestionForm.jsx:93
 #: adhocracy4.js/polls/static/polls/QuestionForm.jsx:96
-#: adhocracy4.py/comments/static/comments/Comment.jsx:130
+#: adhocracy4.py/comments/static/comments/Comment.jsx:127
 #: adhocracy4.py/comments/static/comments/CommentManageDropdown.jsx:19
 #: adhocracy4.py/polls/static/polls/QuestionForm.jsx:93
 #: adhocracy4.py/polls/static/polls/QuestionForm.jsx:96
 msgid "Delete"
 msgstr "Löschen"
 
-#: adhocracy4.js/comments/static/comments/Comment.jsx:131
+#: adhocracy4.js/comments/static/comments/Comment.jsx:128
 #: adhocracy4.js/static/Modal.jsx:49
-#: adhocracy4.py/comments/static/comments/Comment.jsx:131
+#: adhocracy4.py/comments/static/comments/Comment.jsx:128
 msgid "Abort"
 msgstr "Abbrechen"
 
-#: adhocracy4.js/comments/static/comments/Comment.jsx:144
-#: adhocracy4.py/comments/static/comments/Comment.jsx:144
+#: adhocracy4.js/comments/static/comments/Comment.jsx:141
+#: adhocracy4.py/comments/static/comments/Comment.jsx:141
 msgid "Latest edit on"
 msgstr "Letzte Änderung am"
 
-#: adhocracy4.js/comments/static/comments/Comment.jsx:149
-#: adhocracy4.py/comments/static/comments/Comment.jsx:149
+#: adhocracy4.js/comments/static/comments/Comment.jsx:146
+#: adhocracy4.py/comments/static/comments/Comment.jsx:146
 msgid "Moderator"
 msgstr "Moderator"
 
-#: adhocracy4.js/comments/static/comments/Comment.jsx:156
+#: adhocracy4.js/comments/static/comments/Comment.jsx:153
 #: adhocracy4.js/reports/static/reports/react_reports.jsx:20
-#: adhocracy4.py/comments/static/comments/Comment.jsx:156
+#: adhocracy4.py/comments/static/comments/Comment.jsx:153
 #: adhocracy4.py/reports/static/reports/react_reports.jsx:20
 msgid ""
 "You want to report this content? Your message will be sent to the "
@@ -105,15 +101,15 @@ msgstr ""
 "weitergeleitet. Diese prüft den gemeldeten Beitrag. Er wird gelöscht, wenn "
 "er nicht unseren Diskussionsregeln (Netiquette) entspricht."
 
-#: adhocracy4.js/comments/static/comments/Comment.jsx:179
+#: adhocracy4.js/comments/static/comments/Comment.jsx:176
 #: adhocracy4.js/polls/static/polls/QuestionForm.jsx:26
-#: adhocracy4.py/comments/static/comments/Comment.jsx:179
+#: adhocracy4.py/comments/static/comments/Comment.jsx:176
 #: adhocracy4.py/polls/static/polls/QuestionForm.jsx:26
 msgid "Answer"
 msgstr "Antworten"
 
-#: adhocracy4.js/comments/static/comments/Comment.jsx:218
-#: adhocracy4.py/comments/static/comments/Comment.jsx:218
+#: adhocracy4.js/comments/static/comments/Comment.jsx:215
+#: adhocracy4.py/comments/static/comments/Comment.jsx:215
 msgid "Your reply here"
 msgstr "Ihre Antwort hier"
 
@@ -340,38 +336,88 @@ msgid "only show marked questions"
 msgstr "nur gemerkte Fragen anzeigen"
 
 #: apps/questions/assets/Filters.jsx:62
+msgid "display only questions which are not hidden"
+msgstr "nur Fragen anzeigen die nicht verborgen sind"
+
+#: apps/questions/assets/Filters.jsx:76
 msgid "order by likes"
 msgstr "nach Unterstützung sortieren"
 
-#: apps/questions/assets/Question.jsx:75
-msgid "mark as done"
-msgstr "als beantwortet markieren"
-
-#: apps/questions/assets/Question.jsx:78
-msgid "bookmark"
-msgstr "Lesezeichen setzen"
-
-#: apps/questions/assets/Question.jsx:78
-msgid "undo bookmark"
-msgstr "Lesezeichen entfernen"
-
-#: apps/questions/assets/Question.jsx:85
-msgid "add like"
-msgstr "positiv bewerten"
-
-#: apps/questions/assets/Question.jsx:85
-msgid "undo like"
-msgstr "positive Bewertung zurück nehmen"
-
-#: apps/questions/assets/Question.jsx:87 apps/questions/assets/Question.jsx:92
-msgid "likes"
-msgstr "positive Bewertungen"
-
-#: apps/questions/assets/QuestionBox.jsx:15
-#: apps/questions/assets/QuestionBox.jsx:25
+#: apps/questions/assets/QuestionBox.jsx:17
+#: apps/questions/assets/QuestionBox.jsx:46
 msgid "select category"
 msgstr "Merkmal auswählen"
 
-#: apps/questions/assets/StatisticsBox.jsx:46
+#: apps/questions/assets/QuestionBox.jsx:177
+msgid "display question on screen"
+msgstr "Frage auf dem Bildschim anzeigen"
+
+#: apps/questions/assets/QuestionBox.jsx:178
+msgid "mark question as answered"
+msgstr "Frage als beantwortet makieren"
+
+#: apps/questions/assets/QuestionBox.jsx:179
+msgid "hide question from audience"
+msgstr "Frage vor dem Publikum verbergen"
+
+#: apps/questions/assets/QuestionModerator.jsx:111
+msgid "mark as hidden"
+msgstr "als verborgen markieren"
+
+#: apps/questions/assets/QuestionModerator.jsx:111
+msgid "undo mark as hidden"
+msgstr "nicht mehr als verborgen makieren"
+
+#: apps/questions/assets/QuestionModerator.jsx:119
+msgid "mark as done"
+msgstr "als beantwortet markieren"
+
+#: apps/questions/assets/QuestionModerator.jsx:125
+msgid "added to live list"
+msgstr "zur live list hinzugefügt"
+
+#: apps/questions/assets/QuestionModerator.jsx:125
+msgid "remove from live list"
+msgstr "von live list entfernen"
+
+#: apps/questions/assets/QuestionModerator.jsx:132
+msgid "added to shortlist"
+msgstr "der Redelist hinzugefügt"
+
+#: apps/questions/assets/QuestionModerator.jsx:132
+msgid "remove from shortlist"
+msgstr "Von der Redelist entfernen"
+
+#: apps/questions/assets/QuestionPresent.jsx:40
+#: apps/questions/assets/QuestionUser.jsx:68
+#: apps/questions/assets/QuestionUser.jsx:73
+msgid "likes"
+msgstr "positive Bewertungen"
+
+#: apps/questions/assets/QuestionUser.jsx:56
+msgid "on shortlist"
+msgstr "auf Redeliste"
+
+#: apps/questions/assets/QuestionUser.jsx:69
+msgid "add like"
+msgstr "positiv bewerten"
+
+#: apps/questions/assets/QuestionUser.jsx:69
+msgid "undo like"
+msgstr "positive Bewertung zurück nehmen"
+
+#: apps/questions/assets/StatisticsBox.jsx:122
 msgid "Posts included"
 msgstr "Einbezogene Beiträge"
+
+#~ msgid "hide %s replies"
+#~ msgstr "%s Antworten ausblenden"
+
+#~ msgid "view %s replies"
+#~ msgstr "%s Antworten einblenden"
+
+#~ msgid "bookmark"
+#~ msgstr "Lesezeichen setzen"
+
+#~ msgid "undo bookmark"
+#~ msgstr "Lesezeichen entfernen"
