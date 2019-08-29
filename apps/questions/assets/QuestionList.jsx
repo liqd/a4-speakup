@@ -10,10 +10,10 @@ const QuestionList = (props) => {
           props.questions.map((question, index) => {
             return <QuestionModerator
               key={question.id}
-              displayIsOnShortlist
-              displayIsLive
+              displayIsOnShortlist={!question.is_hidden}
+              displayIsLive={!question.is_hidden}
               displayIsHidden
-              displayIsAnswered
+              displayIsAnswered={!question.is_hidden}
               removeFromList={props.removeFromList.bind(this)}
               updateQuestion={props.updateQuestion.bind(this)}
               handleLike={props.handleLike.bind(this)}
