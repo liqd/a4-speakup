@@ -3,6 +3,7 @@ import { updateItem } from './helpers.js'
 
 const React = require('react')
 const QuestionList = require('./QuestionList')
+const InfoBox = require('./InfoBox')
 const Filters = require('./Filters')
 
 class QuestionBox extends React.Component {
@@ -140,13 +141,6 @@ class QuestionBox extends React.Component {
     return updateItem(data, url, 'POST')
   }
 
-  toggleInformation () {
-    const displayInfo = !this.state.displayInfo
-    this.setState({
-      displayInfo: displayInfo
-    })
-  }
-
   togglePollingPaused () {
     const pollingPaused = !this.state.pollingPaused
     this.setState({
@@ -170,28 +164,11 @@ class QuestionBox extends React.Component {
           toggledisplayNotHiddenOnly={this.toggledisplayNotHiddenOnly.bind(this)}
           isModerator={this.props.isModerator}
         />
-        {this.props.isModerator && this.state.displayInfo &&
-          <div className="alert alert-secondary alert-dismissible">
-            <div className="row pt-4">
-              <div className="col-lg-3 pb-2"><i className="icon-push-in-list" /> {django.gettext('add question to shortlist')}</div>
-              <div className="col-lg-3 pb-2"><span className="fa-stack fa-1x"><i className="fas fa-tv fa-stack-2x" /><i className="fas fa-arrow-up fa-stack-1x" /></span> {django.gettext('display question on screen')}</div>
-              <div className="col-lg-3 pb-2"><i className="icon-answered" /> {django.gettext('mark question as answered')}</div>
-              <div className="col-lg-3 pb-2"><i className="far fa-eye" /> {django.gettext('hide question from audience')}</div>
-            </div>
-            <button type="button" className="close" onClick={this.toggleInformation.bind(this)} aria-label="Close information">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-        }
-        {this.props.isModerator && !this.state.displayInfo &&
-          <div className="row">
-            <div className="col-12 d-flex justify-content-end">
-              <button type="button" className="btn btn-outline-secondary" onClick={this.toggleInformation.bind(this)} aria-label="Open information">
-                <span aria-hidden="true"><i className="fas fa-info-circle" /></span>
-              </button>
-            </div>
-          </div>
-        }
+        <InfoBox
+          isModerator={this.props.isModerator}
+          displayInfo={this.props.displayInfo}
+        />
+
         <QuestionList
           questions={this.state.filteredQuestions}
           removeFromList={this.removeFromList.bind(this)}

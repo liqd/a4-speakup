@@ -1,0 +1,55 @@
+/* global django */
+const React = require('react')
+
+class InfoBox extends React.Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      displayInfo: true
+    }
+  }
+
+  toggleInformation () {
+    const displayInfo = !this.state.displayInfo
+    this.setState({
+      displayInfo: displayInfo
+    })
+  }
+
+  render () {
+    return (
+      <div>
+        {this.state.displayInfo
+          ? <div className="alert alert-secondary alert-dismissible">
+            {this.props.isModerator &&
+            <div className="row pt-4">
+              <div className="col-lg-3 pb-2 pb-xl-0"><i className="icon-push-in-list" /> {django.gettext('add question to shortlist')}</div>
+              <div className="col-lg-3 pb-2 pb-xl-0"><span className="fa-stack fa-1x"><i className="fas fa-tv fa-stack-2x" /><i className="fas fa-arrow-up fa-stack-1x" /></span> {django.gettext('display question on screen')}</div>
+              <div className="col-lg-3 pb-2 pb-xl-0"><i className="icon-answered" /> {django.gettext('mark question as answered')}</div>
+              <div className="col-lg-3 pb-2 pb-xl-0"><i className="far fa-eye" /> {django.gettext('hide question from audience')}</div>
+            </div>
+            }
+            {!this.props.isModerator &&
+            <div className="row">
+              <div className="col-12"><i className="icon-in-list" /> {django.gettext('question has been added to shortlist')}</div>
+            </div>
+            }
+            <button type="button" className="close" onClick={this.toggleInformation.bind(this)} aria-label="Close information">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          : <div className="row">
+            <div className="col-12 d-flex justify-content-end">
+              <button type="button" className="btn btn-outline-secondary" onClick={this.toggleInformation.bind(this)} aria-label="Open information">
+                <span aria-hidden="true"><i className="fas fa-info-circle" /></span>
+              </button>
+            </div>
+          </div>
+        }
+      </div>
+    )
+  }
+}
+
+module.exports = InfoBox
