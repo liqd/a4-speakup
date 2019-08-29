@@ -16,3 +16,7 @@ rules.add_perm('a4_candy_questions.propose_question',
 
 
 rules.add_perm('a4_candy_questions.view_question', rules.always_allow)
+
+
+rules.add_perm('a4_candy_questions.moderate_questions',
+               is_superuser | is_context_moderator | is_context_initiator)
