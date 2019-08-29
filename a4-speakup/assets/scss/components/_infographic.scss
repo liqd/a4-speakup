@@ -85,12 +85,24 @@
     }
 }
 
+.infographic__link {
+    @media screen and (min-width: $breakpoint-md) {
+        padding-bottom: 7*$spacer;
+    }
+}
+
 .infographic__info-footer {
     @extend .fixed-bottom;
 
     width: 100%;
     height: 150px;
     background-color: $spaekup-purple-light;
+
+    .infographic__link {
+        @media screen and (min-width: $breakpoint-md) {
+            padding-bottom: 0;
+        }
+    }
 }
 
 .infographic__info-screen {

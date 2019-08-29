@@ -31,6 +31,12 @@ class QuestionPresentationListView(ProjectMixin,
     def get_queryset(self):
         return super().get_queryset().filter(module=self.module)
 
+    def get_full_url(self):
+        request = self.request
+        url = self.project.get_absolute_url()
+        full_url = request.build_absolute_uri(url)
+        return full_url
+
 
 class QuestionCreateView(PermissionRequiredMixin, generic.CreateView):
     model = question_models.Question
