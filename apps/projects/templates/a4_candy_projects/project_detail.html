@@ -7,7 +7,7 @@
     {% if view.project.is_draft %}
         <div class="alert alert-warning alert-top" role="alert">
             <div class="text-center alert-text">
-                {% trans 'This project is in not published yet.' %}
+                {% trans 'This event is in not published yet.' %}
             </div>
         </div>
     {% endif %}
@@ -95,7 +95,13 @@
         </div>
     </div>
     <div class="tab-pane fade show active" id="participation" role="tabpanel" aria-labelledby="participation-tab">
+        {% if view.project.has_started %}
         {% block phase_content %}{% endblock %}
+        {% else %}
+        <p class="text-center mt-5">
+        {% trans 'The event has not started yet.' %}
+        </p>
+        {% endif %}
     </div>
     <div class="tab-pane fade" id="statistics" role="tabpanel" aria-labelledby="statistics-tab">
         <div class="container">
@@ -105,6 +111,10 @@
                     <div>
                     {% if view.project.has_started %}
                     {% react_questions_statistics view.module %}
+                    {% else %}
+                    <p class="text-center mt-5">
+                    {% trans 'The event has not started yet.' %}
+                    </p>
                     {% endif %}
                     </div>
                 </div>
