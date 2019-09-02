@@ -121,7 +121,7 @@ class StatisticsBox extends React.Component {
         </div>
         <h3 className="u-serif-header mt-5">{django.gettext('Posts included')}</h3>
         {this.props.isModerator
-          ? <div className="list-group mt-5">
+          ? <div className="list-group mt-3 mt-md-5">
             { this.state.combinedQuestions.map((question, index) => {
               return <QuestionModerator
                 updateQuestion={this.updateQuestion.bind(this)}
