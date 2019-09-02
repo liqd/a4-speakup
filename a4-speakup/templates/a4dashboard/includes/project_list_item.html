@@ -4,19 +4,19 @@
 
 
 <li class="list-group-item p-0">
-    <ul class="list-group d-flex flex-row mb-2">
-        <li class="list-group-item flex-fill border-0 mb-1 pl-0">
+    <ul class="list-group d-flex flex-row mb-2 border-bottom">
+        <li class="list-group-item flex-fill mb-1 pl-0">
             <h2 class="u-h5-font-size">{{ project.name }}</h2>
             <div class="dashboard-list-labels">
                 {% if project.has_finished %}
-                <span class="label">{% trans "Finished" %}</span>
+                <span class="badge badge-pill badge-dark">{% trans "Finished" %}</span>
                 {% endif %}
                 {% if not project.is_public %}
-                <span class="label">{% trans 'private' %}</span>
+                <span class="badge badge-pill badge-light">{% trans 'private' %}</span>
                 {% endif %}
                 </div>
         </li>
-        <li class="list-group-item border-0 px-0 py-5">
+        <li class="list-group-item px-0 py-2">
             <div class="btn-group" role="group">
                 <a href="{{  project.get_absolute_url }}" class="btn btn-link">
                     <i class="fa fa-eye" aria-hidden="true"></i>
