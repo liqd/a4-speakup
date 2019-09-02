@@ -261,8 +261,8 @@ $line-height-base:            1.5 !default;
 $h1-font-size:                $font-size-base * 3.25 !default;
 $h2-font-size:                $font-size-base * 2.5 !default;
 $h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.25 !default;
-$h5-font-size:                $font-size-base !default;
+$h4-font-size:                $font-size-base !default; //required for wagtail added h4
+$h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 
 $headings-margin-bottom:      ($spacer / 2) !default;
