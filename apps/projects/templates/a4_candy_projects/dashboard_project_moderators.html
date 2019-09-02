@@ -3,9 +3,9 @@
 
 {% block title %}
 <div class="page-header mb-5 mt-lg-5">
-    <h1 class="u-serif-header">
+    <h2 class="u-serif-header">
     {% if project %}{{ project.name }}{% endif %}
-    </h1>
+    </h2>
     <a href="{% url 'a4dashboard:project-list' organisation_slug=view.organisation.slug %}"><i class="fas fa-arrow-left"></i> {% trans 'back to events list' %}</a>
 </div>
 {% endblock%}
@@ -14,8 +14,8 @@
     <h1 class="u-serif-header mb-3">{% trans 'Edit Moderators' %}</h1>
     {% include 'a4_candy_projects/includes/dashboard_users_from_email_form.html' %}
 
-    <h2 class="u-serif-header mb-3">{% trans 'Pending Invitations' %}</h2>
+    <h4 class="font-weight-bold mb-2">{% trans 'Pending Invitations' %}</h4>
     {% include 'a4_candy_projects/includes/dashboard_user_invite_list.html' with invites=project.moderatorinvite_set.all %}
-    <h2 class="u-serif-header mb-3">{% trans 'Moderators' %}</h2>
+    <h4 class="font-weight-bold mt-4">{% trans 'Moderators' %}</h4>
     {% include 'a4_candy_projects/includes/dashboard_user_list.html' with users=project.moderators.all %}
 {% endblock %}
