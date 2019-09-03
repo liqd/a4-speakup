@@ -37,19 +37,19 @@
                 </div>
                 {% endfor %}
                 {% endif %}
-                {% block extra_messages %}{% endblock %}
-
-                <div class="content">
-                {% block content %}
-                {% endblock %}
-                </div>
-                {% block extra_js %}
-                {# Override this in templates to add extra javascript #}
-                {% endblock %}
-                {% block extra_css %}
-                {# Override this in templates to add extra javascript #}
-                {% endblock %}
             </div>
+            {% block extra_messages %}{% endblock %}
+
+            <div class="content">
+            {% block content %}
+            {% endblock %}
+            </div>
+            {% block extra_js %}
+            {# Override this in templates to add extra javascript #}
+            {% endblock %}
+            {% block extra_css %}
+            {# Override this in templates to add extra javascript #}
+            {% endblock %}
         </div>
         {% block footer %}
             {% include 'footer.html' %}
