@@ -1165,7 +1165,7 @@ msgstr "Ablehnen"
 
 #: apps/projects/templates/a4_candy_projects/project_detail.html:10
 msgid "This event is in not published yet."
-msgstr ""
+msgstr "Dieses Event ist noch nicht veröffentlicht."
 
 #: apps/projects/templates/a4_candy_projects/project_detail.html:31
 msgid "archived"
@@ -1187,7 +1187,7 @@ msgstr "Statistik"
 #: apps/projects/templates/a4_candy_projects/project_detail.html:102
 #: apps/projects/templates/a4_candy_projects/project_detail.html:116
 msgid "The event has not started yet."
-msgstr ""
+msgstr "Das Event hat noch nicht begonnen."
 
 #: apps/projects/views.py:80
 msgid "Invitation succesfully removed."
