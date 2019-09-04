@@ -93,8 +93,8 @@ lint:
 po:
 	$(VIRTUAL_ENV)/bin/python manage.py makemessages -d djangojs
 	$(VIRTUAL_ENV)/bin/python manage.py makemessages -d django
-	gsed -i 's%#: .*/node_modules.*/adhocracy4%#: adhocracy4.js%' locale/*/LC_MESSAGES/django*.po
-	gsed -i 's%#: .*/adhocracy4%#: adhocracy4.py%' locale/*/LC_MESSAGES/django*.po
+	sed -i 's%#: .*/node_modules.*/adhocracy4%#: adhocracy4.js%' locale/*/LC_MESSAGES/django*.po
+	sed -i 's%#: .*/adhocracy4%#: adhocracy4.py%' locale/*/LC_MESSAGES/django*.po
 	msgen locale/en_GB/LC_MESSAGES/django.po -o locale/en_GB/LC_MESSAGES/django.po
 	msgen locale/en_GB/LC_MESSAGES/djangojs.po -o locale/en_GB/LC_MESSAGES/djangojs.po
 
