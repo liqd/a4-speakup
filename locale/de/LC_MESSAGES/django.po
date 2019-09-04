@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: a4-meinberlin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-29 14:18+0000\n"
+"POT-Creation-Date: 2019-09-04 07:51+0000\n"
 "PO-Revision-Date: 2017-10-16 13:42+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -71,7 +71,6 @@ msgstr "Speichern"
 #: adhocracy4.py/dashboard/templates/a4dashboard/blueprint_list.html:4
 #: adhocracy4.py/dashboard/templates/a4dashboard/blueprint_list.html:7
 #: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:9
-#: a4-speakup/templates/a4dashboard/blueprint_list.html:8
 msgid "New Project"
 msgstr "Neues Event"
 
@@ -1165,8 +1164,8 @@ msgid "Decline"
 msgstr "Ablehnen"
 
 #: apps/projects/templates/a4_candy_projects/project_detail.html:10
-msgid "This project is in not published yet."
-msgstr "Dieses Projekt ist noch nicht veröffentlicht."
+msgid "This event is in not published yet."
+msgstr "Dieses Event ist noch nicht veröffentlicht."
 
 #: apps/projects/templates/a4_candy_projects/project_detail.html:31
 msgid "archived"
@@ -1181,9 +1180,14 @@ msgid "Questions"
 msgstr "Fragen"
 
 #: apps/projects/templates/a4_candy_projects/project_detail.html:57
-#: apps/projects/templates/a4_candy_projects/project_detail.html:104
+#: apps/projects/templates/a4_candy_projects/project_detail.html:110
 msgid "Statistics"
 msgstr "Statistik"
+
+#: apps/projects/templates/a4_candy_projects/project_detail.html:102
+#: apps/projects/templates/a4_candy_projects/project_detail.html:116
+msgid "The event has not started yet."
+msgstr "Das Event hat noch nicht begonnen."
 
 #: apps/projects/views.py:80
 msgid "Invitation succesfully removed."
@@ -1226,7 +1230,7 @@ msgstr "Füge Frage hinzu."
 msgid "display on screen"
 msgstr "auf Bildschirm anzeigen"
 
-#: apps/questions/templates/a4_candy_questions/question_list.html:20
+#: apps/questions/templates/a4_candy_questions/question_list.html:22
 msgid "Add Question"
 msgstr "Frage hinzufügen"
 
@@ -1379,18 +1383,6 @@ msgstr "Diese Seite konnte nicht gefunden werden."
 msgid "Internal server error."
 msgstr "Interner Serverfehler."
 
-#: a4-speakup/templates/a4dashboard/blueprint_list.html:17
-msgid "What kind of project would you like to create?"
-msgstr "Welche Art von Projekt möchten Sie erstellen?"
-
-#: a4-speakup/templates/a4dashboard/blueprint_list.html:37
-msgid "use this template"
-msgstr "Diese Vorlage verwenden"
-
-#: a4-speakup/templates/a4dashboard/blueprint_list.html:40
-msgid "Learn More"
-msgstr "Mehr lesen"
-
 #: a4-speakup/templates/a4dashboard/project_create_form.html:7
 msgid "Create event draft"
 msgstr "Evententwurf anlegen"
@@ -1400,7 +1392,8 @@ msgid ""
 "After saving the draft event you can further customize and edit your project "
 "and eventually publish it."
 msgstr ""
-"Nach dem Speichern des Entwurfs können Sie ihren Event weiter bearbeiten und veröffentlichen."
+"Nach dem Speichern des Entwurfs können Sie ihren Event weiter bearbeiten und "
+"veröffentlichen."
 
 #: a4-speakup/templates/a4dashboard/project_list.html:11
 msgid "Events"
@@ -1538,6 +1531,18 @@ msgstr "Zurück zur Startseite"
 #: a4-speakup/templates/email_base.txt:4
 msgid "Hello"
 msgstr "Hallo"
+
+#~ msgid "This project is in not published yet."
+#~ msgstr "Dieses Projekt ist noch nicht veröffentlicht."
+
+#~ msgid "What kind of project would you like to create?"
+#~ msgstr "Welche Art von Projekt möchten Sie erstellen?"
+
+#~ msgid "use this template"
+#~ msgstr "Diese Vorlage verwenden"
+
+#~ msgid "Learn More"
+#~ msgstr "Mehr lesen"
 
 #~ msgid "Ttitle"
 #~ msgstr "Titel"

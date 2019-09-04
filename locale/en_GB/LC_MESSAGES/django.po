@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-29 14:18+0000\n"
+"POT-Creation-Date: 2019-09-04 07:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,7 +72,6 @@ msgstr "Save"
 #: adhocracy4.py/dashboard/templates/a4dashboard/blueprint_list.html:4
 #: adhocracy4.py/dashboard/templates/a4dashboard/blueprint_list.html:7
 #: adhocracy4.py/dashboard/templates/a4dashboard/project_list.html:9
-#: a4-speakup/templates/a4dashboard/blueprint_list.html:8
 msgid "New Project"
 msgstr "New Project"
 
@@ -1139,8 +1138,8 @@ msgid "Decline"
 msgstr "Decline"
 
 #: apps/projects/templates/a4_candy_projects/project_detail.html:10
-msgid "This project is in not published yet."
-msgstr "This project is in not published yet."
+msgid "This event is in not published yet."
+msgstr "This event is in not published yet."
 
 #: apps/projects/templates/a4_candy_projects/project_detail.html:31
 msgid "archived"
@@ -1155,9 +1154,14 @@ msgid "Questions"
 msgstr "Questions"
 
 #: apps/projects/templates/a4_candy_projects/project_detail.html:57
-#: apps/projects/templates/a4_candy_projects/project_detail.html:104
+#: apps/projects/templates/a4_candy_projects/project_detail.html:110
 msgid "Statistics"
 msgstr "Statistics"
+
+#: apps/projects/templates/a4_candy_projects/project_detail.html:102
+#: apps/projects/templates/a4_candy_projects/project_detail.html:116
+msgid "The event has not started yet."
+msgstr "The event has not started yet."
 
 #: apps/projects/views.py:80
 msgid "Invitation succesfully removed."
@@ -1199,7 +1203,7 @@ msgstr "Add question."
 msgid "display on screen"
 msgstr "display on screen"
 
-#: apps/questions/templates/a4_candy_questions/question_list.html:20
+#: apps/questions/templates/a4_candy_questions/question_list.html:22
 msgid "Add Question"
 msgstr "Add Question"
 
@@ -1345,18 +1349,6 @@ msgstr "This page could not be found."
 #: a4-speakup/templates/500.html:7
 msgid "Internal server error."
 msgstr "Internal server error."
-
-#: a4-speakup/templates/a4dashboard/blueprint_list.html:17
-msgid "What kind of project would you like to create?"
-msgstr "What kind of project would you like to create?"
-
-#: a4-speakup/templates/a4dashboard/blueprint_list.html:37
-msgid "use this template"
-msgstr "use this template"
-
-#: a4-speakup/templates/a4dashboard/blueprint_list.html:40
-msgid "Learn More"
-msgstr "Learn More"
 
 #: a4-speakup/templates/a4dashboard/project_create_form.html:7
 msgid "Create event draft"
@@ -1506,6 +1498,18 @@ msgstr "Back to landing page"
 #: a4-speakup/templates/email_base.txt:4
 msgid "Hello"
 msgstr "Hello"
+
+#~ msgid "This project is in not published yet."
+#~ msgstr "This project is in not published yet."
+
+#~ msgid "What kind of project would you like to create?"
+#~ msgstr "What kind of project would you like to create?"
+
+#~ msgid "use this template"
+#~ msgstr "use this template"
+
+#~ msgid "Learn More"
+#~ msgstr "Learn More"
 
 #~ msgid "Ttitle"
 #~ msgstr "Ttitle"
