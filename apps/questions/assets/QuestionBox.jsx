@@ -13,7 +13,6 @@ class QuestionBox extends React.Component {
     this.state = {
       questions: [],
       filteredQuestions: [],
-      displayInfo: true,
       category: '-1',
       categoryName: django.gettext('select category'),
       displayNotHiddenOnly: false,
@@ -166,7 +165,7 @@ class QuestionBox extends React.Component {
         />
         <InfoBox
           isModerator={this.props.isModerator}
-          displayInfo={this.props.displayInfo}
+          displayInfo={this.props.isModerator}
         />
 
         <QuestionList

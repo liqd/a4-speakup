@@ -6,7 +6,7 @@ class InfoBox extends React.Component {
     super(props)
 
     this.state = {
-      displayInfo: true
+      displayInfo: this.props.displayInfo
     }
   }
 
@@ -32,7 +32,9 @@ class InfoBox extends React.Component {
             }
             {!this.props.isModerator &&
             <div className="row">
-              <div className="col-12"><i className="icon-in-list" /> {django.gettext('question has been added to shortlist')}</div>
+              <div className="col-12">
+                <i className="icon-in-list" /> {django.gettext('is shown in front of a question? It has been marked by the moderation.')}
+              </div>
             </div>
             }
             <button type="button" className="close" onClick={this.toggleInformation.bind(this)} aria-label="Close information">
