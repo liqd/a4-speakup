@@ -165,7 +165,6 @@ class QuestionBox extends React.Component {
         />
         <InfoBox
           isModerator={this.props.isModerator}
-          displayInfo={this.props.isModerator}
         />
 
         <QuestionList

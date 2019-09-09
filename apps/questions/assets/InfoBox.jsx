@@ -6,7 +6,7 @@ class InfoBox extends React.Component {
     super(props)
 
     this.state = {
-      displayInfo: this.props.displayInfo
+      displayInfo: false
     }
   }
 
