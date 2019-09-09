@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-04 07:51+0000\n"
+"POT-Creation-Date: 2019-09-09 15:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -258,16 +258,20 @@ msgid "order by likes"
 msgstr "order by likes"
 
 #: apps/questions/assets/InfoBox.jsx:28
+msgid "add question to shortlist"
+msgstr "add question to shortlist"
+
+#: apps/questions/assets/InfoBox.jsx:31
 msgid "display question on screen"
 msgstr "display question on screen"
 
-#: apps/questions/assets/InfoBox.jsx:29
-msgid "mark question as answered"
-msgstr "mark question as answered"
-
-#: apps/questions/assets/InfoBox.jsx:30
+#: apps/questions/assets/InfoBox.jsx:34
 msgid "hide question from audience"
 msgstr "hide question from audience"
+
+#: apps/questions/assets/InfoBox.jsx:37
+msgid "mark question as answered"
+msgstr "mark question as answered"
 
 #: apps/questions/assets/QuestionBox.jsx:18
 #: apps/questions/assets/QuestionBox.jsx:47
