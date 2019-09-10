@@ -6,7 +6,7 @@ class InfoBox extends React.Component {
     super(props)
 
     this.state = {
-      displayInfo: true
+      displayInfo: false
     }
   }
 
@@ -41,7 +41,7 @@ class InfoBox extends React.Component {
             {!this.props.isModerator &&
             <div className="row">
               <div className="col-12">
-                <i className="icon-in-list" /> <span>{django.gettext('question has been added to shortlist')}</span>
+                <i className="icon-in-list" /> {django.gettext('is shown in front of a question? It has been marked by the moderation.')}
               </div>
             </div>
             }
