@@ -32,10 +32,10 @@ class InfoBox extends React.Component {
                     <span className="fa-stack fa-1x"><i className="fas fa-tv fa-stack-2x" /><i className="fas fa-arrow-up fa-stack-1x" /></span> <span>{django.gettext('display question on screen')}</span>
                   </div>
                   <div className="col-lg-3 pb-2 pb-xl-0">
-                    <i className="icon-answered" /> <span>{django.gettext('hide question from audience')}</span>
+                    <i className="icon-answered" /> <span>{django.gettext('mark question as answered')}</span>
                   </div>
                   <div className="col-lg-3 pb-2 pb-xl-0">
-                    <i className="icon-answered" /> <span>{django.gettext('mark question as answered')}</span>
+                    <i className="far fa-eye" /> <span>{django.gettext('hide question from audience')}</span>
                   </div>
                 </div>}
               {!this.props.isModerator &&
