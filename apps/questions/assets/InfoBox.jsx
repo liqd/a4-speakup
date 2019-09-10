@@ -43,7 +43,7 @@ export default class InfoBox extends React.Component {
                     <i className="icon-answered" /> <span>{textMarkAnswered}</span>
                   </div>
                   <div className="col-lg-3 pb-2 pb-xl-0">
-                    <i className="icon-answered" /> <span>{textHideQuestion}</span>
+                    <i className="far fa-eye" /> <span>{textHideQuestion}</span>
                   </div>
                 </div>}
               {!this.props.isModerator &&
