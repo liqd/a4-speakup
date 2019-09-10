@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 11:21+0000\n"
+"POT-Creation-Date: 2019-09-10 12:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -359,6 +359,14 @@ msgstr "mark question as answered"
 #: apps/questions/assets/InfoBox.jsx:8
 msgid "is shown in front of a question? It has been marked by the moderation."
 msgstr "is shown in front of a question? It has been marked by the moderation."
+
+#: apps/questions/assets/InfoBox.jsx:9
+msgid "Close information"
+msgstr "Close information"
+
+#: apps/questions/assets/InfoBox.jsx:10
+msgid "Open information"
+msgstr "Open information"
 
 #: apps/questions/assets/QuestionBox.jsx:16
 #: apps/questions/assets/QuestionBox.jsx:45
