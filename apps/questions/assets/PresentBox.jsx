@@ -49,7 +49,7 @@ class PresentBox extends React.Component {
   render () {
     if (this.state.questions.length > 0) {
       return (
-        <div>
+        <div className="container">
           <div className="list-group mt-5">
             { this.state.questions.map((question, index) => {
               return <QuestionPresent
