@@ -363,11 +363,11 @@ msgstr ""
 
 #: apps/questions/assets/InfoBox.jsx:9
 msgid "Close information"
-msgstr ""
+msgstr "Information schließen"
 
 #: apps/questions/assets/InfoBox.jsx:10
 msgid "Open information"
-msgstr ""
+msgstr "Information öffnen"
 
 #: apps/questions/assets/QuestionBox.jsx:16
 #: apps/questions/assets/QuestionBox.jsx:45
