@@ -1,8 +1,8 @@
-var PresentBox = require('./PresentBox')
-var React = require('react')
-var ReactDOM = require('react-dom')
+import PresentBox from './PresentBox'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-module.exports.renderData = function (el) {
+export function renderData (el) {
   const props = JSON.parse(el.getAttribute('data-attributes'))
   ReactDOM.render(<PresentBox {...props} />, el)
 }

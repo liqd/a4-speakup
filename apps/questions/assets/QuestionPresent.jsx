@@ -1,7 +1,7 @@
-/* global django */
-const React = require('react')
+import React from 'react'
+import django from 'django'
 
-class QuestionPresent extends React.Component {
+export default class QuestionPresent extends React.Component {
   constructor (props) {
     super(props)
 
@@ -45,5 +45,3 @@ class QuestionPresent extends React.Component {
       </div>)
   }
 }
-
-module.exports = QuestionPresent

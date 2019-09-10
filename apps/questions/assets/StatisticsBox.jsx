@@ -1,12 +1,11 @@
 /* global fetch */
-/* global django */
+import django from 'django'
 import { updateItem } from './helpers.js'
+import React from 'react'
+import QuestionUser from './QuestionUser'
+import QuestionModerator from './QuestionModerator'
 
-const React = require('react')
-const QuestionUser = require('./QuestionUser')
-const QuestionModerator = require('./QuestionModerator')
-
-class StatisticsBox extends React.Component {
+export default class StatisticsBox extends React.Component {
   constructor (props) {
     super(props)
 
@@ -172,5 +171,3 @@ class StatisticsBox extends React.Component {
     )
   }
 }
-
-module.exports = StatisticsBox

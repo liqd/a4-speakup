@@ -1,9 +1,9 @@
 /* global fetch */
 import $ from 'jquery'
-const React = require('react')
-const QuestionPresent = require('./QuestionPresent')
+import React from 'react'
+import QuestionPresent from './QuestionPresent'
 
-class PresentBox extends React.Component {
+export default class PresentBox extends React.Component {
   constructor (props) {
     super(props)
 
@@ -76,5 +76,3 @@ class PresentBox extends React.Component {
     }
   }
 }
-
-module.exports = PresentBox
