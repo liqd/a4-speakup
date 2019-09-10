@@ -5,7 +5,9 @@ const textDisplayQuestion = django.gettext('display question on screen')
 const textAddQuestion = django.gettext('add question to shortlist')
 const textHideQuestion = django.gettext('hide question from audience')
 const textMarkAnswered = django.gettext('mark question as answered')
-const textInFront = django.gettext('is shown in front of a question? It has been marked by the moderation.')
+const textMarkedModeration = django.gettext('is shown in front of a question? It has been marked by the moderation.')
+const ariaCloseInfo = django.gettext('Close information')
+const ariaOpenInfo = django.gettext('Open information')
 
 export default class InfoBox extends React.Component {
   constructor (props) {
@@ -47,19 +49,19 @@ export default class InfoBox extends React.Component {
               {!this.props.isModerator &&
                 <div className="row">
                   <div className="col-12">
-                    <i className="icon-in-list" /> {textInFront}
+                    <i className="icon-in-list" /> {textMarkedModeration}
                   </div>
                 </div>}
-              <button type="button" className="close" onClick={this.toggleInformation.bind(this)} aria-label="Close information">
-                <span aria-hidden="true">&times;</span>
+              <button type="button" className="close" onClick={this.toggleInformation.bind(this)}>
+                <span aria-label={ariaCloseInfo}>&times;</span>
               </button>
             </div>
           )
           : (
             <div className="row">
               <div className="col-12 d-flex justify-content-end">
-                <button type="button" className="btn btn-outline-secondary" onClick={this.toggleInformation.bind(this)} aria-label="Open information">
-                  <span aria-hidden="true"><i className="fas fa-info-circle" /></span>
+                <button type="button" className="btn btn-outline-secondary" onClick={this.toggleInformation.bind(this)}>
+                  <span aria-label={ariaOpenInfo}><i className="fas fa-info-circle" /></span>
                 </button>
               </div>
             </div>
