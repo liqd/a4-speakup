@@ -51,14 +51,17 @@ class PresentBox extends React.Component {
       return (
         <div className="container">
           <div className="list-group mt-5">
-            { this.state.questions.map((question, index) => {
-              return <QuestionPresent
-                key={question.id}
-                id={question.id}
-                likes={question.likes}
-              >{question.text}</QuestionPresent>
-            })
-            }
+            {this.state.questions.map((question, index) => {
+              return (
+                <QuestionPresent
+                  key={question.id}
+                  id={question.id}
+                  likes={question.likes}
+                >
+                  {question.text}
+                </QuestionPresent>
+              )
+            })}
           </div>
         </div>
       )

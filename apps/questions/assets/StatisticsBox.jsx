@@ -102,62 +102,72 @@ class StatisticsBox extends React.Component {
       <div>
         <div className="row justify-content-center">
           <div className="col-12 col-md-8">
-            { this.props.categories.map((category, index) => {
+            {this.props.categories.map((category, index) => {
               const countPerCategory = this.countCategory(category)
               const style = { width: countPerCategory + '%' }
               return (
                 <div key={index} className="mt-3">
                   <span>{category}</span>
                   <div className="progress">
-                    <div className="progress-bar" style={style} role="progressbar" aria-valuenow="25" aria-valuemin="0"
-                      aria-valuemax="100">{countPerCategory}%
+                    <div
+                      className="progress-bar" style={style} role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                      aria-valuemax="100"
+                    >{countPerCategory}%
                     </div>
                   </div>
                 </div>
               )
-            })
-            }
+            })}
           </div>
         </div>
         <h3 className="u-serif-header mt-5">{django.gettext('Posts included')}</h3>
         {this.props.isModerator
-          ? <div className="list-group mt-3 mt-md-5">
-            { this.state.combinedQuestions.map((question, index) => {
-              return <QuestionModerator
-                updateQuestion={this.updateQuestion.bind(this)}
-                displayIsOnShortlist={false}
-                displayIsLive={false}
-                displayIsHidden={question.is_hidden}
-                displayIsAnswered={question.is_answered}
-                removeFromList={this.removeFromList.bind(this)}
-                key={question.id}
-                id={question.id}
-                is_answered={question.is_answered}
-                is_on_shortlist={question.is_on_shortlist}
-                is_live={question.is_live}
-                is_hidden={question.is_hidden}
-                category={question.category}
-                likes={question.likes}
-              >{question.text}</QuestionModerator>
-            })
-            }
-          </div>
-          : <div className="list-group mt-5">
-            { this.state.combinedQuestions.map((question, index) => {
-              return <QuestionUser
-                key={question.id}
-                id={question.id}
-                is_answered={question.is_answered}
-                is_on_shortlist={question.is_on_shortlist}
-                is_live={question.is_live}
-                is_hidden={question.is_hidden}
-                category={question.category}
-                likes={question.likes}
-              >{question.text}</QuestionUser>
-            })
-            }
-          </div>
-        }
+          ? (
+            <div className="list-group mt-3 mt-md-5">
+              {this.state.combinedQuestions.map((question, index) => {
+                return (
+                  <QuestionModerator
+                    updateQuestion={this.updateQuestion.bind(this)}
+                    displayIsOnShortlist={false}
+                    displayIsLive={false}
+                    displayIsHidden={question.is_hidden}
+                    displayIsAnswered={question.is_answered}
+                    removeFromList={this.removeFromList.bind(this)}
+                    key={question.id}
+                    id={question.id}
+                    is_answered={question.is_answered}
+                    is_on_shortlist={question.is_on_shortlist}
+                    is_live={question.is_live}
+                    is_hidden={question.is_hidden}
+                    category={question.category}
+                    likes={question.likes}
+                  >
+                    {question.text}
+                  </QuestionModerator>
+                )
+              })}
+            </div>
+          )
+          : (
+            <div className="list-group mt-5">
+              {this.state.combinedQuestions.map((question, index) => {
+                return (
+                  <QuestionUser
+                    key={question.id}
+                    id={question.id}
+                    is_answered={question.is_answered}
+                    is_on_shortlist={question.is_on_shortlist}
+                    is_live={question.is_live}
+                    is_hidden={question.is_hidden}
+                    category={question.category}
+                    likes={question.likes}
+                  >
+                    {question.text}
+                  </QuestionUser>
+                )
+              })}
+            </div>
+          )}
       </div>
     )
   }
