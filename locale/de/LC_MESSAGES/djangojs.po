@@ -359,7 +359,7 @@ msgstr "Frage als beantwortet markieren"
 
 #: apps/questions/assets/InfoBox.jsx:8
 msgid "is shown in front of a question? It has been marked by the moderation."
-msgstr ""
+msgstr "wird vor einer Frage angezeigt? Dann wurde sie von der Moderation vorgemerkt."
 
 #: apps/questions/assets/InfoBox.jsx:9
 msgid "Close information"
