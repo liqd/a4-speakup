@@ -1,8 +1,8 @@
-var StatisticsBox = require('./StatisticsBox')
-var React = require('react')
-var ReactDOM = require('react-dom')
+import StatisticsBox from './StatisticsBox'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-module.exports.renderData = function (el) {
+export function renderData (el) {
   const props = JSON.parse(el.getAttribute('data-attributes'))
   ReactDOM.render(<StatisticsBox {...props} />, el)
 }

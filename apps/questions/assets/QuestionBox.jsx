@@ -1,12 +1,11 @@
-/* global django */
+import django from 'django'
 import { updateItem } from './helpers.js'
+import React from 'react'
+import QuestionList from './QuestionList'
+import InfoBox from './InfoBox'
+import Filters from './Filters'
 
-const React = require('react')
-const QuestionList = require('./QuestionList')
-const InfoBox = require('./InfoBox')
-const Filters = require('./Filters')
-
-class QuestionBox extends React.Component {
+export default class QuestionBox extends React.Component {
   constructor (props) {
     super(props)
 
@@ -179,5 +178,3 @@ class QuestionBox extends React.Component {
       </div>)
   }
 }
-
-module.exports = QuestionBox

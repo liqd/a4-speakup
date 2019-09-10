@@ -1,7 +1,7 @@
-/* global django */
-const React = require('react')
+import React from 'react'
+import django from 'django'
 
-class Filter extends React.Component {
+export default class Filter extends React.Component {
   selectCategory (e) {
     e.preventDefault()
     const category = e.target.getAttribute('data-value')
@@ -87,5 +87,3 @@ class Filter extends React.Component {
     )
   }
 }
-
-module.exports = Filter

@@ -1,6 +1,6 @@
-const QuestionModerator = require('./QuestionModerator')
-const QuestionUser = require('./QuestionUser')
-const React = require('react')
+import QuestionModerator from './QuestionModerator'
+import QuestionUser from './QuestionUser'
+import React from 'react'
 
 const QuestionList = (props) => {
   if (props.isModerator) {
@@ -66,4 +66,4 @@ const QuestionList = (props) => {
   }
 }
 
-module.exports = QuestionList
+export default QuestionList

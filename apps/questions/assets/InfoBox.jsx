@@ -1,7 +1,15 @@
-/* global django */
-const React = require('react')
+import React from 'react'
+import django from 'django'
 
-class InfoBox extends React.Component {
+const textDisplayQuestion = django.gettext('display question on screen')
+const textAddQuestion = django.gettext('add question to shortlist')
+const textHideQuestion = django.gettext('hide question from audience')
+const textMarkAnswered = django.gettext('mark question as answered')
+const textMarkedModeration = django.gettext('is shown in front of a question? It has been marked by the moderation.')
+const ariaCloseInfo = django.gettext('Close information')
+const ariaOpenInfo = django.gettext('Open information')
+
+export default class InfoBox extends React.Component {
   constructor (props) {
     super(props)
 
@@ -26,34 +34,34 @@ class InfoBox extends React.Component {
               {this.props.isModerator &&
                 <div className="row pt-4">
                   <div className="col-lg-3 pb-2 pb-xl-0">
-                    <i className="icon-push-in-list" /> <span>{django.gettext('add question to shortlist')}</span>
+                    <i className="icon-push-in-list" /> <span>{textAddQuestion}</span>
                   </div>
                   <div className="col-lg-3 pb-2 pb-xl-0">
-                    <span className="fa-stack fa-1x"><i className="fas fa-tv fa-stack-2x" /><i className="fas fa-arrow-up fa-stack-1x" /></span> <span>{django.gettext('display question on screen')}</span>
+                    <span className="fa-stack fa-1x"><i className="fas fa-tv fa-stack-2x" /><i className="fas fa-arrow-up fa-stack-1x" /></span> <span>{textDisplayQuestion}</span>
                   </div>
                   <div className="col-lg-3 pb-2 pb-xl-0">
-                    <i className="icon-answered" /> <span>{django.gettext('mark question as answered')}</span>
+                    <i className="icon-answered" /> <span>{textMarkAnswered}</span>
                   </div>
                   <div className="col-lg-3 pb-2 pb-xl-0">
-                    <i className="far fa-eye" /> <span>{django.gettext('hide question from audience')}</span>
+                    <i className="icon-answered" /> <span>{textHideQuestion}</span>
                   </div>
                 </div>}
               {!this.props.isModerator &&
                 <div className="row">
                   <div className="col-12">
-                    <i className="icon-in-list" /> {django.gettext('is shown in front of a question? It has been marked by the moderation.')}
+                    <i className="icon-in-list" /> {textMarkedModeration}
                   </div>
                 </div>}
-              <button type="button" className="close" onClick={this.toggleInformation.bind(this)} aria-label="Close information">
-                <span aria-hidden="true">&times;</span>
+              <button type="button" className="close" onClick={this.toggleInformation.bind(this)}>
+                <span aria-label={ariaCloseInfo}>&times;</span>
               </button>
             </div>
           )
           : (
             <div className="row">
               <div className="col-12 d-flex justify-content-end">
-                <button type="button" className="btn btn-outline-secondary" onClick={this.toggleInformation.bind(this)} aria-label="Open information">
-                  <span aria-hidden="true"><i className="fas fa-info-circle" /></span>
+                <button type="button" className="btn btn-outline-secondary" onClick={this.toggleInformation.bind(this)}>
+                  <span aria-label={ariaOpenInfo}><i className="fas fa-info-circle" /></span>
                 </button>
               </div>
             </div>
@@ -62,5 +70,3 @@ class InfoBox extends React.Component {
     )
   }
 }
-
-module.exports = InfoBox

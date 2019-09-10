@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: a4-meinberlin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-09 15:25+0000\n"
+"POT-Creation-Date: 2019-09-10 11:21+0000\n"
 "PO-Revision-Date: 2017-10-16 13:42+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -1395,15 +1395,15 @@ msgstr ""
 "Nach dem Speichern des Entwurfs können Sie ihren Event weiter bearbeiten und "
 "veröffentlichen."
 
-#: a4-speakup/templates/a4dashboard/project_list.html:11
+#: a4-speakup/templates/a4dashboard/project_list.html:10
 msgid "Events"
 msgstr "Events"
 
-#: a4-speakup/templates/a4dashboard/project_list.html:14
+#: a4-speakup/templates/a4dashboard/project_list.html:13
 msgid "New Event"
 msgstr "Neues Event"
 
-#: a4-speakup/templates/a4dashboard/project_list.html:26
+#: a4-speakup/templates/a4dashboard/project_list.html:25
 msgid "We could not find any events."
 msgstr "Wir konnten keine Events finden."
 
