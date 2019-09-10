@@ -1236,7 +1236,7 @@ msgstr "Frage hinzufügen"
 
 #: apps/questions/templates/a4_candy_questions/question_present_list.html:11
 msgid "join in "
-msgstr "mitmachen unter"
+msgstr "mitmachen unter "
 
 #: apps/questions/templates/a4_candy_questions/question_present_list.html:19
 msgid "Enter event link"
