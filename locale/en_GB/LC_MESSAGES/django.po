@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-09 15:25+0000\n"
+"POT-Creation-Date: 2019-09-10 11:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1362,15 +1362,15 @@ msgstr ""
 "After saving the draft event you can further customize and edit your project "
 "and eventually publish it."
 
-#: a4-speakup/templates/a4dashboard/project_list.html:11
+#: a4-speakup/templates/a4dashboard/project_list.html:10
 msgid "Events"
 msgstr "Events"
 
-#: a4-speakup/templates/a4dashboard/project_list.html:14
+#: a4-speakup/templates/a4dashboard/project_list.html:13
 msgid "New Event"
 msgstr "New Event"
 
-#: a4-speakup/templates/a4dashboard/project_list.html:26
+#: a4-speakup/templates/a4dashboard/project_list.html:25
 msgid "We could not find any events."
 msgstr "We could not find any events."
 

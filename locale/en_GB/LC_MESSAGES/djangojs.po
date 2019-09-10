@@ -3,12 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-09 15:25+0000\n"
+"POT-Creation-Date: 2019-09-10 11:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,21 +40,76 @@ msgstr "Collapsible element"
 
 #: adhocracy4.js/comments/static/comments/Comment.jsx:23
 #: adhocracy4.py/comments/static/comments/Comment.jsx:23
-#, fuzzy, javascript-format
-#| msgid "hide one reply"
+#, javascript-format
 msgid "hide one reply"
 msgid_plural "hide %s replies"
 msgstr[0] "hide one reply"
-msgstr[1] "hide one reply"
+msgstr[1] "hide %s replies"
 
 #: adhocracy4.js/comments/static/comments/Comment.jsx:25
 #: adhocracy4.py/comments/static/comments/Comment.jsx:25
-#, fuzzy, javascript-format
-#| msgid "view one reply"
+#, javascript-format
 msgid "view one reply"
 msgid_plural "view %s replies"
 msgstr[0] "view one reply"
-msgstr[1] "view one reply"
+msgstr[1] "view %s replies"
+
+#: adhocracy4.js/comments/static/comments/Comment.jsx:125
+#: adhocracy4.py/comments/static/comments/Comment.jsx:125
+msgid "Do you really want to delete this comment?"
+msgstr "Do you really want to delete this comment?"
+
+#: adhocracy4.js/comments/static/comments/Comment.jsx:127
+#: adhocracy4.js/comments/static/comments/CommentManageDropdown.jsx:19
+#: adhocracy4.js/polls/static/polls/QuestionForm.jsx:93
+#: adhocracy4.js/polls/static/polls/QuestionForm.jsx:96
+#: adhocracy4.py/comments/static/comments/Comment.jsx:127
+#: adhocracy4.py/comments/static/comments/CommentManageDropdown.jsx:19
+#: adhocracy4.py/polls/static/polls/QuestionForm.jsx:93
+#: adhocracy4.py/polls/static/polls/QuestionForm.jsx:96
+msgid "Delete"
+msgstr "Delete"
+
+#: adhocracy4.js/comments/static/comments/Comment.jsx:128
+#: adhocracy4.js/static/Modal.jsx:49
+#: adhocracy4.py/comments/static/comments/Comment.jsx:128
+msgid "Abort"
+msgstr "Abort"
+
+#: adhocracy4.js/comments/static/comments/Comment.jsx:141
+#: adhocracy4.py/comments/static/comments/Comment.jsx:141
+msgid "Latest edit on"
+msgstr "Latest edit on"
+
+#: adhocracy4.js/comments/static/comments/Comment.jsx:146
+#: adhocracy4.py/comments/static/comments/Comment.jsx:146
+msgid "Moderator"
+msgstr "Moderator"
+
+#: adhocracy4.js/comments/static/comments/Comment.jsx:153
+#: adhocracy4.js/reports/static/reports/react_reports.jsx:20
+#: adhocracy4.py/comments/static/comments/Comment.jsx:153
+#: adhocracy4.py/reports/static/reports/react_reports.jsx:20
+msgid ""
+"You want to report this content? Your message will be sent to the "
+"moderation. The moderation will look at the reported content. The content "
+"will be deleted if it does not meet our discussion rules (netiquette)."
+msgstr ""
+"You want to report this content? Your message will be sent to the "
+"moderation. The moderation will look at the reported content. The content "
+"will be deleted if it does not meet our discussion rules (netiquette)."
+
+#: adhocracy4.js/comments/static/comments/Comment.jsx:176
+#: adhocracy4.js/polls/static/polls/QuestionForm.jsx:26
+#: adhocracy4.py/comments/static/comments/Comment.jsx:176
+#: adhocracy4.py/polls/static/polls/QuestionForm.jsx:26
+msgid "Answer"
+msgstr "Answer"
+
+#: adhocracy4.js/comments/static/comments/Comment.jsx:215
+#: adhocracy4.py/comments/static/comments/Comment.jsx:215
+msgid "Your reply here"
+msgstr "Your reply here"
 
 #: adhocracy4.js/comments/static/comments/CommentBox.jsx:167
 #: adhocracy4.py/comments/static/comments/CommentBox.jsx:167
@@ -101,6 +156,11 @@ msgstr "The currently active phase doesn't allow to comment."
 #: adhocracy4.py/comments/static/comments/CommentManageDropdown.jsx:16
 msgid "Edit"
 msgstr "Edit"
+
+#: adhocracy4.js/comments/static/comments/CommentManageDropdown.jsx:22
+#: adhocracy4.py/comments/static/comments/CommentManageDropdown.jsx:22
+msgid "Report"
+msgstr "Report"
 
 #: adhocracy4.js/follows/static/follows/FollowButton.jsx:51
 #: adhocracy4.py/follows/static/follows/FollowButton.jsx:51
@@ -191,15 +251,30 @@ msgid_plural "votes"
 msgstr[0] "vote"
 msgstr[1] "votes"
 
+#: adhocracy4.js/polls/static/polls/Question.jsx:142
+#: adhocracy4.py/polls/static/polls/Question.jsx:142
+msgid "To poll"
+msgstr "To poll"
+
+#: adhocracy4.js/polls/static/polls/Question.jsx:145
+#: adhocracy4.py/polls/static/polls/Question.jsx:145
+msgid "Change vote"
+msgstr "Change vote"
+
+#: adhocracy4.js/polls/static/polls/Question.jsx:149
+#: adhocracy4.py/polls/static/polls/Question.jsx:149
+msgid "Show preliminary results"
+msgstr "Show preliminary results"
+
+#: adhocracy4.js/polls/static/polls/Question.jsx:177
+#: adhocracy4.py/polls/static/polls/Question.jsx:177
+msgid "Your choice"
+msgstr "Your choice"
+
 #: adhocracy4.js/polls/static/polls/QuestionForm.jsx:15
 #: adhocracy4.py/polls/static/polls/QuestionForm.jsx:15
 msgid "Question"
 msgstr "Question"
-
-#: adhocracy4.js/polls/static/polls/QuestionForm.jsx:26
-#: adhocracy4.py/polls/static/polls/QuestionForm.jsx:26
-msgid "Answer"
-msgstr "Answer"
 
 #: adhocracy4.js/polls/static/polls/QuestionForm.jsx:37
 #: adhocracy4.py/polls/static/polls/QuestionForm.jsx:37
@@ -210,6 +285,25 @@ msgstr "Users can select more than one answer."
 #: adhocracy4.py/polls/static/polls/QuestionForm.jsx:45
 msgid "Choice"
 msgstr "Choice"
+
+#: adhocracy4.js/polls/static/polls/QuestionForm.jsx:67
+#: adhocracy4.py/polls/static/polls/QuestionForm.jsx:67
+msgid "Add a new choice"
+msgstr "Add a new choice"
+
+#: adhocracy4.js/polls/static/polls/QuestionForm.jsx:76
+#: adhocracy4.js/polls/static/polls/QuestionForm.jsx:79
+#: adhocracy4.py/polls/static/polls/QuestionForm.jsx:76
+#: adhocracy4.py/polls/static/polls/QuestionForm.jsx:79
+msgid "Move up"
+msgstr "Move up"
+
+#: adhocracy4.js/polls/static/polls/QuestionForm.jsx:85
+#: adhocracy4.js/polls/static/polls/QuestionForm.jsx:88
+#: adhocracy4.py/polls/static/polls/QuestionForm.jsx:85
+#: adhocracy4.py/polls/static/polls/QuestionForm.jsx:88
+msgid "Move down"
+msgstr "Move down"
 
 #: adhocracy4.js/reports/static/reports/ReportModal.jsx:57
 #: adhocracy4.py/reports/static/reports/ReportModal.jsx:57
@@ -226,89 +320,82 @@ msgstr "Your message"
 msgid "Send Report"
 msgstr "Send Report"
 
-#: adhocracy4.js/reports/static/reports/react_reports.jsx:20
-#: adhocracy4.py/reports/static/reports/react_reports.jsx:20
-msgid ""
-"You want to report this content? Your message will be sent to the "
-"moderation. The moderation will look at the reported content. The content "
-"will be deleted if it does not meet our discussion rules (netiquette)."
-msgstr ""
-"You want to report this content? Your message will be sent to the "
-"moderation. The moderation will look at the reported content. The content "
-"will be deleted if it does not meet our discussion rules (netiquette)."
+#: adhocracy4.js/static/Alert.jsx:10 adhocracy4.js/static/Alert.jsx:11
+msgid "Close"
+msgstr "Close"
 
-#: adhocracy4.js/static/Modal.jsx:49
-msgid "Abort"
-msgstr "Abort"
-
-#: apps/questions/assets/Filters.jsx:29
+#: apps/questions/assets/Filters.jsx:31
 msgid "all"
 msgstr "all"
 
-#: apps/questions/assets/Filters.jsx:48
+#: apps/questions/assets/Filters.jsx:50
 msgid "only show marked questions"
 msgstr "only show marked questions"
 
-#: apps/questions/assets/Filters.jsx:62
+#: apps/questions/assets/Filters.jsx:65
 msgid "display only questions which are not hidden"
 msgstr "display only questions which are not hidden"
 
-#: apps/questions/assets/Filters.jsx:76
+#: apps/questions/assets/Filters.jsx:80
 msgid "order by likes"
 msgstr "order by likes"
 
-#: apps/questions/assets/InfoBox.jsx:28
-msgid "add question to shortlist"
-msgstr "add question to shortlist"
-
-#: apps/questions/assets/InfoBox.jsx:31
+#: apps/questions/assets/InfoBox.jsx:4
 msgid "display question on screen"
 msgstr "display question on screen"
 
-#: apps/questions/assets/InfoBox.jsx:34
+#: apps/questions/assets/InfoBox.jsx:5
+msgid "add question to shortlist"
+msgstr "add question to shortlist"
+
+#: apps/questions/assets/InfoBox.jsx:6
 msgid "hide question from audience"
 msgstr "hide question from audience"
 
-#: apps/questions/assets/InfoBox.jsx:37
+#: apps/questions/assets/InfoBox.jsx:7
 msgid "mark question as answered"
 msgstr "mark question as answered"
 
-#: apps/questions/assets/QuestionBox.jsx:18
-#: apps/questions/assets/QuestionBox.jsx:47
+#: apps/questions/assets/InfoBox.jsx:8
+msgid "is shown in front of a question? It has been marked by the moderation."
+msgstr "is shown in front of a question? It has been marked by the moderation."
+
+#: apps/questions/assets/QuestionBox.jsx:16
+#: apps/questions/assets/QuestionBox.jsx:45
 msgid "select category"
 msgstr "select category"
 
-#: apps/questions/assets/QuestionModerator.jsx:111
+#: apps/questions/assets/QuestionModerator.jsx:113
 msgid "mark as hidden"
 msgstr "mark as hidden"
 
-#: apps/questions/assets/QuestionModerator.jsx:111
+#: apps/questions/assets/QuestionModerator.jsx:113
 msgid "undo mark as hidden"
 msgstr "undo mark as hidden"
 
-#: apps/questions/assets/QuestionModerator.jsx:119
+#: apps/questions/assets/QuestionModerator.jsx:123
 msgid "mark as done"
 msgstr "mark as done"
 
-#: apps/questions/assets/QuestionModerator.jsx:125
+#: apps/questions/assets/QuestionModerator.jsx:129
 msgid "added to live list"
 msgstr "added to live list"
 
-#: apps/questions/assets/QuestionModerator.jsx:125
+#: apps/questions/assets/QuestionModerator.jsx:129
 msgid "remove from live list"
 msgstr "remove from live list"
 
-#: apps/questions/assets/QuestionModerator.jsx:132
+#: apps/questions/assets/QuestionModerator.jsx:135
 msgid "added to shortlist"
 msgstr "added to shortlist"
 
-#: apps/questions/assets/QuestionModerator.jsx:132
+#: apps/questions/assets/QuestionModerator.jsx:135
 msgid "remove from shortlist"
 msgstr "remove from shortlist"
 
 #: apps/questions/assets/QuestionPresent.jsx:40
 #: apps/questions/assets/QuestionUser.jsx:68
-#: apps/questions/assets/QuestionUser.jsx:73
+#: apps/questions/assets/QuestionUser.jsx:75
 msgid "likes"
 msgstr "likes"
 
@@ -327,54 +414,6 @@ msgstr "undo like"
 #: apps/questions/assets/StatisticsBox.jsx:122
 msgid "Posts included"
 msgstr "Posts included"
-
-#~ msgid "Do you really want to delete this comment?"
-#~ msgstr "Do you really want to delete this comment?"
-
-#~ msgid "Delete"
-#~ msgstr "Delete"
-
-#~ msgid "Latest edit on"
-#~ msgstr "Latest edit on"
-
-#~ msgid "Moderator"
-#~ msgstr "Moderator"
-
-#~ msgid "Your reply here"
-#~ msgstr "Your reply here"
-
-#~ msgid "Report"
-#~ msgstr "Report"
-
-#~ msgid "To poll"
-#~ msgstr "To poll"
-
-#~ msgid "Change vote"
-#~ msgstr "Change vote"
-
-#~ msgid "Show preliminary results"
-#~ msgstr "Show preliminary results"
-
-#~ msgid "Your choice"
-#~ msgstr "Your choice"
-
-#~ msgid "Add a new choice"
-#~ msgstr "Add a new choice"
-
-#~ msgid "Move up"
-#~ msgstr "Move up"
-
-#~ msgid "Move down"
-#~ msgstr "Move down"
-
-#~ msgid "Close"
-#~ msgstr "Close"
-
-#~ msgid "hide %s replies"
-#~ msgstr "hide %s replies"
-
-#~ msgid "view %s replies"
-#~ msgstr "view %s replies"
 
 #~ msgid "bookmark"
 #~ msgstr "bookmark"
