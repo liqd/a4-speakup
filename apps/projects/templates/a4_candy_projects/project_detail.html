@@ -64,7 +64,6 @@
         <div class="container">
             <div class="row">
                 <div class="offset-md-1 col-md-10">
-                    <h2 class="u-serif-header text-center">{% trans "Information" %}</h2>
                     <div>
                         <p>{{ view.project.information|transform_collapsibles|richtext }}</p>
                         {% if view.project.contact_name or view.project.contact_address_text or view.project.contact_email or view.project.contact_phone or view.project.contact_url %}
@@ -107,7 +106,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="u-serif-header text-center">{% trans "Statistics" %}</h2>
+                    <h3 class="u-serif-header text-center">{% trans "Statistics" %}</h3>
+                    <p class="text-center text-muted">{% trans "The answered questions are included in the statistics. It shows which groups are represented." %}</p>
                     <div>
                     {% if view.project.has_started %}
                     {% react_questions_statistics view.module %}
