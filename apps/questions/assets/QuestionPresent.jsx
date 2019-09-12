@@ -26,6 +26,7 @@ export default class QuestionPresent extends React.Component {
   }
 
   render () {
+    const likesTag = django.gettext('likes')
     return (
       <div className="list-group-item border-bottom mb-2">
         <div>
@@ -37,7 +38,7 @@ export default class QuestionPresent extends React.Component {
               <div className="float-right">
                 <span className="text-muted">{this.state.likes}</span>
                 <i className="icon-like text-muted ml-2" aria-hidden="true" />
-                <span className="sr-only">{django.gettext('likes')}</span>
+                <span className="sr-only">{likesTag}</span>
               </div>
             </div>
           </div>

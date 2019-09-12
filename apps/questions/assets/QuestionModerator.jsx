@@ -94,6 +94,14 @@ export default class QuestionModerator extends React.Component {
   }
 
   render () {
+    const hiddenText = django.gettext('mark as hidden')
+    const undoHiddenText = django.gettext('undo mark as hidden')
+    const doneText = django.gettext('mark as done')
+    const addLiveText = django.gettext('added to live list')
+    const removeLiveText = django.gettext('remove from live list')
+    const addShortlistText = django.gettext('added to shortlist')
+    const removeShortlistText = django.gettext('remove from shortlist')
+
     return (
       <div className="list-group-item border-bottom mb-2">
         <div>
@@ -110,7 +118,7 @@ export default class QuestionModerator extends React.Component {
                 type="button" className="btn btn-transparent float-sm-right px-3"
                 onClick={this.toggleIshidden.bind(this)}
               >
-                <i className={this.props.is_hidden ? 'far fa-eye-slash text-secondary' : 'far fa-eye text-primary'} aria-label={this.props.is_hidden ? django.gettext('mark as hidden') : django.gettext('undo mark as hidden')} />
+                <i className={this.props.is_hidden ? 'far fa-eye-slash text-secondary' : 'far fa-eye text-primary'} aria-label={this.props.is_hidden ? hiddenText : undoHiddenText} />
               </button>}
 
             {this.props.displayIsAnswered &&
@@ -120,19 +128,19 @@ export default class QuestionModerator extends React.Component {
               >
                 <i
                   className={this.props.is_answered ? 'icon-answered text-primary px-1 text-secondary' : 'icon-answered text-primary px-1 text-primary'}
-                  aria-label={django.gettext('mark as done')}
+                  aria-label={doneText}
                 />
               </button>}
             {this.props.displayIsLive &&
               <button type="button" className="btn btn-transparent float-sm-right px-3" onClick={this.toggleIslive.bind(this)}>
                 <span className="fa-stack fa-1x">
-                  <i className={this.state.is_live ? 'fas fa-tv fa-stack-2x text-secondary' : 'fas fa-tv fa-stack-2x text-primary'} aria-label={this.state.is_live ? django.gettext('added to live list') : django.gettext('remove from live list')} />
+                  <i className={this.state.is_live ? 'fas fa-tv fa-stack-2x text-secondary' : 'fas fa-tv fa-stack-2x text-primary'} aria-label={this.state.is_live ? addLiveText : removeLiveText} />
                   <i className={this.state.is_live ? 'fas fa-arrow-up fa-stack-1x fa-inverse text-secondary' : 'fas fa-arrow-up fa-stack-1x text-primary'} aria-hidden="true" />
                 </span>
               </button>}
             {this.props.displayIsOnShortlist &&
               <button type="button" className="btn btn-transparent float-sm-right px-3" onClick={this.toggleIsOnShortList.bind(this)}>
-                <i className={this.state.is_on_shortlist ? 'icon-in-list text-secondary' : 'icon-push-in-list text-primary'} aria-label={this.state.is_on_shortlist ? django.gettext('added to shortlist') : django.gettext('remove from shortlist')} />
+                <i className={this.state.is_on_shortlist ? 'icon-in-list text-secondary' : 'icon-push-in-list text-primary'} aria-label={this.state.is_on_shortlist ? addShortlistText : removeShortlistText} />
               </button>}
           </div>
         </div>
