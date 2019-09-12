@@ -48,12 +48,17 @@ export default class QuestionUser extends React.Component {
   }
 
   render () {
+    const shortlistText = django.gettext('on shortlist')
+    const likesTag = django.gettext('likes')
+    const addLikeTag = django.gettext('add like')
+    const undoLikeTag = django.gettext('undo like')
+
     return (
       <div className="list-group-item border-bottom mb-2">
         <div>
           <p>
             {this.props.is_on_shortlist &&
-              <i className="icon-in-list pr-1 text-secondary" aria-label={django.gettext('on shortlist')} />}
+              <i className="icon-in-list pr-1 text-secondary" aria-label={shortlistText} />}
             {this.props.children}
           </p>
         </div>
@@ -65,14 +70,14 @@ export default class QuestionUser extends React.Component {
                 ? (
                   <button type="button" className="btn btn-transparent float-right px-3" onClick={this.handleLike.bind(this)}>
                     <span className="text-muted">{this.state.likes}</span>
-                    <span className="sr-only">{django.gettext('likes')}</span>
-                    <i className={this.state.session_like ? 'icon-like text-secondary ml-2' : 'icon-like text-muted ml-2'} aria-label={this.state.session_like ? django.gettext('add like') : django.gettext('undo like')} />
+                    <span className="sr-only">{likesTag}</span>
+                    <i className={this.state.session_like ? 'icon-like text-secondary ml-2' : 'icon-like text-muted ml-2'} aria-label={this.state.session_like ? addLikeTag : undoLikeTag} />
                   </button>
                 )
                 : (
                   <div className="float-right">
                     <span className="text-muted">{this.state.likes}</span>
-                    <span className="sr-only">{django.gettext('likes')}</span>
+                    <span className="sr-only">{likesTag}</span>
                     <i className="icon-like text-muted ml-1" aria-hidden="true" />
                   </div>
                 )}
