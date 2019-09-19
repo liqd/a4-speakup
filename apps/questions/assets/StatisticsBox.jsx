@@ -120,10 +120,10 @@ export default class StatisticsBox extends React.Component {
             })}
           </div>
         </div>
-        <h3 className="u-serif-header text-center mt-3 mt-md-5">{questionAnsweredTag}</h3>
+        <h3 className="u-serif-header text-center mt-5">{questionAnsweredTag}</h3>
         {this.props.isModerator
           ? (
-            <div className="list-group mt-3 mt-md-4">
+            <div className="list-group mt-md-4">
               {this.state.combinedQuestions.map((question, index) => {
                 return (
                   <QuestionModerator
