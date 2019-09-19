@@ -1,6 +1,7 @@
 from wagtail.core import blocks
 from wagtail.images.blocks import ImageChooserBlock
 
+
 class CallToActionBlock(blocks.StructBlock):
     body = blocks.RichTextBlock()
     link = blocks.CharBlock()
