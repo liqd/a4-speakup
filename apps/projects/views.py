@@ -3,6 +3,7 @@ import itertools
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404, redirect
+from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import ungettext
 from django.views import generic
@@ -12,6 +13,7 @@ from adhocracy4.dashboard import mixins as a4dashboard_mixins
 from adhocracy4.dashboard import signals as a4dashboard_signals
 from adhocracy4.projects import models as project_models
 from adhocracy4.projects.mixins import ProjectMixin
+from apps.exports.views import DashboardExportView
 
 from . import forms, models
 
@@ -178,3 +180,14 @@ class DashboardProjectModeratorsView(AbstractProjectUserInviteListView):
 
     def get_permission_object(self):
         return self.project
+
+
+class QuestionsDashboardExportView(DashboardExportView):
+    template_name = 'a4_candy_exports/export_dashboard.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['question_export'] = reverse(
+            'a4dashboard:project-questions-export',
+            kwargs={'module_slug': self.module.slug})
+        return context

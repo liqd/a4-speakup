@@ -3,7 +3,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from adhocracy4.dashboard import DashboardComponent, components
 
-from . import views
+from . import exports, views
 
 
 class ModeratorsComponent(DashboardComponent):
@@ -28,3 +28,30 @@ class ModeratorsComponent(DashboardComponent):
 
 
 components.register_project(ModeratorsComponent())
+
+
+class ExportQuestionsComponent(DashboardComponent):
+    identifier = 'questions_export'
+    weight = 30
+    label = _('Export Excel')
+
+    def is_effective(self, module):
+        return True
+
+    def get_base_url(self, module):
+        return reverse('a4dashboard:dashboard-questions-export', kwargs={
+            'module_slug': module.slug
+        })
+
+    def get_urls(self):
+        return [
+            (r'^modules/(?P<module_slug>[-\w_]+)/export/$',
+                views.QuestionsDashboardExportView.as_view(),
+                'dashboard-questions-export'),
+            (r'^modules/(?P<module_slug>[-\w_]+)/export/questions/$',
+                exports.QuestionsDashboardExportView.as_view(),
+                'project-questions-export'),
+        ]
+
+
+components.register_module(ExportQuestionsComponent())
