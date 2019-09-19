@@ -23,17 +23,17 @@
                 {% for module_menu in dashboard_menu.modules %}
                     <ul class="list-group mb-3">
                         {% for item in module_menu.menu %}
-                            <li class="list-group-item">
-                                <a href="{{ item.url }}"
-                                   class="{{ item.is_active|yesno:"is-active," }}">
-                                    {{ item.label }}
-                                    {% if not item.is_complete %}
-                                        <i class="fa fa-exclamation-circle text-secondary"
-                                           title="{% trans 'Missing fields for publication' %}"
-                                           aria-label="{% trans 'Missing fields for publication' %}"></i>
-                                    {% endif %}
-                                </a>
-                            </li>
+                        <li class="list-group-item">
+                            <a href="{{ item.url }}"
+                               class="{{ item.is_active|yesno:"is-active," }}">
+                                {{ item.label }}
+                                {% if not item.is_complete %}
+                                    <i class="fa fa-exclamation-circle text-secondary"
+                                       title="{% trans 'Missing fields for publication' %}"
+                                       aria-label="{% trans 'Missing fields for publication' %}"></i>
+                                {% endif %}
+                            </a>
+                        </li>
                         {% endfor %}
                     </ul>
                 {% endfor %}

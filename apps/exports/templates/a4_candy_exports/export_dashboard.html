@@ -5,26 +5,26 @@
     <h1 class="u-first-heading">{% trans 'Export' %}</h1>
 
     <p class="form-hint">{% blocktrans %}You can export the results of your project as an excel file.{% endblocktrans %}</p>
-<table class="export-table">
-    <thead>
-    <tr>
-        <th></th>
-        <th></th>
-    </tr>
-    </thead>
+<table class="table">
   <tbody>
     {% if question_export %}
-    <tr>
-        <td class="export-table__txt-cell" id="id-export-question-hint">
+    <tr scope="row">
+        <td class="pl-0 align-middle" id="id-export-question-hint">
             {% trans "here you can export all questions" %}
         </td>
-        <td class="export-table__btn-cell">
+        <td>
             <a class="btn btn--secondary" aria-labelledby="id-export-question-hint" href="{{ question_export }}">
                 {% trans "Export" %}
             </a>
         </td>
     </tr>
     {% endif %}
+    <tr scope="row">
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
 </table>
 </tbody>
 {% endblock %}
