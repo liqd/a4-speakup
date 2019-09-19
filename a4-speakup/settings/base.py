@@ -80,6 +80,7 @@ INSTALLED_APPS = [
 
     'apps.contrib',
     'apps.dashboard',
+    'apps.exports',
     'apps.ideas',
     'apps.likes',
     'apps.questions',

@@ -1,0 +1,30 @@
+{% extends "a4dashboard/base_dashboard_project.html" %}
+{% load i18n %}
+
+{% block dashboard_project_content %}
+    <h1 class="u-first-heading">{% trans 'Export' %}</h1>
+
+    <p class="form-hint">{% blocktrans %}You can export the results of your project as an excel file.{% endblocktrans %}</p>
+<table class="export-table">
+    <thead>
+    <tr>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+  <tbody>
+    {% if question_export %}
+    <tr>
+        <td class="export-table__txt-cell" id="id-export-question-hint">
+            {% trans "here you can export all questions" %}
+        </td>
+        <td class="export-table__btn-cell">
+            <a class="btn btn--secondary" aria-labelledby="id-export-question-hint" href="{{ question_export }}">
+                {% trans "Export" %}
+            </a>
+        </td>
+    </tr>
+    {% endif %}
+</table>
+</tbody>
+{% endblock %}
