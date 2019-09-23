@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-18 12:39+0000\n"
+"POT-Creation-Date: 2019-09-23 11:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -292,6 +292,7 @@ msgstr "Edit categories"
 
 #: adhocracy4.py/categories/fields.py:12 adhocracy4.py/categories/filters.py:14
 #: adhocracy4.py/categories/forms.py:45 adhocracy4.py/exports/mixins.py:150
+#: apps/projects/exports.py:38
 msgid "Category"
 msgstr "Category"
 
@@ -932,11 +933,24 @@ msgstr "Short description"
 msgid "description"
 msgstr "description"
 
-#: apps/ideas/exports.py:61
+#: apps/exports/templates/a4_candy_exports/export_dashboard.html:5
+#: apps/projects/dashboard.py:36
+msgid "Export Excel"
+msgstr "Export Excel"
+
+#: apps/exports/templates/a4_candy_exports/export_dashboard.html:11
+msgid "here you can export all questions"
+msgstr "here you can export all questions"
+
+#: apps/exports/templates/a4_candy_exports/export_dashboard.html:15
+msgid "Export"
+msgstr "Export"
+
+#: apps/ideas/exports.py:61 apps/projects/exports.py:35
 msgid "ID"
 msgstr "ID"
 
-#: apps/ideas/exports.py:63
+#: apps/ideas/exports.py:63 apps/projects/exports.py:42
 msgid "Created"
 msgstr "Created"
 
@@ -1048,6 +1062,26 @@ msgstr "Organisation successfully updated."
 #: apps/projects/templates/a4_candy_projects/dashboard_project_moderators.html:19
 msgid "Moderators"
 msgstr "Moderators"
+
+#: apps/projects/exports.py:36
+msgid "Text"
+msgstr "Text"
+
+#: apps/projects/exports.py:37
+msgid "Likes"
+msgstr "Likes"
+
+#: apps/projects/exports.py:39
+msgid "Answered"
+msgstr "Answered"
+
+#: apps/projects/exports.py:40
+msgid "On shortlist"
+msgstr "On shortlist"
+
+#: apps/projects/exports.py:41
+msgid "Hidden"
+msgstr "Hidden"
 
 #: apps/projects/forms.py:38
 msgid "Invite users via email"
@@ -1186,35 +1220,35 @@ msgstr ""
 "The answered questions are included in the statistics. It shows which groups "
 "are represented."
 
-#: apps/projects/views.py:80
+#: apps/projects/views.py:82
 msgid "Invitation succesfully removed."
 msgstr "Invitation succesfully removed."
 
-#: apps/projects/views.py:121
+#: apps/projects/views.py:123
 msgid "Following users already accepted an invitation: "
 msgstr "Following users already accepted an invitation: "
 
-#: apps/projects/views.py:129
+#: apps/projects/views.py:131
 msgid "Following users are already invited: "
 msgstr "Following users are already invited: "
 
-#: apps/projects/views.py:172
+#: apps/projects/views.py:174
 msgid "Invite moderators via email"
 msgstr "Invite moderators via email"
 
-#: apps/projects/views.py:173
+#: apps/projects/views.py:175
 msgid "Invite moderators via file upload"
 msgstr "Invite moderators via file upload"
 
-#: apps/projects/views.py:174
+#: apps/projects/views.py:176
 msgid "{} moderator invited."
 msgstr "{} moderator invited."
 
-#: apps/projects/views.py:174
+#: apps/projects/views.py:176
 msgid "{} moderators invited."
 msgstr "{} moderators invited."
 
-#: apps/projects/views.py:175
+#: apps/projects/views.py:177
 msgid "Moderator successfully removed."
 msgstr "Moderator successfully removed."
 
@@ -1349,15 +1383,15 @@ msgid "I have read and accept the {}terms of use{} and the {}privacy policy{}."
 msgstr ""
 "I have read and accept the {}terms of use{} and the {}privacy policy{}."
 
-#: a4-speakup/settings/base.py:171 a4-speakup/settings/base.py:182
+#: a4-speakup/settings/base.py:172 a4-speakup/settings/base.py:183
 msgid "Rich text editor"
 msgstr "Rich text editor"
 
-#: a4-speakup/settings/base.py:255
+#: a4-speakup/settings/base.py:256
 msgid "English"
 msgstr "English"
 
-#: a4-speakup/settings/base.py:256
+#: a4-speakup/settings/base.py:257
 msgid "German"
 msgstr "German"
 
