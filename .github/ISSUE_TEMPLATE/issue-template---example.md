@@ -1,13 +1,12 @@
 ---
 name: Issue template - Example
-about: 'This template should be used in order to help us understand the issue better. '
+about: This is an example on how to use the template. For current use, better use
+  the other one.
 title: ''
 labels: ''
 assignees: ''
 
 ---
-
-Please, fill in this template in order to help us understand the issue better
 
 **URL:** https://speakup.digital/projects/feedback-fur-speakup/
 **user:** *moderator/ initiator/ participants/ visitors (non-logged-in)/ admin/ cms-editors/ developers*
