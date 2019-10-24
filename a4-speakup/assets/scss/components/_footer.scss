@@ -1,11 +1,18 @@
 .footer--purple {
     width: 100%;
-    height: 100px;
+    height: 120px;
     position: relative;
     background-color: $purple;
+    font-family: $font-family-homepage-mono;
+    color: $white;
+
+    a {
+        color: $white;
+    }
 }
 
 .footer__curve {
+    height: 50px !important;
     top: 0;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
