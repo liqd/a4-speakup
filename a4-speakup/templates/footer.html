@@ -1,3 +1,12 @@
+{% load snippet_tags %}
+
 <footer class="footer--purple">
-    <div class="footer__curve d-lg-none"></div>
+    <div class="footer__curve d-sm-none"></div>
+      <div class="footer__links container pt-5 pt-sm-3">
+            <span>© 2019 liquid democracy</span>&nbsp;
+          {% load_site_menu "footer" as footer %}
+          {% for item in footer %}
+              <a class="footer-nav__link" href="{{ item.url }}">{{ item.title }}</a>&nbsp;
+          {% endfor %}
+      </div>
 </footer>
