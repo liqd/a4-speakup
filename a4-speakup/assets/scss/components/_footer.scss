@@ -12,7 +12,7 @@
 }
 
 .footer__curve {
-    height: 50px !important;
+    height: 40px !important;
     top: 0;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
@@ -20,7 +20,7 @@
 
 .footer__links {
     position: absolute;
-    bottom: $spacer;
+    bottom: 0.5*$spacer;
     left: 0;
     right: 0;
     margin-left: auto;
