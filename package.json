@@ -30,7 +30,7 @@
     "shpjs": "3.4.3",
     "style-loader": "1.0.0",
     "tether": "1.4.7",
-    "timeago.js": "4.0.0",
+    "timeago.js": "4.0.1",
     "webpack": "4.41.2",
     "webpack-merge": "4.2.2"
   },
