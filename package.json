@@ -21,7 +21,7 @@
     "immutability-helper": "3.0.1",
     "mini-css-extract-plugin": "0.8.0",
     "node-sass": "4.13.0",
-    "popper.js": "1.16.0",
+    "popper.js": "1.16.1",
     "react-flip-move": "3.0.4",
     "react-sticky-box": "0.8.0",
     "sass-loader": "8.0.0",
