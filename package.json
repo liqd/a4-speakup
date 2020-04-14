@@ -9,7 +9,7 @@
     "@babel/runtime": "7.9.2",
     "@fortawesome/fontawesome-free": "5.13.0",
     "acorn": "7.1.1",
-    "adhocracy4": "liqd/adhocracy4#ebc21b9ef72eff5f7a355711f8b34560e4a3a30e",
+    "adhocracy4": "liqd/adhocracy4#speakup-v1.3",
     "axios": "0.19.2",
     "babel-loader": "8.1.0",
     "bootstrap": "4.4.1",
