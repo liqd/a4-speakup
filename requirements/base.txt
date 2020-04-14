@@ -1,4 +1,4 @@
-git+git://github.com/liqd/adhocracy4.git@speakup-v1.2#egg=adhocracy4
+git+git://github.com/liqd/adhocracy4.git@ebc21b9ef72eff5f7a355711f8b34560e4a3a30e#egg=adhocracy4
 bcrypt==3.1.7
 brotli==1.0.7
 django-capture-tag==1.0
