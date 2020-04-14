@@ -22,18 +22,18 @@ from apps.questions import urls as questions_urls
 from apps.questions.api import QuestionViewSet
 
 router = routers.DefaultRouter()
-router.register(r'reports', ReportViewSet, base_name='reports')
+router.register(r'reports', ReportViewSet, basename='reports')
 
 
 ct_router = a4routers.ContentTypeDefaultRouter()
-ct_router.register(r'comments', CommentViewSet, base_name='comments')
-ct_router.register(r'ratings', RatingViewSet, base_name='ratings')
+ct_router.register(r'comments', CommentViewSet, basename='comments')
+ct_router.register(r'ratings', RatingViewSet, basename='ratings')
 
 module_router = a4routers.ModuleDefaultRouter()
-module_router.register(r'questions', QuestionViewSet, base_name='questions')
+module_router.register(r'questions', QuestionViewSet, basename='questions')
 
 likes_router = LikesDefaultRouter()
-likes_router.register(r'likes', LikesViewSet, base_name='likes')
+likes_router.register(r'likes', LikesViewSet, basename='likes')
 
 
 urlpatterns = [
