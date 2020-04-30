@@ -22,10 +22,12 @@ module.exports = {
       'react-dom',
       'react-flip-move'
     ],
-
     datepicker: [
       './a4-speakup/assets/js/init-picker.js',
       'datepicker/css/datepicker.min.css'
+    ],
+    image_uploader: [
+      'adhocracy4/adhocracy4/images/assets/image_uploader.js'
     ]
   },
   output: {
