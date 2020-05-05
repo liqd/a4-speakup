@@ -26,8 +26,14 @@ module.exports = {
       './a4-speakup/assets/js/init-picker.js',
       'datepicker/css/datepicker.min.css'
     ],
+    category_formset: [
+      'adhocracy4/adhocracy4/categories/assets/category_formset.js'
+    ],
     image_uploader: [
       'adhocracy4/adhocracy4/images/assets/image_uploader.js'
+    ],
+    select_dropdown_init: [
+      'adhocracy4/adhocracy4/categories/assets/select_dropdown_init.js'
     ]
   },
   output: {
