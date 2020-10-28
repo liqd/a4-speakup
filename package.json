@@ -8,7 +8,7 @@
     "@babel/preset-react": "7.9.4",
     "@babel/runtime": "7.9.6",
     "@fortawesome/fontawesome-free": "5.13.0",
-    "acorn": "7.2.0",
+    "acorn": "7.4.1",
     "adhocracy4": "liqd/adhocracy4#speakup-v1.3",
     "axios": "0.19.2",
     "babel-loader": "8.1.0",
