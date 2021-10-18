@@ -10,7 +10,7 @@
     "@fortawesome/fontawesome-free": "5.13.0",
     "acorn": "7.2.0",
     "adhocracy4": "liqd/adhocracy4#speakup-v1.3",
-    "axios": "0.19.2",
+    "axios": "0.21.2",
     "babel-loader": "8.1.0",
     "bootstrap": "4.5.0",
     "copy-webpack-plugin": "5.1.1",
